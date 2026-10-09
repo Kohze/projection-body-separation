@@ -1,11 +1,11 @@
-PROJECTION-BODY SEPARATION -- VERSION 1.0.0
+PROJECTION-BODY SEPARATION -- VERSION 1.0.1
 
 This standalone folder contains the eleven-page manuscript, editable main.tex,
 exact reproduction snapshot, source audit, internal review records and citation
 metadata. README.md gives the current public-edition instructions.
 
 Repository: https://github.com/Kohze/projection-body-separation
-Release: https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.0
+Release: https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.1
 
 Build: python -B build_paper.py
 Verify delivery: python -B verify_delivery.py

@@ -8,3 +8,7 @@ and versioned public data/code availability; its mathematical constants,
 construction and certificates are unchanged. None of these records is external
 peer review. `publication-revision-v1.0.0.json` records the revision scope.
 The remote publication audit is retained in the surrounding workspace.
+
+Version 1.0.1 fixes external-report newline portability and adds its regression
+test. See portability-fix-v1.0.1.json and CHANGELOG.md. The historical v1.0.0
+records remain preserved; current citation coverage is in citation-audit-v1.0.1.json.

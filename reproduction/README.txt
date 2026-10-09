@@ -58,12 +58,12 @@ new geometry and growth checks:
 This checks the delivery hashes, recomputes complete rational seed geometry,
 compares the independently obtained R and a to the closed formulas, checks
 the exact recursive states and infinite-tail hypotheses, checks all finite
-separation constants, runs nine adversarial/unit tests, and checks regenerated
+separation constants, runs ten adversarial/unit tests, and checks regenerated
 reports against their delivered hashes. Growth acceptance is replayed in
 both normal and optimized Python. Typical runtime is around twenty seconds.
 
 The runner writes regenerated reports and certificates to temporary files;
-it leaves every delivered file unchanged. All nine unit tests also run under
+it leaves every delivered file unchanged. All ten unit tests also run under
 optimized Python. Empty or incomplete manifests are rejected.
 
 To regenerate the supplied certificates and confirm identical bytes:
@@ -124,7 +124,12 @@ open. Research and code were developed with AI assistance.
 Older papers and archives in the surrounding workspace are preserved.
 This package is a separate research continuation, with its own claims and
 reproducibility records. Its manuscript, data and code edition is available at
-https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.0.
+https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.1.
 The original Python code and generated geometry/growth/block certificate data
 are MIT licensed. Third-party inputs retain their upstream terms and are
 fetched rather than redistributed. Manuscript rights are reserved separately.
+
+VERSION 1.0.1 PORTABILITY FIX
+The replay wrapper normalizes physical CRLF report line endings to LF. This
+changes no JSON values or mathematical inputs; full report hashes are still
+compared. A regression test covers Windows-style and Linux-style report bytes.

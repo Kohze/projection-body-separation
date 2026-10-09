@@ -1,0 +1,15 @@
+{
+  "version": "1.0.1",
+  "finding": "External replay JSON values identical; physical newline bytes differ across Windows/Linux",
+  "diagnosis": {
+    "json_values_identical": true,
+    "saved_bytes": 1157,
+    "saved_crlf": 31,
+    "generated_linux_bytes": 1126,
+    "bytes_identical_after_crlf_normalization": true
+  },
+  "fix": "Normalize CRLF report newlines to LF in the wrapper; keep strict full-report digest equality",
+  "regression_test": "test_external_report_newlines_are_portable",
+  "unit_tests": 10,
+  "mathematical_values_changed": false
+}

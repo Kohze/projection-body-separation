@@ -1,9 +1,9 @@
 # Beyond point-generated product-join constructions for projection-body volume
 
-Robin Gounder · Working research draft · 9 October 2026 · Version 1.0.0
+Robin Gounder · Working research draft · 9 October 2026 · Version 1.0.1
 
 [Read the paper](beyond-point-generated-projection-body-constructions.pdf) ·
-[Versioned release](https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.0) ·
+[Versioned release](https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.1) ·
 [Citation metadata](CITATION.cff) · [Rights](RIGHTS.md)
 
 This eleven-page research note specifies a rational twelve-dimensional seed whose
@@ -34,7 +34,7 @@ python -B reproduction/verify_all.py --regenerate
 The checks recompute complete rational seed geometry, compare the closed
 formulas, verify the 224 block inequalities, reconstruct the rational recursion,
 check infinite-tail hypotheses, check all 197 residue bounds and the dimension
-15,500 comparison, and run nine unit tests in normal and optimized Python.
+15,500 comparison, and run ten unit tests in normal and optimized Python.
 Certificate regeneration occurs in temporary files and leaves delivered files
 unchanged. The own-construction checks need no network access.
 

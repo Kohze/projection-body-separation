@@ -100,7 +100,7 @@ def main():
         print('PASS: exact growth, analytic endpoint hypotheses, all 197 residues, finite separation; normal and optimized Python.', flush=True)
         print(run(['-m', 'unittest', '-v', 'test_certificate_checks.py']).strip(), flush=True)
         run(['-O', '-m', 'unittest', '-v', 'test_certificate_checks.py'])
-        print('PASS: all nine unit tests also pass under optimized Python.', flush=True)
+        print('PASS: all ten unit tests also pass under optimized Python.', flush=True)
         if args.with_prior:
             report = temporary/'prior.json'
             print(run(['replay_prior.py', '--report', str(report)]).strip(), flush=True)
@@ -108,7 +108,7 @@ def main():
     prior = json.loads((ROOT/'prior-mixed-upper-replay.json').read_text())
     require(prior['status'] == 'PASS' and prior['mathematics_replayed'] is True, 'Missing prior upper replay record')
     manifest(args.assembly)
-    print(json.dumps(dict(status='PASS', manifest_files=count, unit_tests=9,
+    print(json.dumps(dict(status='PASS', manifest_files=count, unit_tests=10,
                           seed_geometry='independently recomputed', growth='independently recomputed',
                           delivered_files_modified=False,
                           external_upper='replayed now' if args.with_prior else 'saved successful replay; use --with-prior to rerun'), indent=2), flush=True)

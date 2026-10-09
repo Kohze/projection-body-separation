@@ -5,7 +5,13 @@
   "latex_overfull": 0,
   "latex_underfull": 0,
   "unresolved_references": 0,
-  "final_pdf_sha256": "005b51f71a69a8e97d68001e9573934092dd0ccf205ddaca4a6107f1f281cc9d",
+  "final_pdf_sha256": "44ef102267d2f041475da188f890730ae2a79829e433308789b011ec6fa10830",
   "status": "PASS",
-  "edition": "v1.0.0; discussion, conclusion and disclosure/availability revision"
+  "edition": "v1.0.1; exact companion disclosure, 16 references and portable replay",
+  "patch_pages_reinspected": [
+    8,
+    9,
+    10,
+    11
+  ]
 }

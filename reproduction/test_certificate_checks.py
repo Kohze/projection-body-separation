@@ -12,6 +12,7 @@ import check_seeds
 import check_growth
 import verify_all
 import check_block
+import replay_prior
 
 ROOT = Path(__file__).resolve().parent
 
@@ -64,6 +65,18 @@ class CertificateChecks(unittest.TestCase):
         self.assertIsInstance(hi, F)
         self.assertLess(F(1359, 500), lo)
         self.assertLess(hi, F(11, 4))
+
+    def test_external_report_newlines_are_portable(self):
+        payload = {'status': 'PASS', 'escaped': '\r\n', 'value': ['-3', '2000']}
+        expected = (json.dumps(payload, indent=2)+'\n').encode()
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/'report.json'
+            path.write_bytes(expected.replace(b'\n', b'\r\n'))
+            replay_prior.normalize_report_newlines(path)
+            self.assertEqual(path.read_bytes(), expected)
+            self.assertEqual(json.loads(path.read_bytes()), payload)
+            replay_prior.normalize_report_newlines(path)
+            self.assertEqual(path.read_bytes(), expected)
 
     def test_manifest_rejects_missing_coverage(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -20,6 +20,11 @@ def require(ok, message):
         raise ValueError(message)
 
 
+def normalize_report_newlines(path):
+    """Make the external summary portable without changing its JSON values."""
+    path.write_bytes(path.read_bytes().replace(b'\r\n', b'\n'))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--directory', type=Path)
@@ -49,6 +54,7 @@ def main():
     print('Verified pinned prior files:', len(names), flush=True)
     subprocess.run([sys.executable, str(target/'verify.py'), '--mode', 'ordinary', '--report', str(args.report.resolve())],
                    cwd=target, check=True)
+    normalize_report_newlines(args.report.resolve())
 
 
 if __name__ == '__main__':

@@ -88,9 +88,9 @@
   "review_revision_utc": "2026-10-09T19:52:29.102340+00:00",
   "review_report": "REVIEWER_AUDIT.txt",
   "edition_repository": "https://github.com/Kohze/projection-body-separation",
-  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.0",
-  "publication_verification_record": "Workspace audit/github-publication-projection-body-separation-v1.0.0.json records the actual remote publication check.",
-  "citation_coverage_audit": "Companion public paper folder audit/citation-audit-v1.0.0.json",
+  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.1",
+  "publication_verification_record": "Workspace audit/github-publication-projection-body-separation-v1.0.1.json records the actual remote publication check.",
+  "citation_coverage_audit": "Companion public paper folder audit/citation-audit-v1.0.1.json",
   "citation_entries": 16,
   "additional_contextual_sources": [
     "Brannen (1996)",
