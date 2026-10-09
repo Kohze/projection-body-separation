@@ -1,0 +1,272 @@
+{
+  "commit": "2fc3f25179cf1128c4bccbde65fd3a07c093ad6d",
+  "retrieved_utc": "2026-10-09T19:23:23.749465+00:00",
+  "files": [
+    {
+      "path": "notes/mixed-bellman-product-join/CANDIDATE_2_854261.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/CANDIDATE_2_854261.md",
+      "bytes": 4948,
+      "sha256": "f1cf7351a669db8b94e6f7fdca0c0062d679e5407dc0bf9746f17cd60dc6b646",
+      "git_blob": "a9b99000ce080f45c9ef13904d4b7acc4fa2e3e1"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/CANDIDATE_ID.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/CANDIDATE_ID.json",
+      "bytes": 856,
+      "sha256": "1585f8f56a6585fe064f997e0ce0eb4388139c6456fb69b906c20c3e8c792670",
+      "git_blob": "349ca3f690d2ecac1b7704e502b0ca96abb9247c"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/DEPENDENCIES.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/DEPENDENCIES.md",
+      "bytes": 9321,
+      "sha256": "d1a3b3303aeba4d68e1d1e63383ceb824b20e95a7ae9443cb278476ec376fe8d",
+      "git_blob": "6e3246fab6c0beafecf3a97b08ad416b5dca8b67"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/MANIFEST.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/MANIFEST.json",
+      "bytes": 5872,
+      "sha256": "f82b4c8b5cc11a7f39608f2c0150f06cc368511f113af00a8995f11b890c507f",
+      "git_blob": "52fca3791d68856f811453423025c7c31c2b2d94"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/PUBLIC_AUDIT.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/PUBLIC_AUDIT.md",
+      "bytes": 3219,
+      "sha256": "f32ab0d442f46fc2b4102a4c16dcd574647398d02acb5d23c43e0ab6ca71cf2b",
+      "git_blob": "c5bb338a14eb9cfe7fdb6b5b99c12a83213046db"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/README.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/README.md",
+      "bytes": 5925,
+      "sha256": "89902c381a26d401449a94441b74b1e17c401ebc27fc9f687ffbd61f36a9d9f2",
+      "git_blob": "bd89af427be55d2135ec079e26f31e4aeaf3e671"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/SOURCE_MAP.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/SOURCE_MAP.json",
+      "bytes": 20466,
+      "sha256": "6d139b38afe86074af967ad5a3961fe8030874d9dcfec93c2447ae776b065d28",
+      "git_blob": "ff1d13d6d95fd940d4bf9474970fff21b1e55b35"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/VERIFICATION.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/VERIFICATION.md",
+      "bytes": 5106,
+      "sha256": "d433051ab8c8690726e60ae451ac69a15d662567a1e6ce44bf09ec82892e0608",
+      "git_blob": "a24bbd355c83e4e6f2e05e54282240339aa37e23"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/build.sh",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/build.sh",
+      "bytes": 523,
+      "sha256": "c1322f9d4cae4e7ab9ff7268302e91123d5da9a2f0c1e52d4fa85d4578d044dc",
+      "git_blob": "e12576061028aed23aef80dd5dd83fb30666e96d"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/check_classical_upper.py",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/check_classical_upper.py",
+      "bytes": 2469,
+      "sha256": "4e9e2407f99400fcfd6314a2ffc8c0f5b595c8b1ae105d024640e097efc941c8",
+      "git_blob": "f71601ec27f905339858674e8250569735e4a77d"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/check_finite.py",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/check_finite.py",
+      "bytes": 5320,
+      "sha256": "3d5d6706e719aa859851903986472583e539aeba79ab4cc81675de81bdae6f1a",
+      "git_blob": "83d15f59cc087d53be45ba3de58d5d73b65fed3f"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/check_mixed_large_dimensions.py",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/check_mixed_large_dimensions.py",
+      "bytes": 1324,
+      "sha256": "0db5d59337280d2cc9c4df6967ea94d4137b69b37f833a4f9e9b97753a99157c",
+      "git_blob": "edf2e7f07327ad6487cf52a09b4a132798b923dd"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/check_mixed_tail.py",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/check_mixed_tail.py",
+      "bytes": 2781,
+      "sha256": "8332ca7b70cfc4680668d08b965be80566ca21a0960b1325f442273891b0bd2b",
+      "git_blob": "b306f2489a15e56860ac13424a75047d9df01e38"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/classical_upper_exact.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/classical_upper_exact.json",
+      "bytes": 3930,
+      "sha256": "9e2efb95db4c59c114d54ec0fe72649447fe5b2297ec74158d8e061c740bb53a",
+      "git_blob": "c2a04fb2d645b6fce1aa16881e9a226e7f85ce65"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/combined_audit.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/combined_audit.md",
+      "bytes": 8495,
+      "sha256": "2ff06345975d3d6e9cf9985317af8b72a7f28ef10f6fb3e4e9e478580c475a0b",
+      "git_blob": "f5f426361bc562ce87ff1d0e5ac2e7942a72a2d2"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/final_replay.txt",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/final_replay.txt",
+      "bytes": 262,
+      "sha256": "8bfccfb2e84bba69de436152dc7b103335a42674a489e65e5b4b6453834e1599",
+      "git_blob": "77aff8e819ed144d5212f454c3a84663746a1897"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/finite_proof.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/finite_proof.md",
+      "bytes": 8480,
+      "sha256": "0074e164502adfa4e38ffa2c4392f9c4d47b10be04a5e0ed5a3944911b458203",
+      "git_blob": "b83b934731d4d8fb1d615e6a1d964d4e16afe294"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/finite_report.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/finite_report.json",
+      "bytes": 1672,
+      "sha256": "39b33bf33da19bde7088c08f4726afe3a76264e8de1245e9a1122b537d9b7e03",
+      "git_blob": "b58011a996975a56ab66f248530c0fd5799ee651"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/finite_report_optimized.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/finite_report_optimized.json",
+      "bytes": 1672,
+      "sha256": "39b33bf33da19bde7088c08f4726afe3a76264e8de1245e9a1122b537d9b7e03",
+      "git_blob": "b58011a996975a56ab66f248530c0fd5799ee651"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/generate_finite_points.py",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/generate_finite_points.py",
+      "bytes": 1861,
+      "sha256": "f90b54a0897421236a3eaa07d6ce3453561abad11d57a297f5a9469dba079885",
+      "git_blob": "d9ee07e090e0ffb533a028bf3a9d25917349e5e6"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/generate_mixed_tail.py",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/generate_mixed_tail.py",
+      "bytes": 2865,
+      "sha256": "12b929817d1e6be4c38f8bd5fbf7bbedf7438645e38fa77f5a27f4008318eb73",
+      "git_blob": "811642ca2e4f0f425d899e17b09c98df224d2b81"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/independent_finite_replay.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/independent_finite_replay.json",
+      "bytes": 1672,
+      "sha256": "39b33bf33da19bde7088c08f4726afe3a76264e8de1245e9a1122b537d9b7e03",
+      "git_blob": "b58011a996975a56ab66f248530c0fd5799ee651"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/independent_tail_replay_optimized.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/independent_tail_replay_optimized.json",
+      "bytes": 331,
+      "sha256": "b0b375b34c2dc2fbbe0b64d98e3e25ba7fcfd35e172e03799e25049f73613e09",
+      "git_blob": "20dfb592a682f8831368a2fa43c01894563ed7c6"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/inherited_lower_replay.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/inherited_lower_replay.json",
+      "bytes": 6736,
+      "sha256": "a362e9e4b1331ceb5f0b36d9fe1ffb4271226c7e1d967e53df8f85188fe9f17b",
+      "git_blob": "936650785b72604bfdcb464de6222d6fe64c6ec7"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/literature.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/literature.md",
+      "bytes": 16027,
+      "sha256": "961406635d1e7ecf22fe61428b11c5060e93e6729cb6766baac93351fce2656c",
+      "git_blob": "4a9fc8a39d6086f5f05903bffeb8c1fcdd8cbc88"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/mixed_finite_points.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/mixed_finite_points.json",
+      "bytes": 652887,
+      "sha256": "1778ba5b540295dd0355dc8809d599c0db584df8f89103b7dfef76910f378171",
+      "git_blob": "ad9ffcada79e97be0e63b58e003c5820ebba3cc3"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/mixed_large_dimensions.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/mixed_large_dimensions.md",
+      "bytes": 3020,
+      "sha256": "0bd5e96a5c96e3f4f0ce0eccbfc394512dbf9c162ec4e5b8e174cbcd1c1a4202",
+      "git_blob": "fa9bf3c1a7be471c76bde5ec7bc061a1d21d9b71"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/mixed_tail_certificate.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/mixed_tail_certificate.json",
+      "bytes": 478290,
+      "sha256": "3d19c41c656b952b4e649f1f9fb0ea2ff3a14c6c26086b91e8c7a780fba4cb94",
+      "git_blob": "3e80ef36870bf7acacc3eb582ef01ee5920e54cb"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/mixed_tail_core.py",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/mixed_tail_core.py",
+      "bytes": 4944,
+      "sha256": "575ec721c180e4df03adac7b003e37f4c606f3101ea3ba3ee29b8511ac3b6de6",
+      "git_blob": "2679438fc68d599b341601f0ce4582dbb0e76b04"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/mixed_tail_proof.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/mixed_tail_proof.md",
+      "bytes": 6262,
+      "sha256": "f21ac99ae0ea4e90d431a6dec5a6f0e28211ffcb4e572e63a16de02fddfc75b4",
+      "git_blob": "ef850913c4e83e853f67b0a49f3f335b0d79a761"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/mixed_tail_report.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/mixed_tail_report.json",
+      "bytes": 331,
+      "sha256": "b0b375b34c2dc2fbbe0b64d98e3e25ba7fcfd35e172e03799e25049f73613e09",
+      "git_blob": "20dfb592a682f8831368a2fa43c01894563ed7c6"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/paper.pdf",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/paper.pdf",
+      "bytes": 374021,
+      "sha256": "168520d8329eaf668457e1b014590488c24f7440803cc6a4b32a66afa3542793",
+      "git_blob": "3bbbe837782873092454f3d2f3cff80250caec9d"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/paper.tex",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/paper.tex",
+      "bytes": 29828,
+      "sha256": "7e469af5b1533eccecb9ebc9245d4ad5f2f10372fadc50759b0b90fc7d6e9ab9",
+      "git_blob": "5ae4195643f1a5c4f4a74aa02ea8d5bccf87524c"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/portable_replay.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/portable_replay.json",
+      "bytes": 1615,
+      "sha256": "b4fa67d0f72973fca309b3a28b7c1bdef385aeb77ac98a0fdbb4e2e19b6348b6",
+      "git_blob": "fd56a015c995fa7c894addf28e46631c8b176cd0"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/primary_source_manifest.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/primary_source_manifest.json",
+      "bytes": 4334,
+      "sha256": "ec1beba29ba14c007ff16e7b7befcf55a5129aa1e6bf7175d1e3be7cc13da90e",
+      "git_blob": "20d145055615a784bf857a280b41c0c1c6a35780"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/proof.md",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/proof.md",
+      "bytes": 14545,
+      "sha256": "756d9a6eb1dceaa9b0e1cda26d2bb9ca0402331a685e9ae2dd13234b35f0e3d6",
+      "git_blob": "8bb8dcb95b691d13fe2a6da04e22956f1a6c8c86"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/provenance.json",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/provenance.json",
+      "bytes": 2358,
+      "sha256": "6c18a3c5f4dbeac182986b139fe3ab5a3d682bb443c2c5fffc2abd12b9e656a7",
+      "git_blob": "98ef6cc0bb86bc5d295e5df77c3955b707163c6d"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/verify.py",
+      "url": "https://raw.githubusercontent.com/mxym/math/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/verify.py",
+      "bytes": 8163,
+      "sha256": "dc5385e6caa559b3b8be63a5d2f0a45d69150f4970f387e2507be9b22dc80605",
+      "git_blob": "dd91265163752d1bdae068f4eea483152e98f279"
+    }
+  ]
+}

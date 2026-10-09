@@ -1,0 +1,737 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,allcolors=blue!50!black]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\conv}{conv}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CC}{\mathcal C}
+\newcommand{\RK}{\mathcal P}
+\title{Beyond point-generated product--join constructions\protect\\for projection-body volume}
+\author{Robin Gounder}
+\date{Working research draft, 9 October 2026}
+\hypersetup{pdftitle={Beyond point-generated product-join constructions for projection-body volume},pdfauthor={Robin Gounder}}
+\raggedbottom
+\begin{document}
+\maketitle
+\begin{abstract}
+We give an explicit rational twelve-dimensional seed whose iterated
+products and joins have projection-volume root limit strictly between
+$2.861$ and $2.8611$. In combination with the prior bound
+$\Gamma_{\CC}\le e^{1.049}<2.855$ for the class generated from a point by
+products, joins, and affine equivalences, this proves a strict asymptotic
+separation between that entire class and unrestricted convex polytopes.
+An explicit fixed-block construction exceeds every member of $\CC_n$
+for every $n\ge15500$. A simpler eight-dimensional seed already gives
+a limit above $2.8571$. The geometric seed family, product--join calculus,
+recursive scheme, and comparison upper bound are attributed to prior
+work. The additional contribution is their use with specified rational
+seeds to obtain the stronger lower bounds and class separation.
+Independent exact geometry and recurrence certificates accompany the
+proof; global optimality and bibliographic priority are not asserted.
+\end{abstract}
+
+\section{The separation problem and main result}
+For a full-dimensional convex body $K\subset\R^n$, use the normalization
+\[
+ h_{\Pi K}(u)=\vol_{n-1}(K\mid u^\perp),\qquad
+ R_n(K)=\frac{\vol_n(\Pi K)}{\vol_n(K)^{n-1}}.
+\]
+Here $u$ is a unit vector and $K\mid u^\perp$ is its orthogonal projection.
+Write $g(n)=n^n/n!$ and $c_n=(n+1)g(n)=R_n(T_n)$, where $T_n$ is an
+$n$-simplex. The ratio is invariant under invertible affine maps.
+For standard background on support functions, area measures, and affine
+convex geometry, see Schneider~\cite{schneider}.
+We omit the dimension subscript when it is unambiguous.
+The standard product and join are taken in independent coordinate spaces:
+\[
+ A*B=\conv\bigl((A,0,0)\cup(0,B,1)\bigr).
+\]
+Let $\CC$ consist of polytopes obtained from a zero-dimensional point by
+finitely many Cartesian products, joins, and invertible affine maps on
+their affine hulls. Rank-dropping affine maps are outside this definition.
+Set $\CC_n=\{K\in\CC:\dim K=n\}$ and
+\[
+ \Gamma_{\CC}=\limsup_{n\to\infty}\sup_{K\in\CC_n}R_n(K)^{1/n}.
+\]
+The limit in fact exists by the spectral reduction in~\cite{mxym-spectral},
+but the limsup definition suffices below.
+Let $U_n$ be the supremum of $R_n(K)^{1/n}$ over all full-dimensional
+convex bodies $K\subset\R^n$.
+
+The unrestricted maximization problem has a longer history.
+Brannen~\cite{brannen} formulated the simplex maximum conjecture and
+disproved a different proposed upper bound for centrally symmetric bodies.
+Lutwak, Yang, and Zhang~\cite{lyz} developed affine-invariant functionals
+for polytopes and derived projection-volume estimates. Saroglou~\cite{saroglou-cones}
+established sharp three-dimensional maxima within the classes of zonoids,
+cones, and double cones. These results concern the same volume ratio,
+but do not supply the whole-class comparison used here.
+
+Feng, Hu, Liu, and Xu~\cite{feng} already disprove the simplex upper bound
+in every dimension at least nine using polytopes with at most $n+2$
+facets. OpenAI's product example~\cite{openai} provides a particularly
+simple later counterexample. Subsequent work in the mxym repository
+gives the exact product--join calculus and a recursive construction with
+root limit between $2.8534$ and $2.8535$~\cite[Section 9]{mxym-calculus}.
+Its mixed Bellman bound~\cite{mxym-upper} controls every finite expression
+in $\CC$, not just that particular recursion.
+The question addressed here is whether the point-generated closure itself
+can attain the best unrestricted exponential rate.
+
+\begin{theorem}\label{thm:main}
+There is an explicitly specified sequence of rational polytopes
+$P_n\subset\R^n$ such that
+\[
+ \lim_{n\to\infty}R_n(P_n)^{1/n}=\beta,
+ \qquad 2.861<\beta<2.8611.
+\]
+Consequently, using the prior upper theorem~\cite{mxym-upper},
+\[
+ \Gamma_{\CC}<2.855<\beta
+ \le\liminf_{n\to\infty}U_n.
+\]
+There is also an explicit fixed-block sequence $E_n$ satisfying
+\[
+ R_n(E_n)>\sup_{K\in\CC_n}R_n(K)\qquad\text{for every }n\ge15500.
+\]
+The number $15500$ is a sufficient threshold, not a sharp one.
+\end{theorem}
+
+Thus the advantage concerns an entire construction class. For example,
+the asymptotic ratio of $R_n(P_n)$ to its class supremum has lower root
+at least $2.861/2.855>1.0021$. This is an exponential separation;
+it is not a claim of optimality among all convex bodies.
+For context, Zhang's reverse polar projection inequality~\cite{zhang}
+and the Blaschke--Santal\'o inequality~\cite{meyer-pajor} give
+\[
+ R_n(K)\le\frac{\kappa_n^2 n^n}{\binom{2n}{n}},\qquad
+ \limsup_{n\to\infty}U_n\le\frac{\pi e}{2},
+\]
+where $\kappa_n$ is the volume of the Euclidean unit ball; see
+\cite[Introduction, equation (3)]{saroglou} for the combined estimate.
+The limiting constant follows
+from Stirling's formula. A substantial unrestricted gap therefore remains.
+
+\section{Facet invariants and inherited operation rules}
+For a polytope $K$ of dimension $d$ and volume $V$, let $v_i$ be its
+outward facet area-normal vectors and let $\zeta_i$ be the facet area times
+its support number. Equivalently, $\langle v_i,x\rangle=\zeta_i$ on facet $i$.
+Define the determinant sums
+\[
+ \RK(K)=\sum_{|J|=d}|\det(v_j:j\in J)|,\qquad
+ \mathcal S(K)=\sum_{|J|=d+1}|\det((v_j,\zeta_j):j\in J)|.
+\]
+Cauchy's projection formula gives $\RK(K)=\vol_d(\Pi K)$: the projection
+body is a translate of the zonotope $\sum_i[0,v_i]$.
+The determinant expression for zonotope volume and its application to
+projection bodies are classical; see~\cite[Section 1]{lyz}
+and~\cite[Section 3]{saroglou}.
+The lifted invariant of~\cite[Section 2]{mxym-calculus} is
+\begin{equation}\label{eq:invariant}
+ a(K)=\frac{\mathcal S(K)}{dV\RK(K)},\qquad
+ H(K)=\frac1{a(K)},\qquad Q(K)=\frac{a(K)R_d(K)}{g(d)}.
+\end{equation}
+It is affine invariant and satisfies $1/(d+1)\le a(K)\le1$.
+We use different symbols for the geometric tilt parameters below and
+the invariant $a$.
+
+For positive-dimensional factors $A,B$ of dimensions $r,s$, the exact
+identities in~\cite[Sections 3--5]{mxym-calculus} are
+\begin{align}
+ R(A\times B)&=R(A)R(B),&
+ a(A\times B)&=\frac{ra(A)+sa(B)}{r+s},\label{eq:product}\\
+ R(A*B)&=\frac{g(r+s+1)}{g(r)g(s)}R(A)R(B)(a(A)+a(B)),&
+ a(A*B)&=\frac{a(A)a(B)}{a(A)+a(B)}.\label{eq:join}
+\end{align}
+These rules apply to the nonsimplex seeds as well as to members of
+$\CC$. They, and the balanced recursion used below, are imported prior
+results rather than new operation formulas.
+
+\section{An explicit rational seed}
+Let $n=2m$ with $m\ge1$, choose $0<u_1<\cdots<u_m<1$, and put
+\[
+ b=(-u_m,\ldots,-u_1,u_1,\ldots,u_m),\qquad
+ K(u)=\{x\ge0:\ \boldsymbol1\cdot x+b\cdot x\le1,
+                         \ \boldsymbol1\cdot x-b\cdot x\le1\}.
+\]
+For rational $u$, this is a rational realization of the central two-facet
+section family underlying~\cite[Section 4]{feng}. We do not claim the family itself.
+The symmetry exchanging paired coordinates interchanges the two upper
+facets; it is not central symmetry of $K(u)$.
+
+\begin{proposition}\label{prop:seed}
+The polytope $K(u)$ has $n+1+m^2$ vertices and $n+2$ facets. Put
+\begin{equation}\label{eq:I}
+ I(u)=\sum_{i=1}^m
+ \frac{u_i^{2m-2}}{(1+u_i)\prod_{j\ne i}(u_i^2-u_j^2)},\qquad
+ p(u)=n+1+\sum_{j=1}^m(2j-1)u_j,\qquad
+ s(u)=1+\sum_{j=1}^m u_j.
+\end{equation}
+Then
+\begin{equation}\label{eq:seedstate}
+ n!\vol_n(K(u))=I(u),\qquad
+ R_n(K(u))=g(n)I(u)p(u),\qquad a(K(u))=\frac{s(u)}{p(u)}.
+\end{equation}
+In particular $Q(K(u))=I(u)s(u)$.
+\end{proposition}
+\begin{proof}
+The vertices are the origin, the $n$ points
+$e_i/(1+|b_i|)$, and, for each pair $b_i=-v<0<b_j=w$,
+\[
+ \frac{w}{v+w}e_i+\frac{v}{v+w}e_j.
+\]
+An active-set argument proves completeness: at a nonzero vertex one or
+both upper facets must be active, leaving at most one or two positive
+coordinates, respectively. In the latter case the signs must be opposite.
+Each coordinate hyperplane contains the origin and $n-1$ independent axis
+vertices. Each upper hyperplane contains a point with all coordinates
+positive and $b\cdot x$ of the required strict sign. Thus every listed
+inequality defines a facet.
+
+On $b\cdot x\ge0$, the upper constraint with $+b$ determines feasibility;
+the other upper constraint is redundant there.
+Change variables $y_i=(1+b_i)x_i$ and use the standard simplex with slack
+coordinate $y_0=1-\sum_{i=1}^n y_i$. Its truncating coefficients are
+$t_0=0$ and $t_i=b_i/(1+b_i)$. The Jacobian is
+$\prod_i(1+b_i)^{-1}$ and
+$t_i-t_j=(b_i-b_j)/((1+b_i)(1+b_j))$ for $i,j\ge1$.
+The simplex truncation identity in Appendix~\ref{app:truncation}, with
+these factors cancelled, gives
+\[
+ n!\vol_n(K(u)\cap\{b\cdot x\ge0\})
+ =\sum_{b_i>0}\frac{b_i^{n-1}}{(1+b_i)\prod_{j\ne i}(b_i-b_j)}.
+\]
+The two halves have equal volume. Pairing $b_j=\pm u_j$ in the last
+denominator gives~\eqref{eq:I}.
+
+Write $V=\vol_n(K(u))$. Each upper facet vector is a positive multiple
+of $\boldsymbol1\pm b$. Reflection makes the two multiples equal.
+The divergence identity $\sum_i\zeta_i=nV$, with zero support on coordinate
+facets, makes each multiple $nV/2$. Balance of area-normal vectors then
+gives $-nVe_i$ on coordinate facet $i$. After division by $nV$, the
+horizontal generators and their lifted support coordinates are
+\[
+ (-e_i,0),\qquad
+ \left(\frac{\boldsymbol1+b}{2},\frac12\right),\quad
+ \left(\frac{\boldsymbol1-b}{2},\frac12\right).
+\]
+The horizontal $n$-minor sum is
+\[
+ 1+n+\frac12\sum_{i<j}|b_i-b_j|
+ =n+1+\sum_{j=1}^m(2j-1)u_j=p(u).
+\]
+The lifted $(n+1)$-minor sum is $1+\frac12\sum_i|b_i|=s(u)$.
+Restoring the factors $(nV)^n$ and $(nV)^{n+1}$ in the two sums and
+using~\eqref{eq:invariant} proves~\eqref{eq:seedstate}.
+\end{proof}
+
+Our principal seed is the following body with 49 vertices and 14 facets:
+\begin{equation}\label{eq:seed12}
+ K_0=K\left(\frac{17}{100},\frac{24}{100},\frac{32}{100},
+                    \frac{41}{100},\frac{53}{100},\frac{69}{100}\right).
+\end{equation}
+In integer form its upper inequalities are
+\[
+ \sum_i(100\pm B_i)x_i\le100,\qquad
+ B=(-69,-53,-41,-32,-24,-17,17,24,32,41,53,69).
+\]
+Direct rational evaluation, independently checked from its geometry,
+gives
+\begin{align}
+ I_0&=\frac{1031929453906486710787861599001}
+               {2386952337826268810834539955652},\label{eq:exactI}\\
+ p_0&=\frac{768}{25},\qquad s_0=\frac{84}{25},\qquad
+ a_0=\frac7{64},\qquad R_0=g(12)I_0\frac{768}{25}.\label{eq:exactstate}
+\end{align}
+For comparison, the simpler seed
+$K(1/10,2/10,3/10,4/10)$ in dimension eight has 25 vertices and
+\[
+ I_0=\frac{231953}{378378},\qquad p_0=14,\qquad s_0=2,\qquad a_0=\frac17.
+\]
+Its initial ratio $R_8/c_8=231953/243243$ is below one. Nevertheless,
+the same recursive amplification already exceeds the asymptotic ceiling
+for $\CC$. A seed's immediate projection-volume root therefore does not
+by itself describe its value under repeated operation rules.
+
+\section{Recursive amplification and exact tail control}
+Starting from either specified seed, apply the prior scheme
+of~\cite[Section 9]{mxym-calculus}:
+\begin{equation}\label{eq:recursion}
+ K_{j+1}=(K_j\times K_j)*(K_j\times K_j),\qquad
+ d_j=\dim K_j,\quad R_j=R_{d_j}(K_j),\quad a_j=a(K_j).
+\end{equation}
+The inherited identities give
+\begin{equation}\label{eq:state-recurrence}
+ d_j=\frac{(3d_0+1)4^j-1}{3},\qquad a_j=\frac{a_0}{2^j},\qquad
+ R_{j+1}=R_j^4D_j,\quad
+ D_j=2a_j\frac{g(4d_j+1)}{g(2d_j)^2}.
+\end{equation}
+
+\begin{proposition}[Exact seed ranking at fixed dimension]\label{prop:ranking}
+For any two full-dimensional polytope seeds $A,B$ of the same positive dimension $d$,
+the recursion~\eqref{eq:recursion} has positive root limits
+$\beta_A,\beta_B$ and
+\begin{equation}\label{eq:ranking}
+ \left(\frac{\beta_A}{\beta_B}\right)^{3d+1}
+ =\frac{a(A)R_d(A)^3}{a(B)R_d(B)^3}.
+\end{equation}
+Thus maximizing the limiting rate in the fixed-dimensional family
+$K(u)$ is exactly equivalent to maximizing the rational objective
+\[
+ J(u)=I(u)^3p(u)^2s(u).
+\]
+This ranking concerns the specified recursion, not every operation schedule.
+\end{proposition}
+\begin{proof}
+The central-binomial bounds used below imply that $D_j$ lies between
+two positive constants depending only on $d,a_0$. The logarithmic
+recurrence therefore gives a finite root limit for every seed.
+For equal-dimensional seeds their multiplier ratio is $a(A)/a(B)$
+at every level, so exact iteration gives
+\[
+ \frac{R_j(A)}{R_j(B)}
+ =\left(\frac{R_d(A)}{R_d(B)}\right)^{4^j}
+  \left(\frac{a(A)}{a(B)}\right)^{(4^j-1)/3}.
+\]
+Take $d_j$th roots and use $4^j/d_j\to3/(3d+1)$ to prove~\eqref{eq:ranking}.
+Finally $aR^3=g(d)^3I^3p^2s$ by~\eqref{eq:seedstate}.
+The factor $g(d)^3$ is constant at fixed dimension.
+\end{proof}
+
+\begin{lemma}\label{lem:tail}
+For both seeds and every $j\ge0$, one has $3<D_j<7$ and
+$R_j^{1/d_j}<3$. The roots $R_j^{1/d_j}$ strictly increase to a limit
+$\beta$ with
+\begin{equation}\label{eq:tail-enclosure}
+ (3R_j^3)^{1/(3d_j+1)}<\beta<(7R_j^3)^{1/(3d_j+1)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+We extend the elementary tail argument in~\cite[Lemma 9.1]{mxym-calculus}
+to these seed states. For $q\ge1$,
+\[
+ \frac{4^q}{2\sqrt q}\le\binom{2q}{q}
+ \le\frac{4^q}{\sqrt{3q+1}}.
+\]
+Both follow by induction from equality at $q=1$.
+For the lower bound the squared induction comparison has difference
+$(2q+1)^2-4q(q+1)=1$; for the upper bound it has difference
+$4(q+1)^2(3q+1)-(2q+1)^2(3q+4)=q$.
+Set $q=2d_j$ and note that
+\begin{equation}\label{eq:binomial}
+ \frac{g(2q+1)}{g(q)^2}
+ =\frac{4^q}{\binom{2q}{q}}
+     \left(1+\frac1{2q}\right)^{2q}.
+\end{equation}
+The last factor is strictly between $2$ and $e$. Thus
+\[
+ 4a_j\sqrt{6d_j+1}<D_j<4ea_j\sqrt{2d_j}.
+\]
+The closed dimension formula implies
+\[
+ a_j^2(6d_j+1)=a_0^2(6d_0+2-4^{-j})\ge a_0^2(6d_0+1),
+\]
+and $a_j^2(2d_j)<a_0^2(2d_0+2/3)$.
+The exact checks
+\begin{equation}\label{eq:hypotheses}
+ 16a_0^2(6d_0+1)>9,\qquad
+ 121a_0^2(2d_0+2/3)<49,\qquad
+ 7R_0^3<3^{3d_0+1}
+\end{equation}
+hold for both seeds. The elementary bound $e<11/4$ proves $D_j<7$.
+Iterating $R_{j+1}<7R_j^4$ gives
+\[
+ R_j^3\le\frac{(7R_0^3)^{4^j}}7
+ <\frac{3^{(3d_0+1)4^j}}7
+ =\frac{3^{3d_j+1}}7<3^{3d_j}.
+\]
+Since $D_j>3>R_j^{1/d_j}$, the recurrence proves strict root increase.
+The upper bound by three proves convergence. Iteration of the logarithmic
+recurrence and the dimension formula yield the absolutely convergent series
+\[
+ \log\beta=
+ \frac{\log R_j+\sum_{t\ge0}4^{-t-1}\log D_{j+t}}{d_j+1/3}.
+\]
+Using $3<D_{j+t}<7$ and $\sum_{t\ge0}4^{-t-1}=1/3$ proves
+the two strict bounds in~\eqref{eq:tail-enclosure}.
+\end{proof}
+
+\begin{proposition}\label{prop:endpoints}
+For the twelve-dimensional seed, $2.861<\beta<2.8611$.
+For the eight-dimensional seed, $2.8571<\beta<2.8573$.
+\end{proposition}
+\begin{proof}
+The finite certificate stores the full exact rational state $R_5$ for
+each seed. The checker reconstructs it using~\eqref{eq:binomial}, without
+importing the producer's factorial formula. It verifies by integer
+comparison
+\[
+ \ell^{3d_5+1}<3R_5^3,\qquad 7R_5^3<h^{3d_5+1},
+\]
+with the following rational endpoints:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+Seed dimension & $d_5$ & $\ell$ & $h$\\
+\midrule
+8  & 8533  & $28571/10000$ & $28573/10000$\\
+12 & 12629 & $2861/1000$   & $28611/10000$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Together with Lemma~\ref{lem:tail}, these finite inequalities certify
+the limits. No floating-point logarithm or numerically truncated infinite
+product is used in acceptance of the endpoints.
+\end{proof}
+
+For the first assertion of Theorem~\ref{thm:main}, take the twelve-dimensional
+family. For $n\ge144$, choose the largest $j$ with $d_j\le\sqrt n$, put
+$k=\lfloor n/d_j\rfloor$, $r=n-kd_j$, and set
+\[
+ P_n=K_j^k\times T_r.
+\]
+Here $K_j^k$ denotes a Cartesian power; the factor $T_0$ is omitted.
+For $n<144$ use $P_n=T_n$. Then $j\to\infty$,
+$0\le r<d_j\le\sqrt n$, and $kd_j/n\to1$. Product multiplicativity gives
+\[
+ \frac{\log R_n(P_n)}n
+ =\frac{kd_j}{n}\frac{\log R_j}{d_j}+\frac{\log c_r}{n}.
+\]
+Set $c_0=1$. The bound $c_r\le(r+1)e^r$ makes the last term tend to zero,
+so the required all-dimensional limit is $\beta$. This padding argument
+is the one used for the prior recursive family in~\cite[Corollary 9.3]{mxym-calculus}.
+
+\section{The imported upper bound and an effective separation}
+The mixed Bellman theorem~\cite{mxym-upper} states, for every $K\in\CC$,
+with $D=n+1$ and $H=1/a(K)$,
+\begin{equation}\label{eq:prior-upper}
+ \log Q(K)\le\frac{87}{2000}\left(D-\frac{H^2}{D}\right)
+              +\frac{11}{2000}\left(D-\frac{H^4}{D^3}\right)
+ \le\frac{49}{1000}D.
+\end{equation}
+This is an imported theorem, not a new inequality of this note.
+Its pinned exact certificate was replayed successfully: 19,900 finite
+state rectangles, 15,568 tail cells, and the analytic large-dimension
+constants. The complete English argument was also inspected. Exact
+replay checks its finite proof obligations; it does not replace review
+of its analytic argument.
+
+Since $H\le n+1$, $R=g(n)HQ$, and $g(n)\le e^n$,
+\begin{equation}\label{eq:finite-upper}
+ \sup_{K\in\CC_n}R_n(K)
+ \le e^{49/1000}(n+1)(e^{1049/1000})^n
+ <\frac{1051}{1000}(n+1)\left(\frac{7137}{2500}\right)^n.
+\end{equation}
+The factorial bound follows from
+$\sum_{i=1}^n\log i\ge\int_1^n\log t\,dt$.
+The final bounds $e^{49/1000}<1.051$ and $e^{1049/1000}<2.8548$ are
+certified by rational Taylor intervals.
+Taking roots proves $\Gamma_{\CC}<2.855$, and hence the asymptotic
+separation in Theorem~\ref{thm:main}.
+
+\begin{proposition}\label{prop:effective}
+Let $L=K_2$ for the seed~\eqref{eq:seed12}. Thus $\dim L=197$.
+For $n=197k+r$, $0\le r\le196$, define $E_n=L^k\times T_r$.
+Then $R_n(E_n)>\sup_{K\in\CC_n}R_n(K)$ for every $n\ge15500$.
+\end{proposition}
+\begin{proof}
+Put $b_*=28581/10000=2.8581$. The exact recurrence certificate proves
+$R_{197}(L)>b_*^{197}$.
+The block has 224 facets and 46,118,408 vertices: under each recursive
+step the facet count is multiplied by four and the vertex count changes
+from $v$ to $2v^2$. The package supplies its sparse integer facet
+inequalities, not its full vertex list.
+The checker verifies all 197 rational residue inequalities
+\[
+ c_r>\frac{b_*^r}{3500}\qquad(0\le r\le196),\qquad c_0=1.
+\]
+It reconstructs the simplex values from $c_1=2$ and
+$c_{r+1}/c_r=((r+2)/(r+1))(1+1/r)^r$, rather than the producer's
+factorial formula. Consequently, for $k\ge1$,
+\[
+ R_n(E_n)>b_*^{n-r}c_r
+ >\frac{b_*^n}{3500}.
+\]
+Comparison with~\eqref{eq:finite-upper} therefore reduces to
+\[
+ \left(\frac{9527}{9516}\right)^n>\frac{7357}{2}(n+1).
+\]
+The certificate checks this integer inequality at $n=15500$.
+The ratio of consecutive left-to-right quotients is
+$(9527/9516)(n+1)/(n+2)>1$ throughout $n\ge15500$.
+This proves the assertion in every stated dimension.
+\end{proof}
+
+\section{Exact verification}
+The accompanying standard-library Python package contains both exact
+seeds, their vertex lists and oriented triangulations, the full rational
+recurrence states, and separate geometric and growth checkers.
+The producers use pulling triangulations; the standard geometric
+framework is described in~\cite{triangulations}. The checkers validate
+the resulting oriented chains independently of their construction.
+For the twelve-dimensional seed, the geometric checker solves all 91
+active systems, verifies 924 positively oriented simplices, cancels all
+interior boundary faces, and verifies multiplicity one at a generic
+rational interior point. The analogous counts for the eight-dimensional
+seed are 45 active systems and 70 simplices.
+All uncancelled faces lie on the body's boundary. Crossing an interior
+codimension-one face therefore leaves the positive-chain multiplicity
+unchanged, and a generic interior path avoids faces of codimension two.
+Multiplicity is constant in the interior; its checked value one proves
+coverage almost everywhere with no interior overlap.
+
+The checker obtains volumes from simplex determinants and facet vectors
+from boundary cofactors, then sums every horizontal and lifted maximal
+minor. Thus it checks both $R_0$ and $a_0$ without assuming
+Proposition~\ref{prop:seed}. The recurrence checker imports neither the
+geometric producer nor its formula module and uses central binomial
+coefficients instead of factorial ratios. It checks~\eqref{eq:hypotheses},
+the rational limit endpoints, the dimension-197 block inequality, the
+197 residue inequalities, and the dimension-15500 comparison. Explicit
+exceptions keep the mathematical checks active under optimized Python.
+The dimension-197 block also has an explicit inequality certificate.
+A separate checker compares its 224 inequalities with a flattened
+description using sixteen seed copies, four inner join coordinates,
+and one outer join coordinate. It verifies a strict interior point.
+This checks equivalence to the recursive expression; it does not
+enumerate the block's vertices or independently recompute its volume.
+
+Run \texttt{python verify\_all.py} for all new checks and nine unit tests.
+The runner writes regenerated certificates and reports to temporary files
+and leaves the delivered files unchanged. Empty or incomplete delivery
+manifests and mathematically false comparison constants are rejected.
+The command \texttt{python replay\_prior.py} fetches byte-pinned external
+upper-bound inputs and replays their checker. This optional step needs network access
+on first use. The delivery includes its successful replay report and the
+input manifest. Formula and geometric data, unlike PDF build metadata,
+regenerate byte-identically in the tested environments.
+
+\section{Discussion}
+The separation in Theorem~\ref{thm:main} identifies a limitation of the
+point-generated class rather than a failure of products and joins
+themselves. The same inherited operations amplify the new seeds beyond
+the upper rate available to every finite expression in $\CC$.
+Thus changing the initial geometric input can matter even when the
+subsequent construction rules remain fixed. The result compares complete
+construction classes; exceeding one previously known recursive sequence
+alone would not establish this conclusion.
+
+The eight-dimensional example illustrates why immediate seed performance
+can be misleading. Its ratio $R_8/c_8$ is below one, yet its recursively
+amplified rate exceeds the ceiling for $\CC$. The lifted invariant $a$
+records information used by joins that the initial value of $R$ alone
+does not capture. Proposition~\ref{prop:ranking} makes this observation
+quantitative: at a fixed dimension and for the specified recursion, the
+correct seed objective is $aR^3$, or equivalently $I^3p^2s$ in the stated
+tilt family. This supplies an exact target for further seed search.
+It does not justify comparing different dimensions by that objective or
+claiming that the balanced recursion is the best possible schedule.
+
+The asymptotic advantage is small at the level of a single root, but it
+produces an exponential ratio of volumes as dimension grows. The fixed
+block construction makes the comparison effective in every dimension
+at least $15500$. This is a sufficient threshold obtained from a
+particular block, residue bounds, and the imported class envelope; it
+is not evidence that separation first occurs there. Nor does the lower
+rate approach a known unrestricted optimum: the classical upper root
+$\pi e/2$ leaves a substantial gap. The simplex-bound questions in
+dimensions four through eight are unchanged.
+
+Explicitness also needs a computational qualification. The block $L$
+has a compact description by 224 facet inequalities but more than
+46 million vertices. Its certified ratio is obtained from the checked
+seed geometry and the inherited operation identities, rather than by
+enumerating its vertices or constructing its projection body directly.
+The package therefore makes these particular witnesses and their
+comparison independently checkable; it does not provide an efficient
+algorithm for optimizing projection-body volume over arbitrary polytopes.
+
+The central geometric family is prior work~\cite{feng}, as are the lifted
+invariant, operation rules, recursion, and tail method~\cite{mxym-calculus}.
+The whole-class upper theorem~\cite{mxym-upper} is an essential external
+dependency. Its exact finite obligations were replayed, but this does not
+formalize its analytic argument or constitute external peer review.
+The contribution relative to the inspected sources is the specified
+rational seeds, their certified amplified rates, and the resulting
+class separation and effective comparison. The supplementary literature
+audit does not establish bibliographic priority.
+
+Further progress could take several forms. A rigorous global search for
+the objective $I^3p^2s$ would distinguish a good rational seed from an
+optimum within a precisely stated family. Enlarging that family, changing
+seed dimension, or allowing unbalanced schedules may improve the lower
+rate. Sharper class envelopes and residue comparisons may lower the
+effective dimension threshold. These are separate optimization problems;
+none is resolved by the present certificates. External mathematical
+review and proof-assistant formalization would strengthen confidence in
+both the new argument and its imported dependencies.
+
+\section{Conclusion}
+An explicit rational twelve-dimensional seed, amplified by the prior
+product--join recursion, gives a projection-volume root limit strictly
+between $2.861$ and $2.8611$. Combined with the attributed upper theorem
+for the point-generated class, this proves a strict exponential
+separation from that entire class. A fixed 197-dimensional block and
+simplex padding give a concrete comparison in every dimension
+$n\ge15500$.
+
+The examples show that the initial seed and its lifted invariant are
+material to recursive growth. Exact geometry, recurrence certificates,
+and a finite comparison make the claims reproducible without treating
+numerical search as proof. The unrestricted extremal rate, optimal seed
+and schedule, sharp separation threshold, and global bibliographic
+priority remain open.
+
+\section*{Generative AI disclosure}
+OpenAI Codex agents contributed substantially to source discovery,
+literature synthesis, and mathematical exposition.
+
+\section*{Data and code availability}
+The manuscript source, PDF, exact seed coordinates and triangulations,
+dimension-197 facet inequalities, rational recurrence certificates,
+verification programs, source audit, and reproduction instructions are
+publicly available in the accompanying GitHub repository~\cite{data}.
+The versioned release \texttt{v1.0.0} identifies the edition accompanying
+this manuscript. Original Python code and generated certificate data are
+provided under the MIT license; manuscript rights are stated separately.
+
+From the release's \texttt{reproduction/} directory, run
+\texttt{python -B verify\_all.py --regenerate} with Python 3.11 or newer.
+All checks of the new constructions use only the standard library and
+run without network access. The optional flag \texttt{--with-prior}
+fetches and replays the byte-pinned external upper-theorem package;
+its first use requires network access. The delivery manifest records
+SHA-256 hashes, and verification leaves delivered files unchanged.
+The release includes the successful external replay record. External
+inputs remain attributed and are fetched from their pinned upstream
+locations rather than redistributed as part of this package.
+
+\appendix
+\section{A simplex truncation identity}\label{app:truncation}
+The following is a standard simplex section formula; see
+Lasserre~\cite[Theorem 2.2]{lasserre}. We include a proof in the
+normalization used here, using the Genocchi--Hermite representation of
+divided differences~\cite[Section 9]{deboor}.
+Let $t_0,\ldots,t_n$ be distinct real numbers, and let
+$\Delta_n=\{y_i\ge0:\sum_{i=1}^n y_i\le1\}$, with
+$y_0=1-\sum_{i=1}^n y_i$. Then
+\begin{equation}\label{eq:truncation}
+ \frac{\vol_n\{y\in\Delta_n:\sum_{i=0}^n t_i y_i\ge0\}}
+      {\vol_n(\Delta_n)}
+ =\sum_{t_i>0}\frac{t_i^n}{\prod_{j\ne i}(t_i-t_j)}.
+\end{equation}
+Here a zero node contributes zero.
+For completeness, the elementary divided-difference integration identity is
+\[
+ \int_{\Delta_n} f^{(n)}\left(\sum_{i=0}^n t_i y_i\right)\,dy
+ =\sum_{i=0}^n\frac{f(t_i)}{\prod_{j\ne i}(t_i-t_j)}.
+\]
+One proves it by induction using the fundamental theorem of calculus in
+$y_n$. Multiplication by $t_n-t_0$ turns the integral into the difference
+of the two $(n-1)$-simplex integrals on the faces $y_0=0$ and $y_n=0$.
+The induction hypothesis gives exactly the divided-difference recurrence;
+the initial case $n=0$ is evaluation at a point. Apply this identity to
+$f(t)=t_+^n/n!$. Its $n$th derivative is the positive-half-line indicator
+almost everywhere; the integration identity still holds by the same
+fundamental-theorem argument, or by smooth approximation.
+Since $\vol_n(\Delta_n)=1/n!$, equation~\eqref{eq:truncation} follows.
+
+\begin{thebibliography}{99}
+\bibitem{brannen}
+N.~S.~Brannen, \emph{Volumes of projection bodies}, Mathematika
+\textbf{43} (1996), 255--264.
+\href{https://doi.org/10.1112/S002557930001175X}{Published article}.
+
+\bibitem{deboor}
+C.~de Boor, \emph{Divided differences}, Surveys in Approximation Theory
+\textbf{1} (2005), 46--69.
+\href{https://surveys-in-approximation-theory.com/papers/2/2.pdf}{Published full text}.
+
+\bibitem{triangulations}
+J.~A.~De Loera, J.~Rambau, and F.~Santos, \emph{Triangulations: Structures
+for Algorithms and Applications}, Algorithms and Computation in
+Mathematics 25, Springer, 2010.
+\href{https://doi.org/10.1007/978-3-642-12971-1}{Publisher record}.
+
+\bibitem{feng}
+Y.~Feng, S.~Hu, W.~Liu, and L.~Xu, \emph{On the reverse projection
+inequality}, author-deposited preprint (2026), MathSciDoc:2608.23002,
+PDF dated 26 August 2026.
+\href{https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20260821091122099811781}{Primary archive record}.
+
+\bibitem{data}
+R.~Gounder, \emph{Beyond point-generated product--join constructions for
+projection-body volume: manuscript, data, and code}, version 1.0.0 (2026).
+\href{https://github.com/Kohze/projection-body-separation}{Reproduction repository};
+\href{https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.0}{Versioned release}.
+
+\bibitem{lasserre}
+J.~B.~Lasserre, \emph{Volume of slices and sections of the simplex in
+closed form}, Optimization Letters \textbf{9} (2015), 1263--1269.
+\href{https://doi.org/10.1007/s11590-015-0898-z}{Published article};
+\href{https://arxiv.org/abs/1412.4617v1}{Versioned author preprint}.
+
+\bibitem{lyz}
+E.~Lutwak, D.~Yang, and G.~Zhang, \emph{A new affine invariant for
+polytopes and Schneider's projection problem}, Transactions of the
+American Mathematical Society \textbf{353} (2001), 1767--1779.
+\href{https://doi.org/10.1090/S0002-9947-01-02726-X}{Published article};
+\href{https://cims.nyu.edu/~yangd/papers/trans.pdf}{Author-hosted full text}.
+
+\bibitem{meyer-pajor}
+M.~Meyer and A.~Pajor, \emph{On the Blaschke--Santal\'o inequality},
+Archiv der Mathematik \textbf{55} (1990), 82--93.
+\href{https://doi.org/10.1007/BF01199119}{Published article}.
+
+\bibitem{mxym-upper}
+mxym (repository account), \emph{A certified mixed quadratic/quartic
+envelope for projection-body growth}, research manuscript, dated
+7 October 2026.
+\href{https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/proof.md}{Pinned proof};
+\href{https://github.com/mxym/math/tree/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join}{Exact certificates and checker}.
+
+\bibitem{mxym-spectral}
+mxym (repository account), \emph{Asymptotic spectral reduction}, supplement
+to the product--join calculus manuscript, research note (2026).
+\href{https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md}{Pinned supplement}, Section 2.
+
+\bibitem{mxym-calculus}
+mxym (repository account), \emph{Projection-volume calculus for joins and
+Cartesian products}, research manuscript, version 2, 7 October 2026.
+\href{https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/paper.md}{Pinned manuscript}, Sections 2--5 and 9.
+
+\bibitem{openai}
+OpenAI, \emph{A product counterexample to the simplex maximum for
+projection-body volume}, research preprint, 24 September 2026.
+\href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-product-counterexample-to-the-simplex-maximum-for-projection-body-volume-September-24-2026}{Pinned manuscript and source}.
+
+\bibitem{saroglou-cones}
+C.~Saroglou, \emph{Volumes of projection bodies of some classes of convex
+bodies}, Mathematika \textbf{57} (2011), 329--353.
+\href{https://doi.org/10.1112/S0025579311001860}{Published article}.
+
+\bibitem{saroglou}
+C.~Saroglou, \emph{On the shape of a convex body with respect to its
+second projection body}, Advances in Applied Mathematics \textbf{67}
+(2015), 55--74.
+\href{https://doi.org/10.1016/j.aam.2015.03.004}{Published article};
+\href{https://arxiv.org/abs/1409.4347v2}{Versioned author preprint}.
+
+\bibitem{schneider}
+R.~Schneider, \emph{Convex Bodies: The Brunn--Minkowski Theory}, second
+expanded edition, Encyclopedia of Mathematics and its Applications 151,
+Cambridge University Press, 2014.
+\href{https://doi.org/10.1017/CBO9781139003858}{Publisher record}.
+
+\bibitem{zhang}
+G.~Zhang, \emph{Restricted chord projection and affine inequalities},
+Geometriae Dedicata \textbf{39} (1991), 213--222.
+\href{https://doi.org/10.1007/BF00182294}{Published article}.
+\end{thebibliography}
+\end{document}

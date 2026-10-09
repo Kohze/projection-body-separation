@@ -1,0 +1,148 @@
+CONTRIBUTION AND DEPENDENCY AUDIT -- 9 OCTOBER 2026
+
+The result advances beyond the earlier attribution-corrected notes by proving
+a lower rate above a certified upper bound for an entire construction class.
+It is not a renewed claim to the first projection-body counterexample, the
+central seed family, the product--join rules, or the balanced recursion.
+
+CLAIM MAP
+
+1. Central two-facet section family:
+   Prior: Feng, Hu, Liu, Xu, On the reverse projection inequality (2026),
+   Section 4. Their Theorem 1.3 already gives counterexamples in every
+   dimension at least nine. Their author-deposited full text was inspected.
+
+2. Lifted invariant a, general product and join identities:
+   Prior: mxym, Projection-volume calculus for joins and Cartesian products,
+   v2, Sections 2--5. These identities apply beyond the point-generated class.
+   Their prior exact checker was replayed during the preceding priority audit.
+
+3. Balanced recursive operation and geometric dimension formula:
+   Prior: the same v2 manuscript, Section 9. Its simplex-seeded limit is
+   between 2.8534 and 2.8535. The infinite-tail approach and all-dimensional
+   padding mechanism are also prior; the present note adapts their constants.
+
+4. Upper bound for the entire class C:
+   Prior: mxym, A certified mixed quadratic/quartic envelope for projection-
+   body growth. Its complete English proof was inspected and its own exact
+   package replayed: 19900 finite rectangles, 15568 tail cells, and analytic
+   large-factor constants. Gamma_C<=exp(1049/1000)<2.855. The class admits
+   affine equivalences, not arbitrary rank-dropping affine maps.
+   This is an essential external mathematical dependency. Successful replay
+   does not formalize its analytic proof or make it peer reviewed.
+
+5. Specified rational dimension-12 seed and certified limit 2.861<beta<2.8611:
+   Present research contribution relative to the inspected pinned corpus.
+   Geometry is independently computed from 49 vertices and 924 simplices,
+   including all horizontal and lifted minors. The entire rational recurrence
+   through level five and all infinite-tail hypotheses are checked exactly.
+   The seed is not claimed optimal, globally or within its tilt family.
+
+6. Dimension-8 seed and certified limit 2.8571<beta<2.8573:
+   Present exact amplification of a simple rational specialization of the
+   prior central family. The seed itself is not a new general family.
+   R(K_0)/c_8=231953/243243<1, but its amplified limit exceeds the class upper
+   bound. Thus immediate seed performance can miss amplification potential.
+
+7. Exact seed ranking:
+   An explicit consequence of the prior recursion, proved here for any two
+   full-dimensional polytope seeds of a fixed dimension d:
+   (beta_A/beta_B)^(3d+1)=a(A)R(A)^3/[a(B)R(B)^3].
+   It reduces selection in the stated tilt family to the rational objective
+   I^3*p^2*s. No first-discovery claim is made for this algebraic consequence.
+   It does not compare different dimensions or arbitrary operation schedules.
+
+8. Separation of unrestricted polytopes from the entire point-generated C:
+   Present consequence of the certified new lower construction and the
+   imported upper theorem. This is stronger than comparison with Cartesian
+   products of simplices or any single known recursive family.
+
+9. Effective all-dimensional separation from n=15500:
+   Present exact calculation for the specified dimension-197 block and
+   simplex residue recipe. The finite inequality at 15500 is propagated
+   analytically to all larger dimensions. This threshold is not sharp.
+
+SOURCE AND PRIORITY SCREEN
+
+The mxym comparison uses immutable commit
+  2fc3f25179cf1128c4bccbde65fd3a07c093ad6d.
+The current-head comparison through
+  c8cc0a89cac4db7c98685298d6859a8cb3f4b3bd
+changed only an unrelated qutrit-purity project. The exact file comparison
+is saved in prior-head-comparison.json. Dates inside manuscripts are not
+treated as independent publication timestamps.
+
+The preceding review retrieved 405 relevant files with verified Git blobs.
+A further focused text screen covered 286 Markdown/TeX/text files, including
+historical duplicates. Its three matches concern other separation questions
+or explicitly exclude nonsimplex seeds. No matching 2.861 result was located.
+The patterns and matches are saved in priority-text-screen.json.
+Web searches for the numerical rate and the projection-volume seed direction
+also did not locate a matching theorem. These searches are not proof of
+absence, a complete citation search, or certification of priority.
+
+The manuscript therefore does not claim a world record, global novelty,
+unrestricted optimality, a solution of dimensions 4--8, or a publishable
+journal tier. Subscription citation indexes, unavailable older full texts,
+unpublished work, and sources released after the review remain limitations.
+
+REVIEW OF THE ARGUMENT
+
+Normalization: Pi K is generated by full facet vectors [0,v_i]; no extra
+power of two is present in the maximal-minor volume formula.
+
+Seed volume: the signed rational sum is derived from a simplex truncation
+identity with a complete divided-difference proof. Independent positive
+triangulations verify the two concrete volumes without relying on that sum.
+
+Auxiliary invariant: lifted minors are computed from actual facet vectors
+and supports, not inferred from horizontal minors or an assumed symmetry.
+The coordinate-exchange symmetry is not central symmetry of the body.
+
+Recursive growth: the producer uses factorial g-ratios; the checker uses
+central binomial coefficients. Generic constant bounds prove root limits,
+while the seed-specific inequalities 3<D_j<7 prove strict increase and
+give finite rational enclosures for the infinite tail.
+
+Class upper: the mixed potential, its real-state coverage, and its analytic
+dimension tails are imported with explicit credit. The conversion to the
+finite bound (1051/1000)(n+1)(7137/2500)^n is checked by rational Taylor intervals.
+
+All dimensions: the beta-limit sequence uses growing blocks with residues
+o(n). The n>=15500 sequence instead uses the fixed dimension-197 block with
+all 197 exact rational residue bounds. These are two distinct explicit recipes.
+
+Testing: corrupt vertices, duplicate vertices, missing simplices, reversed
+orientations and invalid probes are rejected. Wrong geometric R or a and
+an insufficient comparison block are rejected. The growth checker separately
+rejects four altered certificates. Tests exercise proof obligations rather
+than asserting floating-point output agreement.
+
+Verification is independent in the algorithmic and exact-arithmetic sense;
+all code was developed in the same research session. External human review
+and proof-assistant formalization are outstanding. The analytic arguments,
+including those in imported preprints, remain subject to mathematical review.
+
+
+REVIEW REVISION
+
+The first continuation package is preserved with SHA-256
+352765d5defe2930ee55e3355ac82bae443461dbd40e6a8ce5926112f60c85e7.
+This revision improves the sufficient uniform threshold from 20000 to 15500,
+supplies explicit sparse inequalities for the dimension-197 block, strengthens
+the corruption controls and delivery-manifest coverage checks, and makes the
+main verifier leave delivered files unchanged. The two certified beta intervals
+are unchanged. The new threshold is still not claimed sharp.
+
+The manuscript now adds the classical unrestricted upper bound
+R_n(K)<=kappa_n^2*n^n/binom(2n,n), obtained from Zhang's inequality and
+Blaschke--Santalo, as recorded in Saroglou, arXiv:1409.4347v2 (2014),
+Introduction, equation (3). Stirling gives limiting upper root pi*e/2.
+This is background context, not an essential premise of the new lower bound
+or the comparison with the point-generated class. The versioned primary
+preprint and its introduction were inspected; no journal-publication date
+is inferred from the older local download filename.
+
+Reviewer scores and unresolved external-review/deposit items are in
+REVIEWER_AUDIT.txt. These are an internal adversarial self-review, not an
+independent referee report or a guarantee of journal acceptance.

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "platform": "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+  "isolated_copy": true,
+  "no_virtualenv": true,
+  "command": "-B verify_all.py --regenerate",
+  "exit_code": 0,
+  "elapsed_seconds": 14.5,
+  "delivered_files_modified": false,
+  "files_compared": 34,
+  "unit_tests": 9,
+  "unit_tests_normal_and_optimized": true,
+  "certificate_regeneration_byte_identical": true,
+  "geometry_recomputed": true,
+  "growth_normal_and_optimized": true,
+  "stdout": "PASS: delivery manifest (33 files).\nPASS: byte-identical certificate regeneration in temporary files.\nPASS: complete rational seed geometry and lifted minors.\nPASS: closed formulas agree with independent geometry.\nPASS: explicit 224-facet description of the dimension-197 block.\nPASS: exact growth, analytic endpoint hypotheses, all 197 residues, finite separation; normal and optimized Python.\ntest_block_rejects_incorrect_inequalities_or_probe (test_certificate_checks.CertificateChecks.test_block_rejects_incorrect_inequalities_or_probe) ... ok\ntest_effective_comparison_rejects_insufficient_block (test_certificate_checks.CertificateChecks.test_effective_comparison_rejects_insufficient_block) ... ok\ntest_exponential_bounds_are_rational (test_certificate_checks.CertificateChecks.test_exponential_bounds_are_rational) ... ok\ntest_finite_bounds_reject_mathematically_false_claims (test_certificate_checks.CertificateChecks.test_finite_bounds_reject_mathematically_false_claims) ... ok\ntest_geometry_rejects_corrupt_certificates (test_certificate_checks.CertificateChecks.test_geometry_rejects_corrupt_certificates) ... ok\ntest_growth_rejects_wrong_geometric_invariant (test_certificate_checks.CertificateChecks.test_growth_rejects_wrong_geometric_invariant) ... ok\ntest_growth_rejects_wrong_geometric_volume (test_certificate_checks.CertificateChecks.test_growth_rejects_wrong_geometric_volume) ... ok\ntest_manifest_rejects_missing_coverage (test_certificate_checks.CertificateChecks.test_manifest_rejects_missing_coverage) ... ok\ntest_seed_geometry_and_lifted_invariant (test_certificate_checks.CertificateChecks.test_seed_geometry_and_lifted_invariant) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.545s\n\nOK\nPASS: all nine unit tests also pass under optimized Python.\nPASS: delivery manifest (33 files).\n{\n  \"status\": \"PASS\",\n  \"manifest_files\": 33,\n  \"unit_tests\": 9,\n  \"seed_geometry\": \"independently recomputed\",\n  \"growth\": \"independently recomputed\",\n  \"delivered_files_modified\": false,\n  \"external_upper\": \"saved successful replay; use --with-prior to rerun\"\n}\n",
+  "stderr": "",
+  "isolated_directory": "/tmp/projection-reviewed-jowpkzd4"
+}

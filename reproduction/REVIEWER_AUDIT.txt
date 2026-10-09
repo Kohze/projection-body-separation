@@ -1,0 +1,106 @@
+REVIEWER AUDIT -- 9 OCTOBER 2026
+
+Internal adversarial AI-assisted self-review. This is not an independent
+external referee report or a prediction of acceptance.
+
+RECOMMENDATION
+Ready for external mathematical review as a focused research note; no journal-acceptance prediction.
+
+No fatal error was found in the own lower construction under the stated
+dependencies. Finite replay does not prove the absence of mathematical
+errors or replace review of the analytic arguments.
+
+CATEGORY SCORES (0--10; qualitative assessment)
+
+Mathematical argument: 8.5/10
+Own seed and recurrence claims survive the audit; the imported analytic upper theorem remains essential.
+
+Novelty and literature coverage: 7.0/10
+Focused pinned-source comparison supports a contribution candidate; global priority is unestablished.
+
+Scientific significance: 7.5/10
+Strict separation from an entire construction class; the unrestricted optimum remains far away.
+
+Claim discipline and attribution: 9.0/10
+Inherited geometry, operation rules, recursion, tail method and upper theorem are explicitly credited.
+
+Reproducibility and adversarial checks: 9.0/10
+Exact independent algorithms, immutable delivery checks, negative controls and cross-platform replay.
+
+Exposition and notation: 8.5/10
+Scope, rationality, affine equivalence and the two all-dimensional recipes are clarified.
+
+Typography and layout: 8.5/10
+All eight pages inspected; consistent theorem/table/reference style and no LaTeX layout warnings.
+
+Publication readiness: 7.0/10
+Complete research draft and reproduction snapshot; external review and a public archival deposit remain outstanding.
+
+Unweighted mean: 8.125/10.
+
+FINDINGS AND FIXES
+
+A1 [major] Verification integrity
+Finding: The delivery checker accepted an empty or incomplete manifest.
+Fix: Require coverage of core proof artifacts, valid SHA-256 entries, unique safe paths and exact file hashes.
+Evidence: Tests reject empty, partial and duplicate manifests; the sealed package is replayed after extraction.
+
+A2 [major] Verification integrity
+Finding: The main runner regenerated evidence in place, so a failed check could replace delivered evidence.
+Fix: Regenerate certificates and reports in a temporary directory and compare their bytes to delivered files.
+Evidence: Before/after file hashes are compared during Windows and Linux replay.
+
+A3 [moderate] Adversarial verification
+Finding: Some altered-constant controls only established rejection of unexpected field values.
+Fix: Accept positive claimed constants and check their actual inequalities; reject mathematically false endpoints, padding and thresholds.
+Evidence: Nine unit tests run in normal and optimized Python; four growth self-controls reject false mathematics.
+
+A4 [moderate] Quantitative strength
+Finding: The earlier sufficient threshold 20000 used avoidably coarse finite comparison constants.
+Fix: Certify block root 2.8581, class root 2.8548, prefactor 1.051 and all 197 residue bounds with padding 1/3500.
+Evidence: Exact comparison at n=15500 and a proved monotone ratio give all larger dimensions; sharpness is not claimed.
+
+A5 [moderate] Explicit construction
+Finding: The dimension-197 block was specified recursively but lacked a delivered flattened inequality description.
+Fix: Supply 224 sparse integer facet inequalities and check them against an independently flattened mass-coordinate construction.
+Evidence: Exact row-multiset agreement and a strict interior probe; 46,118,408 vertices are counted, not enumerated.
+
+A6 [moderate] Mathematical scope
+Finding: Rationality, affine-map scope and fixed-dimension seed ranking needed more precise qualifications.
+Fix: Require rational tilts for rational bodies, m>=1, invertible affine equivalences and fixed dimension/recursion for ranking.
+Evidence: Definitions, seed proof, ranking proposition, README and contribution ledger agree.
+
+A7 [moderate] Context and attribution
+Finding: The class separation could be mistaken for proximity to unrestricted optimality.
+Fix: Add the classical unrestricted upper bound and its limiting root pi*e/2; distinguish inherited methods from the new specialized seeds.
+Evidence: Versioned Saroglou primary preprint and pinned calculus/upper-theorem sources are cited; priority remains unasserted.
+
+A8 [minor] Proof exposition and layout
+Finding: The seed-volume change of variables and facet-existence argument were too compressed.
+Fix: State the Jacobian and transformed coefficient differences, explain all facets, and consistently typeset proofs and exact endpoints.
+Evidence: Eight-page final render inspected page by page; no clipping, overlaps or unresolved references.
+
+REMAINING LIMITS
+
+1. This report is an internal adversarial AI-assisted self-review, not independent external peer review.
+2. The whole-class separation uses an essential attributed, unreviewed mixed Bellman upper theorem. Its finite exact obligations were replayed; neither its analytic proof nor this paper is proof-assistant formalized.
+3. The focused literature screen does not establish bibliographic priority or exclude recent, unpublished or unindexed work.
+4. Neither seed, recursive schedule, limiting constant nor sufficient threshold 15500 is claimed optimal.
+5. The dimension-197 inequalities are checked for equivalence to the recursive block; its volume is obtained by inherited operation identities, not an independent high-dimensional volume computation.
+6. The known simplex-bound questions in dimensions four through eight remain open.
+7. The research package is locally committed; this review does not establish a public GitHub/DOI archival deposit.
+
+REPLAY SCOPE
+verify_all.py recomputes both complete seed geometries, compares the
+closed formulas, checks the block inequalities, exact recursion,
+tail hypotheses, all 197 residue bounds and the n=15500 comparison.
+Nine unit tests and the growth checks run in normal and optimized
+Python. Certificates and reports regenerate into temporary files.
+verification-environments.json records the actual Windows/Linux
+runs; the external release audit records replay of the final ZIP.
+The default command checks the saved successful prior-upper replay;
+--with-prior fetches and reruns its pinned external package.
+
+The earlier release archive is preserved. The revised paper and
+editable source are also placed alongside the other papers in
+papers/beyond-point-generated-projection-body-constructions/.

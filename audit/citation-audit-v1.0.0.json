@@ -1,0 +1,519 @@
+{
+  "date": "2026-10-09",
+  "status": "PASS",
+  "bibliography_entries": 16,
+  "all_entries_cited": true,
+  "added_sources": 9,
+  "published_research_articles": 8,
+  "scholarly_books": 2,
+  "recent_research_preprint_or_repository_entries": 5,
+  "own_data_software_record": 1,
+  "primary_source_policy": true,
+  "full_text_inspection_not_claimed_for_all_sources": true,
+  "journal_version_correction": "Saroglou: Advances in Applied Mathematics 67 (2015), 55-74; DOI 10.1016/j.aam.2015.03.004; retained arXiv:1409.4347v2 link for exact inspected text.",
+  "padding_or_arbitrary_reference_count_target": false,
+  "priority_certified": false,
+  "rows": [
+    {
+      "key": "brannen",
+      "title": "Volumes of projection bodies",
+      "year": 1996,
+      "doi": "10.1112/S002557930001175X",
+      "primary": "https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/S002557930001175X",
+      "inspected": "Publisher abstract and bibliographic record",
+      "role": "Historical simplex maximum conjecture and a different symmetric upper-bound counterexample"
+    },
+    {
+      "key": "deboor",
+      "title": "Divided differences",
+      "year": 2005,
+      "primary": "https://surveys-in-approximation-theory.com/papers/2/2.pdf",
+      "inspected": "Published full text, Section 9, Genocchi-Hermite formula (52); journal/author publication record",
+      "role": "Classical divided-difference integral representation used in the self-contained appendix"
+    },
+    {
+      "key": "triangulations",
+      "title": "Triangulations: Structures for Algorithms and Applications",
+      "year": 2010,
+      "doi": "10.1007/978-3-642-12971-1",
+      "primary": "https://link.springer.com/book/10.1007/978-3-642-12971-1",
+      "inspected": "Publisher book record and chapter inventory; standard background citation, not a newly imported proof premise",
+      "role": "Geometric triangulation framework; the exact checker still validates the own chains independently"
+    },
+    {
+      "key": "feng",
+      "title": "On the reverse projection inequality",
+      "year": 2026,
+      "primary": "https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20260821091122099811781",
+      "inspected": "Author-deposited full PDF, Theorem 1.3 and Section 4, in preceding source audit",
+      "role": "Essential prior central seed family and pre-existing counterexamples in every dimension at least nine"
+    },
+    {
+      "key": "data",
+      "title": "Beyond point-generated product-join constructions for projection-body volume: manuscript, data, and code",
+      "year": 2026,
+      "primary": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.0",
+      "inspected": "Own edition inventory and preflight; actual remote publication verified after push in the workspace publication audit",
+      "role": "Versioned data/software availability; does not count as independent scholarly evidence"
+    },
+    {
+      "key": "lasserre",
+      "title": "Volume of slices and sections of the simplex in closed form",
+      "year": 2015,
+      "doi": "10.1007/s11590-015-0898-z",
+      "primary": "https://link.springer.com/article/10.1007/s11590-015-0898-z",
+      "full_text": "https://arxiv.org/html/1412.4617v1",
+      "inspected": "Publisher record and author preprint, Theorem 2.2; checked equivalence by node shift/sign normalization",
+      "role": "Acknowledges that the appendix halfspace-simplex volume identity is classical"
+    },
+    {
+      "key": "lyz",
+      "title": "A new affine invariant for polytopes and Schneider's projection problem",
+      "year": 2001,
+      "doi": "10.1090/S0002-9947-01-02726-X",
+      "primary": "https://cims.nyu.edu/~yangd/papers/trans.pdf",
+      "inspected": "Author-hosted full text, introduction and Section 1 zonotope formula, Definition 3.1 and Section 4",
+      "role": "Prior affine-functional approach and classical determinant formula; no assertion that its functional equals the inherited lifted invariant"
+    },
+    {
+      "key": "meyer-pajor",
+      "title": "On the Blaschke-Santalo inequality",
+      "year": 1990,
+      "doi": "10.1007/BF01199119",
+      "primary": "https://link.springer.com/article/10.1007/BF01199119",
+      "inspected": "Publisher bibliographic record; inequality application cross-checked in Saroglou introduction equation (3)",
+      "role": "Classical volume-product upper inequality used only for unrestricted background context"
+    },
+    {
+      "key": "mxym-upper",
+      "title": "A certified mixed quadratic/quartic envelope for projection-body growth",
+      "year": 2026,
+      "primary": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/proof.md",
+      "inspected": "Pinned full analytic argument and exact certificate replay; recorded in source-audit.json and prior-mixed-upper-replay.json",
+      "role": "Essential imported whole-class upper theorem; recent unreviewed repository manuscript"
+    },
+    {
+      "key": "mxym-spectral",
+      "title": "Asymptotic spectral reduction",
+      "year": 2026,
+      "primary": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md",
+      "inspected": "Pinned full supplement, Section 2, in preceding source audit",
+      "role": "Existence of the class limit; main theorem only needs the limsup definition"
+    },
+    {
+      "key": "mxym-calculus",
+      "title": "Projection-volume calculus for joins and Cartesian products",
+      "year": 2026,
+      "primary": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/paper.md",
+      "inspected": "Pinned full manuscript, Sections 2-5 and 9, in preceding source audit",
+      "role": "Essential inherited invariant, product/join identities, balanced recursion, tail and padding methods"
+    },
+    {
+      "key": "openai",
+      "title": "A product counterexample to the simplex maximum for projection-body volume",
+      "year": 2026,
+      "primary": "https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-product-counterexample-to-the-simplex-maximum-for-projection-body-volume-September-24-2026",
+      "inspected": "Pinned original manuscript/source in preceding source audit",
+      "role": "Related later simple product counterexample; not the first counterexample"
+    },
+    {
+      "key": "saroglou-cones",
+      "title": "Volumes of projection bodies of some classes of convex bodies",
+      "year": 2011,
+      "doi": "10.1112/S0025579311001860",
+      "primary": "https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/S0025579311001860",
+      "inspected": "Publisher abstract and bibliographic record; full text not claimed inspected",
+      "role": "Established sharp three-dimensional zonoid/cone/double-cone results; contextual claim limited to primary abstract"
+    },
+    {
+      "key": "saroglou",
+      "title": "On the shape of a convex body with respect to its second projection body",
+      "year": 2015,
+      "doi": "10.1016/j.aam.2015.03.004",
+      "primary": "https://www.sciencedirect.com/science/article/pii/S0196885815000354",
+      "full_text": "https://arxiv.org/html/1409.4347v2",
+      "inspected": "Publisher journal record; versioned author preprint introduction equations (2)-(3), Section 3 determinant formulas",
+      "role": "Classical unrestricted upper context and standard projection formulas; published version replaces preprint-only citation"
+    },
+    {
+      "key": "schneider",
+      "title": "Convex Bodies: The Brunn-Minkowski Theory",
+      "year": 2014,
+      "doi": "10.1017/CBO9781139003858",
+      "primary": "https://doi.org/10.1017/CBO9781139003858",
+      "inspected": "Publisher record, second-edition contents and publisher frontmatter; general background, not a new essential premise",
+      "role": "Support functions, area measures and affine convex geometry",
+      "date_note": "Bibliography uses the second expanded edition copyright year 2014; publisher lists early print/online availability in 2013."
+    },
+    {
+      "key": "zhang",
+      "title": "Restricted chord projection and affine inequalities",
+      "year": 1991,
+      "doi": "10.1007/BF00182294",
+      "primary": "https://link.springer.com/article/10.1007/BF00182294",
+      "inspected": "Publisher abstract displaying the exact reverse polar projection inequality and bibliographic record",
+      "role": "Original source of the reverse polar projection inequality used for the unrestricted context"
+    }
+  ],
+  "crossref_metadata_attempts": [
+    {
+      "key": "brannen",
+      "doi": "10.1112/S002557930001175X",
+      "retrieved": false,
+      "error": "HTTP Error 429: Too Many Requests",
+      "fallback": "Publisher/author primary pages inspected through browsing; ledger records exact scope."
+    },
+    {
+      "key": "triangulations",
+      "doi": "10.1007/978-3-642-12971-1",
+      "retrieved": false,
+      "error": "HTTP Error 429: Too Many Requests",
+      "fallback": "Publisher/author primary pages inspected through browsing; ledger records exact scope."
+    },
+    {
+      "key": "lasserre",
+      "retrieved": true,
+      "doi": "10.1007/s11590-015-0898-z",
+      "title": [
+        "Volume of slices and sections of the simplex in closed form"
+      ],
+      "author": [
+        {
+          "given": "Jean B.",
+          "family": "Lasserre",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container_title": [
+        "Optimization Letters"
+      ],
+      "volume": "9",
+      "issue": "7",
+      "page": "1263-1269",
+      "published": {
+        "date-parts": [
+          [
+            2015,
+            5,
+            10
+          ]
+        ]
+      },
+      "published_print": {
+        "date-parts": [
+          [
+            2015,
+            10
+          ]
+        ]
+      },
+      "published_online": {
+        "date-parts": [
+          [
+            2015,
+            5,
+            10
+          ]
+        ]
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "url": "https://doi.org/10.1007/s11590-015-0898-z"
+    },
+    {
+      "key": "lyz",
+      "retrieved": true,
+      "doi": "10.1090/s0002-9947-01-02726-x",
+      "title": [
+        "A new affine invariant for polytopes and Schneider’s projection problem"
+      ],
+      "author": [
+        {
+          "given": "Erwin",
+          "family": "Lutwak",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Deane",
+          "family": "Yang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Gaoyong",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container_title": [
+        "Transactions of the American Mathematical Society"
+      ],
+      "volume": "353",
+      "issue": "5",
+      "page": "1767-1779",
+      "published": {
+        "date-parts": [
+          [
+            2001,
+            1,
+            5
+          ]
+        ]
+      },
+      "published_print": {
+        "date-parts": [
+          [
+            2001,
+            1,
+            5
+          ]
+        ]
+      },
+      "published_online": null,
+      "publisher": "American Mathematical Society (AMS)",
+      "url": "https://doi.org/10.1090/s0002-9947-01-02726-x"
+    },
+    {
+      "key": "meyer-pajor",
+      "doi": "10.1007/BF01199119",
+      "retrieved": false,
+      "error": "HTTP Error 429: Too Many Requests",
+      "fallback": "Publisher/author primary pages inspected through browsing; ledger records exact scope."
+    },
+    {
+      "key": "saroglou-cones",
+      "retrieved": true,
+      "doi": "10.1112/s0025579311001860",
+      "title": [
+        "VOLUMES OF PROJECTION BODIES OF SOME CLASSES OF CONVEX BODIES"
+      ],
+      "author": [
+        {
+          "given": "Christos",
+          "family": "Saroglou",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of MathematicsUniversity of CreteGreece"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container_title": [
+        "Mathematika"
+      ],
+      "volume": "57",
+      "issue": "2",
+      "page": "329-353",
+      "published": {
+        "date-parts": [
+          [
+            2011,
+            6,
+            20
+          ]
+        ]
+      },
+      "published_print": {
+        "date-parts": [
+          [
+            2011,
+            7
+          ]
+        ]
+      },
+      "published_online": {
+        "date-parts": [
+          [
+            2011,
+            6,
+            20
+          ]
+        ]
+      },
+      "publisher": "Wiley",
+      "url": "https://doi.org/10.1112/s0025579311001860"
+    },
+    {
+      "key": "saroglou",
+      "retrieved": true,
+      "doi": "10.1016/j.aam.2015.03.004",
+      "title": [
+        "On the shape of a convex body with respect to its second projection body"
+      ],
+      "author": [
+        {
+          "given": "Christos",
+          "family": "Saroglou",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "container_title": [
+        "Advances in Applied Mathematics"
+      ],
+      "volume": "67",
+      "issue": null,
+      "page": "55-74",
+      "published": {
+        "date-parts": [
+          [
+            2015,
+            6
+          ]
+        ]
+      },
+      "published_print": {
+        "date-parts": [
+          [
+            2015,
+            6
+          ]
+        ]
+      },
+      "published_online": null,
+      "publisher": "Elsevier BV",
+      "url": "https://doi.org/10.1016/j.aam.2015.03.004"
+    },
+    {
+      "key": "schneider",
+      "retrieved": true,
+      "doi": "10.1017/cbo9781139003858",
+      "title": [
+        "Convex Bodies The Brunn-MinkowskiTheory"
+      ],
+      "author": [
+        {
+          "given": "Rolf",
+          "family": "Schneider",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container_title": [],
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "published": {
+        "date-parts": [
+          [
+            2013,
+            10,
+            31
+          ]
+        ]
+      },
+      "published_print": {
+        "date-parts": [
+          [
+            2013,
+            10,
+            31
+          ]
+        ]
+      },
+      "published_online": {
+        "date-parts": [
+          [
+            2013,
+            12,
+            5
+          ]
+        ]
+      },
+      "publisher": "Cambridge University Press",
+      "url": "https://doi.org/10.1017/cbo9781139003858"
+    },
+    {
+      "key": "zhang",
+      "retrieved": true,
+      "doi": "10.1007/bf00182294",
+      "title": [
+        "Restricted chord projection and affine inequalities"
+      ],
+      "author": [
+        {
+          "given": "Gaoyong",
+          "family": "Zhang",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container_title": [
+        "Geometriae Dedicata"
+      ],
+      "volume": "39",
+      "issue": "2",
+      "page": null,
+      "published": {
+        "date-parts": [
+          [
+            1991,
+            8
+          ]
+        ]
+      },
+      "published_print": {
+        "date-parts": [
+          [
+            1991,
+            8
+          ]
+        ]
+      },
+      "published_online": null,
+      "publisher": "Springer Science and Business Media LLC",
+      "url": "https://doi.org/10.1007/bf00182294"
+    }
+  ]
+}

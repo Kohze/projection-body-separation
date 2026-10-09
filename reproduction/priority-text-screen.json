@@ -1,0 +1,26 @@
+{
+  "text_files_searched": 286,
+  "patterns": [
+    "2\\.86",
+    "(?:non.?simplex|Feng).{0,65}seed|seed.{0,65}(?:non.?simplex|Feng)",
+    "separat.{0,65}(?:point.generated|recursive.class)|(?:point.generated|recursive.class).{0,65}separat"
+  ],
+  "matching_lines": [
+    {
+      "path": "notes\\projection-bellman-power-obstruction\\paper.md",
+      "line": 355,
+      "text": "**Corollary 4.3 (a strictly positive gap at each bounded polynomial degree).** Fix a finite integer \\(m\\ge1\\). Among all **nondecreasing** real polynomial functions \\(\\psi:[0,1]\\to\\mathbb R\\) of degree at most \\(m\\), nor"
+    },
+    {
+      "path": "notes\\projection-product-depth-hierarchy\\paper.md",
+      "line": 466,
+      "text": "The point-generated class's full growth constant remains in the separately published Bellman interval. The strict-hierarchy theorem shows that no finite product depth can capture its exact supremum and that the intermedi"
+    },
+    {
+      "path": "notes\\unbalanced-homogeneous-projection-recursion\\AUDIT.md",
+      "line": 29,
+      "text": "Only fixed homogeneous arities and simplex seeds are optimized. Alternating/periodic arities, non-simplex starting bodies and nonhomogeneous product/join trees remain outside Theorem 1; the entire recursive class has an "
+    }
+  ],
+  "scope": "Focused text screen only; negative matches do not establish priority."
+}

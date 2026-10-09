@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "integrity": {
+    "immutable_candidate_sha256": "fd67965b11233d115194b69b3fcd64ad4236783fadf858debfb12a0f2125e5cb",
+    "protected_files": 11,
+    "protected_arithmetic_functions": 8,
+    "protected_constants": 5,
+    "publication_manifest_files": 36
+  },
+  "mathematics_replayed": true,
+  "replay": {
+    "ordinary": {
+      "finite_rectangles": 19900,
+      "finite_margin": {
+        "numerator": "-3",
+        "denominator": "2000"
+      },
+      "tail_cells": 15568,
+      "tail_maximum_depth": 7,
+      "tail_margin": "-1/100000000",
+      "tail_certificate_sha256": "3d19c41c656b952b4e649f1f9fb0ea2ff3a14c6c26086b91e8c7a780fba4cb94",
+      "large_factor_analytic_constants": "PASS",
+      "classical_context_constants": "PASS",
+      "replay_matches_supplied_reports": true
+    }
+  },
+  "scope": "Finite products and joins from a point; invertible affine maps on affine hulls.",
+  "upper_conclusion": "Gamma_C <= exp(1049/1000) < 2.855",
+  "inherited_lower_endpoint": "Prior Theorem 9.2 and Corollary 9.3; historical replay retained, not rerun here.",
+  "network_or_checkout_required": false
+}

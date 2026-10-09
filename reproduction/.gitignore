@@ -1,0 +1,7 @@
+__pycache__/
+.prior-cache/
+*.aux
+*.log
+*.out
+recursive-seed-search.json
+symmetric-shape-search.json

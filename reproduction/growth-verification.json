@@ -1,0 +1,36 @@
+{
+  "families": [
+    {
+      "seed": "seed-eight",
+      "last_dimension": 8533,
+      "endpoint_exponent": 25600,
+      "limit_lower": "28571/10000",
+      "limit_upper": "28573/10000",
+      "strict_growth": true
+    },
+    {
+      "seed": "seed-twelve",
+      "last_dimension": 12629,
+      "endpoint_exponent": 37888,
+      "limit_lower": "2861/1000",
+      "limit_upper": "28611/10000",
+      "strict_growth": true
+    }
+  ],
+  "effective_separation": {
+    "starting_dimension": 15500,
+    "block_dimension": 197,
+    "block_root_lower": "28581/10000",
+    "class_root_upper": "7137/2500",
+    "class_prefactor": "1051/1000",
+    "uniform_padding_lower": "1/3500",
+    "residues_checked": 197,
+    "worst_residue": 196,
+    "comparison": "R(E_n) > sup_{K in C_n} R(K) for every n>=15500",
+    "imported_upper_theorem": "mxym mixed Bellman envelope; replayed separately"
+  },
+  "corrupted_certificates_rejected": 4,
+  "status": "PASS",
+  "certificate_sha256": "944582eed5a3f68f77b0f323edce31750b53174484e244e82334e2ba8455a026",
+  "scope": "Exact finite hypotheses and analytic endpoint arithmetic, not external peer review or formalization"
+}

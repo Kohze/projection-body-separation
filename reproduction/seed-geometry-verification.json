@@ -1,0 +1,102 @@
+[
+  {
+    "dimension": 8,
+    "parameter": [
+      "1",
+      "10"
+    ],
+    "vertices": 25,
+    "facets": 10,
+    "active_systems_checked": 45,
+    "positive_simplices_checked": 70,
+    "uncancelled_boundary_simplices": 350,
+    "interior_probe_multiplicity": 1,
+    "projection_minors_checked": 45,
+    "polytope_volume": [
+      "231953",
+      "15256200960"
+    ],
+    "scaled_projection_volume": [
+      "14",
+      "1"
+    ],
+    "ratio": [
+      "231953",
+      "243243"
+    ],
+    "excess": [
+      "-11290",
+      "243243"
+    ],
+    "lifted_minors_checked": 10,
+    "scaled_lifted_volume": [
+      "2",
+      "1"
+    ],
+    "a": [
+      "1",
+      "7"
+    ],
+    "R": [
+      "30402543616",
+      "8513505"
+    ],
+    "Q": [
+      "231953",
+      "189189"
+    ],
+    "status": "explicit_rational_seed_geometry_verified",
+    "name": "seed-eight",
+    "input_sha256": "19a16b31a9bb3852402f31cc670c7ef18afc7b0b23bad3b9cae6f31a3c6e8215"
+  },
+  {
+    "dimension": 12,
+    "parameter": [
+      "1",
+      "100"
+    ],
+    "vertices": 49,
+    "facets": 14,
+    "active_systems_checked": 91,
+    "positive_simplices_checked": 924,
+    "uncancelled_boundary_simplices": 6468,
+    "interior_probe_multiplicity": 1,
+    "projection_minors_checked": 91,
+    "polytope_volume": [
+      "1031929453906486710787861599001",
+      "1143353988942523282419841974021237043200"
+    ],
+    "scaled_projection_volume": [
+      "768",
+      "25"
+    ],
+    "ratio": [
+      "66043485050015149490423142336064",
+      "64646625816128113626768790465575"
+    ],
+    "excess": [
+      "1396859233887035863654351870489",
+      "64646625816128113626768790465575"
+    ],
+    "lifted_minors_checked": 14,
+    "scaled_lifted_volume": [
+      "84",
+      "25"
+    ],
+    "a": [
+      "7",
+      "64"
+    ],
+    "R": [
+      "9738508131535033883259834876306653184",
+      "39393717852499721029290890043125"
+    ],
+    "Q": [
+      "1031929453906486710787861599001",
+      "710402481495913336557898796325"
+    ],
+    "status": "explicit_rational_seed_geometry_verified",
+    "name": "seed-twelve",
+    "input_sha256": "02bc663b7d18f7c6e06f50621ffed935dedf1b84f8a334e63500f379de15f65f"
+  }
+]

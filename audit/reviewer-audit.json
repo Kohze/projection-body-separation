@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-09",
+  "review_type": "internal adversarial self-review",
+  "independent_external_referee": false,
+  "recommendation": "Ready for external mathematical review as a focused research note; no journal-acceptance prediction.",
+  "scoring_scale": "0 to 10; qualitative self-assessment, not acceptance probabilities",
+  "scores": [
+    {
+      "category": "Mathematical argument",
+      "score": 8.5,
+      "rationale": "Own seed and recurrence claims survive the audit; the imported analytic upper theorem remains essential."
+    },
+    {
+      "category": "Novelty and literature coverage",
+      "score": 7.0,
+      "rationale": "Focused pinned-source comparison supports a contribution candidate; global priority is unestablished."
+    },
+    {
+      "category": "Scientific significance",
+      "score": 7.5,
+      "rationale": "Strict separation from an entire construction class; the unrestricted optimum remains far away."
+    },
+    {
+      "category": "Claim discipline and attribution",
+      "score": 9.0,
+      "rationale": "Inherited geometry, operation rules, recursion, tail method and upper theorem are explicitly credited."
+    },
+    {
+      "category": "Reproducibility and adversarial checks",
+      "score": 9.0,
+      "rationale": "Exact independent algorithms, immutable delivery checks, negative controls and cross-platform replay."
+    },
+    {
+      "category": "Exposition and notation",
+      "score": 8.5,
+      "rationale": "Scope, rationality, affine equivalence and the two all-dimensional recipes are clarified."
+    },
+    {
+      "category": "Typography and layout",
+      "score": 8.5,
+      "rationale": "All eight pages inspected; consistent theorem/table/reference style and no LaTeX layout warnings."
+    },
+    {
+      "category": "Publication readiness",
+      "score": 7.0,
+      "rationale": "Complete research draft and reproduction snapshot; external review and a public archival deposit remain outstanding."
+    }
+  ],
+  "overall_mean": 8.125,
+  "findings": [
+    {
+      "id": "A1",
+      "severity": "major",
+      "category": "Verification integrity",
+      "finding": "The delivery checker accepted an empty or incomplete manifest.",
+      "fix": "Require coverage of core proof artifacts, valid SHA-256 entries, unique safe paths and exact file hashes.",
+      "evidence": "Tests reject empty, partial and duplicate manifests; the sealed package is replayed after extraction."
+    },
+    {
+      "id": "A2",
+      "severity": "major",
+      "category": "Verification integrity",
+      "finding": "The main runner regenerated evidence in place, so a failed check could replace delivered evidence.",
+      "fix": "Regenerate certificates and reports in a temporary directory and compare their bytes to delivered files.",
+      "evidence": "Before/after file hashes are compared during Windows and Linux replay."
+    },
+    {
+      "id": "A3",
+      "severity": "moderate",
+      "category": "Adversarial verification",
+      "finding": "Some altered-constant controls only established rejection of unexpected field values.",
+      "fix": "Accept positive claimed constants and check their actual inequalities; reject mathematically false endpoints, padding and thresholds.",
+      "evidence": "Nine unit tests run in normal and optimized Python; four growth self-controls reject false mathematics."
+    },
+    {
+      "id": "A4",
+      "severity": "moderate",
+      "category": "Quantitative strength",
+      "finding": "The earlier sufficient threshold 20000 used avoidably coarse finite comparison constants.",
+      "fix": "Certify block root 2.8581, class root 2.8548, prefactor 1.051 and all 197 residue bounds with padding 1/3500.",
+      "evidence": "Exact comparison at n=15500 and a proved monotone ratio give all larger dimensions; sharpness is not claimed."
+    },
+    {
+      "id": "A5",
+      "severity": "moderate",
+      "category": "Explicit construction",
+      "finding": "The dimension-197 block was specified recursively but lacked a delivered flattened inequality description.",
+      "fix": "Supply 224 sparse integer facet inequalities and check them against an independently flattened mass-coordinate construction.",
+      "evidence": "Exact row-multiset agreement and a strict interior probe; 46,118,408 vertices are counted, not enumerated."
+    },
+    {
+      "id": "A6",
+      "severity": "moderate",
+      "category": "Mathematical scope",
+      "finding": "Rationality, affine-map scope and fixed-dimension seed ranking needed more precise qualifications.",
+      "fix": "Require rational tilts for rational bodies, m>=1, invertible affine equivalences and fixed dimension/recursion for ranking.",
+      "evidence": "Definitions, seed proof, ranking proposition, README and contribution ledger agree."
+    },
+    {
+      "id": "A7",
+      "severity": "moderate",
+      "category": "Context and attribution",
+      "finding": "The class separation could be mistaken for proximity to unrestricted optimality.",
+      "fix": "Add the classical unrestricted upper bound and its limiting root pi*e/2; distinguish inherited methods from the new specialized seeds.",
+      "evidence": "Versioned Saroglou primary preprint and pinned calculus/upper-theorem sources are cited; priority remains unasserted."
+    },
+    {
+      "id": "A8",
+      "severity": "minor",
+      "category": "Proof exposition and layout",
+      "finding": "The seed-volume change of variables and facet-existence argument were too compressed.",
+      "fix": "State the Jacobian and transformed coefficient differences, explain all facets, and consistently typeset proofs and exact endpoints.",
+      "evidence": "Eight-page final render inspected page by page; no clipping, overlaps or unresolved references."
+    }
+  ],
+  "unresolved_limits": [
+    "This report is an internal adversarial AI-assisted self-review, not independent external peer review.",
+    "The whole-class separation uses an essential attributed, unreviewed mixed Bellman upper theorem. Its finite exact obligations were replayed; neither its analytic proof nor this paper is proof-assistant formalized.",
+    "The focused literature screen does not establish bibliographic priority or exclude recent, unpublished or unindexed work.",
+    "Neither seed, recursive schedule, limiting constant nor sufficient threshold 15500 is claimed optimal.",
+    "The dimension-197 inequalities are checked for equivalence to the recursive block; its volume is obtained by inherited operation identities, not an independent high-dimensional volume computation.",
+    "The known simplex-bound questions in dimensions four through eight remain open.",
+    "The research package is locally committed; this review does not establish a public GitHub/DOI archival deposit."
+  ],
+  "own_lower_construction_fatal_error_found": false,
+  "proof_of_no_errors_claimed": false
+}

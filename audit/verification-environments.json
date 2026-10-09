@@ -1,0 +1,48 @@
+{
+  "windows": {
+    "status": "PASS",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]",
+    "isolated_copy": false,
+    "no_virtualenv": false,
+    "command": "-B verify_all.py --regenerate --with-prior",
+    "exit_code": 0,
+    "elapsed_seconds": 55.0,
+    "delivered_files_modified": false,
+    "files_compared": 36,
+    "unit_tests": 9,
+    "unit_tests_normal_and_optimized": true,
+    "certificate_regeneration_byte_identical": true,
+    "geometry_recomputed": true,
+    "growth_normal_and_optimized": true,
+    "stdout": "PASS: delivery manifest (33 files).\nPASS: byte-identical certificate regeneration in temporary files.\nPASS: complete rational seed geometry and lifted minors.\nPASS: closed formulas agree with independent geometry.\nPASS: explicit 224-facet description of the dimension-197 block.\nPASS: exact growth, analytic endpoint hypotheses, all 197 residues, finite separation; normal and optimized Python.\ntest_block_rejects_incorrect_inequalities_or_probe (test_certificate_checks.CertificateChecks.test_block_rejects_incorrect_inequalities_or_probe) ... ok\ntest_effective_comparison_rejects_insufficient_block (test_certificate_checks.CertificateChecks.test_effective_comparison_rejects_insufficient_block) ... ok\ntest_exponential_bounds_are_rational (test_certificate_checks.CertificateChecks.test_exponential_bounds_are_rational) ... ok\ntest_finite_bounds_reject_mathematically_false_claims (test_certificate_checks.CertificateChecks.test_finite_bounds_reject_mathematically_false_claims) ... ok\ntest_geometry_rejects_corrupt_certificates (test_certificate_checks.CertificateChecks.test_geometry_rejects_corrupt_certificates) ... ok\ntest_growth_rejects_wrong_geometric_invariant (test_certificate_checks.CertificateChecks.test_growth_rejects_wrong_geometric_invariant) ... ok\ntest_growth_rejects_wrong_geometric_volume (test_certificate_checks.CertificateChecks.test_growth_rejects_wrong_geometric_volume) ... ok\ntest_manifest_rejects_missing_coverage (test_certificate_checks.CertificateChecks.test_manifest_rejects_missing_coverage) ... ok\ntest_seed_geometry_and_lifted_invariant (test_certificate_checks.CertificateChecks.test_seed_geometry_and_lifted_invariant) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.820s\n\nOK\nPASS: all nine unit tests also pass under optimized Python.\nVerified pinned prior files: 38\nPASS: original certificate/input bytes and protected arithmetic source.\nPASS: publication manifest.\nPASS: all exact checkers from an unrelated working directory (ordinary).\n{\n  \"status\": \"PASS\",\n  \"integrity\": {\n    \"immutable_candidate_sha256\": \"fd67965b11233d115194b69b3fcd64ad4236783fadf858debfb12a0f2125e5cb\",\n    \"protected_files\": 11,\n    \"protected_arithmetic_functions\": 8,\n    \"protected_constants\": 5,\n    \"publication_manifest_files\": 36\n  },\n  \"mathematics_replayed\": true,\n  \"replay\": {\n    \"ordinary\": {\n      \"finite_rectangles\": 19900,\n      \"finite_margin\": {\n        \"numerator\": \"-3\",\n        \"denominator\": \"2000\"\n      },\n      \"tail_cells\": 15568,\n      \"tail_maximum_depth\": 7,\n      \"tail_margin\": \"-1/100000000\",\n      \"tail_certificate_sha256\": \"3d19c41c656b952b4e649f1f9fb0ea2ff3a14c6c26086b91e8c7a780fba4cb94\",\n      \"large_factor_analytic_constants\": \"PASS\",\n      \"classical_context_constants\": \"PASS\",\n      \"replay_matches_supplied_reports\": true\n    }\n  },\n  \"scope\": \"Finite products and joins from a point; invertible affine maps on affine hulls.\",\n  \"upper_conclusion\": \"Gamma_C <= exp(1049/1000) < 2.855\",\n  \"inherited_lower_endpoint\": \"Prior Theorem 9.2 and Corollary 9.3; historical replay retained, not rerun here.\",\n  \"network_or_checkout_required\": false\n}\nPASS: delivery manifest (33 files).\n{\n  \"status\": \"PASS\",\n  \"manifest_files\": 33,\n  \"unit_tests\": 9,\n  \"seed_geometry\": \"independently recomputed\",\n  \"growth\": \"independently recomputed\",\n  \"delivered_files_modified\": false,\n  \"external_upper\": \"replayed now\"\n}\n",
+    "stderr": ""
+  },
+  "linux": {
+    "status": "PASS",
+    "platform": "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]",
+    "isolated_copy": true,
+    "no_virtualenv": true,
+    "command": "-B verify_all.py --regenerate",
+    "exit_code": 0,
+    "elapsed_seconds": 14.5,
+    "delivered_files_modified": false,
+    "files_compared": 34,
+    "unit_tests": 9,
+    "unit_tests_normal_and_optimized": true,
+    "certificate_regeneration_byte_identical": true,
+    "geometry_recomputed": true,
+    "growth_normal_and_optimized": true,
+    "stdout": "PASS: delivery manifest (33 files).\nPASS: byte-identical certificate regeneration in temporary files.\nPASS: complete rational seed geometry and lifted minors.\nPASS: closed formulas agree with independent geometry.\nPASS: explicit 224-facet description of the dimension-197 block.\nPASS: exact growth, analytic endpoint hypotheses, all 197 residues, finite separation; normal and optimized Python.\ntest_block_rejects_incorrect_inequalities_or_probe (test_certificate_checks.CertificateChecks.test_block_rejects_incorrect_inequalities_or_probe) ... ok\ntest_effective_comparison_rejects_insufficient_block (test_certificate_checks.CertificateChecks.test_effective_comparison_rejects_insufficient_block) ... ok\ntest_exponential_bounds_are_rational (test_certificate_checks.CertificateChecks.test_exponential_bounds_are_rational) ... ok\ntest_finite_bounds_reject_mathematically_false_claims (test_certificate_checks.CertificateChecks.test_finite_bounds_reject_mathematically_false_claims) ... ok\ntest_geometry_rejects_corrupt_certificates (test_certificate_checks.CertificateChecks.test_geometry_rejects_corrupt_certificates) ... ok\ntest_growth_rejects_wrong_geometric_invariant (test_certificate_checks.CertificateChecks.test_growth_rejects_wrong_geometric_invariant) ... ok\ntest_growth_rejects_wrong_geometric_volume (test_certificate_checks.CertificateChecks.test_growth_rejects_wrong_geometric_volume) ... ok\ntest_manifest_rejects_missing_coverage (test_certificate_checks.CertificateChecks.test_manifest_rejects_missing_coverage) ... ok\ntest_seed_geometry_and_lifted_invariant (test_certificate_checks.CertificateChecks.test_seed_geometry_and_lifted_invariant) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.545s\n\nOK\nPASS: all nine unit tests also pass under optimized Python.\nPASS: delivery manifest (33 files).\n{\n  \"status\": \"PASS\",\n  \"manifest_files\": 33,\n  \"unit_tests\": 9,\n  \"seed_geometry\": \"independently recomputed\",\n  \"growth\": \"independently recomputed\",\n  \"delivered_files_modified\": false,\n  \"external_upper\": \"saved successful replay; use --with-prior to rerun\"\n}\n",
+    "stderr": "",
+    "isolated_directory": "/tmp/projection-reviewed-jowpkzd4"
+  },
+  "external_upper": {
+    "status": "PASS",
+    "file": "prior-mixed-upper-replay.json",
+    "finite_rectangles": 19900,
+    "tail_cells": 15568
+  },
+  "scope": "Exact arithmetic and reproduction checks; internal self-review, not external peer review or formalization"
+}

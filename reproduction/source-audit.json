@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-09",
+  "audit_utc": "2026-10-09T19:35:30.039585+00:00",
+  "prior_sources": [
+    {
+      "id": "calculus",
+      "title": "Projection-volume calculus for joins and Cartesian products",
+      "author": "mxym (repository account)",
+      "commit": "2fc3f25179cf1128c4bccbde65fd3a07c093ad6d",
+      "url": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/paper.md",
+      "bytes": 31278,
+      "sha256": "8b7ad76a8a4b96ff40d43e9f9c3e7f4fe494dbadcf82bbdc114f980971ffb430"
+    },
+    {
+      "id": "spectral",
+      "title": "Asymptotic spectral reduction",
+      "author": "mxym (repository account)",
+      "commit": "2fc3f25179cf1128c4bccbde65fd3a07c093ad6d",
+      "url": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md",
+      "bytes": 9032,
+      "sha256": "4e86069432d563910f3c58e75ef777d98e1c5ab088a45687b640e2a3f88e4b0e"
+    },
+    {
+      "id": "upper",
+      "title": "A certified mixed quadratic/quartic envelope for projection-body growth",
+      "author": "mxym (repository account)",
+      "commit": "2fc3f25179cf1128c4bccbde65fd3a07c093ad6d",
+      "url": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/proof.md",
+      "bytes": 14545,
+      "sha256": "756d9a6eb1dceaa9b0e1cda26d2bb9ca0402331a685e9ae2dd13234b35f0e3d6"
+    },
+    {
+      "id": "feng",
+      "title": "On the reverse projection inequality",
+      "authors": [
+        "Yibin Feng",
+        "Shengnan Hu",
+        "Weiru Liu",
+        "Lei Xu"
+      ],
+      "identifier": "MathSciDoc:2608.23002",
+      "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20260821091122099811781",
+      "full_pdf_url": "https://archive.ymsc.tsinghua.edu.cn/pacm_download/743/12781--2026.8.26.pdf",
+      "pdf_sha256": "d9959e4c7889ecc3a8ab111ecd741762edd7208d0379ed32e43157782a89316d",
+      "reviewed": "Theorem 1.3 and Section 4; no redistribution"
+    },
+    {
+      "id": "saroglou-background",
+      "author": "Christos Saroglou",
+      "title": "On the shape of a convex body with respect to its second projection body",
+      "identifier": "arXiv:1409.4347v2",
+      "year": 2014,
+      "url": "https://arxiv.org/abs/1409.4347v2",
+      "pdf_sha256": "883fc204a32815ccf94faee8eaf9b51c031d645fd15e705cbce5303d64ed0f97",
+      "role": "Background unrestricted upper bound, Introduction equation (3); not an essential lower-bound premise",
+      "published_version": {
+        "year": 2015,
+        "journal": "Advances in Applied Mathematics",
+        "volume": 67,
+        "pages": "55-74",
+        "doi": "10.1016/j.aam.2015.03.004"
+      },
+      "inspected_version": "arXiv:1409.4347v2 (2014), retained alongside the published-version citation"
+    }
+  ],
+  "current_repository_head": "c8cc0a89cac4db7c98685298d6859a8cb3f4b3bd",
+  "projection_changes_since_pin": false,
+  "source_audit_report": "PRIORITY_AND_DEPENDENCIES.txt",
+  "focused_screen": "priority-text-screen.json",
+  "essential_imports": [
+    "central seed family",
+    "facet invariant and product/join calculus",
+    "balanced recursive operation and tail method",
+    "whole-class mixed Bellman upper theorem"
+  ],
+  "certified_new_claims": [
+    "specified rational 12-dimensional seed has 2.861<beta<2.8611",
+    "specified rational 8-dimensional seed has 2.8571<beta<2.8573",
+    "explicit unrestricted polytopes exceed the entire point-generated class exponentially",
+    "fixed 197-dimensional block and simplex residues beat the entire class in all n>=15500",
+    "explicit 224-facet inequality description of the dimension-197 block, checked by an independent flattened-mass construction"
+  ],
+  "exact_seed_ranking": "(beta_A/beta_B)^(3d+1)=a(A)R(A)^3/[a(B)R(B)^3], at fixed dimension and recursion",
+  "priority": "Not established; no matching rate/class separation found in focused inspected corpus",
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "mathematical_scope": "Rational seed geometry and finite analytic proof obligations; imported upper theorem remains an essential cited analytic dependency",
+  "review_revision_utc": "2026-10-09T19:52:29.102340+00:00",
+  "review_report": "REVIEWER_AUDIT.txt",
+  "edition_repository": "https://github.com/Kohze/projection-body-separation",
+  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.0",
+  "publication_verification_record": "Workspace audit/github-publication-projection-body-separation-v1.0.0.json records the actual remote publication check.",
+  "citation_coverage_audit": "Companion public paper folder audit/citation-audit-v1.0.0.json",
+  "citation_entries": 16,
+  "additional_contextual_sources": [
+    "Brannen (1996)",
+    "Lutwak-Yang-Zhang (2001)",
+    "Saroglou (2011)",
+    "Schneider, second expanded edition (2014)",
+    "Zhang (1991)",
+    "Meyer-Pajor (1990)",
+    "de Boor (2005)",
+    "Lasserre (2015)",
+    "De Loera-Rambau-Santos (2010)"
+  ],
+  "new_context_does_not_change_certified_constants": true
+}

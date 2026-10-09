@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-09",
+  "version": "1.0.0",
+  "changes": [
+    "Separate discussion interpreting the class separation, lifted invariant, computational limits and open problems",
+    "Separate conclusion with the exact principal claims",
+    "AI disclosure using the exact wording requested for the companion papers",
+    "Public versioned data/code availability with commands, licenses and external dependency scope"
+  ],
+  "mathematical_constants_and_certificates_changed": false,
+  "pages": 11,
+  "references": 16,
+  "external_peer_review": false,
+  "repository": "https://github.com/Kohze/projection-body-separation",
+  "release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.0"
+}

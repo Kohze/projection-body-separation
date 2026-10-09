@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "dimension": 197,
+  "facets": 224,
+  "vertices": 46118408,
+  "seed_copies": 16,
+  "join_coordinates": 5,
+  "inequalities_checked": 224,
+  "strict_interior_probe": true,
+  "scope": "Exact H-representation equivalence to the certified recursive expression; no exhaustive vertex or volume enumeration",
+  "certificate_sha256": "08a61c15095bb3940a352709f4be91a559fbf9694c319d2a92fda6731cda6577"
+}
