@@ -1,6 +1,14 @@
 BEYOND POINT-GENERATED PRODUCT--JOIN CONSTRUCTIONS
 Reviewer-audited research draft and exact reproduction package, 10 October 2026
 
+VERSION 1.3.0 NOTE
+The matching manuscript now has a stronger principal generic section seed
+of dimension 18 and 23 facets, with amplified limit in (2.9280,2.9283).
+Its analytic proof, integer columns and exact outward checker are in
+../research/section-seeds/. From the repository root also run
+  python -B research/section-seeds/check_section_seed.py --check-report
+The symmetric polygon seed below remains included as a comparison.
+
 VERSION 1.2.0 NOTE
 The matching manuscript now has a stronger principal polygon-section seed
 of dimension 15 and 18 facets, with amplified limit in (2.8900,2.8902).
@@ -161,7 +169,7 @@ code were developed with AI assistance.
 Older papers and archives in the surrounding workspace are preserved.
 This package is a separate research continuation, with its own claims and
 reproducibility records. Its manuscript, data and code edition is available at
-https://github.com/Kohze/projection-body-separation/releases/tag/v1.2.0.
+https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.0.
 The original Python code and generated geometry/growth/block certificate data
 are MIT licensed. Third-party inputs retain their upstream terms and are
 fetched rather than redistributed. Manuscript rights are reserved separately.

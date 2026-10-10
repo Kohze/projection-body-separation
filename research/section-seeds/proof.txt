@@ -1,0 +1,109 @@
+RATIONAL EIGHTEEN-DIMENSIONAL SECTION SEED: ANALYTIC CERTIFICATE
+10 October 2026. Classical tools are not claimed as new methods.
+
+1. Geometry and smoothness
+
+Let r=4, m=23, n=m-r-1=18. The integer columns b_i of the r by m
+matrix B are in seed.json. Put M=[1;B] and
+  S={x>=0: sum x_i=1, Bx=0}.
+The checker verifies every r-column linear determinant and every
+(r+1)-column affine determinant is nonzero. It finds strictly positive
+barycentric solutions for 3113 simplices on the columns. For each deleted
+column i, at least one of these simplices omits i. Thus zero lies in the
+interior of the convex hull of every remaining column set. S has dimension
+n in its affine hull, and every coordinate inequality is a genuine facet.
+Selecting n free coordinates gives a rational affine realization in R^n.
+
+Let f be the density of Z=sum b_i X_i, with independent mean-one
+exponentials X_i. It is continuously differentiable. To see this directly,
+any unit direction is orthogonal to at most r-1 columns, since every r
+columns are independent. By compactness the r-th smallest |b_i dot u|
+has a positive uniform lower bound. The characteristic function
+  product_i (1+i b_i dot t)^-1
+therefore decays uniformly as O((1+|t|)^-(m-r+1)). Since m-r+1=20>r+1,
+it and its first frequency moments are integrable. Fourier inversion
+gives a C^1 density. The same argument applies after deleting any column.
+
+2. Weighted geometric state
+
+Write V=vol_n(S), F=ker M, and p_i=P_F e_i. For the facet x_i=0,
+let its area-normal vector be -d_i p_i. Coarea and homogeneity give
+  f(0)=n! V/sqrt(det MM^T).
+If f_i is the density with column i deleted, the corresponding facet
+formula and the Gram determinant identity are
+  f_i(0)=(n-1)! area(facet i)/sqrt(det M_-i M_-i^T),
+  det(M_-i M_-i^T)=det(MM^T) |p_i|^2.
+Integration by parts on the nonnegative coordinate x_i, equivalently
+as a distributional identity followed by C^1 regularity, yields
+  f_i(z)=f(z)+b_i dot grad f(z).
+Consequently
+  gamma_i=1+b_i dot grad f(0)/f(0), d_i=n V gamma_i.
+
+Choose an orthonormal frame U of F and a positive lambda with M lambda=(1,0).
+In these affine coordinates the lifted facet vectors are
+d_i(-U_i,lambda_i). Complementary maximal minors give the weighted sums
+  D_gamma=sum_{|J|=r+1} |det M_J| product_{i notin J} gamma_i,
+  E_gamma=sum_{|J|=r} |det B_J| product_{i notin J} gamma_i.
+The minor scale in both sums is 1/sqrt(det MM^T). For the lifted minors,
+use B lambda=0 and 1^T lambda=1; lambda's component in F does not affect
+the determinant. The classical facet determinant formulas imply
+  R_n(S)=g(n) f(0) D_gamma, a(S)=E_gamma/D_gamma,
+where g(n)=n^n/n!. These are the section/coarea/spline methods, with the
+facet weights retained; no new general method or extremal theorem is claimed.
+
+3. Density and gradient by finite multivariate interpolation
+
+For each r-column basis Y, let theta_Y=Y^-T 1 and
+  alpha_Y=product_{k notin Y}(1-theta_Y dot b_k)^-1.
+General position, checked by the determinants above, guarantees that
+all denominators are nonzero. The polynomials
+  L_Y(w)=alpha_Y product_{k notin Y}(1+w dot b_k)
+have degree m-r. At each arrangement node w=-theta_Z their values are
+delta_{Y,Z}. There are binom(m,r) polynomials, exactly the dimension of
+the polynomial space of total degree at most m-r in r variables. They
+therefore form an interpolation basis and sum identically to 1.
+This is a classical interpolation argument, not a new identity method.
+
+Dividing this polynomial identity by the common product identifies the
+Laplace transform of Z with a finite signed sum of transforms of Y X_Y.
+All transforms exist near zero. Uniqueness for finite signed measures
+therefore gives the corresponding density identity. On a generic ray h,
+C^1 regularity justifies the limits
+  f(0)=sum_{Y^-1 h>0} alpha_Y/|det Y|,
+  grad f(0)=-sum_{Y^-1 h>0} alpha_Y theta_Y/|det Y|.
+The checker verifies that each supplied ray is generic and reconstructs
+both sums on two rays. Their outward intervals overlap in every component.
+
+4. Exact outward arithmetic and amplification
+
+Every density and gradient contribution is rational. Multiplying by 2^256,
+rounding each contribution down, and allowing one unit of upper error per
+term encloses the exact sum, including negative contributions. The facet
+factors gamma_i are positive and are enclosed outwards at denominator 2^128.
+Products are rounded down or up at each multiplication, as appropriate.
+All determinant coefficients are nonnegative after absolute values, so
+the resulting D_gamma, E_gamma, R and a bounds remain rigorous. The final
+state intervals are coarsened only outwards:
+  108996733071/10^12 <= a(S) <= 108996733072/10^12,
+  194095847511843177/10^9 <= R_18(S) <= 194095847511843178/10^9.
+These enclosures use integers and rational arithmetic only.
+
+Apply the inherited recursion K_next=(K x K)*(K x K). Its exact state
+recurrence is increasing in R and a, so both interval endpoints propagate.
+The original central-binomial tail proof, with upper constant 8, applies:
+  16 a_lower^2 (6n+1)>9,
+  121 a_upper^2 (2n+2/3)<64,
+  8 R_upper^3<3^(3n+1).
+It gives 3<D_j<8, strictly increasing roots below 3, and
+  (3 R_j^3)^(1/(3d_j+1)) < beta < (8 R_j^3)^(1/(3d_j+1)).
+At level 5, d_5=18773 and 3d_5+1=56320. Exact integer comparisons prove
+  (366/125)^56320 < 3 R_lower,5^3,
+  8 R_upper,5^3 < (29283/10000)^56320.
+Thus 2.9280<beta<2.9283.
+
+The geometric construction, coarea, complementary minors and spline inversion
+are classical and follow the attributed Feng--Hu--Liu--Xu and Z. Xu sources.
+The lifted invariant, product-join calculus, amplification and comparison upper
+bound are imported from the attributed mxym manuscript. The contribution is
+the specified rational seed and its stronger certified amplified rate.
+No global optimum, minimal dimension or global bibliographic priority is proved.

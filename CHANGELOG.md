@@ -1,5 +1,21 @@
 # Changes
 
+## 1.3.0 - 10 October 2026
+
+Raise the certified amplified lower rate again, from 2.890 to 2.928, by
+an explicit rational eighteen-dimensional simplex section with twenty-three
+facets. Retain the nonuniform facet weights in the classical section/spline
+calculation. Prove the density and gradient identities, regularity, genuine
+facet hypotheses, and the interpolation identity used by the certificate.
+Use outward integer arithmetic to enclose the seed state and prove
+2.9280 < beta < 2.9283. Add a standard-library checker and six tests, all
+passing in normal and optimized Python on Windows and Linux. Keep the
+simpler polygon seed as a comparison. Update the sixteen-page manuscript,
+integer-coordinate appendix, discussion, conclusion and reproduction metadata;
+shorten the classical truncation appendix to its formula and primary sources.
+The finite separation from dimension nine is retained. Global optimality,
+unrestricted minimality and bibliographic priority remain unproved.
+
 ## 1.2.0 - 10 October 2026
 
 Strengthen the main certified amplified lower rate from 2.861 to 2.890.

@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-10",
+  "edition": "v1.3.0",
+  "status": "PASS",
+  "review_type": "Internal mathematical and computational self-review, not external peer review.",
+  "contribution": "Specified rational eighteen-dimensional section seed and certified amplified root limit between 2.9280 and 2.9283.",
+  "preceding_lower_rates": [
+    "2.861",
+    "2.890"
+  ],
+  "dimension": 18,
+  "facets": 23,
+  "a_bounds": [
+    "108996733071/1000000000000",
+    "6812295817/62500000000"
+  ],
+  "R_bounds": [
+    "194095847511843177/1000000000",
+    "97047923755921589/500000000"
+  ],
+  "analytic_review": [
+    "Exact barycentric signs verify full dimension and every genuine coordinate facet.",
+    "General position gives uniform Fourier decay and C1 regularity, including deleted-column densities.",
+    "Integration by parts gives f_i=f+b_i dot grad f; facet coarea gives d_i=nV gamma_i.",
+    "Weighted complementary minors give R=g(n) f D_gamma and a=E_gamma/D_gamma; the lifted minor scale is 1/sqrt(det MM^T).",
+    "The general-position interpolation polynomials are an exact basis by cardinality and nodal values; their sum is identically one.",
+    "Laplace uniqueness and C1 regularity justify generic-ray density and gradient limits.",
+    "Termwise floor intervals, positive facet products and outward state coarsening preserve every enclosure.",
+    "Monotonicity in R and a propagates the seed intervals; the original tail proof with upper constant 8 proves the infinite-limit endpoints.",
+    "The new padding family and original finite witnesses give one sequence retaining separation in every dimension at least nine."
+  ],
+  "finite_checks": {
+    "linear_bases": 8855,
+    "affine_bases": 33649,
+    "interior_simplex_bases": 3113,
+    "verified_facets": 23,
+    "generic_rays": 2,
+    "density_precision_bits": 256,
+    "facet_precision_bits": 128,
+    "last_dimension": 18773,
+    "endpoint_exponent": 56320,
+    "floating_point_acceptance": false
+  },
+  "tests": {
+    "additional_tests": 6,
+    "windows_normal": "PASS",
+    "windows_optimized": "PASS",
+    "linux_normal": "PASS",
+    "linux_optimized": "PASS"
+  },
+  "proof_simplification": "The classical truncation appendix now cites the original formula and sources instead of reproducing its routine proof.",
+  "bibliography_entries": 18,
+  "AI_disclosure_matches_companion_papers": true,
+  "independent_authorship": false,
+  "proof_assistant_formalization": false,
+  "unrestricted_minimality_proved": false,
+  "global_optimality_proved": false,
+  "bibliographic_priority_proved": false,
+  "remote_replay": "Anonymous public-download and CI receipts are stored in the surrounding workspace after publication."
+}

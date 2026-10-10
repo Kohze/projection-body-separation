@@ -24,3 +24,10 @@ layout record and bounded prior-art search are respectively
 polygon-seed-review-v1.2.0.json, citation-audit-v1.2.0.json,
 layout-qa-v1.2.0.json and polygon-prior-art-v1.2.0.json. They are internal
 audit records, not external peer review or certification of priority.
+
+Version 1.3.0 adds a general rational eighteen-dimensional section seed and
+raises the certified amplified lower rate to 2.928. The current records are
+section-seed-review-v1.3.0.json, citation-audit-v1.3.0.json,
+layout-qa-v1.3.0.json and section-prior-art-v1.3.0.json. The geometry uses
+the density gradient to retain nonuniform facet weights; its finite certificate
+uses outward exact arithmetic. Historical audits retain their dated scope.

@@ -4,13 +4,13 @@ message: >-
   licensing for original code/data is separate from manuscript reuse rights.
 type: software
 title: "Beyond point-generated product-join constructions for projection-body volume: manuscript, data, and code"
-version: 1.2.0
+version: 1.3.0
 date-released: 2026-10-10
 authors:
   - family-names: Gounder
     given-names: Robin
 repository-code: https://github.com/Kohze/projection-body-separation
-url: https://github.com/Kohze/projection-body-separation/releases/tag/v1.2.0
+url: https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.0
 keywords:
   - convex geometry
   - projection bodies
@@ -25,5 +25,5 @@ preferred-citation:
       given-names: Robin
   year: 2026
   month: 10
-  notes: "Working research draft, version 1.2.0. Not externally peer reviewed; no DOI assigned."
-  url: https://github.com/Kohze/projection-body-separation/releases/tag/v1.2.0
+  notes: "Working research draft, version 1.3.0. Not externally peer reviewed; no DOI assigned."
+  url: https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.0

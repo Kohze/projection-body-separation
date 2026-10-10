@@ -1,0 +1,655 @@
+{
+  "commit": "4248c2b2d4cad94d4269def3158b414352e1a40b",
+  "truncated": false,
+  "relevant_paths": [
+    "comparisons/2026-10-07-simplex-product-rate-gap.md",
+    "comparisons/2026-10-07-symmetric-projection-cone-equality.md",
+    "lean/references/projection-cap/public-proof.tex",
+    "notes/dimension-structure-simplex-stability/source/sections/05_projection.tex",
+    "notes/exact-product-join-finite-optima/AUDIT.md",
+    "notes/exact-product-join-finite-optima/README.md",
+    "notes/exact-product-join-finite-optima/paper.md",
+    "notes/mixed-bellman-product-join-improved/README.md",
+    "notes/mixed-bellman-product-join-improved/proof.md",
+    "notes/mixed-bellman-product-join/CANDIDATE_2_854261.md",
+    "notes/mixed-bellman-product-join/DEPENDENCIES.md",
+    "notes/mixed-bellman-product-join/PUBLIC_AUDIT.md",
+    "notes/mixed-bellman-product-join/README.md",
+    "notes/mixed-bellman-product-join/VERIFICATION.md",
+    "notes/mixed-bellman-product-join/combined_audit.md",
+    "notes/mixed-bellman-product-join/finite_proof.md",
+    "notes/mixed-bellman-product-join/literature.md",
+    "notes/mixed-bellman-product-join/mixed_large_dimensions.md",
+    "notes/mixed-bellman-product-join/mixed_tail_proof.md",
+    "notes/mixed-bellman-product-join/paper.tex",
+    "notes/mixed-bellman-product-join/positive-sextic/AUDIT_SUMMARY.md",
+    "notes/mixed-bellman-product-join/positive-sextic/README.md",
+    "notes/mixed-bellman-product-join/positive-sextic/dependencies/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md",
+    "notes/mixed-bellman-product-join/positive-sextic/dependencies/v2/paper.md",
+    "notes/mixed-bellman-product-join/positive-sextic/paper.tex",
+    "notes/mixed-bellman-product-join/positive-sextic/proof.md",
+    "notes/mixed-bellman-product-join/proof.md",
+    "notes/mixed-bellman-product-join/sharpened-binary-lower/LIMIT_INTERVAL.md",
+    "notes/mixed-bellman-product-join/sharpened-binary-lower/README.md",
+    "notes/projection-bellman-power-obstruction/AUDIT.md",
+    "notes/projection-bellman-power-obstruction/README.md",
+    "notes/projection-bellman-power-obstruction/paper.md",
+    "notes/projection-bellman-quadratic-oscillation/AUDIT.md",
+    "notes/projection-bellman-quadratic-oscillation/README.md",
+    "notes/projection-bellman-quadratic-oscillation/paper.md",
+    "notes/projection-first-nesting-d55/AUDIT.md",
+    "notes/projection-first-nesting-d55/README.md",
+    "notes/projection-first-nesting-d55/paper.md",
+    "notes/projection-persistent-nesting-gap/AUDIT.md",
+    "notes/projection-persistent-nesting-gap/README.md",
+    "notes/projection-persistent-nesting-gap/paper.md",
+    "notes/projection-product-depth-hierarchy/AUDIT.md",
+    "notes/projection-product-depth-hierarchy/README.md",
+    "notes/projection-product-depth-hierarchy/paper.md",
+    "notes/quantitative-projection-simplex-stability/INDEPENDENT_AUDIT.md",
+    "notes/quantitative-projection-simplex-stability/README.md",
+    "notes/quantitative-projection-simplex-stability/VERIFICATION.md",
+    "notes/quantitative-projection-simplex-stability/header.tex",
+    "notes/quantitative-projection-simplex-stability/paper.md",
+    "notes/quantitative-projection-simplex-stability/paper.tex",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/AUDIT.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/BUILD.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/CORRECTIONS.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/DEPENDENCIES.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/LITERATURE.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/PDF_QA.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/PRIMARY_LOCATORS.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/PUBLICATION.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/README.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/VERIFICATION.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/corrections/v4-paper.after.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/corrections/v4-paper.before.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/header.tex",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/paper.md",
+    "notes/quantitative-symmetric-projection-stability-bibliographic-correction/paper.tex",
+    "notes/quantitative-symmetric-projection-stability/AUDIT.md",
+    "notes/quantitative-symmetric-projection-stability/BUILD.md",
+    "notes/quantitative-symmetric-projection-stability/DEPENDENCIES.md",
+    "notes/quantitative-symmetric-projection-stability/LITERATURE.md",
+    "notes/quantitative-symmetric-projection-stability/PDF_QA.md",
+    "notes/quantitative-symmetric-projection-stability/README.md",
+    "notes/quantitative-symmetric-projection-stability/VERIFICATION.md",
+    "notes/quantitative-symmetric-projection-stability/header.tex",
+    "notes/quantitative-symmetric-projection-stability/paper.md",
+    "notes/quantitative-symmetric-projection-stability/paper.tex",
+    "notes/stronger-symmetric-projection-stability/EDITORIAL_CHANGES.md",
+    "notes/stronger-symmetric-projection-stability/INDEPENDENT_AUDIT.md",
+    "notes/stronger-symmetric-projection-stability/NOTICE.md",
+    "notes/stronger-symmetric-projection-stability/PDF_QA.md",
+    "notes/stronger-symmetric-projection-stability/README.md",
+    "notes/stronger-symmetric-projection-stability/VERIFICATION.md",
+    "notes/stronger-symmetric-projection-stability/dependencies/CORRECTIONS.md",
+    "notes/stronger-symmetric-projection-stability/dependencies/completed-proof.md",
+    "notes/stronger-symmetric-projection-stability/geometry-next.md",
+    "notes/stronger-symmetric-projection-stability/geometry-rigidity.md",
+    "notes/stronger-symmetric-projection-stability/global-next.md",
+    "notes/stronger-symmetric-projection-stability/halfmass.md",
+    "notes/stronger-symmetric-projection-stability/header.tex",
+    "notes/stronger-symmetric-projection-stability/matching.md",
+    "notes/stronger-symmetric-projection-stability/paper.md",
+    "notes/stronger-symmetric-projection-stability/paper.tex",
+    "notes/stronger-symmetric-projection-stability/sources/UPSTREAM_NOTICE.md",
+    "notes/stronger-symmetric-projection-stability/stronger-upper-end-stability.md",
+    "notes/two-layer-projection-depth-separation/AUDIT.md",
+    "notes/two-layer-projection-depth-separation/README.md",
+    "notes/two-layer-projection-depth-separation/paper.md",
+    "notes/unbalanced-homogeneous-projection-recursion/AUDIT.md",
+    "notes/unbalanced-homogeneous-projection-recursion/README.md",
+    "notes/unbalanced-homogeneous-projection-recursion/paper.md",
+    "preprints/005-simplex-product-optimum/README.md",
+    "preprints/005-simplex-product-optimum/v1.1/PROOF_AUDIT.md",
+    "preprints/005-simplex-product-optimum/v1.1/build/main.tex",
+    "preprints/005-simplex-product-optimum/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md",
+    "preprints/005-simplex-product-optimum/v2/BELLMAN_UPPER_BOUND.md",
+    "preprints/005-simplex-product-optimum/v2/PROOF_AUDIT.md",
+    "preprints/005-simplex-product-optimum/v2/README.md",
+    "preprints/005-simplex-product-optimum/v2/RESEARCH_LOG.md",
+    "preprints/005-simplex-product-optimum/v2/paper.md",
+    "preprints/005-simplex-product-optimum/v3/PROOF_AUDIT.md",
+    "preprints/005-simplex-product-optimum/v3/README.md",
+    "preprints/005-simplex-product-optimum/v3/RESEARCH_LOG.md",
+    "preprints/005-simplex-product-optimum/v3/paper.md",
+    "preprints/005-simplex-product-optimum/v4/PROOF_AUDIT.md",
+    "preprints/005-simplex-product-optimum/v4/README.md",
+    "preprints/005-simplex-product-optimum/v4/paper.md",
+    "preprints/005-simplex-product-optimum/v5/PROOF_AUDIT.md",
+    "preprints/005-simplex-product-optimum/v5/README.md",
+    "preprints/005-simplex-product-optimum/v5/paper.md",
+    "reviews/2026-10-07-projection-spectral-clarification.md",
+    "reviews/2026-10-07-symmetric-projection-equality-review.md",
+    "verification/2026-10-07-bellman-recursion-audit/README.md",
+    "verification/2026-10-07-mixed-bellman-independent-audit/AUDIT.md",
+    "verification/2026-10-07-mixed-bellman-independent-audit/README.md"
+  ],
+  "novelty_established": false,
+  "checked_sources": [
+    {
+      "path": "comparisons/2026-10-07-simplex-product-rate-gap.md",
+      "sha256": "eb70e51b2200612832da1907a5780b64edac329dc6e3846b3393daa2d8312ab4"
+    },
+    {
+      "path": "comparisons/2026-10-07-symmetric-projection-cone-equality.md",
+      "sha256": "1704fd73ee636927e22f5e975a32231dbb3368308bf74b3a71de7b1f1d77fc14"
+    },
+    {
+      "path": "lean/references/projection-cap/public-proof.tex",
+      "sha256": "9361999cfa4337500041da4b3fc824cd3676a07a22ffad0274e38346bf301b98"
+    },
+    {
+      "path": "notes/dimension-structure-simplex-stability/source/sections/05_projection.tex",
+      "sha256": "4afbbc917087f92a8c677f749a6c965118270eaaf94354a780620f9e2350ce32"
+    },
+    {
+      "path": "notes/exact-product-join-finite-optima/AUDIT.md",
+      "sha256": "eb4ad9955f0eb5a79e9037df8631ba9d95192ed611b74406ae28e0f2252ac647"
+    },
+    {
+      "path": "notes/exact-product-join-finite-optima/README.md",
+      "sha256": "d7f7c84289a59b1e50a53a4c46d93f102d2914434fbd44f1f8dea126da37975a"
+    },
+    {
+      "path": "notes/exact-product-join-finite-optima/paper.md",
+      "sha256": "b779ad786914fe512fdb2dcfde098d12570e626700e90d8414f415a87e0e99fc"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join-improved/README.md",
+      "sha256": "46e361a911025b87dc5db316a6c7b37a958b8c8007af9b2aec28454f6fe6d635"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join-improved/proof.md",
+      "sha256": "46a4f77757cf775fe2be582bef9cb1fe90c10508a5c7361028f32d78a4557680"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/CANDIDATE_2_854261.md",
+      "sha256": "f1cf7351a669db8b94e6f7fdca0c0062d679e5407dc0bf9746f17cd60dc6b646"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/DEPENDENCIES.md",
+      "sha256": "d1a3b3303aeba4d68e1d1e63383ceb824b20e95a7ae9443cb278476ec376fe8d"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/PUBLIC_AUDIT.md",
+      "sha256": "f32ab0d442f46fc2b4102a4c16dcd574647398d02acb5d23c43e0ab6ca71cf2b"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/README.md",
+      "sha256": "89902c381a26d401449a94441b74b1e17c401ebc27fc9f687ffbd61f36a9d9f2"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/VERIFICATION.md",
+      "sha256": "d433051ab8c8690726e60ae451ac69a15d662567a1e6ce44bf09ec82892e0608"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/combined_audit.md",
+      "sha256": "2ff06345975d3d6e9cf9985317af8b72a7f28ef10f6fb3e4e9e478580c475a0b"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/finite_proof.md",
+      "sha256": "0074e164502adfa4e38ffa2c4392f9c4d47b10be04a5e0ed5a3944911b458203"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/literature.md",
+      "sha256": "961406635d1e7ecf22fe61428b11c5060e93e6729cb6766baac93351fce2656c"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/mixed_large_dimensions.md",
+      "sha256": "0bd5e96a5c96e3f4f0ce0eccbfc394512dbf9c162ec4e5b8e174cbcd1c1a4202"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/mixed_tail_proof.md",
+      "sha256": "f21ac99ae0ea4e90d431a6dec5a6f0e28211ffcb4e572e63a16de02fddfc75b4"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/paper.tex",
+      "sha256": "7e469af5b1533eccecb9ebc9245d4ad5f2f10372fadc50759b0b90fc7d6e9ab9"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/positive-sextic/AUDIT_SUMMARY.md",
+      "sha256": "603b4600bb3950efe7582d4a12fe0ad24ff555af123b95796675f31b3cb6857b"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/positive-sextic/README.md",
+      "sha256": "b5667a2d03532c51f98ec4d7f6b37dd816486a3914f5aed79802f0a3129c1117"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/positive-sextic/dependencies/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md",
+      "sha256": "4e86069432d563910f3c58e75ef777d98e1c5ab088a45687b640e2a3f88e4b0e"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/positive-sextic/dependencies/v2/paper.md",
+      "sha256": "8b7ad76a8a4b96ff40d43e9f9c3e7f4fe494dbadcf82bbdc114f980971ffb430"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/positive-sextic/paper.tex",
+      "sha256": "9f4ae55350d9094d3ddbb40401c2f64bc8400c79f4c2db0f54e459d14f12b277"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/positive-sextic/proof.md",
+      "sha256": "e6b320a0b08d3a956c49265032ce68bac29a3255ed0e99bdb37f5e5f48a20f12"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/proof.md",
+      "sha256": "756d9a6eb1dceaa9b0e1cda26d2bb9ca0402331a685e9ae2dd13234b35f0e3d6"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/sharpened-binary-lower/LIMIT_INTERVAL.md",
+      "sha256": "2e3b7f6c4c4e276b97e4a810e5d8c1c19e04b51db6d55557acb3a71730e686f7"
+    },
+    {
+      "path": "notes/mixed-bellman-product-join/sharpened-binary-lower/README.md",
+      "sha256": "3d55f5acada649fbed7e9199e4c9feadd59a69f1a9028f2562917522e4b016ee"
+    },
+    {
+      "path": "notes/projection-bellman-power-obstruction/AUDIT.md",
+      "sha256": "3e316c162aea0bf2c1284a393e161fffc61dfb7b363a46a75dfc4fd65b72da8e"
+    },
+    {
+      "path": "notes/projection-bellman-power-obstruction/README.md",
+      "sha256": "66acd869bdd440391d119426dbdb8e154e315a17ab84156e457ef798908869d2"
+    },
+    {
+      "path": "notes/projection-bellman-power-obstruction/paper.md",
+      "sha256": "3106c0449a48734709fd92f17a3fbf3327d11767cc22a92d6c7bfb0914b88a22"
+    },
+    {
+      "path": "notes/projection-bellman-quadratic-oscillation/AUDIT.md",
+      "sha256": "3b4b05768c78009022682bf91518f9d3436459288ae0d5cece26e104938b5e24"
+    },
+    {
+      "path": "notes/projection-bellman-quadratic-oscillation/README.md",
+      "sha256": "b4e3e8162ce59824e4661a220ed10577dd463b6194891cd4ec71babb60cbddcd"
+    },
+    {
+      "path": "notes/projection-bellman-quadratic-oscillation/paper.md",
+      "sha256": "63c0efc50bae03f2b914de6d9c03eadf9e2d293777aa18eb4a658ec85d877d74"
+    },
+    {
+      "path": "notes/projection-first-nesting-d55/AUDIT.md",
+      "sha256": "8a9e0726e1e48976ecb402aa25f01022e47c3c2b3bebff4a0a173bde4ee0b63b"
+    },
+    {
+      "path": "notes/projection-first-nesting-d55/README.md",
+      "sha256": "e67d23f29c5b4bc4ab71069309a4709462e3880a221ec2d978fe4e13926a2462"
+    },
+    {
+      "path": "notes/projection-first-nesting-d55/paper.md",
+      "sha256": "5b76a0b0f9cfca66ed72a9fc9fd42631aefa9163c3f1db97f905e9bb892d6cbc"
+    },
+    {
+      "path": "notes/projection-persistent-nesting-gap/AUDIT.md",
+      "sha256": "b641ef01b231a1fa3e203cd1fcab6944f6651da070f57deabe05338dc957ce76"
+    },
+    {
+      "path": "notes/projection-persistent-nesting-gap/README.md",
+      "sha256": "716546ffaeab11ad266cf34c2287e84fb1d2bc5cee5b3a3e9f44108790dc01bc"
+    },
+    {
+      "path": "notes/projection-persistent-nesting-gap/paper.md",
+      "sha256": "72862478dfc66614d13eebfec74a1ce70f6c76610edad502cccfd260b121eac5"
+    },
+    {
+      "path": "notes/projection-product-depth-hierarchy/AUDIT.md",
+      "sha256": "012ac5473e1afe999822217561a0a0458fc8b82f1e99afed6da4e722d721241b"
+    },
+    {
+      "path": "notes/projection-product-depth-hierarchy/README.md",
+      "sha256": "f13372a8e1a5db5c75f20816aaeecc561f866b0afcc69b34e070adb30fe6b405"
+    },
+    {
+      "path": "notes/projection-product-depth-hierarchy/paper.md",
+      "sha256": "9588134c7dbfa6232d242bdd5ea8175deda9bbf47d66c3bfa4cae89b96d64eb8"
+    },
+    {
+      "path": "notes/quantitative-projection-simplex-stability/INDEPENDENT_AUDIT.md",
+      "sha256": "cb448e743f8fb33232d32e94db3f1293eca1eeb98ef324c0eea41572415b1ecb"
+    },
+    {
+      "path": "notes/quantitative-projection-simplex-stability/README.md",
+      "sha256": "1961bb42003809524d7258a1f7056be1953d65c5d717e868ef615bdef54fb156"
+    },
+    {
+      "path": "notes/quantitative-projection-simplex-stability/VERIFICATION.md",
+      "sha256": "6b8634f3ea2b547eb7cae87d61938008be37f8fd0537939b25b9ed68704c0476"
+    },
+    {
+      "path": "notes/quantitative-projection-simplex-stability/header.tex",
+      "sha256": "ac0cf9fa759bde72dd69be0fed755a0f642f92dd36b0f67078cccf2ba2b16597"
+    },
+    {
+      "path": "notes/quantitative-projection-simplex-stability/paper.md",
+      "sha256": "33651147ae32773add33066c3b60dd099209dcadd6b3b7079e3e08eeaba976d2"
+    },
+    {
+      "path": "notes/quantitative-projection-simplex-stability/paper.tex",
+      "sha256": "1a77b7f5fa2ff5d89dc4eb35873897cddd7119c644f9101250f7cb91cb820e53"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/AUDIT.md",
+      "sha256": "60daa607ccbd6b599980d22319fc60738b4556d9070871168c18847f4556ba4c"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/BUILD.md",
+      "sha256": "a01faf1e0299e030f123aa86bd21f346217e8a102e2e6b67a6e668acc8a5a8aa"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/CORRECTIONS.md",
+      "sha256": "97db3f9dd07db42650255b2f0db51b8d32f8553a4cf40bc808be437aafa518c2"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/DEPENDENCIES.md",
+      "sha256": "629c08e9768cd131eafcf379bfe885080aea4c56bdf1376a769ee2de30cf59c0"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/LITERATURE.md",
+      "sha256": "5acb656da2363327df656f1e99ddbff8af4f0160e79ddeb7a9b43201225edf39"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/PDF_QA.md",
+      "sha256": "2e8b064bf8faccbef9dcda6d80b8c6ccbc233cece83821d767b5cbc043901fff"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/PRIMARY_LOCATORS.md",
+      "sha256": "e1fe38f5e676562584b55735cc999303e9b461c430ad773bc3cd6082dafde338"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/PUBLICATION.md",
+      "sha256": "e06f5fdfcd22c633cacaca7b8ef5f4e11530852d4b6c9f42d377fc5b94f72539"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/README.md",
+      "sha256": "c35d205ea59a891a2ed97780ad620e852faeffce5433809142610c58d4c32521"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/VERIFICATION.md",
+      "sha256": "96a66aaad42fe1d90d62c1e354a0a5e2b45efc51f41459bb1273424ba3a8eb9b"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/corrections/v4-paper.after.md",
+      "sha256": "3c62ef4494ae957d7ff8c894fc8953fcfb7121c94284f5590b89a75faf82dba4"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/corrections/v4-paper.before.md",
+      "sha256": "19eb5aa0c79e34280cc3619cf40c1bea7acda6f6ec1161b05fbb6bf2308fda81"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/header.tex",
+      "sha256": "8046d5ef05d8fa5294fabf75854992374c0efd438524e4624f99c281106a05b3"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/paper.md",
+      "sha256": "6a31c8d2dff76b3f73b862a0b6ef2ea192afc9de23b3605208b465ee3a5c1193"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability-bibliographic-correction/paper.tex",
+      "sha256": "723ae494c5ad14d667df699df75495ae5b0f6c69efb133ba868cce1912284a9a"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/AUDIT.md",
+      "sha256": "47543bfeb1b7f7eb7ae74f323ffc14d5d22bde506d7d83da4442d2fd5acc6885"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/BUILD.md",
+      "sha256": "5e5f7ade5f385e55b22a8b4dc0838519e78657332302a838d44dc47c918a5426"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/DEPENDENCIES.md",
+      "sha256": "629c08e9768cd131eafcf379bfe885080aea4c56bdf1376a769ee2de30cf59c0"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/LITERATURE.md",
+      "sha256": "42e941dfab420e4a4a39ffde5b40f7e11dcebe0f8748a26c74947fdfd513ef69"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/PDF_QA.md",
+      "sha256": "2c9a4dcad7a1cf835c9aa70263d35695c557d8813a713cb0a1bd518909ba255d"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/README.md",
+      "sha256": "98590c7556bb6e55f830f235fd752d883fddecbca41700b50716769632288342"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/VERIFICATION.md",
+      "sha256": "96a66aaad42fe1d90d62c1e354a0a5e2b45efc51f41459bb1273424ba3a8eb9b"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/header.tex",
+      "sha256": "8046d5ef05d8fa5294fabf75854992374c0efd438524e4624f99c281106a05b3"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/paper.md",
+      "sha256": "08f6f55c6a694da05d348d3dcbda18be186044fd39570c51bf786507aaef862c"
+    },
+    {
+      "path": "notes/quantitative-symmetric-projection-stability/paper.tex",
+      "sha256": "8aa856c42ededb1ad5ec6763fa50395f4f590a2c82ae8006021963daa6351e9b"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/EDITORIAL_CHANGES.md",
+      "sha256": "f84ea91c2679a526e12035e0c6a3333d4e5909e4a9161b1a26c23d7651b4e2d9"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/INDEPENDENT_AUDIT.md",
+      "sha256": "44a2a55f2cb596f00969815a7767b3094081d3e9454f4cfab79d9b59233f6f2f"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/NOTICE.md",
+      "sha256": "e65da1f0d3bf44bd6f8c9a3d251a4c83c06625b164a338823aed6ce9dfdb7d10"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/PDF_QA.md",
+      "sha256": "6b44041a536a434e26ad66d2c364745f9be0322c9e795ba934d44784d679f452"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/README.md",
+      "sha256": "a30b6d518589506b716f0e5612fe339e059e846ba52709ba05edd1b6ba544b89"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/VERIFICATION.md",
+      "sha256": "6d905597aa2b3cd694959e49eabe0a6aa624df1bedb0cc9373803dc5a3bda0c6"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/dependencies/CORRECTIONS.md",
+      "sha256": "22a6b5207acc5c00ab3a1e2d3fe862e29ad4d3d02baa115596008d4e57e88134"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/dependencies/completed-proof.md",
+      "sha256": "6a31c8d2dff76b3f73b862a0b6ef2ea192afc9de23b3605208b465ee3a5c1193"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/geometry-next.md",
+      "sha256": "6cac58dea95cdbabf2d4c6783520730a01bb2bf6e29e6f2ddbf0bc2cbbb2c615"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/geometry-rigidity.md",
+      "sha256": "9dff4ffe4f34abdce72e0250b4e5feea04072b65d2fe700a3234e550ca61690c"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/global-next.md",
+      "sha256": "841982eab2efcef004ab2c408c7992ecedf8475a5b65a4f8cc5154a06f1f9c0c"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/halfmass.md",
+      "sha256": "e6247229c3469bedea80f5b7e57481c53275fde24313a2a103eab0988dce0c10"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/header.tex",
+      "sha256": "a3fa5860b77537fcb304ce9c3ac89cad7b29e08ce840d2022800a9db43eb8cbf"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/matching.md",
+      "sha256": "8899699adf0eba7c59c788daf575de4e24cb195f150cad11940dd603d0882f1c"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/paper.md",
+      "sha256": "fd3f470c3f885e8093161c12d14450e63d8678305d9bc08026187d702b0e6f35"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/paper.tex",
+      "sha256": "44da6e87dc6be59a7906d0080010ea0be80cc44baade8119e448feb2282209d4"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/sources/UPSTREAM_NOTICE.md",
+      "sha256": "1f1d6f4638d99535bb113dce6efb142ea9404f669d135f624c927f8d78386542"
+    },
+    {
+      "path": "notes/stronger-symmetric-projection-stability/stronger-upper-end-stability.md",
+      "sha256": "5cb7ce36f99beaa7b9c7509df68b42e9ceda036474af69a9ed517808f2780269"
+    },
+    {
+      "path": "notes/two-layer-projection-depth-separation/AUDIT.md",
+      "sha256": "72e7162b9d28bb43a56acf957726970ad081da0250253154de8ab8a03a4a5352"
+    },
+    {
+      "path": "notes/two-layer-projection-depth-separation/README.md",
+      "sha256": "3d11935e749cbf7aa26a476f7510ba5bdeb297a5f78554eb8f589cfc3693e1c3"
+    },
+    {
+      "path": "notes/two-layer-projection-depth-separation/paper.md",
+      "sha256": "6b099f7491190dc7361fe906b411470c9687daabfdbbec9115323e3002ea3f3b"
+    },
+    {
+      "path": "notes/unbalanced-homogeneous-projection-recursion/AUDIT.md",
+      "sha256": "0c666492f7f856a798f20a8300a565caaeb10a2c9745e457194c83be981190c5"
+    },
+    {
+      "path": "notes/unbalanced-homogeneous-projection-recursion/README.md",
+      "sha256": "51869cc82c47800daea571421b97fee9d4a7df19265f66409adbc1019ca91f56"
+    },
+    {
+      "path": "notes/unbalanced-homogeneous-projection-recursion/paper.md",
+      "sha256": "9515625f59adf39786102a7775a6d681cb0998d4813f42a2deee7e3e68bfb281"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/README.md",
+      "sha256": "fc5bfac29470a10ba9da496cc2dd3ddf50ea0ac41548471192988e17e7255ce9"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v1.1/PROOF_AUDIT.md",
+      "sha256": "93736218440d4dc55dae8b40b003bf8a63fb075e07028a64362749953b2cc18c"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v1.1/build/main.tex",
+      "sha256": "f709b04734073d0cf2d63eb958da68370d38a21a419301630b404279dc9428f0"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md",
+      "sha256": "4e86069432d563910f3c58e75ef777d98e1c5ab088a45687b640e2a3f88e4b0e"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v2/BELLMAN_UPPER_BOUND.md",
+      "sha256": "af736ff243e2c5bebb71a39eae3cad75e3f20b6c64b05284b2ee3de5272d78bf"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v2/PROOF_AUDIT.md",
+      "sha256": "4d90bd3e7d8ac4b96ec9240eee1549fcca7e9ade6bdba282554984be09bbfc33"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v2/README.md",
+      "sha256": "01137c32bc9d76ed786995c08cb10abf1669295943b36ac972e1ee251ed8f6f8"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v2/RESEARCH_LOG.md",
+      "sha256": "75ffe5e010e98154f2cd6eb3e1b888518ae820deb21698291860dbd24666bcd9"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v2/paper.md",
+      "sha256": "8b7ad76a8a4b96ff40d43e9f9c3e7f4fe494dbadcf82bbdc114f980971ffb430"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v3/PROOF_AUDIT.md",
+      "sha256": "9676ef7fe5aac76181062945357dee95f39306a72a0eade8a424d876795ac86d"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v3/README.md",
+      "sha256": "4d819bd15e7cb1435c0ba01f6e338e33e82c0078bdc3b8d4b401863ba2353c0f"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v3/RESEARCH_LOG.md",
+      "sha256": "7f2db188c44a502cf7826976fa397c64df0423c8d4876c63c34efc3545f3154b"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v3/paper.md",
+      "sha256": "7827af9bbd122acd0852778c22ba94dbc9c80b729b5502f2944574f8b9e5121a"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v4/PROOF_AUDIT.md",
+      "sha256": "19eacbdc7dc11ae6179cf42342f3dbec44f00828ebcc336bbc119472290d0370"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v4/README.md",
+      "sha256": "2c36808637c6282b0c8bdd8164c106f811c8d0973796ff9b52f317afb6892f9d"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v4/paper.md",
+      "sha256": "19eb5aa0c79e34280cc3619cf40c1bea7acda6f6ec1161b05fbb6bf2308fda81"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v5/PROOF_AUDIT.md",
+      "sha256": "1492eb49aa7ee67110da30abbcd00b0da42708ea0dacb78de727711e61ee0311"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v5/README.md",
+      "sha256": "73a4c6c442a48bbcf72425a5f7b42a921f2aaa9c1498165b79bbee804a64b06a"
+    },
+    {
+      "path": "preprints/005-simplex-product-optimum/v5/paper.md",
+      "sha256": "31bf54678d473fdb564285fe38f48e00dcca437aaf23ecbca3727127f6a1f291"
+    },
+    {
+      "path": "reviews/2026-10-07-projection-spectral-clarification.md",
+      "sha256": "1884cbfd3d9acf6a798ccbc290d0121c6ba6e864a1f98eeeae1ef26c0202f84d"
+    },
+    {
+      "path": "reviews/2026-10-07-symmetric-projection-equality-review.md",
+      "sha256": "7ab6b6d8dbdfb55bbc91f4c425cf905f50f51e7169d56fed5036c64dfc750f6f"
+    },
+    {
+      "path": "verification/2026-10-07-bellman-recursion-audit/README.md",
+      "sha256": "dd97cc711f12a736f3688ddfe1aa662595c4adbf38b4b0c18c1f1bcc1131eef3"
+    },
+    {
+      "path": "verification/2026-10-07-mixed-bellman-independent-audit/AUDIT.md",
+      "sha256": "7ccb2215465ad555cdf3ffe4234f307dda68db8a9b0a0d6b81eaa7c12694326b"
+    },
+    {
+      "path": "verification/2026-10-07-mixed-bellman-independent-audit/README.md",
+      "sha256": "dd0fc5a0741ac2d062b613a2e249c71bb301d28be34cf24a81f37e9078287fff"
+    }
+  ],
+  "sources_downloaded": 123,
+  "date": "2026-10-10",
+  "repository": "https://github.com/mxym/math",
+  "claim_audited": "The specified rational eighteen-dimensional, twenty-three-facet seed and certified amplified rate above 2.928.",
+  "excluded_novelty_claims": [
+    "Simplex-section method",
+    "Gale diagrams and polygon configurations",
+    "Coarea and complementary minors",
+    "Exponential-spline inversion",
+    "Lifted invariant and product-join amplification calculus",
+    "Density-gradient facet weights and classical multivariate interpolation"
+  ],
+  "priority_certified": false,
+  "conclusion": "No matching specified seed or amplified bound was located in the inspected sources. The search is bounded and cannot certify global priority.",
+  "primary_background": [
+    "https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20260821091122099811781",
+    "https://arxiv.org/html/0806.1127v4"
+  ],
+  "web_queries": [
+    "\"projection\" \"2.928\" \"volume\"",
+    "\"simplex\" \"projection-body\" \"section\" growth"
+  ],
+  "web_search_limit": "No matching construction located; indexed search can omit recent or unpublished work.",
+  "pattern_search": {
+    "patterns": [
+      "2\\.9[12]"
+    ],
+    "matching_documents": [],
+    "inspected_source_hashes_verified": 123
+  },
+  "source_hash_encoding": "UTF-8 with LF line endings; Windows cache CRLF is normalized before comparison."
+}
