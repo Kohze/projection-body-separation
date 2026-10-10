@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-10",
+  "edition": "v1.3.2",
+  "status": "PASS",
+  "pages": 16,
+  "renderer": "Poppler pdftoppm, maximum page dimension 1500 pixels",
+  "all_pages_visually_inspected": true,
+  "contact_sheets": 4,
+  "focused_full_page_checks": [
+    2,
+    6,
+    7,
+    14,
+    15,
+    16
+  ],
+  "latex_overfull": 0,
+  "latex_underfull": 0,
+  "unresolved_references": 0,
+  "final_pdf_sha256": "56e09d8135d0f1205afdb41d7636a49dffd5a37696d36602c18ff56790d3d9d4",
+  "source_sha256": "1fec0af03dc73b5f2acfd89e18463877639aba5fd2d54b79c2704e1e303cee8d",
+  "checks": [
+    "Henk context and formula text",
+    "Xu equation and lemma pointers and Ron attribution",
+    "All 21 bibliography entries and DOI link targets",
+    "Bibliography font and page balance",
+    "Page breaks, tables, coordinate blocks and reproduction commands"
+  ]
+}

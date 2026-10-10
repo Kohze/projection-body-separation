@@ -39,3 +39,8 @@ novelty-comparison-v1.3.1.json. The source ledger now reflects the principal
 eighteen-dimensional seed and the public author names. Mathematical constants,
 proof dependency pins and computational construction certificates are unchanged.
 Earlier audits remain historical records, not current scores or external review.
+
+Version 1.3.2 is a citation-only revision with twenty-one cited entries.
+Its current records are citation-audit-v1.3.2.json, layout-qa-v1.3.2.json
+and citation-release-review-v1.3.2.json. The earlier full internal review
+and scores remain historical; this delta does not re-score the mathematics.

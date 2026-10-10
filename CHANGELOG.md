@@ -1,5 +1,18 @@
 # Changes
 
+## 1.3.2 - 10 October 2026
+
+Strengthen literature coverage with Henk (2025) on zonotope projection
+volumes and centrally symmetric lower bounds, and Ron (1988) on exponential
+box splines. Give exact section, equation and lemma pointers for Xu's
+volume-density relation and exponential-spline decomposition, and a section
+pointer for the inherited geometric construction. Twenty-one references
+are cited. Set the bibliography in a standard smaller font to avoid an
+almost empty final page. Rebuild and visually inspect the PDF, refresh matching source/PDF
+snapshots and inventories, and update the versioned data/code citation.
+Construction data, mathematical certificates and essential proof dependency
+pins are unchanged. Prior internal scores are not a new external review.
+
 ## 1.3.1 - 10 October 2026
 
 Final editorial and release audit. Distinguish the generic recursion X_j,

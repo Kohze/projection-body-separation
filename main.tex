@@ -15,7 +15,7 @@
 \newcommand{\RK}{\mathcal P}
 \title{Beyond point-generated product--join constructions\protect\\for projection-body volume}
 \author{Robin Gounder}
-\date{10 October 2026\quad\textnormal{(version 1.3.1)}}
+\date{10 October 2026\quad\textnormal{(version 1.3.2)}}
 \hypersetup{pdftitle={Beyond point-generated product-join constructions for projection-body volume},pdfauthor={Robin Gounder},pdfkeywords={convex geometry, projection bodies, polytopes, simplex sections, affine inequalities, exact computation}}
 \raggedbottom
 \begin{document}
@@ -75,7 +75,10 @@ disproved a different proposed upper bound for centrally symmetric bodies.
 Lutwak, Yang, and Zhang~\cite{lyz} developed affine-invariant functionals
 for polytopes and derived projection-volume estimates. Saroglou~\cite{saroglou-cones}
 established sharp three-dimensional maxima within the classes of zonoids,
-cones, and double cones. These results concern the same volume ratio,
+cones, and double cones. Henk~\cite{henk} proved that an $n$-dimensional
+zonotope with $n+1$ generators has $R_n=2^n$, and gave an exponential
+lower bound for the centrally symmetric supremum.
+These results concern the same volume ratio,
 but do not supply the whole-class comparison used here.
 
 Feng, Hu, Liu, and Xu~\cite{feng} already disprove the simplex upper bound
@@ -346,7 +349,10 @@ variables. Coarea and scaling of the fibers $Mx=(s,0)$ give
                 \frac{s^{15}V}{\sqrt{\det(MM^T)}}\,ds
       =\frac{15!V}{\sqrt{\det(MM^T)}}.
 \]
-This is the standard multivariate-spline volume method; see~\cite{xu}.
+This is the standard multivariate-spline volume relation;
+see~\cite[Section 3, equation (3.2)]{xu}. The exponential-spline
+decomposition used below is recorded in~\cite[Lemma 3.1]{xu},
+with attribution to Ron~\cite{ron}.
 Thus $R_{15}(S_0)=g(15)Df(0)$.
 
 For completeness, the supplied certificate evaluates the density by a
@@ -422,8 +428,8 @@ $f_i(0)=f(0)+b_i\cdot\nabla f(0)$. The facet coarea identity and
 therefore give $d_i=nV\gamma_i$. Applying complementary minors to an
 orthonormal frame of $F$ and its lift by any $\lambda$ with
 $M\lambda=(1,0)$ proves~\eqref{eq:weighted-section}.
-These are the classical section and spline volume tools~\cite{feng,xu},
-with the facet weights retained.
+These are the classical section tools of~\cite[Section 4]{feng} and
+spline volume formulas of~\cite[Section 3]{xu}, with the facet weights retained.
 
 For the specified $C$, the required $C^1$ regularity follows directly
 from Fourier inversion. Any unit vector is orthogonal to at most three
@@ -954,7 +960,7 @@ The manuscript source, PDF, exact seed coordinates, triangulations and section c
 dimension-197 facet inequalities, finite operation recipes, recurrence certificates,
 verification programs, source audit, and reproduction instructions are
 publicly available in the accompanying GitHub repository~\cite{data}.
-The versioned release \texttt{v1.3.1} identifies the edition accompanying
+The versioned release \texttt{v1.3.2} identifies the edition accompanying
 this manuscript. Original Python code and generated certificate data are
 provided under the MIT license; manuscript rights are stated separately.
 
@@ -1031,6 +1037,8 @@ facet. The generic rays $(17,13,7,3)$ and $(19,11,5,2)$ give overlapping
 outward enclosures for the density, gradient and complete geometric state.
 The matrix specifies a witness; no seed or combinatorial optimality is claimed.
 
+\begingroup
+\small
 \begin{thebibliography}{99}
 \bibitem{brannen}
 N.~S.~Brannen, \emph{Volumes of projection bodies}, Mathematika
@@ -1056,9 +1064,14 @@ PDF dated 26 August 2026.
 
 \bibitem{data}
 R.~Gounder, \emph{Beyond point-generated product--join constructions for
-projection-body volume: manuscript, data, and code}, version 1.3.1 (2026).
+projection-body volume: manuscript, data, and code}, version 1.3.2 (2026).
 \href{https://github.com/Kohze/projection-body-separation}{Reproduction repository};
-\href{https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.1}{Versioned release}.
+\href{https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.2}{Versioned release}.
+
+\bibitem{henk}
+M.~Henk, \emph{Note on projection bodies of zonotopes with $n+1$ generators},
+Acta Mathematica Scientia \textbf{45} (2025), 96--103.
+\href{https://doi.org/10.1007/s10473-025-0107-9}{Published article}.
 
 \bibitem{lasserre}
 J.~B.~Lasserre, \emph{Volume of slices and sections of the simplex in
@@ -1117,6 +1130,11 @@ OpenAI, \emph{A product counterexample to the simplex maximum for
 projection-body volume}, research preprint, 24 September 2026.
 \href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-product-counterexample-to-the-simplex-maximum-for-projection-body-volume-September-24-2026}{Pinned manuscript and source}.
 
+\bibitem{ron}
+A.~Ron, \emph{Exponential box splines}, Constructive Approximation
+\textbf{4} (1988), 357--378.
+\href{https://doi.org/10.1007/BF02075467}{Published article}.
+
 \bibitem{saroglou-cones}
 C.~Saroglou, \emph{Volumes of projection bodies of some classes of convex
 bodies}, Mathematika \textbf{57} (2011), 329--353.
@@ -1140,4 +1158,5 @@ G.~Zhang, \emph{Restricted chord projection and affine inequalities},
 Geometriae Dedicata \textbf{39} (1991), 213--222.
 \href{https://doi.org/10.1007/BF00182294}{Published article}.
 \end{thebibliography}
+\endgroup
 \end{document}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-10",
+  "edition": "v1.3.2",
+  "status": "PASS",
+  "review_type": "Internal citation and layout delta review; not independent external peer review.",
+  "previous_full_internal_review": "final-release-review-v1.3.1.json",
+  "scores_reassessed": false,
+  "changes": [
+    "Add Henk (2025) as geometric context",
+    "Add Ron (1988) for the original spline attribution",
+    "Pinpoint Xu Section 3 equation (3.2), Lemma 3.1 and Feng Section 4",
+    "Refresh matching source/PDF and versioned reproduction metadata"
+  ],
+  "mathematical_certificates_and_proof_pins_changed": false,
+  "prior_manifest_files_unchanged": 110,
+  "prior_file_changes": [
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "README.md",
+    "README.txt",
+    "audit/README.md",
+    "beyond-point-generated-projection-body-constructions.pdf",
+    "main.tex",
+    "reproduction/ARTIFACTS.sha256",
+    "reproduction/README.txt",
+    "reproduction/beyond-point-generated.pdf",
+    "reproduction/beyond-point-generated.tex",
+    "reproduction/source-audit.json"
+  ],
+  "validation": {
+    "warning_free_three_pass_latex_build": true,
+    "all_21_references_cited": true,
+    "all_16_rendered_pages_inspected": true,
+    "delivery_inventory": "Checked after sealing",
+    "remote_CI": "Checked after publication; receipt retained in surrounding workspace"
+  },
+  "limitations": [
+    "The earlier full mathematical review retains its original scope.",
+    "No new mathematical theorem, priority certification or external peer review is claimed."
+  ]
+}
