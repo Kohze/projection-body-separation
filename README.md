@@ -93,3 +93,29 @@ The geometric family, dimension-nine simplex counterexample phenomenon,
 operation identities, Pareto algorithm and mixed Bellman theorem are prior
 work and explicitly attributed. The finite witness search is not exhaustive
 and makes no optimality or global priority claim.
+
+## Minimality research supplement
+
+[Read the supplement](research/minimality/minimality.pdf) ·
+[Exact checker and certificate](research/minimality/README.txt)
+
+The supplement proves that nine is the first separation dimension within
+the entire class generated from paired two-upper-facet seeds by products,
+joins and affine maps. A short analytic proof and a separate exact polynomial
+certificate establish the seed bound through dimension eight; an invariant
+envelope proves closure under every operation tree. The checker
+also cross-checks the point-generated class through dimension nine without
+Pareto pruning. Seven adversarial and positive tests run in normal and
+optimized Python.
+
+**Global minimality remains unproved.** The supplement shows that proving
+nine minimal over all convex bodies is equivalent to proving the unrestricted
+simplex bound in dimension eight. General asymmetric seeds and arbitrary
+convex bodies need not belong to the generated class. This research supplement is
+separate from the v1.1.0 paper and its sealed reproduction snapshot.
+
+```sh
+python -B research/minimality/check_minimality.py --check-report
+python -B -m unittest discover -s research/minimality -p test_minimality.py -v
+python -B -O -m unittest discover -s research/minimality -p test_minimality.py -v
+```

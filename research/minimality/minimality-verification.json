@@ -1,0 +1,506 @@
+{
+  "status": "PASS: exact arithmetic obligations",
+  "unrestricted_minimality_proved": false,
+  "paired_seed_family_first_separation_dimension": 9,
+  "paired_seed_product_join_class_first_separation_dimension": 9,
+  "polynomial_certificate_sha256": "cc3cb105be78d39263825ece88a3ebb9fc0970652e0fbd831e2dcd85511d92d8",
+  "polynomial": {
+    "denominator_monomials": 291,
+    "numerator_monomials": 125,
+    "ordered_gap_monomials": 585,
+    "smallest_positive_coefficient": 2,
+    "degrees": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "analytic_anchor": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "analytic_gradient": [
+    "2749/18225",
+    "1768/6075",
+    "3208/6075",
+    "15664/18225"
+  ],
+  "ordered_cone_tail_margins": [
+    "941/18225",
+    "217/18225",
+    "988/18225",
+    "1489/18225"
+  ],
+  "dimension_nine_R_over_simplex": "20811283583/20797677600",
+  "point_generated_class": [
+    {
+      "dimension": 1,
+      "distinct_states": 1,
+      "R_over_simplex": "1"
+    },
+    {
+      "dimension": 2,
+      "distinct_states": 2,
+      "R_over_simplex": "1"
+    },
+    {
+      "dimension": 3,
+      "distinct_states": 4,
+      "R_over_simplex": "1"
+    },
+    {
+      "dimension": 4,
+      "distinct_states": 9,
+      "R_over_simplex": "1"
+    },
+    {
+      "dimension": 5,
+      "distinct_states": 21,
+      "R_over_simplex": "1"
+    },
+    {
+      "dimension": 6,
+      "distinct_states": 51,
+      "R_over_simplex": "1"
+    },
+    {
+      "dimension": 7,
+      "distinct_states": 130,
+      "R_over_simplex": "1"
+    },
+    {
+      "dimension": 8,
+      "distinct_states": 341,
+      "R_over_simplex": "1"
+    },
+    {
+      "dimension": 9,
+      "distinct_states": 914,
+      "R_over_simplex": "1"
+    }
+  ],
+  "product_envelope_corners": [
+    {
+      "left_dimension": 1,
+      "right_dimension": 1,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "65/2"
+        },
+        {
+          "H_left": "1",
+          "H_right": "2",
+          "difference": "45/2"
+        },
+        {
+          "H_left": "2",
+          "H_right": "1",
+          "difference": "45/2"
+        },
+        {
+          "H_left": "2",
+          "H_right": "2",
+          "difference": "9"
+        }
+      ]
+    },
+    {
+      "left_dimension": 1,
+      "right_dimension": 2,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "32"
+        },
+        {
+          "H_left": "1",
+          "H_right": "3",
+          "difference": "80/3"
+        },
+        {
+          "H_left": "2",
+          "H_right": "1",
+          "difference": "65/3"
+        },
+        {
+          "H_left": "2",
+          "H_right": "3",
+          "difference": "31/3"
+        }
+      ]
+    },
+    {
+      "left_dimension": 1,
+      "right_dimension": 3,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "1857/64"
+        },
+        {
+          "H_left": "1",
+          "H_right": "4",
+          "difference": "1935/64"
+        },
+        {
+          "H_left": "2",
+          "H_right": "1",
+          "difference": "1269/64"
+        },
+        {
+          "H_left": "2",
+          "H_right": "4",
+          "difference": "405/32"
+        }
+      ]
+    },
+    {
+      "left_dimension": 1,
+      "right_dimension": 4,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "15784/625"
+        },
+        {
+          "H_left": "1",
+          "H_right": "5",
+          "difference": "105192/3125"
+        },
+        {
+          "H_left": "2",
+          "H_right": "1",
+          "difference": "55377/3125"
+        },
+        {
+          "H_left": "2",
+          "H_right": "5",
+          "difference": "48069/3125"
+        }
+      ]
+    },
+    {
+      "left_dimension": 1,
+      "right_dimension": 5,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "6091/288"
+        },
+        {
+          "H_left": "1",
+          "H_right": "6",
+          "difference": "95999/2592"
+        },
+        {
+          "H_left": "2",
+          "H_right": "1",
+          "difference": "40187/2592"
+        },
+        {
+          "H_left": "2",
+          "H_right": "6",
+          "difference": "11863/648"
+        }
+      ]
+    },
+    {
+      "left_dimension": 1,
+      "right_dimension": 6,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "1983768/117649"
+        },
+        {
+          "H_left": "1",
+          "H_right": "7",
+          "difference": "33261048/823543"
+        },
+        {
+          "H_left": "2",
+          "H_right": "1",
+          "difference": "10898253/823543"
+        },
+        {
+          "H_left": "2",
+          "H_right": "7",
+          "difference": "17578215/823543"
+        }
+      ]
+    },
+    {
+      "left_dimension": 1,
+      "right_dimension": 7,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "26142545/2097152"
+        },
+        {
+          "H_left": "1",
+          "H_right": "8",
+          "difference": "11462481/262144"
+        },
+        {
+          "H_left": "2",
+          "H_right": "1",
+          "difference": "11462481/1048576"
+        },
+        {
+          "H_left": "2",
+          "H_right": "8",
+          "difference": "3204945/131072"
+        }
+      ]
+    },
+    {
+      "left_dimension": 2,
+      "right_dimension": 2,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "257/8"
+        },
+        {
+          "H_left": "1",
+          "H_right": "3",
+          "difference": "207/8"
+        },
+        {
+          "H_left": "3",
+          "H_right": "1",
+          "difference": "207/8"
+        },
+        {
+          "H_left": "3",
+          "H_right": "3",
+          "difference": "81/8"
+        }
+      ]
+    },
+    {
+      "left_dimension": 2,
+      "right_dimension": 3,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "18474/625"
+        },
+        {
+          "H_left": "1",
+          "H_right": "4",
+          "difference": "93843/3125"
+        },
+        {
+          "H_left": "3",
+          "H_right": "1",
+          "difference": "75438/3125"
+        },
+        {
+          "H_left": "3",
+          "H_right": "4",
+          "difference": "37341/3125"
+        }
+      ]
+    },
+    {
+      "left_dimension": 2,
+      "right_dimension": 4,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "235/9"
+        },
+        {
+          "H_left": "1",
+          "H_right": "5",
+          "difference": "2783/81"
+        },
+        {
+          "H_left": "3",
+          "H_right": "1",
+          "difference": "1805/81"
+        },
+        {
+          "H_left": "3",
+          "H_right": "5",
+          "difference": "1201/81"
+        }
+      ]
+    },
+    {
+      "left_dimension": 2,
+      "right_dimension": 5,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "2619172/117649"
+        },
+        {
+          "H_left": "1",
+          "H_right": "6",
+          "difference": "31970709/823543"
+        },
+        {
+          "H_left": "3",
+          "H_right": "1",
+          "difference": "16822548/823543"
+        },
+        {
+          "H_left": "3",
+          "H_right": "6",
+          "difference": "15069483/823543"
+        }
+      ]
+    },
+    {
+      "left_dimension": 2,
+      "right_dimension": 6,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "298137/16384"
+        },
+        {
+          "H_left": "1",
+          "H_right": "7",
+          "difference": "710703/16384"
+        },
+        {
+          "H_left": "3",
+          "H_right": "1",
+          "difference": "304587/16384"
+        },
+        {
+          "H_left": "3",
+          "H_right": "7",
+          "difference": "362637/16384"
+        }
+      ]
+    },
+    {
+      "left_dimension": 3,
+      "right_dimension": 3,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "441/16"
+        },
+        {
+          "H_left": "1",
+          "H_right": "4",
+          "difference": "459/16"
+        },
+        {
+          "H_left": "4",
+          "H_right": "1",
+          "difference": "459/16"
+        },
+        {
+          "H_left": "4",
+          "H_right": "4",
+          "difference": "27/2"
+        }
+      ]
+    },
+    {
+      "left_dimension": 3,
+      "right_dimension": 4,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "2907390/117649"
+        },
+        {
+          "H_left": "1",
+          "H_right": "5",
+          "difference": "27675162/823543"
+        },
+        {
+          "H_left": "4",
+          "H_right": "1",
+          "difference": "22440555/823543"
+        },
+        {
+          "H_left": "4",
+          "H_right": "5",
+          "difference": "13519143/823543"
+        }
+      ]
+    },
+    {
+      "left_dimension": 3,
+      "right_dimension": 5,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "45016023/2097152"
+        },
+        {
+          "H_left": "1",
+          "H_right": "6",
+          "difference": "40676229/1048576"
+        },
+        {
+          "H_left": "4",
+          "H_right": "1",
+          "difference": "13558743/524288"
+        },
+        {
+          "H_left": "4",
+          "H_right": "6",
+          "difference": "5286789/262144"
+        }
+      ]
+    },
+    {
+      "left_dimension": 4,
+      "right_dimension": 4,
+      "corners": [
+        {
+          "H_left": "1",
+          "H_right": "1",
+          "difference": "2885/128"
+        },
+        {
+          "H_left": "1",
+          "H_right": "5",
+          "difference": "4185/128"
+        },
+        {
+          "H_left": "5",
+          "H_right": "1",
+          "difference": "4185/128"
+        },
+        {
+          "H_left": "5",
+          "H_right": "5",
+          "difference": "2493/128"
+        }
+      ]
+    }
+  ],
+  "class_calculus_attribution": "mxym product/join calculus and exact finite-optima classification (2026); unpruned cross-check here",
+  "remaining_global_requirement": "R_8(K) <= 131072/35 for every full-dimensional convex body K in R^8",
+  "analytic_scope": "The note supplies the analytic proofs, continuity argument and inherited pyramid reduction. Finite arithmetic is not a formalization of those arguments."
+}

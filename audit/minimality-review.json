@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-10",
+  "status": "PASS: scoped research supplement",
+  "external_peer_review": false,
+  "goal": "Prove dimension nine minimal for separation over all convex bodies",
+  "full_goal_achieved": false,
+  "unrestricted_minimality_proved": false,
+  "proved_scope": "Dimension nine is first for the entire product/join/affine closure of the paired seed family",
+  "global_reduction": "The full goal is equivalent to R_8(K)<=131072/35 for every full-dimensional convex body K in R^8",
+  "completed_obligations": {
+    "supporting_gradient": "Exact Fraction differentiation at (1,2,4,8)",
+    "ordered_cone": "Four positive tail margins, denominator 18225",
+    "analytic_transform": "Pr\u00e9kopa convolution/marginal theorems; elementary survival-function Laplace bound",
+    "polynomial_identity": "Independent integer sparse-polynomial reconstruction and cleared divided difference",
+    "coefficient_positivity": "585 positive coefficients; minimum 2; degrees 7-10; no finite grid extrapolation",
+    "boundary": "Continuity or Laplace integral covers repeated and zero parameters",
+    "join_closure": "Exact algebra using (H-r-1)(J-s-1)>=0",
+    "product_closure": "64 rational corners for all 16 dimension pairs with r+s<=8",
+    "all_operation_trees": "Induction using Q(H+8-n)<=9 and 1<=H<=n+1",
+    "small_class": "Unpruned exact states through dimension 9; 341 in dimension 8, 914 in dimension 9",
+    "strict_nine_witness": "20811283583/20797677600; inherited independent geometry certificate unchanged"
+  },
+  "unresolved_obligations": [
+    "All convex bodies in dimension 8; no reduction to the paired-seed generated class is proved"
+  ],
+  "essential_prior_inputs": [
+    {
+      "source": "mxym product/join calculus, version 2, 7 October 2026",
+      "scope": "Operation identities and universal invariant bounds"
+    },
+    {
+      "source": "Feng, Hu, Liu, Xu, 26 August 2026",
+      "scope": "Prior seed family, dimension-nine phenomenon and open dimensions 4-8"
+    },
+    {
+      "source": "Pr\u00e9kopa, 1973, Theorems 6 and 7",
+      "url": "https://acta.bibl.u-szeged.hu/14411/1/math_034_335-343.pdf",
+      "scope": "Marginal and convolution preservation of log-concavity"
+    }
+  ],
+  "caveats": [
+    "Analytic proofs are not proof-assistant formalized",
+    "No external peer review or global bibliographic priority claim",
+    "Finite search nonexistence is not a proof premise"
+  ],
+  "new_tests": [
+    {
+      "optimized": false,
+      "tests": 7,
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "tests": 7,
+      "status": "PASS"
+    }
+  ],
+  "polynomial_certificate_sha256": "cc3cb105be78d39263825ece88a3ebb9fc0970652e0fbd831e2dcd85511d92d8",
+  "supplement_pdf_sha256": "5fd17f2aa874a12ac3b2ed5cf30a4ebec3e66ca75ef5a2d81f206a1b5623dddd",
+  "pages": 5,
+  "all_pages_visually_inspected": true,
+  "build_warnings": 0,
+  "references": 5,
+  "all_references_cited": true,
+  "original_v1_1_0_paper_sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
+  "original_paper_and_sealed_snapshot_changed": false,
+  "exploratory_checks": {
+    "old_search_top_candidates_exactly_rejected": 30,
+    "centroid_cut_direction_searches": 120,
+    "no_numerical_search_used_as_proof": true
+  }
+}

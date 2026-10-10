@@ -1,5 +1,18 @@
 # Changes
 
+## Unreleased research supplement: dimension-nine minimality
+
+Add a separate five-page research supplement with an exact reduction of
+global minimality to the unrestricted eight-dimensional simplex bound.
+Prove that dimension nine is minimal within the entire class generated
+from paired two-upper-facet seeds by products, joins and affine maps.
+Supply an analytic proof, an independent 585-term positive-polynomial
+certificate, all 64 exact product-closure corner checks, unpruned operation
+states through dimension nine, and seven positive/adversarial tests.
+Global minimality over arbitrary convex bodies remains unproved. The
+v1.1.0 paper, sealed reproduction snapshot, tags and release assets are
+unchanged. CI now also checks the research supplement.
+
 ## 1.1.0 - 10 October 2026
 
 Prove separation from the entire point-generated class in every dimension

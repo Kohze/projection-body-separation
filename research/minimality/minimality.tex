@@ -1,0 +1,321 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\E}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\CC}{\mathcal C}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{lemma}[proposition]{Lemma}
+\title{The dimension-nine threshold: an exact reduction\texorpdfstring{\\}{ }and minimality for constructions from paired seeds}
+\author{Robin Gounder}
+\date{10 October 2026\quad Research supplement}
+\begin{document}
+\maketitle
+\begin{abstract}
+The accompanying paper proves separation from the point-generated
+product--join class in every dimension at least nine. We show that global
+minimality of nine is equivalent to the unrestricted simplex bound in
+dimension eight, which remains unproved here. We do prove that nine is
+the first separation dimension within the paired two-upper-facet seed
+family and for all constructions from those seeds by products and joins.
+The proof uses a rational supporting gradient and log-concavity; a
+separate positive-polynomial certificate checks the seed bound. Neither
+argument reduces arbitrary convex bodies to these constructions.
+\end{abstract}
+
+\section{What global minimality requires}
+For a full-dimensional convex body $K\subset\mathbb R^n$, put
+\[
+ R_n(K)=\frac{\vol_n(\Pi K)}{\vol_n(K)^{n-1}},\qquad
+ g(n)=\frac{n^n}{n!},\qquad c_n=(n+1)g(n).
+\]
+Here $\Pi K$ is the projection body. Let $\CC$ be the class generated
+from a point by Cartesian products, joins, and invertible affine maps
+on the relevant affine hulls.
+The exact finite classification in~\cite{finite} gives
+$\sup_{K\in\CC_n}R_n(K)=c_n$ for $1\le n\le9$.
+The accompanying paper~\cite{paper} supplies a strict witness in dimension
+nine and separation in every larger dimension. The unrestricted simplex
+bound in dimensions four through eight is left open in~\cite[Introduction]{feng}.
+
+\begin{proposition}\label{prop:global}
+Nine is the smallest dimension admitting separation from $\CC$ if and
+only if
+\begin{equation}\label{eq:remaining}
+ R_8(K)\le c_8=\frac{131072}{35}
+ \quad\text{for every full-dimensional convex body }K\subset\mathbb R^8.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The inherited pyramid calculus~\cite[Sections 2--5]{calculus} gives,
+for a $d$-dimensional convex body $K$ and $t\ge0$,
+\[
+ \frac{R_{d+t}(\mathcal P^tK)}{c_{d+t}}
+ =\frac{R_d(K)}{g(d)}\frac{1+t a(K)}{d+t+1},
+ \qquad a(K)\ge\frac1{d+1}.
+\]
+Here $a(K)$ is the lifted facet invariant of~\cite{calculus}, extended
+by continuity to convex bodies.
+The difference between consecutive terms on the right is
+\[
+ \frac{R_d(K)}{g(d)}
+ \frac{(d+1)a(K)-1}{(d+t+1)(d+t+2)}\ge0.
+\]
+Thus any strict violation of the simplex bound in a dimension $d\le8$
+lifts to a strict violation in dimension eight. If~\eqref{eq:remaining}
+holds, no such lower-dimensional separation exists, and the known
+dimension-nine witness proves minimality. Conversely, a violation
+of~\eqref{eq:remaining} is already separation in dimension eight.
+\end{proof}
+
+By continuity of volume and the projection-body operator under Hausdorff
+convergence, it would suffice to prove~\eqref{eq:remaining} for every
+full-dimensional rational polytope in $\mathbb R^8$. This is still an
+unbounded class; finite searches do not establish that assertion.
+
+\section{A proved minimum for the paired family}
+For $0\le u_1\le\cdots\le u_m<1$ and $n\ge2m$, define
+\[
+ K_n(u)=\{x\in\mathbb R^n:x_i\ge0,\
+             \boldsymbol1\cdot x+|b\cdot x|\le1\},\qquad
+ b=(-u_m,\ldots,-u_1,u_1,\ldots,u_m,0^{n-2m}).
+\]
+For $m=0$ this means the standard simplex. The family is inherited
+from the two-facet constructions of~\cite{feng}; we make no priority
+claim for the family or the dimension-nine phenomenon.
+
+\begin{theorem}\label{thm:paired}
+Every paired seed $K_n(u)$ in dimension $n\le8$ satisfies
+$R_n(K_n(u))\le c_n$. The paired seed
+$K_9(1/100,2/100,3/100,5/100)$ satisfies
+\[
+ \frac{R_9}{c_9}=\frac{20811283583}{20797677600}>1.
+\]
+Consequently nine is the first separation dimension within this paired
+seed family, with zero coordinates and affine images allowed.
+\end{theorem}
+
+We first record an elementary consequence of log-concavity.
+\begin{lemma}\label{lem:laplace}
+If $\PP(Y>0)=1$, $Y$ has a log-concave survival function, and its mean
+$M$ is finite, then $\E e^{-Y}\le(1+M)^{-1}$.
+\end{lemma}
+\begin{proof}
+Write $S(t)=\PP(Y>t)$, so $S(0)=1$.
+Convexity of $-\log S$ implies $S(t+s)\le S(t)S(s)$ for $s,t\ge0$.
+Consequently
+\[
+ J(t):=\int_t^\infty S(s)\,ds\le M S(t).
+\]
+For $L=\int_0^\infty e^{-t}S(t)\,dt$, Tonelli's theorem gives
+$\int_0^\infty e^{-t}J(t)\,dt=M-L\le ML$.
+Hence $L\ge M/(1+M)$ and $\E e^{-Y}=1-L\le(1+M)^{-1}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:paired}]
+It is enough to consider dimension eight: appending a zero tilt is a
+pyramid, so Proposition~\ref{prop:global}'s monotonicity transfers the
+eight-dimensional bound to smaller dimensions. Padding with zero pairs
+then gives four parameters $0\le u_1\le\cdots\le u_4<1$.
+Let $X_i$ be independent standard Laplace variables, each with density
+$e^{-|x|}/2$, and write
+\[
+ M(u)=\E\left|\sum_{i=1}^4u_iX_i\right|,\qquad
+ I(u)=8!\vol_8(K_8(u)).
+\]
+The homogeneous gauge integral gives
+\[
+ I(u)=\int_{\mathbb R_+^8}e^{-\boldsymbol1\cdot x-|b\cdot x|}\,dx
+     =\E e^{-Y},\qquad Y=\left|\sum_{i=1}^4u_iX_i\right|,
+\]
+because the difference of two independent standard exponential
+variables is standard Laplace. If $u\ne0$, the sum has a symmetric
+log-concave density by Pr\'ekopa's convolution theorem~\cite[Theorem 7]{prekopa}.
+The density of $Y$ on $[0,\infty)$ and its survival function are therefore
+log-concave; the latter follows by integrating $f(t+s)$ over $s\ge0$
+using~\cite[Theorem 6]{prekopa}. Lemma~\ref{lem:laplace} yields
+$I(u)\le(1+M(u))^{-1}$.
+
+The convex homogeneous function $M$ on $\mathbb R^4$ has, at $v=(1,2,4,8)$,
+supporting gradient
+\begin{equation}\label{eq:gradient}
+ \nabla M(v)=\frac1{18225}(2749,5304,9624,15664).
+\end{equation}
+For a direct exact calculation, partial fractions of the characteristic
+function $\prod_i(1+u_i^2t^2)^{-1}$ give
+\[
+ M(u)=\sum_{i=1}^4\frac{u_i^7}{\prod_{j\ne i}(u_i^2-u_j^2)}
+ \quad(0<u_1<\cdots<u_4).
+\]
+Differentiating at $v$ gives~\eqref{eq:gradient}. Convexity and homogeneity
+imply $M(u)\ge\nabla M(v)\cdot u$.
+Writing $x_1=u_1$ and $x_j=u_j-u_{j-1}$ for $j\ge2$, we obtain
+\begin{equation}\label{eq:gap}
+ M(u)-\frac{u_1+3u_2+5u_3+7u_4}{9}
+ \ge\frac{941x_1+217x_2+988x_3+1489x_4}{18225}\ge0.
+\end{equation}
+The seed formula in~\cite[Proposition 2]{paper} now gives, with
+$w\cdot u=u_1+3u_2+5u_3+7u_4$,
+\[
+ \frac{R_8(K_8(u))}{c_8}
+ =I(u)\left(1+\frac{w\cdot u}{9}\right)
+ \le\frac{1+w\cdot u/9}{1+M(u)}\le1.
+\]
+For $u=0$ the body is a simplex; repeated and zero parameters also follow
+by continuity, or directly from the integral argument. The displayed
+rational value in dimension nine is checked by the exact seed formula
+and the independent geometric certificate in~\cite{paper}. Since the
+class maximum there is $c_9$, this is separation from $\CC_9$.
+\end{proof}
+
+\subsection{Closure under arbitrary products and joins}
+Let $\mathcal F$ be the class generated by a point and all paired seeds
+$K_n(u)$, using Cartesian products, joins, and invertible affine maps.
+This allows arbitrary finite operation trees, rather than only pyramids
+or the balanced recursion of the accompanying paper.
+
+\begin{proposition}\label{prop:closure}
+For $1\le n\le8$ and every $K\in\mathcal F_n$, one has $R_n(K)\le c_n$.
+Thus nine is the first separation dimension within $\mathcal F$.
+\end{proposition}
+\begin{proof}
+Use the inherited coordinates $H=1/a$ and $Q=aR/g(n)$ from~\cite{calculus}.
+The universal invariant bounds give $1\le H\le n+1$. We prove by induction
+on operation trees of output dimension at most eight that
+\begin{equation}\label{eq:closed-envelope}
+ Q(H+8-n)\le9.
+\end{equation}
+The formal point state is $n=0$, $H=Q=1$, which satisfies the bound.
+For a seed of dimension $n\le8$, the left side divided by nine is
+$R_8(\mathcal P^{8-n}K)/c_8$. These pyramids remain paired seeds, so
+Theorem~\ref{thm:paired} proves the base cases.
+
+For a join of factors with dimensions $r,s$, states $(h,q),(j,v)$, and
+$n=r+s+1\le8$, the new state is $(h+j,qv)$. Put
+$A=h-r-1\le0$ and $B=j-s-1\le0$. Then
+\[
+ (h+8-r)(j+8-s)=(9+A)(9+B)
+ \ge9(9+A+B)=9(h+j+8-n).
+\]
+The two input bounds therefore imply the output bound.
+
+For a product, assume $1\le r\le s$ and $n=r+s\le8$; products with a
+point do not change a state. With $G=g(r)g(s)/g(n)$, the operation rules
+give
+\[
+ H=\frac{nhj}{rj+sh},\qquad Q=qvG\frac{rj+sh}{n}.
+\]
+It suffices to verify
+\begin{equation}\label{eq:product-envelope}
+ (h+8-r)(j+8-s)
+ -9G\left(hj+\frac{8-n}{n}(sh+rj)\right)\ge0.
+\end{equation}
+This is bilinear in $(h,j)$, so its minimum on
+$[1,r+1]\times[1,s+1]$ occurs at a corner. For the sixteen pairs
+$1\le r\le s$, $r+s\le8$, all 64 corner values are at least nine;
+the checker recomputes each exact value. This proves product closure.
+
+Finally, for $n\le8$, inequality~\eqref{eq:closed-envelope} implies
+\[
+ \frac{R_n(K)}{c_n}=\frac{HQ}{n+1}
+ \le\frac{9H}{(n+1)(H+8-n)}\le1,
+\]
+where the last inequality is $(8-n)H\le(8-n)(n+1)$.
+The known paired witness in dimension nine belongs to $\mathcal F$ and
+exceeds the class maximum $c_9$.
+\end{proof}
+
+\section{Independent arithmetic check and remaining scope}
+The file \texttt{check\_minimality.py} recomputes the supporting gradient,
+the four margins in~\eqref{eq:gap}, the dimension-nine rational ratio,
+and every corner obligation in~\eqref{eq:product-envelope}.
+An unpruned enumeration of all operation states gives the simplex
+maximum in dimensions one through nine, independently cross-checking
+the previously published Pareto classification~\cite{finite}.
+
+There is also a separate algebraic proof of the eight-dimensional family
+bound. For distinct positive parameters, write
+\[
+ I(u)=\frac{N(u)}{D(u)},\qquad
+ D(u)=\prod_i(1+u_i)\prod_{i<j}(u_i+u_j).
+\]
+The supplied integer numerator $N$ has 125 monomials. The checker
+reconstructs $D$ and verifies the divided-difference formula for $I$
+after multiplication by the Vandermonde polynomial. It then substitutes
+$u_i=x_1+\cdots+x_i$ into
+\[
+ 9D(u)-(9+w\cdot u)N(u).
+\]
+The resulting polynomial has 585 nonzero monomials, all with positive
+integer coefficients, of total degrees seven through ten. This proves
+the bound throughout the ordered positive parameter region; continuity
+handles its boundary. The checker uses standard-library integer and
+rational arithmetic, with no computer-algebra system or optimizer.
+
+Run the following commands from this supplement's directory:
+\begin{quote}\small\ttfamily
+python -B check\_minimality.py -{}-check-report\\
+python -B -m unittest -v test\_minimality.py\\
+python -B -O -m unittest -v test\_minimality.py
+\end{quote}
+The tests reject altered numerators and denominators, false or missing
+gap coefficients, duplicate monomials, and invalid exponents. The
+analytic arguments are supplied above, rather than inferred from finite
+checks, and have not been proof-assistant formalized or externally
+peer reviewed.
+
+Theorem~\ref{thm:paired} and Proposition~\ref{prop:closure} exclude the paired
+family and its complete product--join closure as sources of a
+lower-dimensional witness. General asymmetric seeds and arbitrary convex
+bodies need not belong to this generated class. The results do not
+prove~\eqref{eq:remaining}, nor imply that every maximizer belongs to
+$\mathcal F$. Global minimality is therefore open in this work. The next
+substantive requirement is a bound covering all eight-dimensional convex
+bodies, or an exact counterexample refuting it.
+
+\section*{Generative AI disclosure}
+OpenAI Codex agents contributed substantially to source discovery,
+literature synthesis, and mathematical exposition.
+
+\section*{Data and code availability}
+This note, its source, polynomial certificate, checker, and exact-arithmetic
+report are supplied in the accompanying reproduction repository~\cite{paper},
+under \texttt{research/minimality/}. The original paper and its versioned
+release remain separate from this research supplement. The supplied
+checks establish the stated arithmetic obligations; they do not claim
+an unrestricted nonexistence proof or global bibliographic priority.
+
+\begin{thebibliography}{9}
+\bibitem{feng}
+Y.~Feng, S.~Hu, W.~Liu, and L.~Xu,
+\emph{On the reverse projection inequality}, author-deposited preprint,
+MathSciDoc:2608.23002, PDF dated 26 August 2026.
+\href{https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20260821091122099811781}{Primary archive record}.
+
+\bibitem{paper}
+R.~Gounder, \emph{Beyond point-generated product--join constructions
+for projection-body volume}, working research draft, version 1.1.0, 2026.
+\href{https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0}{Versioned manuscript and certificates};
+\href{https://github.com/Kohze/projection-body-separation/tree/main/research/minimality}{Minimality research supplement}.
+
+\bibitem{finite}
+mxym (repository account), \emph{An exact Pareto dynamic program for
+product--join projection geometry: sharp extrema through dimension 48},
+research note, 8 October 2026.
+\href{https://github.com/mxym/math/blob/55ba5a7be927e3e7d2dbfd8d054db91b63d8d755/notes/exact-product-join-finite-optima/paper.md}{Pinned theorem and proof}.
+
+\bibitem{calculus}
+mxym (repository account), \emph{Projection-volume calculus for joins
+and Cartesian products}, research manuscript, version 2, 7 October 2026.
+\href{https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/paper.md}{Pinned manuscript}.
+
+\bibitem{prekopa}
+A.~Pr\'ekopa, \emph{On logarithmic concave measures and functions},
+Acta Scientiarum Mathematicarum (Szeged) \textbf{34} (1973), 335--343.
+\href{https://acta.bibl.u-szeged.hu/14411/1/math_034_335-343.pdf}{Published full text}.
+\end{thebibliography}
+\end{document}

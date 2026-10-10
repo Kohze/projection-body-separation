@@ -15,8 +15,8 @@
     },
     {
       "path": ".github/workflows/verify.yml",
-      "sha256": "3d25eda2bd4d4891308fe8b4acda3137461499a61909b2cd8a0ff8ee03da5a4e",
-      "bytes": 485
+      "sha256": "b246df53a79c27e53083b5221e7d4463887087aee0f05e997d66aef04f7a8c59",
+      "bytes": 750
     },
     {
       "path": ".gitignore",
@@ -47,6 +47,11 @@
       "path": "audit/layout-qa.json",
       "sha256": "1b7da3476606d32f72ae5fbaf8eb803d7e884e3c6b6e8edd57ee398a6d02b68a",
       "bytes": 333
+    },
+    {
+      "path": "audit/minimality-review.json",
+      "sha256": "a3000a1b6f32a34ea786bc07ef8d445a560ccdd7f7b3f6a951eeb1d28a46516d",
+      "bytes": 3266
     },
     {
       "path": "audit/portability-fix-v1.0.1.json",
@@ -100,8 +105,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "8fa46b3c35c154bb069f8a9a807520cddebdfcad1a661361d87376a52bedeaff",
-      "bytes": 1539
+      "sha256": "63b6c5ce5edf8c390df39211c92fd31a0f3d12aef62f19f7ceb55ff32fe01962",
+      "bytes": 2297
     },
     {
       "path": "CITATION.cff",
@@ -120,8 +125,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "eaca57d6ec3e6812f91dfe5df7bc017efd5fc690075c8ae53b80bbc45ea07f5a",
-      "bytes": 4994
+      "sha256": "7df9adf9709b83a4dec0f3cbff87fb15dc97e768b6a64c4b571dc2b81a39d789",
+      "bytes": 6298
     },
     {
       "path": "README.txt",
@@ -344,6 +349,46 @@
       "bytes": 8106
     },
     {
+      "path": "research/minimality/build_note.py",
+      "sha256": "3a9e10a1c024dae8514161ddb4ca6e22bfb00a08175a93d7eba25cdd5c0467c6",
+      "bytes": 1193
+    },
+    {
+      "path": "research/minimality/check_minimality.py",
+      "sha256": "19adaf900fe186dddfa11e1f1762f544fb901e98b3a23091c74266c6413ce791",
+      "bytes": 8767
+    },
+    {
+      "path": "research/minimality/minimality-verification.json",
+      "sha256": "ccc9864fea3af2df21c65ec5559aa051a4c3930154621b4a677319b8205ab683",
+      "bytes": 10632
+    },
+    {
+      "path": "research/minimality/minimality.pdf",
+      "sha256": "5fd17f2aa874a12ac3b2ed5cf30a4ebec3e66ca75ef5a2d81f206a1b5623dddd",
+      "bytes": 337758
+    },
+    {
+      "path": "research/minimality/minimality.tex",
+      "sha256": "0133adc10c70aa3b63d3f576481edb70e7fc1d0f1e687488b3c7d41339c0d74f",
+      "bytes": 14085
+    },
+    {
+      "path": "research/minimality/paired-eight-polynomial.json",
+      "sha256": "cc3cb105be78d39263825ece88a3ebb9fc0970652e0fbd831e2dcd85511d92d8",
+      "bytes": 109704
+    },
+    {
+      "path": "research/minimality/README.txt",
+      "sha256": "409aabb562e6e5a20900b10a43911a51fc560d5477a1cf694ae486187ee07d4a",
+      "bytes": 2869
+    },
+    {
+      "path": "research/minimality/test_minimality.py",
+      "sha256": "c0731be64373e12ed8be03376609c982af4df21afd49a31e553648a43ea58b66",
+      "bytes": 2571
+    },
+    {
       "path": "RIGHTS.md",
       "sha256": "d86c176097902a2948dd2af8bb529754e80893e9cfb137dce7529313acac809f",
       "bytes": 872
@@ -352,6 +397,14 @@
       "path": "verify_delivery.py",
       "sha256": "64f8b409c596a4213f9c5566323381031bd74f178e69f5b28338e282b3de3d41",
       "bytes": 1517
+    }
+  ],
+  "research_supplements": [
+    {
+      "directory": "research/minimality",
+      "date": "2026-10-10",
+      "status": "scoped research result; global minimality remains unproved",
+      "pdf": "research/minimality/minimality.pdf"
     }
   ]
 }
