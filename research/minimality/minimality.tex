@@ -24,7 +24,11 @@ the first separation dimension within the paired two-upper-facet seed
 family and for all constructions from those seeds by products and joins.
 The proof uses a rational supporting gradient and log-concavity; a
 separate positive-polynomial certificate checks the seed bound. Neither
-argument reduces arbitrary convex bodies to these constructions.
+argument reduces arbitrary convex bodies to these constructions. We give
+an equivalent section--projection inequality with no bound on the number
+of facets, an exact checker for individual rational polytopes, and a
+uniform neighbourhood bound for centred, possibly asymmetric, two-facet
+deformations of a simplex. Global minimality remains unproved.
 \end{abstract}
 
 \section{What global minimality requires}
@@ -76,6 +80,76 @@ By continuity of volume and the projection-body operator under Hausdorff
 convergence, it would suffice to prove~\eqref{eq:remaining} for every
 full-dimensional rational polytope in $\mathbb R^8$. This is still an
 unbounded class; finite searches do not establish that assertion.
+
+\section{An unrestricted section formulation}
+Let $\Delta_{m-1}=\{y\in\mathbb R^m:y_i\ge0,\ \sum_i y_i=1\}$ and
+$C_m=[-1/2,1/2]^m$. For an eight-dimensional subspace
+$F\subset\boldsymbol1^\perp$ and $\lambda\in\operatorname{relint}\Delta_{m-1}$,
+put $S=(\lambda+F)\cap\Delta_{m-1}$. Volumes in $F$, and in its translates,
+are Euclidean eight-dimensional volumes; $P_F$ denotes orthogonal projection.
+
+\begin{proposition}\label{prop:all-facets}
+The unrestricted bound~\eqref{eq:remaining} is equivalent to
+\begin{equation}\label{eq:all-facets}
+ \vol_8(S)\,\vol_8(P_F C_m)\le\frac9{8!}
+ \quad\text{for every }m\ge9,\ F,\lambda\text{ as above}.
+\end{equation}
+In particular, there is no facet-count restriction in this equivalence.
+\end{proposition}
+\begin{proof}
+Feng et al.~\cite[Proposition 4.1]{feng} prove that, for any such section,
+there is a full-dimensional polytope $Q\subset F$ with
+\[
+ R_8(Q)\ge8^8\vol_8(S)\vol_8(P_F C_m).
+\]
+Thus~\eqref{eq:remaining} implies~\eqref{eq:all-facets}.
+
+For the converse, let $K\subset\mathbb R^n$ be any full-dimensional
+polytope, with $m$ facets, and translate an interior point to the origin.
+Let $u_i$ be its facet-area vectors: the outward unit normal multiplied
+by the facet's $(n-1)$-volume. Write $z_i=h_K(u_i)>0$ and $V=\vol_n(K)$.
+The balance and divergence identities give $\sum_i u_i=0$ and
+$\sum_i z_i=nV$. Define the $m\times n$ matrix $T$ and the offset by
+\begin{equation}\label{eq:section-map}
+ T_i=-\frac{u_i^{\mathsf T}}{nV},\qquad
+ \lambda_i=\frac{z_i}{nV},\qquad F=\operatorname{im}T.
+\end{equation}
+The facet normals span $\mathbb R^n$, so $T$ has rank $n$,
+$F\subset\boldsymbol1^\perp$, and $\lambda$ is in the relative interior
+of the simplex. The facet inequalities give the exact equality
+$\lambda+TK=(\lambda+F)\cap\Delta_{m-1}$.
+Put $J=\sqrt{\det(T^{\mathsf T}T)}$. Then
+\[
+ \vol_n(S)=JV,\qquad
+ \vol_n(P_F C_m)=\frac1J\sum_{|I|=n}|\det T_I|.
+\]
+For the second identity, $U=T(T^{\mathsf T}T)^{-1/2}$ has orthonormal
+columns, and the zonotope determinant formula gives the sum of the
+absolute minors of $U$. Cauchy's projection formula similarly gives
+$\vol_n(\Pi K)=\sum_{|I|=n}|\det(u_i)_{i\in I}|$. Consequently
+\begin{equation}\label{eq:exact-section-product}
+ \vol_n(S)\vol_n(P_F C_m)
+ =V\sum_{|I|=n}|\det T_I|=\frac{R_n(K)}{n^n}.
+\end{equation}
+Applying~\eqref{eq:all-facets} with $n=8$ proves the simplex bound for
+every eight-dimensional polytope. Hausdorff approximation then proves
+it for every convex body.
+\end{proof}
+
+The section construction and one direction are prior work in~\cite{feng};
+the exact representation above spells out the converse relevant to the
+unrestricted goal. A proof for $m=10$, or for central hyperplane sections
+alone, would not establish~\eqref{eq:all-facets}. Recent sharp slicing
+and stability results~\cite{slicing-stability,restricted-slicing} concern
+section volume rather than this coupled section--projection product.
+For example, in the central $m=10$ case, combining Webb's density bound
+$p_a(0)\le1/\sqrt2$ with
+$D(a):=\sum_{i<j}|a_i-a_j|\le\sqrt{330}$ for $|a|=1$
+gives only $D(a)f_a(0)\le9\sqrt{165}>81$, since $f_a(0)=9p_a(0)$.
+The required coupled bound is $D(a)f_a(t)\le81$
+by~\cite[Proposition 4.2]{feng}, for every admissible offset $t$.
+Thus those separate sharp estimates do not by themselves close even
+this special case, and no reduction to bounded $m$ is asserted here.
 
 \section{A proved minimum for the paired family}
 For $0\le u_1\le\cdots\le u_m<1$ and $n\ge2m$, define
@@ -229,6 +303,114 @@ The known paired witness in dimension nine belongs to $\mathcal F$ and
 exceeds the class maximum $c_9$.
 \end{proof}
 
+\section{Centred asymmetric cuts near a simplex}
+The supporting-gradient calculation also gives a local result without
+paired coefficients. Let $E_1,\ldots,E_8$ be independent standard
+exponential variables, and define
+\[
+ M(b)=\E\left|\sum_{i=1}^8 b_iE_i\right|,\qquad
+ D(b)=\sum_{i<j}|b_i-b_j|,\qquad
+ r(b)=\max_i b_i-\min_i b_i.
+\]
+\begin{lemma}\label{lem:asymmetric-mean}
+For every $b\in\mathbb R^8$,
+\begin{equation}\label{eq:asymmetric-mean}
+ M(b)\ge\frac{D(b)}{18}+\frac{217}{36450}r(b).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The function $M$ is convex, positively homogeneous, and invariant under
+coordinate permutations. At $v=(-8,-4,-2,-1,1,2,4,8)$ its gradient is
+\[
+ \nabla M(v)=\frac1{36450}
+ (-15664,-9624,-5304,-2749,2749,5304,9624,15664).
+\]
+This is half the paired gradient, with the appropriate signs: swapping
+every positive and negative coordinate changes the sign of
+$\sum v_iE_i$, so the two component derivatives in a pair are opposite.
+It can also be differentiated independently from the exponential
+divided-difference formula, as the checker does. Homogeneity and the
+supporting inequality give $M(b)\ge\nabla M(v)\cdot b$.
+Assume $b_1\le\cdots\le b_8$. Then
+$D(b)=\sum_i(2i-9)b_i$. The coefficient difference between
+$\nabla M(v)\cdot b$ and $D(b)/18$ sums to zero and has the seven
+tail sums
+\[
+ \frac1{36450}(1489,988,217,941,217,988,1489).
+\]
+Writing $b$ in its seven nonnegative successive gaps proves the claimed
+bound, because their sum is $r(b)$.
+\end{proof}
+
+\begin{proposition}\label{prop:local-asymmetric}
+Let $b\ne0$, $\sum_i b_i=0$, and
+\[
+ K_\varepsilon(b)=\{x\in\mathbb R^8:x_i\ge0,\
+                 \boldsymbol1\cdot x+\varepsilon|b\cdot x|\le1\}.
+\]
+At $\varepsilon=0$, the right derivative of $R_8(K_\varepsilon(b))/c_8$
+is at most $-217r(b)/36450<0$. More explicitly, for
+$0<s:=\varepsilon r(b)\le1/500$,
+\begin{equation}\label{eq:finite-local}
+ \frac{R_8(K_\varepsilon(b))}{c_8}\le1-\frac{s}{3000}<1.
+\end{equation}
+The coefficients need not occur in opposite pairs.
+\end{proposition}
+\begin{proof}
+Write $Z=\sum_i b_iE_i$, $p=\PP(Z>0)$ and
+$I(\varepsilon)=\E e^{-\varepsilon|Z|}=8!\vol_8(K_\varepsilon(b))$.
+Put
+\[
+ \alpha_\pm=\frac{\E(e^{-\varepsilon|Z|}\boldsymbol1_{\{\pm Z>0\}})}{I(\varepsilon)},
+ \quad t=\alpha_+-\alpha_-,\quad d_i=1+\varepsilon t b_i.
+\]
+Integrating the homogeneous gauge on each of the two cones shows that
+$\alpha_\pm$ are their fractions of the total origin-pyramid volume.
+The facet-area vectors divided by $8\vol_8(K_\varepsilon(b))$ are
+$-d_ie_i$ and $\alpha_\pm(\boldsymbol1\pm\varepsilon b)$.
+Enumerating the minors with zero, one, or two upper-facet vectors gives
+\begin{equation}\label{eq:asymmetric-ratio}
+ \frac{R_8(K_\varepsilon(b))}{c_8}
+ =I(\varepsilon)\left[
+ \prod_i d_i+\frac{2\varepsilon\alpha_+\alpha_-}{9}
+ \sum_{i<j}|b_i-b_j|\prod_{k\ne i,j}d_k\right].
+\end{equation}
+Differentiation at zero, using $\sum b_i=0$, yields
+\[
+ \left.\frac{d}{d\varepsilon}\frac{R_8}{c_8}\right|_{0+}
+ =-M(b)+\frac{2p(1-p)}9D(b)
+ \le-M(b)+\frac{D(b)}{18}.
+\]
+Lemma~\ref{lem:asymmetric-mean} proves the derivative assertion.
+
+For the finite bound, centring gives $|b_i|\le r:=r(b)$ and
+$\E Z^2=\sum_i b_i^2\le2r^2$. The latter follows by summing
+$(b_i-\min b)(b_i-\max b)\le0$ and completing the square.
+Since $e^{-y}\le1-y+y^2/2$ for $y\ge0$,
+$I(\varepsilon)\le1-\varepsilon M(b)+s^2$, as well as $I\le1$.
+All $d_i\ge1-s>0$, and $\sum_i(d_i-1)=0$ implies $\prod_i d_i\le1$.
+Hence~\eqref{eq:asymmetric-ratio}, $\alpha_+\alpha_-\le1/4$, and
+Lemma~\ref{lem:asymmetric-mean} give
+\[
+ \frac{R_8}{c_8}\le1-\frac{217}{36450}s+s^2
+       +\frac{\varepsilon D(b)}{18}\big((1-s)^{-2}-1\big).
+\]
+The ordered-gap expression for $D$ gives $D(b)\le16r$. For
+$0\le s\le1/500$, elementary rational bounds give
+\[
+ (1-s)^{-2}-1\le\frac{201}{100}s,\qquad
+ \frac{217}{36450}-\frac{209}{75}\frac1{500}\ge\frac1{3000}.
+\]
+Substitution proves~\eqref{eq:finite-local}. The checker verifies these
+rational constants separately from the analytic argument.
+\end{proof}
+
+This proposition excludes a uniform neighbourhood of the simplex in
+the centred two-facet family. It is not a bound for all asymmetric
+cuts: dropping $\sum_i b_i=0$ adds
+$(2p-1)\sum_i b_i$ to the first derivative. Nor does a negative derivative
+at a simplex control arbitrary bodies farther away.
+
 \section{Independent arithmetic check and remaining scope}
 The file \texttt{check\_minimality.py} recomputes the supporting gradient,
 the four margins in~\eqref{eq:gap}, the dimension-nine rational ratio,
@@ -268,6 +450,40 @@ analytic arguments are supplied above, rather than inferred from finite
 checks, and have not been proof-assistant formalized or externally
 peer reviewed.
 
+The separate file \texttt{check\_unrestricted.py} accepts rational
+halfspaces, a finite set of feasible points, a positive oriented
+full-dimensional simplicial chain, and a generic interior probe. There
+is no paired-coefficient or upper facet-count condition. Interior faces
+must cancel; every remaining face must lie on a unique input facet; and
+the probe must have multiplicity one. The integer multiplicity is
+constant away from the chain's faces. Crossing an interior face does
+not change it because the oriented boundary cancels, and the interior
+of a convex polyhedron is connected. Thus these conditions prove
+coverage with multiplicity one; they also exclude an unbounded input
+polyhedron, since a finite chain is compact. This is the positive-chain
+method already used by the original paper's seed checker, now applied
+to general facet data.
+
+The checker reconstructs facet-area vectors from boundary minors,
+checks balance and the divergence identity, constructs
+\eqref{eq:section-map}, and verifies~\eqref{eq:exact-section-product}.
+It records rational squared Euclidean volumes, so no rounding of square
+roots enters acceptance. Six supplied controls include the known
+eight- and nine-dimensional seeds and an eight-dimensional polytope
+with three upper facets and eleven facets in total. A centred asymmetric
+control has tilt range exactly $1/500$ and verifies the finite local bound.
+None is an
+unrestricted counterexample in dimension eight. Eight additional tests
+check positive controls and reject altered geometry and chains.
+\begin{quote}\small\ttfamily
+python -B check\_unrestricted.py -{}-check-report\\
+python -B -m unittest -v test\_unrestricted.py\\
+python -B -O -m unittest -v test\_unrestricted.py
+\end{quote}
+Checking individual inputs cannot establish the universal quantifier
+in~\eqref{eq:all-facets}. An unrestricted proof, or a strict rational
+counterexample passing the geometric checks, is still required.
+
 Theorem~\ref{thm:paired} and Proposition~\ref{prop:closure} exclude the paired
 family and its complete product--join closure as sources of a
 lower-dimensional witness. General asymmetric seeds and arbitrary convex
@@ -275,7 +491,10 @@ bodies need not belong to this generated class. The results do not
 prove~\eqref{eq:remaining}, nor imply that every maximizer belongs to
 $\mathcal F$. Global minimality is therefore open in this work. The next
 substantive requirement is a bound covering all eight-dimensional convex
-bodies, or an exact counterexample refuting it.
+bodies, equivalently~\eqref{eq:all-facets} for unbounded $m$, or an exact
+counterexample refuting it. Proposition~\ref{prop:local-asymmetric} and
+the general geometry interface provide additional tools for that task;
+they do not replace it.
 
 \section*{Generative AI disclosure}
 OpenAI Codex agents contributed substantially to source discovery,
@@ -317,5 +536,16 @@ and Cartesian products}, research manuscript, version 2, 7 October 2026.
 A.~Pr\'ekopa, \emph{On logarithmic concave measures and functions},
 Acta Scientiarum Mathematicarum (Szeged) \textbf{34} (1973), 335--343.
 \href{https://acta.bibl.u-szeged.hu/14411/1/math_034_335-343.pdf}{Published full text}.
+
+\bibitem{slicing-stability}
+S.~Myroshnychenko, C.~Tang, K.~Tatarko, and T.~Tkocz,
+\emph{Stability of simplex slicing}, Discrete \& Computational Geometry
+\textbf{76} (2026), 491--507; published online 1 November 2025.
+\href{https://doi.org/10.1007/s00454-025-00758-x}{doi:10.1007/s00454-025-00758-x}.
+
+\bibitem{restricted-slicing}
+S.~Brazitikos and C.~Pandis, \emph{Restricted hyperplane sections of
+the cross-polytope and the simplex}, preprint, 5 June 2026.
+\href{https://arxiv.org/abs/2606.07163}{arXiv:2606.07163v1}.
 \end{thebibliography}
 \end{document}

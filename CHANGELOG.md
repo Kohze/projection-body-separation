@@ -2,7 +2,7 @@
 
 ## Unreleased research supplement: dimension-nine minimality
 
-Add a separate five-page research supplement with an exact reduction of
+Add a separate research supplement with an exact reduction of
 global minimality to the unrestricted eight-dimensional simplex bound.
 Prove that dimension nine is minimal within the entire class generated
 from paired two-upper-facet seeds by products, joins and affine maps.
@@ -12,6 +12,15 @@ states through dimension nine, and seven positive/adversarial tests.
 Global minimality over arbitrary convex bodies remains unproved. The
 v1.1.0 paper, sealed reproduction snapshot, tags and release assets are
 unchanged. CI now also checks the research supplement.
+
+Extend the supplement with an equivalent unrestricted section--projection
+inequality for every facet count, a strict finite neighbourhood bound for
+centred asymmetric two-facet cuts, and a general exact rational-polytope
+interface. Six geometric controls check the section identity, including an
+eight-dimensional eleven-facet example and an asymmetric control at the
+proved neighbourhood boundary. Add eight tests (15 supplement tests total),
+and cite recent simplex slicing and stability work with its precise scope.
+These additions do not prove the remaining universal inequality.
 
 ## 1.1.0 - 10 October 2026
 

@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-10",
+  "status": "PASS: unrestricted reformulation and local progress; global proof incomplete",
+  "goal": "Prove dimension nine minimal for separation over all convex bodies",
+  "full_goal_achieved": false,
+  "unrestricted_minimality_proved": false,
+  "previous_goal_turn": "No progress on the mathematical goal: AI disclosure was checked without changes.",
+  "current_goal_turn": "Progress: an all-facet equivalence, a uniform centred asymmetric local bound, and exact general-polytope geometry.",
+  "requirements": {
+    "dimension_nine_strict_witness": "Previously certified and independently replayed by the new general checker",
+    "lower_dimensions": "Global reduction by pyramid monotonicity remains valid",
+    "all_dimension_eight_bodies": "INCOMPLETE: universal inequality remains unproved",
+    "all_facet_counts": "Equivalent target retains every integer m>=9; no finite-facet reduction is assumed"
+  },
+  "analytic_review": {
+    "section_equivalence": "Feng Proposition 4.1 in one direction; exact normalized facet-area representation in the other; Hausdorff continuity",
+    "normalization": "T_i=-u_i/(nV); lambda_i=(z_i-u_i dot probe)/(nV); product=R_n/n^n",
+    "local_mean": "Supporting gradient of E|sum b_i Exp_i| at (-8,-4,-2,-1,1,2,4,8); seven strictly positive tails",
+    "finite_local_bound": "For sum b_i=0 and s=epsilon*range(b)<=1/500: ratio<=1-s/3000",
+    "local_remainder": "E Z^2<=2 range^2; product d_i<=1; D<=16 range; (1-s)^-2-1<=201s/100",
+    "first_derivative": "-M+2p(1-p)D/9; noncentred vectors have an extra (2p-1)sum b_i term",
+    "geometry_acceptance": "Positive chain coverage, generic probe degree one, boundary minors, facet balance and divergence",
+    "no_extrapolation": "Finite controls do not establish the universal quantifier; local bound is not a global proof"
+  },
+  "exact_report_sha256": "a0a044d50aa71526f4794a62f6a516509ea8f2287593c782a2d83758cbb7511f",
+  "geometric_controls": [
+    {
+      "name": "simplex-eight",
+      "dimension": 8,
+      "facets": 9,
+      "positive_simplices": 1
+    },
+    {
+      "name": "paired-eight",
+      "dimension": 8,
+      "facets": 10,
+      "positive_simplices": 70
+    },
+    {
+      "name": "paired-nine",
+      "dimension": 9,
+      "facets": 11,
+      "positive_simplices": 70
+    },
+    {
+      "name": "three-upper-facets-eight",
+      "dimension": 8,
+      "facets": 11,
+      "positive_simplices": 518
+    },
+    {
+      "name": "asymmetric-centred-eight",
+      "dimension": 8,
+      "facets": 10,
+      "positive_simplices": 70
+    },
+    {
+      "name": "seven-facet-polygon",
+      "dimension": 2,
+      "facets": 7,
+      "positive_simplices": 5
+    }
+  ],
+  "validation": [
+    {
+      "command": "check_minimality.py --check-report",
+      "status": "PASS"
+    },
+    {
+      "command": "check_unrestricted.py --check-report",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "tests": 15,
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "tests": 15,
+      "status": "PASS"
+    }
+  ],
+  "pages": 8,
+  "all_pages_visually_inspected": true,
+  "full_size_pages_inspected": [
+    2,
+    5,
+    6,
+    7
+  ],
+  "build_warnings": 0,
+  "references": 7,
+  "all_references_cited": true,
+  "bibliography": [
+    {
+      "title": "Stability of simplex slicing",
+      "authors": [
+        "Sergii Myroshnychenko",
+        "Colin Tang",
+        "Kateryna Tatarko",
+        "Tomasz Tkocz"
+      ],
+      "url": "https://doi.org/10.1007/s00454-025-00758-x",
+      "publication": "Discrete & Computational Geometry 76 (2026), 491-507",
+      "scope": "Central hyperplane section volume and quantitative stability; not the unrestricted coupled product"
+    },
+    {
+      "title": "Restricted Hyperplane Sections of the Cross-Polytope and the Simplex",
+      "authors": [
+        "Silouanos Brazitikos",
+        "Christos Pandis"
+      ],
+      "url": "https://arxiv.org/html/2606.07163v1",
+      "date": "2026-06-05",
+      "status": "preprint",
+      "scope": "Central and near-central hyperplane section maxima; not an all-facet product theorem"
+    }
+  ],
+  "attribution": "Section construction: Feng et al.; general checker adapts existing MIT-licensed positive-chain geometry; paired and product/join proofs keep prior attribution.",
+  "caveats": [
+    "Not proof-assistant formalized",
+    "No external peer review or priority claim",
+    "No unrestricted minimality proof"
+  ],
+  "original_paper_and_sealed_snapshot_changed": false,
+  "original_v1_1_0_paper_sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
+  "supplement_pdf_sha256": "d5d13a801bf33c1648b62d5360c27ea1bc4953def7a8cea9e162647f01831aeb",
+  "ai_disclosure_matches_companion": true
+}

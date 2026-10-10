@@ -105,8 +105,12 @@ joins and affine maps. A short analytic proof and a separate exact polynomial
 certificate establish the seed bound through dimension eight; an invariant
 envelope proves closure under every operation tree. The checker
 also cross-checks the point-generated class through dimension nine without
-Pareto pruning. Seven adversarial and positive tests run in normal and
-optimized Python.
+Pareto pruning. A further result rules out centred asymmetric two-facet cuts
+with tilt range at most 1/500, with an explicit strict deficit. The unrestricted
+problem is also formulated as a section--projection inequality for every
+facet count. A general rational-polytope interface checks individual geometry
+and that exact representation beyond the paired family. Fifteen adversarial
+and positive tests run in normal and optimized Python.
 
 **Global minimality remains unproved.** The supplement shows that proving
 nine minimal over all convex bodies is equivalent to proving the unrestricted
@@ -116,6 +120,7 @@ separate from the v1.1.0 paper and its sealed reproduction snapshot.
 
 ```sh
 python -B research/minimality/check_minimality.py --check-report
-python -B -m unittest discover -s research/minimality -p test_minimality.py -v
-python -B -O -m unittest discover -s research/minimality -p test_minimality.py -v
+python -B research/minimality/check_unrestricted.py --check-report
+python -B -m unittest discover -s research/minimality -p 'test_*.py' -v
+python -B -O -m unittest discover -s research/minimality -p 'test_*.py' -v
 ```

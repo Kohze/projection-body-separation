@@ -15,8 +15,8 @@
     },
     {
       "path": ".github/workflows/verify.yml",
-      "sha256": "b246df53a79c27e53083b5221e7d4463887087aee0f05e997d66aef04f7a8c59",
-      "bytes": 750
+      "sha256": "ee9bcfa48a97235b0586349154cabe3ac9439a80ea0a78adbe769307e2457cfb",
+      "bytes": 816
     },
     {
       "path": ".gitignore",
@@ -50,8 +50,8 @@
     },
     {
       "path": "audit/minimality-review.json",
-      "sha256": "a3000a1b6f32a34ea786bc07ef8d445a560ccdd7f7b3f6a951eeb1d28a46516d",
-      "bytes": 3266
+      "sha256": "12803a7c3467a917b68206af548248e7557e6490b17d05b82d631d042295fe26",
+      "bytes": 3519
     },
     {
       "path": "audit/portability-fix-v1.0.1.json",
@@ -89,6 +89,11 @@
       "bytes": 6539
     },
     {
+      "path": "audit/unrestricted-minimality-review.json",
+      "sha256": "4c3c0db30f633b22e8af6248dc0342d996aa6226ecf59650665fcb914086da5e",
+      "bytes": 4740
+    },
+    {
       "path": "audit/verification-environments.json",
       "sha256": "e874c2e8be7ae8e0439cae8590b103f092084ac071491e90b7cfe6d2dae050d8",
       "bytes": 7382
@@ -105,8 +110,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "63b6c5ce5edf8c390df39211c92fd31a0f3d12aef62f19f7ceb55ff32fe01962",
-      "bytes": 2297
+      "sha256": "a7a3430b0515ca0f41af57e0b0ea1d0478aafcd05fcd98579fe3a8f6d8335aa4",
+      "bytes": 2872
     },
     {
       "path": "CITATION.cff",
@@ -125,8 +130,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "7df9adf9709b83a4dec0f3cbff87fb15dc97e768b6a64c4b571dc2b81a39d789",
-      "bytes": 6298
+      "sha256": "b5bc1b88d67f8d638fc798f3538bec354f01e74e7f94c8015effbef607e8f514",
+      "bytes": 6702
     },
     {
       "path": "README.txt",
@@ -354,9 +359,19 @@
       "bytes": 1193
     },
     {
+      "path": "research/minimality/build_unrestricted_examples.py",
+      "sha256": "b54720d1f5cfc6e5945a3c8b6743e3db7d4ff3efd28f1e8de608a464acf82d85",
+      "bytes": 4674
+    },
+    {
       "path": "research/minimality/check_minimality.py",
       "sha256": "19adaf900fe186dddfa11e1f1762f544fb901e98b3a23091c74266c6413ce791",
       "bytes": 8767
+    },
+    {
+      "path": "research/minimality/check_unrestricted.py",
+      "sha256": "a07dacebb827fa86984908de62c880c62f0981a30b6e5e286931de895be7813d",
+      "bytes": 12388
     },
     {
       "path": "research/minimality/minimality-verification.json",
@@ -365,13 +380,13 @@
     },
     {
       "path": "research/minimality/minimality.pdf",
-      "sha256": "5fd17f2aa874a12ac3b2ed5cf30a4ebec3e66ca75ef5a2d81f206a1b5623dddd",
-      "bytes": 337758
+      "sha256": "d5d13a801bf33c1648b62d5360c27ea1bc4953def7a8cea9e162647f01831aeb",
+      "bytes": 385198
     },
     {
       "path": "research/minimality/minimality.tex",
-      "sha256": "0133adc10c70aa3b63d3f576481edb70e7fc1d0f1e687488b3c7d41339c0d74f",
-      "bytes": 14085
+      "sha256": "de58c2479b8946d046ab56d08d4de22981df39006d908fa72f06d08e2e997848",
+      "bytes": 24742
     },
     {
       "path": "research/minimality/paired-eight-polynomial.json",
@@ -380,13 +395,28 @@
     },
     {
       "path": "research/minimality/README.txt",
-      "sha256": "409aabb562e6e5a20900b10a43911a51fc560d5477a1cf694ae486187ee07d4a",
-      "bytes": 2869
+      "sha256": "5f3c7db6671af7fa17fb99b198ba4e424c7a60b9543d99f576a50cc478755165",
+      "bytes": 5020
     },
     {
       "path": "research/minimality/test_minimality.py",
       "sha256": "c0731be64373e12ed8be03376609c982af4df21afd49a31e553648a43ea58b66",
       "bytes": 2571
+    },
+    {
+      "path": "research/minimality/test_unrestricted.py",
+      "sha256": "21af3fbed7aa149858e484da9750a12d1b63b6b6be56f4a0f194af0de328f022",
+      "bytes": 3154
+    },
+    {
+      "path": "research/minimality/unrestricted-examples.json",
+      "sha256": "da17b7c834262747cac4df4a39c1b356dbca3f9ed1f16a35c57b335ce3aa08ec",
+      "bytes": 182766
+    },
+    {
+      "path": "research/minimality/unrestricted-verification.json",
+      "sha256": "a0a044d50aa71526f4794a62f6a516509ea8f2287593c782a2d83758cbb7511f",
+      "bytes": 18220
     },
     {
       "path": "RIGHTS.md",
