@@ -18,6 +18,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python -B verify_delivery.py
       - run: python -B reproduction/verify_all.py --regenerate
+      - run: python -B research/polygon-seeds/check_polygon_seed.py --check-report
+      - run: python -B -m unittest discover -s research/polygon-seeds -p 'test_*.py' -v
+      - run: python -B -O -m unittest discover -s research/polygon-seeds -p 'test_*.py' -v
       - run: python -B research/minimality/check_minimality.py --check-report
       - run: python -B research/minimality/check_unrestricted.py --check-report
       - run: python -B research/minimality/check_zonotope_local.py --check-report

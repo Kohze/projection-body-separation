@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-10",
+  "edition": "v1.2.0",
+  "pages": 15,
+  "all_pages_visually_inspected": true,
+  "render_scale": 1.3,
+  "latex_overfull": 0,
+  "latex_underfull": 0,
+  "unresolved_references": 0,
+  "final_pdf_sha256": "46f03831dcc16aa9cd1f409f6856cabc1943be6cef557c37a802518253838aa0",
+  "status": "PASS",
+  "focused_full_page_checks": [
+    5,
+    6,
+    13
+  ],
+  "checks": [
+    "All-page contact sheet",
+    "New polygon-section proof and exact equations",
+    "Tail table and page breaks",
+    "Code availability commands with literal double hyphens",
+    "References and academic typography"
+  ]
+}

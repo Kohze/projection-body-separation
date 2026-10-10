@@ -17,3 +17,10 @@ Version 1.1.0 replaces the sufficient threshold by 9. Current mathematical
 review is dimension-nine-review-v1.1.0.json; current citation coverage is
 citation-audit-v1.1.0.json. Earlier reviewer records describe their dated
 editions. They remain preserved and are not scores for this revision.
+
+Version 1.2.0 adds a rational fifteen-dimensional seed and raises the certified
+amplified lower rate to 2.890. The current mathematical review, citation ledger,
+layout record and bounded prior-art search are respectively
+polygon-seed-review-v1.2.0.json, citation-audit-v1.2.0.json,
+layout-qa-v1.2.0.json and polygon-prior-art-v1.2.0.json. They are internal
+audit records, not external peer review or certification of priority.

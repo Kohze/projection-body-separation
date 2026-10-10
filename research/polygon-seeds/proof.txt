@@ -1,0 +1,90 @@
+Analytic proof for the rational 15-dimensional seed
+10 October 2026; no minimal-dimension or bibliographic-priority claim.
+
+Let A(x,y)=(-y,x+y), and let B be the 18 columns
+  A^j(10,0), A^j(7,4), A^j(4,7), 0<=j<6.
+Let M be the 3 by 18 matrix with first row all ones and remaining rows B.
+F=ker M has dimension n=15. The rational polytope is
+  S={x>=0: sum_i x_i=1, Bx=0},
+in the affine Euclidean space 1/18+F. It has 18 facets.
+
+All columns occur with their negatives, span R^2, and sum to zero.
+Deleting any column leaves two independent antipodal pairs of the six
+axis-orbit columns. Hence zero remains in the interior of their convex
+hull. This proves that S is full-dimensional in its affine space and
+that every coordinate inequality defines a facet.
+
+Let U be an orthonormal 18 by 15 frame for F, V=vol_15(S), and p_i=P_F e_i.
+Write the area-normal vector of facet i as -d_i p_i. The balance identity
+implies d in F-perp=span{1, rows B}, so d=t1+B^T v. The permutation swapping
+each column with its negative preserves S and its metric, and sends p_i
+to p_-i. Thus d_i=d_-i, forcing B^T v=0 and d=t1. With origin 1/18,
+the facet support product is d_i/18. The divergence identity gives t=nV.
+This is a permutation symmetry, not central symmetry of S.
+
+Define
+ D=sum_{i<j<k} |det(b_j-b_i,b_k-b_i)|,
+ E=sum_{i<j} |det(b_i,b_j)|.
+Complementary maximal minors give
+ sum_{|I|=n}|det U_I|=D/sqrt(det MM^T),
+ sum_{|I|=n+1}|det[U,1/18]_I|=E/sqrt(det MM^T).
+For the second identity use B1=0 and an orthonormal row frame for B;
+the missing scale is ||1/18||=1/sqrt(18).
+The facet determinant formulas therefore imply
+ R_n(S)=n^n V D/sqrt(det MM^T), a(S)=E/D.
+
+Let Z=sum_i b_i E_i for independent mean-one exponential E_i, with
+two-dimensional density f. Coarea for Mx=(s,0), followed by homogeneity
+of the fiber volume, gives
+ f(0)=n! V/sqrt(det MM^T).
+Consequently R_n(S)=g(n)D f(0) and a(S)=E/D.
+
+The density is continuous at the origin. For example, the independent
+antipodal column pairs generate independent two-sided exponential
+variables along their directions. Two independent pairs already have
+a continuous bounded two-dimensional density; convolution with the
+remaining independent variables preserves continuity.
+
+Exact evaluation of f does not rely on optimization. For each independent
+pair Y=(b_i,b_j), set theta_Y=Y^-T 1 and
+ alpha_Y=product_{k notin Y}(1-theta_Y dot b_k)^-1.
+No three columns of this specified B are affinely collinear (checked).
+The finite identity
+  1= sum_Y alpha_Y product_{k notin Y}(1+w dot b_k)
+is checked coefficient by coefficient over Q, including pairs of zero
+determinant being omitted. Dividing by the common product proves an
+identity of Laplace transforms of finite signed measures. Each term is
+the transform of alpha_Y times the push-forward of two independent
+exponentials under Y. All transforms exist near w=0. Uniqueness therefore
+gives their density identity. Along a generic ray h, its limit at zero is
+  f(0)=sum_{Y^-1 h>0} alpha_Y/|det Y|.
+Continuity of the original density justifies this limit. Repeating with
+different generic rays is an independent acceptance cross-check.
+
+For B in integer units above, exact arithmetic yields
+ D=101088, E=11232, a=1/9,
+ f(0)=2438615590908055733/12741932669200891556400,
+ D f(0)=4877231181816111466/252095850530248725,
+ R_15(S)=642994345258960007724609375/99249935783672081408.
+
+The inherited recursion K_next=(K x K)*(K x K) has
+ d_j=((3*15+1)*4^j-1)/3, a_j=(1/9)/2^j,
+ R_next=R^4 * 2a*g(4d+1)/g(2d)^2.
+The existing elementary central-binomial tail argument applies because
+ 16a_0^2(6d_0+1)>9,
+ 121a_0^2(2d_0+2/3)<49,
+ 7R_0^3<3^(3d_0+1).
+Thus 3<D_j<7, roots strictly increase below 3, and
+ (3R_j^3)^(1/(3d_j+1)) < beta < (7R_j^3)^(1/(3d_j+1)).
+The independent checker reconstructs the exact state at j=5 and verifies
+  (289/100)^(3d_5+1)<3R_5^3,
+  7R_5^3<(14451/5000)^(3d_5+1).
+Thus 2.8900<beta<2.8902, using no floating-point acceptance premise.
+
+Provenance: the section/projection method is Feng--Hu--Liu--Xu's;
+zonotope complementary minors, coarea, and exponential-spline Laplace
+inversion are classical. The lifted invariant and amplification calculus
+are imported from the attributed mxym manuscript. No novelty is claimed
+for these tools, for Gale diagrams, or for polygon configurations as
+combinatorial constructions. The candidate new contribution is this
+specified rational seed and its stronger rigorously enclosed growth rate.

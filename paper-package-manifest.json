@@ -1,12 +1,12 @@
 {
   "date": "2026-10-10",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "status": "public research draft",
   "editable_source": "main.tex",
   "reproduction_snapshot": "reproduction/ARTIFACTS.sha256",
-  "research_snapshot_local_commit": "fe28badc4fbd4d40b3c434c00f7daa9ef7f90657",
+  "release_parent_commit": "1354c3241c730d97b0669dc873146f19f57e7d15",
   "repository": "https://github.com/Kohze/projection-body-separation",
-  "release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0",
+  "release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.2.0",
   "files": [
     {
       "path": ".gitattributes",
@@ -15,8 +15,8 @@
     },
     {
       "path": ".github/workflows/verify.yml",
-      "sha256": "af90ae7215ed9b454d103d4eea4d4a36cc9d0b1c4be95fb7c1e651d2acb666a0",
-      "bytes": 1146
+      "sha256": "ea2fde8744992168f54f9176b8568bdbf11dcdf09e55ecb32632f8a196eaa9ac",
+      "bytes": 1408
     },
     {
       "path": ".gitignore",
@@ -25,12 +25,12 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "e46f57c11b2533dfb34a3895fb87ce023370caf3b3f1ccd38f4f909285837eb5",
-      "bytes": 3360
+      "sha256": "3e0db749c33aa204b8c37f7810e578cf00c881e526520865321cb935c5604562",
+      "bytes": 4432
     },
     {
       "path": "CITATION.cff",
-      "sha256": "7726a04b732bdd01183dd389c98012a38ef1b65e1a52667a3bf71e66322b6ca7",
+      "sha256": "b7f318f62bac44c263ba1dfe6b177a982c02f4425ad8b5fc2761565dd1658a5d",
       "bytes": 1057
     },
     {
@@ -40,13 +40,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "cf63788af2da46e1abef2eb8c837dba29c65ad993e1013edba5ded43cf65bfbd",
-      "bytes": 8853
+      "sha256": "9313ea81b2a0c71b92e5ac65936ddf90b9e3c654cf2f48ca11a43f762e919dbc",
+      "bytes": 9404
     },
     {
       "path": "README.txt",
-      "sha256": "7d442055ab1ec722e0284d58f4e96cb5e31fb67e878b6705b15c969877c5a7b5",
-      "bytes": 375
+      "sha256": "ab59162a8a3bc9cde7067753e14dda8a0faa7f1bb6d3486825e08e96687892e4",
+      "bytes": 527
     },
     {
       "path": "RIGHTS.md",
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/README.md",
-      "sha256": "1143859e3072d0e7ea7504a7d3e274f57cfd70aa08dd3aa54eff22966275a8e1",
-      "bytes": 1184
+      "sha256": "4c2126d91c98457b7a853bc9a06409a4b36fbd38efb65c49dc4e3a039b9aa0be",
+      "bytes": 1612
     },
     {
       "path": "audit/REVIEWER_AUDIT.txt",
@@ -89,9 +89,19 @@
       "bytes": 18156
     },
     {
+      "path": "audit/citation-audit-v1.2.0.json",
+      "sha256": "5a7e127233d5491056044095f8f2fb467e8fdf0bc75d4bdecf218c5c0efa1dc1",
+      "bytes": 18809
+    },
+    {
       "path": "audit/dimension-nine-review-v1.1.0.json",
       "sha256": "4fd4db6a7ac77429b2dd95d7b0210005313293e2cc43d999a6a7d9a83b5b6d33",
       "bytes": 2170
+    },
+    {
+      "path": "audit/layout-qa-v1.2.0.json",
+      "sha256": "6789a14e1c8e1b67e1dafa082abed16b4e81a537cf6b05a99a4340b4e02f8b6c",
+      "bytes": 612
     },
     {
       "path": "audit/layout-qa.json",
@@ -107,6 +117,16 @@
       "path": "audit/minimality-review.json",
       "sha256": "37ac23ff419eb3689ce31bb34feeed3c9c88afaf5cbef36e05a80eef33271cbe",
       "bytes": 3585
+    },
+    {
+      "path": "audit/polygon-prior-art-v1.2.0.json",
+      "sha256": "12b99adcc1d2c3759d451cd85ceda0393e05f045f01dde8245b40f7267e47aee",
+      "bytes": 31424
+    },
+    {
+      "path": "audit/polygon-seed-review-v1.2.0.json",
+      "sha256": "261913d9371c7aaa106caeb735d67025228d515f15ff303f8296b6b290ba7b01",
+      "bytes": 2628
     },
     {
       "path": "audit/portability-fix-v1.0.1.json",
@@ -140,8 +160,8 @@
     },
     {
       "path": "beyond-point-generated-projection-body-constructions.pdf",
-      "sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
-      "bytes": 423048
+      "sha256": "46f03831dcc16aa9cd1f409f6856cabc1943be6cef557c37a802518253838aa0",
+      "bytes": 460744
     },
     {
       "path": "build_paper.py",
@@ -150,8 +170,8 @@
     },
     {
       "path": "main.tex",
-      "sha256": "3e74d921caa9205909dca1c24e9af95a923a074ec1c9f6b06be8942f3b76db37",
-      "bytes": 40224
+      "sha256": "cec4df001b5676459ff626b0ad053d82478f75cbc5f377cd9feec2d7e344e81e",
+      "bytes": 46231
     },
     {
       "path": "reproduction/.gitattributes",
@@ -165,7 +185,7 @@
     },
     {
       "path": "reproduction/ARTIFACTS.sha256",
-      "sha256": "69ab0eccb1b629e6c1f4a58e6fc297b9070405d5a041999cd2fca9a3988245de",
+      "sha256": "9aede3d3dfeeb0a23ef2ddb394b4476d344f1ad7fede35fb2d3d50790802434c",
       "bytes": 3652
     },
     {
@@ -175,8 +195,8 @@
     },
     {
       "path": "reproduction/README.txt",
-      "sha256": "f97bf31b33a579088c9f9a5a4c802eb24c4effe5068162b13580aa21ac9b540d",
-      "bytes": 8352
+      "sha256": "50cca59c461df87247c66bc40b3c95a21d750c1e1a211160ab7c43b93c744f18",
+      "bytes": 8933
     },
     {
       "path": "reproduction/REVIEWER_AUDIT.txt",
@@ -185,13 +205,13 @@
     },
     {
       "path": "reproduction/beyond-point-generated.pdf",
-      "sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
-      "bytes": 423048
+      "sha256": "46f03831dcc16aa9cd1f409f6856cabc1943be6cef557c37a802518253838aa0",
+      "bytes": 460744
     },
     {
       "path": "reproduction/beyond-point-generated.tex",
-      "sha256": "3e74d921caa9205909dca1c24e9af95a923a074ec1c9f6b06be8942f3b76db37",
-      "bytes": 40224
+      "sha256": "cec4df001b5676459ff626b0ad053d82478f75cbc5f377cd9feec2d7e344e81e",
+      "bytes": 46231
     },
     {
       "path": "reproduction/block-197-verification.json",
@@ -494,17 +514,39 @@
       "bytes": 1423
     },
     {
+      "path": "research/polygon-seeds/README.txt",
+      "sha256": "d8c09821c76e60c44b08fd71ce842910484b0837fbba3eab2a666f1abad0d036",
+      "bytes": 2599
+    },
+    {
+      "path": "research/polygon-seeds/check_polygon_seed.py",
+      "sha256": "896d48d6307c112ffb5823380cd376344fa5a660310a4a7008a465a966b168cb",
+      "bytes": 6333
+    },
+    {
+      "path": "research/polygon-seeds/proof.txt",
+      "sha256": "60a9baae77a602ff7a96bdef8e872a821e11b6d81a3f84137b76a70d09e18b68",
+      "bytes": 4434
+    },
+    {
+      "path": "research/polygon-seeds/seed.json",
+      "sha256": "aadebd9f81337699e758509046d72c425868b35bff12e4fe7d12eb853db1697a",
+      "bytes": 977
+    },
+    {
+      "path": "research/polygon-seeds/test_polygon_seed.py",
+      "sha256": "3f26cfb1de051a293e63ae2370fac5a43eab6557b3835a85813b67933c57cd3c",
+      "bytes": 1425
+    },
+    {
+      "path": "research/polygon-seeds/verification.json",
+      "sha256": "fcd75b818793e04cd8fc5227b7d6b54180bdf492b0c22d501049d7b3b31215bd",
+      "bytes": 1752
+    },
+    {
       "path": "verify_delivery.py",
       "sha256": "64f8b409c596a4213f9c5566323381031bd74f178e69f5b28338e282b3de3d41",
       "bytes": 1517
-    }
-  ],
-  "research_supplements": [
-    {
-      "directory": "research/minimality",
-      "date": "2026-10-10",
-      "status": "scoped research result; global minimality remains unproved",
-      "pdf": "research/minimality/minimality.pdf"
     }
   ]
 }

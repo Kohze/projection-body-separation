@@ -1,5 +1,21 @@
 # Changes
 
+## 1.2.0 - 10 October 2026
+
+Strengthen the main certified amplified lower rate from 2.861 to 2.890.
+Specify a rational 15-dimensional simplex section with 18 facets by three
+six-element orbits of integer planar vectors. Prove its exact seed state
+using antipodal permutation symmetry, complementary minors, coarea and
+a finite Laplace-transform identity. A separate standard-library checker
+verifies every coefficient of that identity, three generic rays, the exact
+state and infinite-tail endpoint arithmetic; five additional tests pass
+in normal and optimized Python. Update the fifteen-page manuscript,
+discussion, conclusion, citation metadata and reproduction instructions.
+The original finite separation from dimension nine is retained. Global
+minimality, seed/schedule optimality and bibliographic priority remain
+unproved. All underlying classical methods and imported calculus remain
+attributed; the contribution is the specified seed and stronger bound.
+
 ## Unreleased research supplement: dimension-nine minimality
 
 Add a separate research supplement with an exact reduction of
@@ -10,8 +26,9 @@ Supply an analytic proof, an independent 585-term positive-polynomial
 certificate, all 64 exact product-closure corner checks, unpruned operation
 states through dimension nine, and seven positive/adversarial tests.
 Global minimality over arbitrary convex bodies remains unproved. The
-v1.1.0 paper, sealed reproduction snapshot, tags and release assets are
-unchanged. CI now also checks the research supplement.
+v1.1.0 tag and release assets are unchanged. Its paper/reproduction snapshot
+was unchanged during these supplement updates; v1.2.0 subsequently updates
+the manuscript and adds the stronger polygon seed. CI also checks the supplement.
 
 Extend the supplement with an equivalent unrestricted section--projection
 inequality for every facet count, a strict finite neighbourhood bound for

@@ -1,14 +1,14 @@
 # Beyond point-generated product-join constructions for projection-body volume
 
-Robin Gounder · Working research draft · 10 October 2026 · Version 1.1.0
+Robin Gounder · Working research draft · 10 October 2026 · Version 1.2.0
 
 [Read the paper](beyond-point-generated-projection-body-constructions.pdf) ·
-[Versioned release](https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0) ·
+[Versioned release](https://github.com/Kohze/projection-body-separation/releases/tag/v1.2.0) ·
 [Citation metadata](CITATION.cff) · [Rights](RIGHTS.md)
 
-This thirteen-page research note specifies a rational twelve-dimensional seed whose
+This fifteen-page research note specifies a rational fifteen-dimensional polygon-section seed whose
 iterated products and joins have projection-volume root limit strictly between
-2.861 and 2.8611. Together with an attributed prior upper theorem, it gives a
+2.8900 and 2.8902. Together with an attributed prior upper theorem, it gives a
 strict exponential separation from the entire class generated from a point
 by products, joins and invertible affine equivalences. Explicit product-join recipes and a fixed 197-dimensional block give separation
 in every dimension at least **9**. One explicit sequence simultaneously has
@@ -16,7 +16,7 @@ this finite separation and the stronger asymptotic limit.
 An eight-dimensional seed gives an amplified rate between 2.8571 and 2.8573,
 despite its initial ratio falling below the simplex ratio.
 
-The geometric family, operation calculus, recursion, tail method and class
+The simplex-section and two-upper-facet methods, operation calculus, recursion, tail method and class
 upper theorem are prior work and are explicitly credited. Optimality and
 global bibliographic priority are not claimed. This is an AI-assisted working
 draft, not externally peer reviewed or proof-assistant formalized. The
@@ -30,14 +30,19 @@ Python 3.11 or newer; standard library only. From the repository root:
 ```sh
 python -B verify_delivery.py
 python -B reproduction/verify_all.py --regenerate
+python -B research/polygon-seeds/check_polygon_seed.py --check-report
+python -B -m unittest discover -s research/polygon-seeds -p 'test_*.py' -v
+python -B -O -m unittest discover -s research/polygon-seeds -p 'test_*.py' -v
 ```
 
 The checks recompute complete rational seed geometry, compare the closed
 formulas, verify the 224 block inequalities, reconstruct the rational recursion,
 check infinite-tail hypotheses, replay the exact dimension-nine class frontier,
 check 39 finite Bellman bounds and 197 explicit residue witnesses, and prove
-the fixed-block extension in every larger dimension. All 16 unit tests run
-in normal and optimized Python.
+the fixed-block extension in every larger dimension. The original 16 unit tests run
+in normal and optimized Python. The principal polygon-section seed has a separate
+exact Laplace-transform certificate, three generic-ray checks, and five additional
+adversarial/regression tests. See [its proof and instructions](research/polygon-seeds/README.txt).
 Certificate regeneration occurs in temporary files and leaves delivered files
 unchanged. The own-construction checks need no network access.
 
@@ -87,7 +92,7 @@ and proves the finite constants needed for all-dimensional propagation.
 
 The original growth certificate still replays the older 15,500 fixed-block
 and simplex-padding argument as a historical control. The current threshold
-is **9**, proved in `threshold-verification.json` and Section 5 of the paper.
+is **9**, proved in `threshold-verification.json` and Section 6 of the paper.
 Nine is a sufficient dimension, not a proved minimum over all convex bodies.
 The geometric family, dimension-nine simplex counterexample phenomenon,
 operation identities, Pareto algorithm and mixed Bellman theorem are prior
@@ -138,7 +143,8 @@ checker includes exact repeated- and zero-coefficient controls.
 nine minimal over all convex bodies is equivalent to proving the unrestricted
 simplex bound in dimension eight. General asymmetric seeds and arbitrary
 convex bodies need not belong to the generated class. This research supplement is
-separate from the v1.1.0 paper and its sealed reproduction snapshot.
+separate from the main manuscript and its sealed reproduction snapshot;
+its initial edition accompanied v1.1.0.
 
 ```sh
 python -B research/minimality/check_minimality.py --check-report

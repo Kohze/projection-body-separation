@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-10",
+  "edition": "v1.2.0",
+  "status": "PASS",
+  "review_type": "Internal mathematical and computational self-review; not external peer review.",
+  "contribution": "Specified rational fifteen-dimensional simplex-section seed with eighteen facets and stronger amplified root limit.",
+  "limit_lower": "2.8900",
+  "limit_upper": "2.8902",
+  "previous_lower": "2.861",
+  "exact_seed": {
+    "dimension": 15,
+    "facets": 18,
+    "a": "1/9",
+    "R": "642994345258960007724609375/99249935783672081408",
+    "R_over_g": "4877231181816111466/252095850530248725",
+    "D": "101088",
+    "E": "11232",
+    "density": "2438615590908055733/12741932669200891556400"
+  },
+  "analytic_checks": [
+    "Deleting any column leaves independent antipodal pairs, proving full dimension and eighteen genuine facets.",
+    "Antipodal column permutation preserves the Euclidean section metric and forces equal facet scale factors; it does not assert central symmetry of the section.",
+    "Complementary minors and the divergence identity give the projection-volume and lifted-state formulas.",
+    "Coarea and homogeneity identify the density at zero with the normalized section volume.",
+    "The fully cleared rational polynomial identity proves equality of Laplace transforms near zero; uniqueness and continuity justify the generic-ray limit.",
+    "Inherited product-join rules and the analytic tail hypotheses give a strictly increasing root sequence and an infinite-limit enclosure.",
+    "Taking the larger witness from the new padded family and the original finite-separation family preserves separation in every dimension at least nine and has the new limit."
+  ],
+  "exact_finite_checks": {
+    "independent_pair_terms": 144,
+    "polynomial_coefficients": 153,
+    "generic_rays": 3,
+    "last_dimension": 15701,
+    "endpoint_exponent": 47104,
+    "floating_point_acceptance": false
+  },
+  "tests": {
+    "additional_adversarial_regression_tests": 5,
+    "normal_python": "PASS",
+    "optimized_python": "PASS"
+  },
+  "algorithmic_independence": "Finite checker reconstructs the identity and recurrence from specified rational columns; it does not accept optimizer output as a premise.",
+  "independent_authorship": false,
+  "proof_assistant_formalization": false,
+  "prior_methods_attributed": true,
+  "bibliography_entries": 18,
+  "global_optimality_proved": false,
+  "unrestricted_minimality_proved": false,
+  "bibliographic_priority_proved": false,
+  "release_verification": "Cross-platform replay and remote publication receipts are stored separately in the surrounding workspace after assembly and push."
+}

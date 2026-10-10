@@ -1,6 +1,16 @@
 BEYOND POINT-GENERATED PRODUCT--JOIN CONSTRUCTIONS
 Reviewer-audited research draft and exact reproduction package, 10 October 2026
 
+VERSION 1.2.0 NOTE
+The matching manuscript now has a stronger principal polygon-section seed
+of dimension 15 and 18 facets, with amplified limit in (2.8900,2.8902).
+Its analytic proof, exact data and independent checker are in
+../research/polygon-seeds/. From the repository root also run
+  python -B research/polygon-seeds/check_polygon_seed.py --check-report
+The four two-upper-facet seed certificates and finite dimension-nine
+comparison below remain valid and unchanged. This document describes
+that original subsystem; it is not the complete v1.2.0 verification entry point.
+
 Read beyond-point-generated.pdf for the mathematical argument and
 PRIORITY_AND_DEPENDENCIES.txt for the contribution and source audit.
 REVIEWER_AUDIT.txt gives the category scores, fixes, and remaining limits.
@@ -151,7 +161,7 @@ code were developed with AI assistance.
 Older papers and archives in the surrounding workspace are preserved.
 This package is a separate research continuation, with its own claims and
 reproducibility records. Its manuscript, data and code edition is available at
-https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0.
+https://github.com/Kohze/projection-body-separation/releases/tag/v1.2.0.
 The original Python code and generated geometry/growth/block certificate data
 are MIT licensed. Third-party inputs retain their upstream terms and are
 fetched rather than redistributed. Manuscript rights are reserved separately.
