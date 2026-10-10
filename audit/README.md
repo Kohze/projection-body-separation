@@ -31,3 +31,11 @@ section-seed-review-v1.3.0.json, citation-audit-v1.3.0.json,
 layout-qa-v1.3.0.json and section-prior-art-v1.3.0.json. The geometry uses
 the density gradient to retain nonuniform facet weights; its finite certificate
 uses outward exact arithmetic. Historical audits retain their dated scope.
+
+Version 1.3.1 is the final editorial audit of the sixteen-page main paper.
+Current records are final-release-review-v1.3.1.json,
+citation-audit-v1.3.1.json, layout-qa-v1.3.1.json and
+novelty-comparison-v1.3.1.json. The source ledger now reflects the principal
+eighteen-dimensional seed and the public author names. Mathematical constants,
+proof dependency pins and computational construction certificates are unchanged.
+Earlier audits remain historical records, not current scores or external review.

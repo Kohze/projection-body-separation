@@ -1,5 +1,24 @@
 # Changes
 
+## 1.3.1 - 10 October 2026
+
+Final editorial and release audit. Distinguish the generic recursion X_j,
+the principal eighteen-dimensional sequence G_j, and the twelve-dimensional
+sequence K_j used for the 197-dimensional block. Avoid reusing the latter
+seed's state symbols for the eight-dimensional comparison. Add a seed summary
+and numbered, captioned endpoint and finite-margin tables. Prevent floats
+from interrupting sentences and set reproduction commands as a code block.
+Condense repeated verification and discussion material while retaining the
+proof obligations. Add PDF keywords and consistent edition metadata.
+
+Cite the public author name Yongxian Zhang for the mxym repository sources
+while retaining immutable proof pins. Cite the newer sextic envelope as
+related work; the essential upper-bound dependency and certified constants
+are unchanged. Update the citation ledger, internal reviewer scores,
+source/dependency ledger and matching reproduction snapshots. Nineteen
+references are cited. Unrestricted minimality and global optimality remain
+unproved; no bibliographic-priority or external peer-review claim is made.
+
 ## 1.3.0 - 10 October 2026
 
 Raise the certified amplified lower rate again, from 2.890 to 2.928, by

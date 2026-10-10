@@ -5,7 +5,7 @@
     {
       "id": "calculus",
       "title": "Projection-volume calculus for joins and Cartesian products",
-      "author": "mxym (repository account)",
+      "author": "Yongxian Zhang (repository account mxym)",
       "commit": "2fc3f25179cf1128c4bccbde65fd3a07c093ad6d",
       "url": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/paper.md",
       "bytes": 31278,
@@ -14,7 +14,7 @@
     {
       "id": "spectral",
       "title": "Asymptotic spectral reduction",
-      "author": "mxym (repository account)",
+      "author": "Yongxian Zhang (repository account mxym)",
       "commit": "2fc3f25179cf1128c4bccbde65fd3a07c093ad6d",
       "url": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md",
       "bytes": 9032,
@@ -23,7 +23,7 @@
     {
       "id": "upper",
       "title": "A certified mixed quadratic/quartic envelope for projection-body growth",
-      "author": "mxym (repository account)",
+      "author": "Yongxian Zhang (repository account mxym)",
       "commit": "2fc3f25179cf1128c4bccbde65fd3a07c093ad6d",
       "url": "https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/proof.md",
       "bytes": 14545,
@@ -64,7 +64,7 @@
     },
     {
       "id": "finite-pareto",
-      "author": "mxym (repository account)",
+      "author": "Yongxian Zhang (repository account mxym)",
       "title": "An exact Pareto dynamic program for product-join projection geometry: sharp extrema through dimension 48",
       "date": "2026-10-08",
       "commit": "55ba5a7be927e3e7d2dbfd8d054db91b63d8d755",
@@ -76,7 +76,7 @@
       "role": "Prior exact Pareto algorithm and simplex optimum through dimension 13; current package independently replays only through dimension 9"
     }
   ],
-  "source_audit_report": "PRIORITY_AND_DEPENDENCIES.txt",
+  "source_audit_report": "../audit/novelty-comparison-v1.3.1.json",
   "focused_screen": "priority-text-screen.json",
   "essential_imports": [
     "central seed family",
@@ -86,13 +86,15 @@
     "exact finite Pareto algorithm (small dimension-nine class replay)"
   ],
   "certified_new_claims": [
-    "specified rational 12-dimensional seed has 2.861<beta<2.8611",
-    "specified rational 8-dimensional seed has 2.8571<beta<2.8573",
-    "explicit unrestricted polytopes exceed the entire point-generated class exponentially",
-    "explicit 224-facet inequality description of the dimension-197 block, checked by an independent flattened-mass construction",
-    "Explicit finite operation recipes and fixed-block extension exceed the entire point-generated class in every n>=9",
-    "One exact-selected rational sequence has both all-n>=9 separation and root limit 2.861<beta<2.8611",
-    "Finite consequence of imported envelope: class R_n < (9/10)*(7137/2500)^n for every n>=49"
+    "Specified rational 18-dimensional simplex-section seed with 23 facets has 2.9280<beta<2.9283.",
+    "Specified symmetric rational 15-dimensional section seed has 2.8900<beta<2.8902.",
+    "Specified rational 12-dimensional seed has 2.861<beta<2.8611.",
+    "Specified rational 8-dimensional seed has 2.8571<beta<2.8573.",
+    "Explicit rational polytopes exceed the entire point-generated product-join class exponentially, using an attributed prior upper theorem.",
+    "Finite operation recipes and a fixed-block extension exceed that class in every dimension n>=9.",
+    "One explicitly selected sequence retains both separation for every n>=9 and the stronger root limit in (2.9280,2.9283).",
+    "The explicit 224-facet description of the dimension-197 block is checked against an independent flattened-mass construction.",
+    "The class envelope implies R_n<(9/10)*(7137/2500)^n for every n>=49."
   ],
   "exact_seed_ranking": "(beta_A/beta_B)^(3d+1)=a(A)R(A)^3/[a(B)R(B)^3], at fixed dimension and recursion",
   "priority": "Not established; no matching rate/class separation found in focused inspected corpus",
@@ -100,12 +102,11 @@
   "proof_assistant_formalization": false,
   "mathematical_scope": "Rational seed geometry and finite analytic proof obligations; imported upper theorem remains an essential cited analytic dependency",
   "review_revision_utc": "2026-10-09T19:52:29.102340+00:00",
-  "review_report": "REVIEWER_AUDIT.txt",
   "edition_repository": "https://github.com/Kohze/projection-body-separation",
-  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0",
-  "publication_verification_record": "Workspace audit/github-publication-projection-body-separation-v1.1.0.json records the remote release check.",
-  "citation_coverage_audit": "Companion public paper folder audit/citation-audit-v1.1.0.json",
-  "citation_entries": 17,
+  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.1",
+  "publication_verification_record": "Remote tag, release assets and CI are checked after the final push; receipts are retained in the surrounding workspace.",
+  "citation_coverage_audit": "../audit/citation-audit-v1.3.1.json",
+  "citation_entries": 19,
   "additional_contextual_sources": [
     "Brannen (1996)",
     "Lutwak-Yang-Zhang (2001)",
@@ -121,5 +122,34 @@
   "threshold_revision": "Earlier sufficient threshold 15500 replaced by certified all-dimensional threshold 9; original check retained as historical control",
   "repository_head_at_prior_audit": "c8cc0a89cac4db7c98685298d6859a8cb3f4b3bd",
   "prior_repository_check_date": "2026-10-09",
-  "projection_changes_since_original_pin_at_prior_audit": false
+  "projection_changes_since_original_pin_at_prior_audit": false,
+  "earlier_v1_1_claim_ledger": [
+    "specified rational 12-dimensional seed has 2.861<beta<2.8611",
+    "specified rational 8-dimensional seed has 2.8571<beta<2.8573",
+    "explicit unrestricted polytopes exceed the entire point-generated class exponentially",
+    "explicit 224-facet inequality description of the dimension-197 block, checked by an independent flattened-mass construction",
+    "Explicit finite operation recipes and fixed-block extension exceed the entire point-generated class in every n>=9",
+    "One exact-selected rational sequence has both all-n>=9 separation and root limit 2.861<beta<2.8611",
+    "Finite consequence of imported envelope: class R_n < (9/10)*(7137/2500)^n for every n>=49"
+  ],
+  "current_review_report": "../audit/final-release-review-v1.3.1.json",
+  "historical_review_report": "REVIEWER_AUDIT.txt",
+  "related_work_not_proof_dependency": [
+    {
+      "author": "Yongxian Zhang (repository account mxym)",
+      "title": "A positive sextic homogeneous Bellman envelope",
+      "commit": "4248c2b2d4cad94d4269def3158b414352e1a40b",
+      "url": "https://github.com/mxym/math/blob/4248c2b2d4cad94d4269def3158b414352e1a40b/notes/mixed-bellman-product-join/positive-sextic/proof.md",
+      "sha256": "e6b320a0b08d3a956c49265032ce68bac29a3255ed0e99bdb37f5e5f48a20f12",
+      "reported_class_ceiling": "2.85386",
+      "independent_exact_replay_by_this_release": false
+    }
+  ],
+  "author_name_source": {
+    "url": "https://github.com/mxym/math/blob/4248c2b2d4cad94d4269def3158b414352e1a40b/AUTHOR.md",
+    "sha256": "d96f3d286eaed1201e1a4c6710d722b5d2a7407677c2aa56cc289d3d34e25094"
+  },
+  "historical_source_audit_report": "PRIORITY_AND_DEPENDENCIES.txt",
+  "repository_head_at_current_audit": "b9056460497110b0983a0c058e19426e908f961e",
+  "current_review_date": "2026-10-10"
 }

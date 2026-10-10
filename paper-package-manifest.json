@@ -1,12 +1,12 @@
 {
   "date": "2026-10-10",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "status": "public research draft",
   "editable_source": "main.tex",
   "reproduction_snapshot": "reproduction/ARTIFACTS.sha256",
-  "release_parent_commit": "965345533f8d40857a9c176dbc49f86b907fd8b3",
+  "release_parent_commit": "0e7f0e9acd5a84511134324914db445b31355cd8",
   "repository": "https://github.com/Kohze/projection-body-separation",
-  "release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.0",
+  "release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.1",
   "files": [
     {
       "path": ".gitattributes",
@@ -25,12 +25,12 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "9f920623335bd171360637e920e2092d9594d51f86a3223aca8eaff7da31b913",
-      "bytes": 5419
+      "sha256": "319a1e9422e9dc36a25b8f9f5dae880e0ade625cbeed6b2be40c78f201110c8b",
+      "bytes": 6556
     },
     {
       "path": "CITATION.cff",
-      "sha256": "35960be7edf29e50849d6b6dfce58e692185751b0952645c7085e540e92642d7",
+      "sha256": "5b823bdb8427586271caa2bd72a6709ebe30abe6291130fcc9eb8ac8e8bfc9fb",
       "bytes": 1057
     },
     {
@@ -40,12 +40,12 @@
     },
     {
       "path": "README.md",
-      "sha256": "6d3c42660401ebe4160a387878fda6a02e801e06db5274dc48d327bb3ead11b0",
-      "bytes": 9832
+      "sha256": "986b52a5855a5d34c1fea5d65dd4da9097f8479c80b4de61d2b52772041f767b",
+      "bytes": 10283
     },
     {
       "path": "README.txt",
-      "sha256": "283f14daa88b520aecca9102fd988704f37568700135e779332e332d72edf3b2",
+      "sha256": "fca43c59f1452d08c93381a1636c6fcae6ebd5950e97227220710a6a21bc454a",
       "bytes": 527
     },
     {
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/README.md",
-      "sha256": "a504be1a498b58cd05aeb6f8ff2c4649b31f6af6fce207ffdfb695c7ae4c8b8c",
-      "bytes": 2056
+      "sha256": "13f735b4a90f19e38fc11d7c41bc759957ea78de8e1788c50c2b0144fdd442a7",
+      "bytes": 2558
     },
     {
       "path": "audit/REVIEWER_AUDIT.txt",
@@ -99,9 +99,19 @@
       "bytes": 18842
     },
     {
+      "path": "audit/citation-audit-v1.3.1.json",
+      "sha256": "71b95577daeb14dc0ef8213c14836efebbd2775a5d697f0a4c7030f9f2b7caa8",
+      "bytes": 19705
+    },
+    {
       "path": "audit/dimension-nine-review-v1.1.0.json",
       "sha256": "4fd4db6a7ac77429b2dd95d7b0210005313293e2cc43d999a6a7d9a83b5b6d33",
       "bytes": 2170
+    },
+    {
+      "path": "audit/final-release-review-v1.3.1.json",
+      "sha256": "fca04328299087ccc9fd8328f7fee45796a867982703919fd64e4f0b31b2a1ce",
+      "bytes": 5983
     },
     {
       "path": "audit/layout-qa-v1.2.0.json",
@@ -112,6 +122,11 @@
       "path": "audit/layout-qa-v1.3.0.json",
       "sha256": "a42cd695c39cf7ee9af793bc24cd931d346d14001d08cb6089f38b5dcd467dba",
       "bytes": 588
+    },
+    {
+      "path": "audit/layout-qa-v1.3.1.json",
+      "sha256": "be1b2d655416f0c0af10436d569a4977271e6dbc907a273b7c69be5eb3614c02",
+      "bytes": 987
     },
     {
       "path": "audit/layout-qa.json",
@@ -127,6 +142,11 @@
       "path": "audit/minimality-review.json",
       "sha256": "37ac23ff419eb3689ce31bb34feeed3c9c88afaf5cbef36e05a80eef33271cbe",
       "bytes": 3585
+    },
+    {
+      "path": "audit/novelty-comparison-v1.3.1.json",
+      "sha256": "de8f40d2f1904b313a5cc28614acd164a887d4666d2068512c0095c375ffe9f5",
+      "bytes": 7274
     },
     {
       "path": "audit/polygon-prior-art-v1.2.0.json",
@@ -180,8 +200,8 @@
     },
     {
       "path": "beyond-point-generated-projection-body-constructions.pdf",
-      "sha256": "6e1838dbd3bdc420d40fe031dc194ba95cb9d20132c4686025e846801ab670ad",
-      "bytes": 475634
+      "sha256": "fb85620d14e73df16158ce193c045b593f03033ad2fa65a6186ee42620a9113d",
+      "bytes": 464805
     },
     {
       "path": "build_paper.py",
@@ -190,8 +210,8 @@
     },
     {
       "path": "main.tex",
-      "sha256": "52a8bdcf8c30286aa5c643a4a7c322417f158c53b7d3c5d7330a02cbfa6ede87",
-      "bytes": 52263
+      "sha256": "7bc078c9b91f9180776e9e12c2d1b519042e87ab97e55b70e98245d5b4a67754",
+      "bytes": 52595
     },
     {
       "path": "reproduction/.gitattributes",
@@ -205,7 +225,7 @@
     },
     {
       "path": "reproduction/ARTIFACTS.sha256",
-      "sha256": "bc68d1ce6b6737e246a892c89fbe4835ef58a81450aa4b53f44d8a31a42c550a",
+      "sha256": "48277defb6430279d64de1edc2bdd259a10a0dd50cc95a13f66be226eb2848b4",
       "bytes": 3652
     },
     {
@@ -215,8 +235,8 @@
     },
     {
       "path": "reproduction/README.txt",
-      "sha256": "80889afa177108ce38782eadc60480641c74045284e33f1686728e29c3b6d2d2",
-      "bytes": 9369
+      "sha256": "8a85516768bc6c57965fb418f79e7cb30573339dbf821a302544c72834c7d55f",
+      "bytes": 9836
     },
     {
       "path": "reproduction/REVIEWER_AUDIT.txt",
@@ -225,13 +245,13 @@
     },
     {
       "path": "reproduction/beyond-point-generated.pdf",
-      "sha256": "6e1838dbd3bdc420d40fe031dc194ba95cb9d20132c4686025e846801ab670ad",
-      "bytes": 475634
+      "sha256": "fb85620d14e73df16158ce193c045b593f03033ad2fa65a6186ee42620a9113d",
+      "bytes": 464805
     },
     {
       "path": "reproduction/beyond-point-generated.tex",
-      "sha256": "52a8bdcf8c30286aa5c643a4a7c322417f158c53b7d3c5d7330a02cbfa6ede87",
-      "bytes": 52263
+      "sha256": "7bc078c9b91f9180776e9e12c2d1b519042e87ab97e55b70e98245d5b4a67754",
+      "bytes": 52595
     },
     {
       "path": "reproduction/block-197-verification.json",
@@ -370,8 +390,8 @@
     },
     {
       "path": "reproduction/source-audit.json",
-      "sha256": "9bbdb1924b140bcfc9e333e47ebdd6f99ec199f3dc2475e30e789ee9b028e590",
-      "bytes": 6539
+      "sha256": "ff980ffb65b6d135e43f65e710ef019f51d6d5ad921280a91c4eb334d3b2b6a0",
+      "bytes": 8599
     },
     {
       "path": "reproduction/tangent-log-verification.json",

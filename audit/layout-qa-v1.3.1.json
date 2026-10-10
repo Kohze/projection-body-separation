@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-10",
+  "edition": "v1.3.1",
+  "status": "PASS",
+  "pages": 16,
+  "renderer": "Poppler pdftoppm, page height 1500 pixels",
+  "all_pages_visually_inspected": true,
+  "all_page_contact_sheets": 4,
+  "focused_full_page_checks": [
+    5,
+    9,
+    11,
+    14,
+    15
+  ],
+  "latex_overfull": 0,
+  "latex_underfull": 0,
+  "unresolved_references": 0,
+  "final_pdf_sha256": "fb85620d14e73df16158ce193c045b593f03033ad2fa65a6186ee42620a9113d",
+  "source_sha256": "7bc078c9b91f9180776e9e12c2d1b519042e87ab97e55b70e98245d5b4a67754",
+  "checks": [
+    "Title, abstract, edition and PDF metadata",
+    "Numbered captioned seed, endpoint and margin tables",
+    "Floats do not interrupt sentences",
+    "Distinct generic, eighteen-dimensional and twelve-dimensional sequence symbols",
+    "Reproduction commands occupy separate complete lines",
+    "Integer coordinate blocks and all nineteen bibliography entries",
+    "No clipping, overlaps, broken glyphs or blank pages"
+  ]
+}

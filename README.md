@@ -1,9 +1,9 @@
 # Beyond point-generated product-join constructions for projection-body volume
 
-Robin Gounder · Working research draft · 10 October 2026 · Version 1.3.0
+Robin Gounder · Working research draft · 10 October 2026 · Version 1.3.1
 
 [Read the paper](beyond-point-generated-projection-body-constructions.pdf) ·
-[Versioned release](https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.0) ·
+[Versioned release](https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.1) ·
 [Citation metadata](CITATION.cff) · [Rights](RIGHTS.md)
 
 This sixteen-page research note specifies a rational eighteen-dimensional simplex-section seed whose
@@ -22,6 +22,13 @@ global bibliographic priority are not claimed. This is an AI-assisted working
 draft, not externally peer reviewed or proof-assistant formalized. The
 manuscript includes an AI disclosure matching the companion papers and discusses the mathematical
 and computational limits of the construction.
+
+The final editorial audit separates the four seed families in the notation,
+adds numbered comparison tables, and cites Yongxian Zhang under his public
+author name. His newer positive sextic class bound is discussed as related
+work; the proof retains the earlier replayed quadratic/quartic dependency.
+The mathematical constants and all construction certificates are unchanged.
+See [the current release audit](audit/final-release-review-v1.3.1.json).
 
 ## Reproduce
 

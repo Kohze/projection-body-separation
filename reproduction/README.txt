@@ -1,5 +1,13 @@
 BEYOND POINT-GENERATED PRODUCT--JOIN CONSTRUCTIONS
-Reviewer-audited research draft and exact reproduction package, 10 October 2026
+Internally audited research draft and exact reproduction package, 10 October 2026
+
+VERSION 1.3.1 NOTE
+The matching sixteen-page manuscript has revised notation, numbered tables,
+nineteen cited references and the same certified mathematical constants.
+The current source/dependency ledger identifies all three asymptotic seed
+families and the versioned release. Historical review records below retain
+their original scope; the current internal review is in ../audit/.
+The later sextic upper envelope is related work, not a substituted proof input.
 
 VERSION 1.3.0 NOTE
 The matching manuscript now has a stronger principal generic section seed

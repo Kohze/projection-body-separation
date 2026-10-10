@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,microtype,xcolor}
 \usepackage[margin=1in]{geometry}
+\usepackage[font=small,labelfont=bf]{caption}
 \usepackage[colorlinks=true,allcolors=blue!50!black]{hyperref}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
@@ -14,30 +15,30 @@
 \newcommand{\RK}{\mathcal P}
 \title{Beyond point-generated product--join constructions\protect\\for projection-body volume}
 \author{Robin Gounder}
-\date{Working research draft, 10 October 2026}
-\hypersetup{pdftitle={Beyond point-generated product-join constructions for projection-body volume},pdfauthor={Robin Gounder}}
+\date{10 October 2026\quad\textnormal{(version 1.3.1)}}
+\hypersetup{pdftitle={Beyond point-generated product-join constructions for projection-body volume},pdfauthor={Robin Gounder},pdfkeywords={convex geometry, projection bodies, polytopes, simplex sections, affine inequalities, exact computation}}
 \raggedbottom
 \begin{document}
 \maketitle
 \begin{abstract}
-We give an explicit rational eighteen-dimensional seed whose iterated
+We construct a rational eighteen-dimensional polytope whose iterated
 products and joins have projection-volume root limit strictly between
-$2.9280$ and $2.9283$. In combination with the prior bound
-$\Gamma_{\CC}\le e^{1.049}<2.855$ for the class generated from a point by
-products, joins, and affine equivalences, this proves a strict asymptotic
-separation between that entire class and unrestricted convex polytopes.
-Explicit finite product--join recipes and a fixed-block extension exceed
-every member of $\CC_n$ for every $n\ge9$. The principal seed is a
-codimension-four section of the standard simplex specified by twenty-three
-integer four-vectors. A simpler symmetric fifteen-dimensional section gives
-a limit above $2.890$, a twelve-dimensional two-upper-facet seed gives
-a limit above $2.861$, and a simpler eight-dimensional seed gives a limit
-above $2.8571$. The section method, product--join calculus, recursive
-scheme, and comparison upper bound are attributed to prior work.
-The contribution is the specified rational seeds, their stronger
-certified amplified rates, and the class separation. Exact geometry,
-Laplace-transform identities, and recurrence certificates accompany
-the proof; global optimality and bibliographic priority are not asserted.
+$2.9280$ and $2.9283$. Together with a prior upper bound below $2.855$,
+this proves a strict exponential separation from the entire class
+generated from a point by products, joins, and invertible affine maps.
+Finite rational recipes and a fixed-block extension also exceed that
+class in every dimension at least nine. The principal seed is a
+codimension-four section of the standard simplex, specified by twenty-three
+integer four-vectors. Simpler sections in dimensions eight, twelve, and
+fifteen give comparison rates. The constructions use the existing
+simplex-section method, product--join calculus, and balanced recursion;
+the new geometric inputs yield the stronger certified lower rate and
+whole-class separation. The proof combines facet determinant identities,
+exponential-spline calculations, and exact recurrence bounds. A versioned
+data and code repository provides the coordinates, finite witnesses, and
+verification programs. The result establishes a limitation of the
+point-generated class, while leaving unrestricted optimality and the
+minimal separation dimension open.
 \end{abstract}
 
 \section{The separation problem and main result}
@@ -80,7 +81,7 @@ but do not supply the whole-class comparison used here.
 Feng, Hu, Liu, and Xu~\cite{feng} already disprove the simplex upper bound
 in every dimension at least nine using polytopes with at most $n+2$
 facets. OpenAI's product example~\cite{openai} provides a particularly
-simple later counterexample. Subsequent work in the mxym repository
+simple later counterexample. Subsequent work of Zhang (repository account mxym)
 gives the exact product--join calculus and a recursive construction with
 root limit between $2.8534$ and $2.8535$~\cite[Section 9]{mxym-calculus}.
 Its mixed Bellman bound~\cite{mxym-upper} controls every finite expression
@@ -113,7 +114,28 @@ Thus the advantage concerns an entire construction class. For example,
 the asymptotic ratio of $R_n(P_n)$ to its class supremum has lower root
 at least $2.928/2.855>1.0255$. This is an exponential separation;
 it is not a claim of optimality among all convex bodies.
-For context, Zhang's reverse polar projection inequality~\cite{zhang}
+Table~\ref{tab:seeds} summarizes the seed constructions. The proof first
+computes their geometric states, then certifies the amplified limits,
+and finally compares them with the imported class upper bound.
+
+\begin{table}[htbp]
+\centering
+\caption{Rational seeds and certified root limits under the same balanced
+product--join recursion. The principal seed is $G_0$.}
+\label{tab:seeds}
+\begin{tabular}{lrrc}
+\toprule
+Seed & Dimension & Facets & Amplified root limit\\
+\midrule
+Paired two-upper-facet & 8 & 10 & $(2.8571,\,2.8573)$\\
+$K_0$ & 12 & 14 & $(2.8610,\,2.8611)$\\
+Symmetric section $S_0$ & 15 & 18 & $(2.8900,\,2.8902)$\\
+General section $G_0$ & 18 & 23 & $(2.9280,\,2.9283)$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For context, G.~Zhang's reverse polar projection inequality~\cite{zhang}
 and the Blaschke--Santal\'o inequality~\cite{meyer-pajor} give
 \[
  R_n(K)\le\frac{\kappa_n^2 n^n}{\binom{2n}{n}},\qquad
@@ -255,12 +277,13 @@ gives
  p_0&=\frac{768}{25},\qquad s_0=\frac{84}{25},\qquad
  a_0=\frac7{64},\qquad R_0=g(12)I_0\frac{768}{25}.\label{eq:exactstate}
 \end{align}
-For comparison, the simpler seed
-$K(1/10,2/10,3/10,4/10)$ in dimension eight has 25 vertices and
+For comparison, write $K=K(1/10,2/10,3/10,4/10)$ for the simpler
+eight-dimensional seed. It has 25 vertices and state
 \[
- I_0=\frac{231953}{378378},\qquad p_0=14,\qquad s_0=2,\qquad a_0=\frac17.
+ 8!\vol_8(K)=\frac{231953}{378378},\qquad
+ R_8(K)=14g(8)\frac{231953}{378378},\qquad a(K)=\frac17.
 \]
-Its initial ratio $R_8/c_8=231953/243243$ is below one. Nevertheless,
+Its initial ratio $R_8(K)/c_8=231953/243243$ is below one. Nevertheless,
 the same recursive amplification already exceeds the asymptotic ceiling
 for $\CC$. A seed's immediate projection-volume root therefore does not
 by itself describe its value under repeated operation rules.
@@ -434,11 +457,12 @@ No floating-point value is an acceptance premise.
 \end{proof}
 
 \section{Recursive amplification and exact tail control}
-Starting from any of the four specified asymptotic seeds, apply the prior scheme
+Starting from a seed $X_0$ chosen from the four specified asymptotic seeds,
+apply the prior scheme
 of~\cite[Section 9]{mxym-calculus}:
 \begin{equation}\label{eq:recursion}
- K_{j+1}=(K_j\times K_j)*(K_j\times K_j),\qquad
- d_j=\dim K_j,\quad R_j=R_{d_j}(K_j),\quad a_j=a(K_j).
+ X_{j+1}=(X_j\times X_j)*(X_j\times X_j),\qquad
+ d_j=\dim X_j,\quad R_j=R_{d_j}(X_j),\quad a_j=a(X_j).
 \end{equation}
 The inherited identities give
 \begin{equation}\label{eq:state-recurrence}
@@ -555,8 +579,13 @@ comparison
  \ell^{3d_5+1}<3R_5^3,\qquad cR_5^3<h^{3d_5+1},
 \]
 using the lower and upper state bounds, respectively, for $G_0$, and
-the following rational endpoints:
-\begin{center}
+the rational endpoints in Table~\ref{tab:endpoints}.
+
+\begin{table}[htbp]
+\centering
+\caption{Exact endpoint comparisons at recursion level five. Here $c$
+is the upper multiplier bound in Lemma~\ref{lem:tail}.}
+\label{tab:endpoints}
 \begin{tabular}{rrrrr}
 \toprule
 Seed dimension & $d_5$ & $\ell$ & $h$ & $c$\\
@@ -567,24 +596,26 @@ Seed dimension & $d_5$ & $\ell$ & $h$ & $c$\\
 18 & 18773 & $366/125$     & $29283/10000$ & 8\\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
+
 Together with Lemma~\ref{lem:tail}, these finite inequalities certify
 the limits. No floating-point logarithm or numerically truncated infinite
 product is used in acceptance of the endpoints.
 \end{proof}
 
-For the asymptotic construction in Theorem~\ref{thm:main}, take the eighteen-dimensional
-family. For $n\ge324$, choose the largest $j$ with $d_j\le\sqrt n$, put
-$k=\lfloor n/d_j\rfloor$, $r=n-kd_j$, and set
+For the asymptotic construction in Theorem~\ref{thm:main}, write $G_j$
+for the recursion starting at the eighteen-dimensional seed $G_0$, and
+put $e_j=\dim G_j$. For $n\ge324$, choose the largest $j$ with
+$e_j\le\sqrt n$, put $k=\lfloor n/e_j\rfloor$, $r=n-ke_j$, and set
 \[
- A_n=K_j^k\times T_r.
+ A_n=G_j^k\times T_r.
 \]
-Here $K_j^k$ denotes a Cartesian power; the factor $T_0$ is omitted.
+Here $G_j^k$ denotes a Cartesian power; the factor $T_0$ is omitted.
 For $n<324$ use $A_n=T_n$. Then $j\to\infty$,
-$0\le r<d_j\le\sqrt n$, and $kd_j/n\to1$. Product multiplicativity gives
+$0\le r<e_j\le\sqrt n$, and $ke_j/n\to1$. Product multiplicativity gives
 \[
  \frac{\log R_n(A_n)}n
- =\frac{kd_j}{n}\frac{\log R_j}{d_j}+\frac{\log c_r}{n}.
+ =\frac{ke_j}{n}\frac{\log R_{e_j}(G_j)}{e_j}+\frac{\log c_r}{n}.
 \]
 Set $c_0=1$. The bound $c_r\le(r+1)e^r$ makes the last term tend to zero,
 so the required all-dimensional limit is $\beta$. This padding argument
@@ -686,7 +717,9 @@ operation rules, not new geometric identities.
 \begin{proposition}\label{prop:effective}
 The accompanying 420-node rational operation certificate specifies
 polytopes $W_n$ for $9\le n\le245$, built from points, $S_9$, $S_{10}$,
-and $K_0$ by products and joins. Let $L=K_2$, of dimension 197. Define
+and $K_0$ by products and joins. Here $K_j$ denotes the recursion starting
+at the twelve-dimensional seed~\eqref{eq:seed12}; let $L=K_2$, of
+dimension 197. Define
 \[
  E_n=\begin{cases}
  W_n,&9\le n\le48,\\
@@ -722,8 +755,13 @@ For each of the 197 integers $49\le s\le245$, it instead certifies
  R_s(W_s)>\frac{1001}{1000}\frac9{10}
                     \left(\frac{7137}{2500}\right)^s.
 \]
-The dimension ranges and certified multiplicative margins are:
-\begin{center}
+Table~\ref{tab:margins} records the certified multiplicative margins.
+
+\begin{table}[htbp]
+\centering
+\caption{Finite witness comparisons. The margins are exact certified
+lower bounds, not estimates of optimal values.}
+\label{tab:margins}
 \begin{tabular}{lll}
 \toprule
 Dimensions & Class upper bound & Witness / upper bound\\
@@ -733,8 +771,8 @@ $10$--$48$ & Rational tangent bounds & $>4001/4000$\\
 $49$--$245$ & $(9/10)(7137/2500)^n$ & $>1001/1000$\\
 \bottomrule
 \end{tabular}
-\end{center}
-These are verified lower margins, not approximations to sharp extrema.
+\end{table}
+
 For example, the recipes choose $W_{10}=S_{10}$, $W_{18}$ as six
 successive pyramids over $K_0$, and $W_{49}=K_1$.
 The finite recipes are explicit construction witnesses; completeness of
@@ -761,75 +799,61 @@ whereas $R_n(A_n)^{1/n}\to\beta$, the selected sequence has limit
 $\beta$ and strictly exceeds the entire class in every dimension $n\ge9$.
 
 \section{Exact verification}
-The principal seed is checked in \path{research/section-seeds/}.
-The checker verifies every linear and affine basis, proves all facet
-hypotheses by exact barycentric signs, and reconstructs the density,
-gradient, facet weights, state enclosures and amplified endpoints with
-outward integer arithmetic. Six additional adversarial and regression
-tests run in normal and optimized Python.
+The principal seed checker in \path{research/section-seeds/} verifies
+every linear and affine basis, proves the facet hypotheses by exact
+barycentric signs, and reconstructs the density, gradient, facet weights,
+state enclosures, and amplified endpoints with outward integer arithmetic.
+Six adversarial and regression tests run in normal and optimized Python.
+The symmetric seed checker in \path{research/polygon-seeds/} independently
+verifies the eighteen integer columns and facet hypotheses, all 153
+coefficients of the cleared Laplace identity from 144 independent pairs,
+three generic-ray density values, determinant sums, and growth endpoints.
+It has five additional adversarial and regression tests.
 
-The simpler symmetric seed is checked in \path{research/polygon-seeds/}.
-The standard-library checker reconstructs the eighteen
-integer columns, verifies all facet hypotheses, checks 153 coefficients
-of the cleared Laplace identity from 144 independent pairs, and computes
-the density on three generic rays. It then checks the determinant sums,
-exact seed state, tail hypotheses, and the rational growth endpoints.
-Five adversarial and regression tests run in normal and optimized Python.
-This certificate verifies the finite identities in
-Proposition~\ref{prop:polygon}; their geometric interpretation is proved
-there rather than inferred from numerical search.
+The \path{reproduction/} package checks the four two-upper-facet seeds
+from their vertices and oriented triangulations. Producers use pulling
+triangulations~\cite{triangulations}; checkers validate the resulting
+chains independently. For the twelve-dimensional seed, the checker
+solves all 91 active systems, verifies 924 positively oriented simplices,
+cancels interior boundary faces, and checks multiplicity one at a generic
+rational interior point. The eight-dimensional counts are 45 active
+systems and 70 simplices. All uncancelled faces lie on the body's boundary.
+Crossing an interior codimension-one face leaves the positive-chain
+multiplicity unchanged, and a generic interior path avoids faces of
+codimension two. The checked multiplicity therefore proves coverage
+almost everywhere without interior overlap. Simplex determinants and
+boundary cofactors give volumes and facet vectors; summing all horizontal
+and lifted maximal minors checks both $R_0$ and $a_0$ without assuming
+Proposition~\ref{prop:seed}.
 
-The accompanying standard-library Python package contains the four exact
-two-upper-facet seeds, their vertex lists and oriented triangulations, the full rational
-recurrence states, and separate geometric and growth checkers.
-The producers use pulling triangulations; the standard geometric
-framework is described in~\cite{triangulations}. The checkers validate
-the resulting oriented chains independently of their construction.
-For the twelve-dimensional seed, the geometric checker solves all 91
-active systems, verifies 924 positively oriented simplices, cancels all
-interior boundary faces, and verifies multiplicity one at a generic
-rational interior point. The analogous counts for the eight-dimensional
-seed are 45 active systems and 70 simplices.
-All uncancelled faces lie on the body's boundary. Crossing an interior
-codimension-one face therefore leaves the positive-chain multiplicity
-unchanged, and a generic interior path avoids faces of codimension two.
-Multiplicity is constant in the interior; its checked value one proves
-coverage almost everywhere with no interior overlap.
+The recurrence checker imports neither the geometric producer nor its
+formula module and uses central binomial coefficients instead of factorial
+ratios. It checks the tail hypotheses, rational limit endpoints, and
+dimension-197 block comparison. The finite-separation checker reconstructs
+all 420 witness nodes, replays the exact dimension-nine class frontier,
+checks 39 rational tangent bounds and 197 residue witnesses, and verifies
+the constants used for infinite propagation. Independent rational atanh
+intervals for logarithms cross-check all 39 comparisons without reusing
+the exponential-series code. Explicit exceptions keep the checks active
+under optimized Python.
 
-The checker obtains volumes from simplex determinants and facet vectors
-from boundary cofactors, then sums every horizontal and lifted maximal
-minor. Thus it checks both $R_0$ and $a_0$ without assuming
-Proposition~\ref{prop:seed}. The recurrence checker imports neither the
-geometric producer nor its formula module and uses central binomial
-coefficients instead of factorial ratios. It checks~\eqref{eq:hypotheses},
-the rational limit endpoints and the original dimension-197 block comparison.
-A separate finite-separation checker reconstructs all 420 witness nodes,
-replays the exact dimension-nine class frontier, checks the 39 rational
-tangent bounds and all 197 residue witnesses, and verifies the finite
-constants in the analytic all-dimensional extension. The additional nine- and
-ten-dimensional two-upper-facet seeds have
-55 and 66 active systems and 70 and 252 oriented simplices, respectively. Explicit
-exceptions keep the mathematical checks active under optimized Python.
-The 39 finite comparisons are also cross-checked using rational atanh
-intervals for logarithms, without reusing the exponential-series code.
-The dimension-197 block also has an explicit inequality certificate.
-A separate checker compares its 224 inequalities with a flattened
-description using sixteen seed copies, four inner join coordinates,
-and one outer join coordinate. It verifies a strict interior point.
-This checks equivalence to the recursive expression; it does not
-enumerate the block's vertices or independently recompute its volume.
+A separate block checker compares all 224 inequalities with a flattened
+description using sixteen seed copies and five join coordinates, and
+verifies a strict interior point. It checks equivalence to the recursive
+construction; its volume still follows from the operation identities.
+The package does not enumerate the block's vertices or independently
+construct its projection body.
 
-The runner in \texttt{reproduction/} verifies the earlier seeds, finite
-comparisons, and sixteen unit tests. Invoke it with
-\texttt{python verify\_all.py}.
-The runner writes regenerated certificates and reports to temporary files
-and leaves the delivered files unchanged. Empty or incomplete delivery
-manifests and mathematically false comparison constants are rejected.
-The command \texttt{python replay\_prior.py} fetches byte-pinned external
-upper-bound inputs and replays their checker. This optional step needs network access
-on first use. The delivery includes its successful replay report and the
-input manifest. Formula and geometric data, unlike PDF build metadata,
-regenerate byte-identically in the tested environments.
+The reproduction runner also executes sixteen unit tests, rejects
+incomplete manifests and false comparison constants, and regenerates
+certificates and reports in temporary files. Delivered files remain
+unchanged. Formula and geometric data regenerate byte-identically in the
+tested environments; PDF build metadata need not do so. The optional
+external replay fetches the byte-pinned upper-theorem inputs and checks
+their finite obligations. Its successful report and input manifest are
+included. These algorithmic cross-checks were developed within the same
+AI-assisted workflow and do not constitute independent authorship or
+external peer review.
 
 \section{Discussion}
 The separation in Theorem~\ref{thm:main} identifies a limitation of the
@@ -863,15 +887,10 @@ family. This shows a concrete benefit from broadening the seed search.
 These certificates establish particular witnesses and their rates.
 Optimality of either family and necessity of the additional facets remain open.
 
-The asymptotic advantage is small at the level of a single root, but it
-produces an exponential ratio of volumes as dimension grows. The finite
-construction now separates in every dimension at least nine. The reduction
-from the earlier sufficient threshold $15500$ comes from retaining the
-invariant dependence in the class envelope and replacing a uniform simplex
-padding loss by finitely many checked product--join witnesses. It does not
-improve the imported asymptotic class ceiling. The separate
-section constructions strengthen the certified value of $\beta$.
-Different finite and asymptotic objectives favour different seeds.
+The finite and asymptotic objectives favour different seeds. The comparison
+in every dimension at least nine uses the invariant dependence in the
+class envelope and finitely many checked product--join witnesses. The
+eighteen-dimensional section instead supplies the stronger asymptotic rate.
 The threshold nine is not proved minimal: the present result makes no new
 assertion about unrestricted maximizers in dimensions four through eight.
 Nor does the lower rate approach a known unrestricted optimum: the
@@ -886,27 +905,29 @@ The package therefore makes these particular witnesses and their
 comparison independently checkable; it does not provide an efficient
 algorithm for optimizing projection-body volume over arbitrary polytopes.
 
-The two-upper-facet family and section method are prior work~\cite{feng},
-and the spline volume method is classical~\cite{xu}, as are the lifted
-invariant, operation rules, recursion, and tail method~\cite{mxym-calculus}.
 The whole-class upper theorem~\cite{mxym-upper} is an essential external
 dependency. Its exact finite obligations were replayed, but this does not
 formalize its analytic argument or constitute external peer review.
-The contribution relative to the inspected sources is the specified
+Relative to the inspected sources, the contribution is the specified
 rational seeds, their certified amplified rates, and the resulting
-class separation and effective comparison. The supplementary literature
-audit does not establish bibliographic priority.
+class separation and effective comparison. The underlying section,
+spline, and operation methods remain attributed to prior work; the
+literature audit does not establish bibliographic priority.
 
-Further progress could take several forms. A structural bound for the
-fixed-dimensional objective $aR^3$ over a specified section family would
-distinguish a good rational seed from an optimum. Enlarging that family, changing
-seed dimension, or allowing unbalanced schedules may improve the lower
-rate. Sharper class envelopes may reduce the finite certificate or
-improve separation margins. Moving below dimension nine would require
-a new unrestricted counterexample, not merely a smaller padding constant.
-These optimization problems are not resolved by the present certificates. External mathematical
-review and proof-assistant formalization would strengthen confidence in
-both the new argument and its imported dependencies.
+Zhang's subsequent positive sextic Bellman envelope~\cite{mxym-sextic}
+reports the sharper class ceiling $\Gamma_{\CC}<2.85386$. This further
+upper-bound refinement is compatible with the separation proved here.
+Our proof and finite comparison certificates retain the earlier pinned
+quadratic/quartic theorem~\cite{mxym-upper}, whose finite obligations are
+replayed in the release; the newer sextic result is cited as related work.
+
+A structural bound for $aR^3$ at fixed dimension would distinguish a
+good seed from an optimum. Broader section families, different seed
+dimensions, and unbalanced operation schedules are concrete directions
+for improving the lower rate. Sharper class envelopes could reduce the
+finite certificate or improve separation margins. Moving below dimension
+nine would require a new unrestricted counterexample. These problems
+remain unresolved by the present certificates.
 
 \section{Conclusion}
 An explicit rational eighteen-dimensional simplex-section seed, amplified by the prior
@@ -922,8 +943,7 @@ The examples show that the initial seed and its lifted invariant are
 material to recursive growth. Exact geometry, recurrence certificates,
 and a finite comparison make the claims reproducible without treating
 numerical search as proof. The unrestricted extremal rate, optimal seed
-and schedule, minimal separation dimension, and global bibliographic
-priority remain open.
+and schedule, and minimal separation dimension remain open.
 
 \section*{Generative AI disclosure}
 OpenAI Codex agents contributed substantially to source discovery,
@@ -934,27 +954,28 @@ The manuscript source, PDF, exact seed coordinates, triangulations and section c
 dimension-197 facet inequalities, finite operation recipes, recurrence certificates,
 verification programs, source audit, and reproduction instructions are
 publicly available in the accompanying GitHub repository~\cite{data}.
-The versioned release \texttt{v1.3.0} identifies the edition accompanying
+The versioned release \texttt{v1.3.1} identifies the edition accompanying
 this manuscript. Original Python code and generated certificate data are
 provided under the MIT license; manuscript rights are stated separately.
 
-From the release's \texttt{reproduction/} directory, run
-\texttt{python -B verify\_all.py -{}-regenerate} with Python 3.11 or newer.
+With Python 3.11 or newer, run these commands from the repository root:
+\begin{quote}
+\small
+\begin{verbatim}
+python -B reproduction/verify_all.py --regenerate
+python -B research/polygon-seeds/check_polygon_seed.py --check-report
+python -B research/section-seeds/check_section_seed.py --check-report
+\end{verbatim}
+\end{quote}
 All checks of the new constructions use only the standard library and
-run without network access. The optional flag \texttt{-{}-with-prior}
+run without network access. Adding \texttt{-{}-with-prior} to the first command
 fetches and replays the byte-pinned external upper-theorem package;
 its first use requires network access. The delivery manifest records
 SHA-256 hashes, and verification leaves delivered files unchanged.
 The release includes the successful external replay record. External
 inputs remain attributed and are fetched from their pinned upstream
 locations rather than redistributed as part of this package.
-From the repository root, also run
-\texttt{python -B research/polygon-seeds/check\_polygon\_seed.py -{}-check-report}
-for the symmetric polygon seed. For the principal seed and its stronger
-root enclosure, run
-\texttt{python -B research/section-seeds/check\_section\_seed.py -{}-check-report}.
 
-\clearpage
 \appendix
 \section{A simplex truncation identity}\label{app:truncation}
 The following is a standard simplex section formula; see
@@ -1035,9 +1056,9 @@ PDF dated 26 August 2026.
 
 \bibitem{data}
 R.~Gounder, \emph{Beyond point-generated product--join constructions for
-projection-body volume: manuscript, data, and code}, version 1.3.0 (2026).
+projection-body volume: manuscript, data, and code}, version 1.3.1 (2026).
 \href{https://github.com/Kohze/projection-body-separation}{Reproduction repository};
-\href{https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.0}{Versioned release}.
+\href{https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.1}{Versioned release}.
 
 \bibitem{lasserre}
 J.~B.~Lasserre, \emph{Volume of slices and sections of the simplex in
@@ -1064,27 +1085,32 @@ Archiv der Mathematik \textbf{55} (1990), 82--93.
 \href{https://doi.org/10.1007/BF01199119}{Published article}.
 
 \bibitem{mxym-upper}
-mxym (repository account), \emph{A certified mixed quadratic/quartic
+Y.~Zhang (repository account mxym), \emph{A certified mixed quadratic/quartic
 envelope for projection-body growth}, research manuscript, dated
 7 October 2026.
 \href{https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/proof.md}{Pinned proof};
 \href{https://github.com/mxym/math/tree/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join}{Exact certificates and checker}.
 
 \bibitem{mxym-finite}
-mxym (repository account), \emph{An exact Pareto dynamic program for
+Y.~Zhang (repository account mxym), \emph{An exact Pareto dynamic program for
 product--join projection geometry: sharp extrema through dimension 48},
 research note, 8 October 2026.
 \href{https://github.com/mxym/math/blob/55ba5a7be927e3e7d2dbfd8d054db91b63d8d755/notes/exact-product-join-finite-optima/paper.md}{Pinned theorem and proof}.
 
 \bibitem{mxym-spectral}
-mxym (repository account), \emph{Asymptotic spectral reduction}, supplement
+Y.~Zhang (repository account mxym), \emph{Asymptotic spectral reduction}, supplement
 to the product--join calculus manuscript, research note (2026).
 \href{https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/ASYMPTOTIC_SPECTRAL_REDUCTION.md}{Pinned supplement}, Section 2.
 
 \bibitem{mxym-calculus}
-mxym (repository account), \emph{Projection-volume calculus for joins and
+Y.~Zhang (repository account mxym), \emph{Projection-volume calculus for joins and
 Cartesian products}, research manuscript, version 2, 7 October 2026.
 \href{https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/preprints/005-simplex-product-optimum/v2/paper.md}{Pinned manuscript}, Sections 2--5 and 9.
+
+\bibitem{mxym-sextic}
+Y.~Zhang (repository account mxym), \emph{A positive sextic homogeneous
+Bellman envelope}, research manuscript, reader edition dated 7 October 2026.
+\href{https://github.com/mxym/math/blob/4248c2b2d4cad94d4269def3158b414352e1a40b/notes/mixed-bellman-product-join/positive-sextic/proof.md}{Pinned manuscript}.
 
 \bibitem{openai}
 OpenAI, \emph{A product counterexample to the simplex maximum for

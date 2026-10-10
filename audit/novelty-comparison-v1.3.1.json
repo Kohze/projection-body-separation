@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-10",
+  "request": "Recheck the current paper against other papers and identify its actual novelty.",
+  "paper": {
+    "path": "main.tex",
+    "version": "1.3.1",
+    "source_sha256": "7bc078c9b91f9180776e9e12c2d1b519042e87ab97e55b70e98245d5b4a67754"
+  },
+  "fresh_evidence": {
+    "mxym_main_commit": "4248c2b2d4cad94d4269def3158b414352e1a40b",
+    "mxym_main_commit_date": "2026-10-10T11:28:07Z",
+    "recursive_tree_truncated": false,
+    "previously_inspected_source_hashes_revalidated": 123,
+    "hash_failures": 0,
+    "fresh_download_receipt": "sources.json",
+    "fresh_downloads": [
+      "feng.pdf",
+      "openai-paper.pdf",
+      "mxym-v2.md",
+      "mxym-positive-sextic.md",
+      "mxym-author.md"
+    ],
+    "scope_limit": "A bounded comparison of primary sources and indexed searches, not an exhaustive priority certification.",
+    "current_upstream_head": "b9056460497110b0983a0c058e19426e908f961e",
+    "changes_after_previous_check": "One commit adds APPT Lean formalizations; no projection-body source changes in that comparison."
+  },
+  "comparison": [
+    {
+      "source": "Feng, Hu, Liu and Xu, On the Reverse Projection Inequality (2026), Theorem 1.3 and Section 4",
+      "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_paperurl/20260821091122099811781",
+      "already_established": "The simplex maximum fails in every dimension n>=9, with at most n+2 facets; simplex-section and cube-projection construction tools.",
+      "our_distinct_claim": "Specified rational seeds, stronger amplified rates and comparison against the complete point-generated product-join class.",
+      "do_not_claim": "First counterexample, new threshold nine, or invention of the section method."
+    },
+    {
+      "source": "OpenAI, A product counterexample to the simplex maximum for projection-body volume (24 September 2026), Theorem 1 and Corollary 6",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-product-counterexample-to-the-simplex-maximum-for-projection-body-volume-September-24-2026/paper.pdf",
+      "already_established": "The exact dimension-twenty T_10 x T_10 counterexample, product multiplicativity and exponential excess over the simplex benchmark.",
+      "our_distinct_claim": "An explicit family whose root limit exceeds the upper rate of every point-generated product-join tree, rather than only the simplex benchmark.",
+      "do_not_claim": "First exponential improvement over simplices or new product multiplicativity."
+    },
+    {
+      "source": "Yongxian Zhang (mxym), Projection-volume calculus for joins and Cartesian products, version 2 (7 October 2026), Sections 2-5 and 9",
+      "url": "https://github.com/mxym/math/blob/4248c2b2d4cad94d4269def3158b414352e1a40b/preprints/005-simplex-product-optimum/v2/paper.md",
+      "already_established": "Lifted invariant a, exact product-join state calculus, balanced binary recursion, tail enclosure and a certified root limit between 2.8534 and 2.8535.",
+      "our_distinct_claim": "New geometric seed inputs and a certified rate between 2.9280 and 2.9283 using that inherited calculus.",
+      "do_not_claim": "New recursion or operation identities. The fixed-dimension objective a R^3 is a direct consequence of the inherited recurrence and should be treated as a supporting optimization observation."
+    },
+    {
+      "source": "Yongxian Zhang (mxym), A positive sextic homogeneous Bellman envelope (7 October 2026 reader edition)",
+      "url": "https://github.com/mxym/math/blob/4248c2b2d4cad94d4269def3158b414352e1a40b/notes/mixed-bellman-product-join/positive-sextic/proof.md",
+      "already_established": "The manuscript states a whole-class upper rate below 2.85386, stronger than the older below-2.855 theorem used in our sealed release.",
+      "our_distinct_claim": "The lower construction remains above this tighter ceiling, conditional on the external analytic upper theorem.",
+      "verification_limit": "This audit inspected the primary statement and argument but did not independently replay or fully audit this newer sextic proof. The existing release's older pinned upper dependency remains unchanged."
+    },
+    {
+      "source": "Zhiqiang Xu, Multivariate Splines and Polytopes (2011), Section 3",
+      "url": "https://arxiv.org/html/0806.1127v4",
+      "already_established": "Multivariate truncated-power and exponential-spline tools for polytope volume evaluation.",
+      "our_distinct_claim": "Their application, with geometric facet weights and exact outward arithmetic, to certify the specified stronger seeds.",
+      "do_not_claim": "Invention of spline inversion, multivariate interpolation, coarea or complementary-minor methods."
+    }
+  ],
+  "defensible_main_contributions_relative_to_inspected_sources": [
+    "An explicit rational eighteen-dimensional simplex-section seed with twenty-three genuine facets and amplified root limit strictly between 2.9280 and 2.9283.",
+    "A simpler symmetric fifteen-dimensional section with an amplified limit above 2.890, plus smaller two-upper-facet comparison seeds.",
+    "A strict exponential separation between unrestricted polytopes and the entire point-generated product-join class, using an attributed external upper theorem.",
+    "Finite rational operation recipes and a fixed-block extension beating that entire class in every dimension n>=9.",
+    "Exact reproducible certificates for these particular witnesses, their states and infinite-tail rate bounds."
+  ],
+  "review_assessment": {
+    "mathematical_contribution": "A substantive constructive and quantitative improvement relative to the inspected sources, supported by an entire-class separation theorem.",
+    "methodological_contribution": "Primarily new seeds and careful synthesis/application of existing geometry and recurrence machinery; no established new general method.",
+    "interpretation": "Richer starting geometry can exceed the best possible asymptotic rate obtainable from points by the same product-join operations.",
+    "unresolved": [
+      "Unrestricted dimension-nine minimality",
+      "Optimal unrestricted asymptotic rate",
+      "Optimal seed or recursion",
+      "Worldwide bibliographic priority"
+    ],
+    "unrestricted_minimality_proved": false,
+    "global_priority_certified": false
+  },
+  "editorial_followups": [
+    "Use the now-public author name Yongxian Zhang, optionally retaining mxym as the repository alias and preserving immutable source pins.",
+    "Mention the newer below-2.85386 class ceiling as later related work; independently review and replay its certificate before replacing the existing theorem dependency.",
+    "Keep the stronger rational seed and whole-class separation as the headline; present n>=9 counterexample existence and the inherited operation machinery as prior results.",
+    "Retain the explicit limits on priority, minimality and optimality claims."
+  ],
+  "editorial_followups_resolved": [
+    "Public author name used with repository alias and immutable original proof pins.",
+    "Newer sextic ceiling cited only as related work.",
+    "Headline remains the rational seed, stronger rate and whole-class separation.",
+    "Minimality, optimality and priority limitations retained."
+  ]
+}
