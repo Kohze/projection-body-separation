@@ -113,7 +113,7 @@ and that exact representation beyond the paired family. A computer-assisted
 theorem also proves a nonpositive first derivative for every two-upper-facet
 direction in dimension eight, without centring. Its four sign cases reduce to
 17,265,590 positive integer coefficients. This is a local derivative theorem;
-it does not bound arbitrary finite deformations. Thirty adversarial and
+it does not bound arbitrary finite deformations. Thirty-five adversarial and
 positive tests run in normal and optimized Python.
 
 An additional executable research result bounds every offset hyperplane
@@ -125,6 +125,15 @@ The analytic reduction and exact certificates are documented in
 covers a family of ten-facet bodies; the full ten-facet bound remains open.
 These additional research artifacts extend the results described in the PDF.
 
+A further [analytic corollary](research/minimality/zonotope-local-extension.txt)
+extends the local derivative bound to every translated zonotope support
+deformation, with any finite number of hinge terms. Its loss adds exactly,
+and the triangle inequality bounds the combined gain by the individual gains.
+The argument imposes no facet-count bound within this family. It remains a
+first-derivative result at a simplex; it gives neither a finite neighbourhood
+bound nor the assertion for arbitrary support polytopes. A standard-library
+checker includes exact repeated- and zero-coefficient controls.
+
 **Global minimality remains unproved.** The supplement shows that proving
 nine minimal over all convex bodies is equivalent to proving the unrestricted
 simplex bound in dimension eight. General asymmetric seeds and arbitrary
@@ -134,6 +143,7 @@ separate from the v1.1.0 paper and its sealed reproduction snapshot.
 ```sh
 python -B research/minimality/check_minimality.py --check-report
 python -B research/minimality/check_unrestricted.py --check-report
+python -B research/minimality/check_zonotope_local.py --check-report
 python -m pip install -r research/minimality/requirements-all-cuts.txt
 python -B research/minimality/check_all_cuts.py --check-report
 python -B research/minimality/check_low_sign_hyperplanes.py --check-report
@@ -141,7 +151,7 @@ python -B -m unittest discover -s research/minimality -p 'test_*.py' -v
 python -B -O -m unittest discover -s research/minimality -p 'test_*.py' -v
 ```
 
-The first two supplement checkers use only the standard library. The all-cut
+The first three supplement checkers use only the standard library. The all-cut
 polynomial proof and its eight tests require the optional pinned dependency
 `python-flint==0.9.0`. The full polynomial check takes several minutes and can
 use several gigabytes of memory. It reconstructs every coefficient from the

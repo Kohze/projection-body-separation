@@ -1,0 +1,62 @@
+{
+  "status": "PASS: exact arithmetic for individual hinge list",
+  "dimension": 8,
+  "hinge_count": 2,
+  "hinges": [
+    {
+      "coefficients": [
+        "-3",
+        "-2",
+        "-1",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "probability": "35779/40320",
+      "positive_mean": "8411/896",
+      "dispersion": "99",
+      "loss": "1569/1120",
+      "gain_upper_bound": "1787196829/1625702400",
+      "derivative_upper_bound": "-490238051/1625702400"
+    },
+    {
+      "coefficients": [
+        "2",
+        "-1",
+        "4",
+        "-3",
+        "1",
+        "-2",
+        "3",
+        "-4"
+      ],
+      "probability": "1/2",
+      "positive_mean": "1487/504",
+      "dispersion": "100",
+      "loss": "1487/504",
+      "gain_upper_bound": "25/9",
+      "derivative_upper_bound": "-29/168"
+    }
+  ],
+  "derivative_upper_bound": "-770865251/1625702400",
+  "proof_dependency": "All-binary local theorem; see zonotope-local-extension.txt",
+  "unrestricted_minimality_proved": false,
+  "repeated_control": {
+    "probability": "1/2",
+    "positive_mean": "35/32",
+    "dispersion": "32",
+    "loss": "35/32",
+    "gain_upper_bound": "8/9",
+    "derivative_upper_bound": "-59/288"
+  },
+  "zero_control": {
+    "probability": "1/2",
+    "positive_mean": "1/2",
+    "dispersion": "14",
+    "loss": "1/2",
+    "gain_upper_bound": "7/18",
+    "derivative_upper_bound": "-1/9"
+  }
+}

@@ -1,0 +1,100 @@
+ANALYTIC LOCAL EXTENSION TO FINITELY MANY HINGE CUTS
+2026-10-10. Working proof, awaiting external review. This does not prove
+the unrestricted minimality claim, nor a finite-size neighbourhood bound.
+
+Statement
+---------
+In dimension eight, choose any finite number h of vectors b_r in R^8
+and any a in R^8. Put
+  phi(x)=a.x+sum_(r=1)^h max(0,b_r.x),
+  K_epsilon={x>=0 : sum_i x_i+epsilon phi(x)<=1}.
+For sufficiently small positive epsilon this is a full-dimensional convex
+polytope. The right derivative at zero of R_8(K_epsilon)/c_8 is nonpositive.
+There is no restriction on h. Thus the result allows an unbounded number of
+upper facets, although it controls only the derivative at a simplex.
+Equivalently, phi is the support function of a translated zonotope
+  L=a+sum_r [0,b_r].
+If at least one b_r has both signs and all eight coordinates nonzero, the
+right derivative is strictly negative, by the strict binary theorem.
+
+First-variation identity for any finite upper envelope
+-----------------------------------------------------
+For general dimension n, let phi(x)=max_s B_s.x, with finitely many distinct
+slopes. Let X have independent mean-one exponential coordinates. Set
+  p_s=P(B_s.X=max_t B_t.X),
+  F=E phi(X), m=sum_s p_s B_s,
+  D(v)=sum_(i<j)|v_i-v_j|.
+Ties between distinct slopes lie in hyperplanes and have probability zero.
+Then, writing c_n=(n+1)n^n/n!,
+  delta=(d/depsilon)|_(0+) R_n(K_epsilon)/c_n
+       =-F+sum_i m_i+sum_(s<t) p_s p_t D(B_s-B_t)/(n+1).
+
+Derivation: if U is uniform on {u>=0:sum u_i=1}, then X=T U with T
+independent of U and E T=n. Radial integration gives
+  I_epsilon=n! vol(K_epsilon)
+             =E(1+epsilon phi(U))^(-n)=1-epsilon F+O(epsilon^2).
+For slope s let alpha_s(epsilon) be the fraction of volume in its radial
+cone. The cones do not depend on epsilon>0, and alpha_s(epsilon)->p_s.
+The normalized facet-area generators are
+  -d_i e_i, alpha_s(epsilon)(1+epsilon B_s),
+where d_i=sum_s alpha_s(epsilon)(1+epsilon B_si).
+Let P_epsilon be the sum of their absolute n-minors. The exact identity is
+  R_n(K_epsilon)/c_n=I_epsilon P_epsilon/(n+1).
+Terms using zero or one upper generator together equal
+  (n+1)+epsilon(n+1)sum_i m_i+o(epsilon).
+This calculation uses sum_s alpha_s=1, so no derivative of alpha_s is needed.
+Terms using two upper generators have first coefficient
+  sum_(s<t) p_s p_t sum_(i<j)|B_si-B_ti-B_sj+B_tj|.
+A determinant with k>=3 upper rows is O(epsilon^(k-1)), by subtracting its
+first upper row from all its other upper rows. Its first derivative is zero.
+These facts prove the displayed identity. A linear support term translates
+every B_s equally and contributes equally to F and sum_i m_i, hence cancels.
+
+Extension from one hinge to arbitrary h
+---------------------------------------
+Let G(X)=a+sum_r b_r 1_(b_r.X>0), the gradient of phi off its null tie set.
+For an independent copy Y of X, the gain in the identity is
+  gain=E D(G(X)-G(Y))/(2(n+1)).
+Since D is subadditive,
+  gain<=sum_r E D(b_r(1_(b_r.X>0)-1_(b_r.Y>0)))/(2(n+1))
+       =sum_r p_r(1-p_r)D(b_r)/(n+1),
+where p_r=P(b_r.X>0). Meanwhile the loss adds exactly:
+  F-E sum_i G_i(X)
+    =sum_r { E[(b_r.X)_+] - p_r sum_i b_ri }.
+The published all-binary first-variation theorem in dimension eight states,
+for every b in R^8, that
+  E[(b.X)_+] - p sum_i b_i >= p(1-p)D(b)/9.
+The paper's absolute-value convention has twice the hinge derivative;
+max(0,b.x)=(|b.x|+b.x)/2, and the linear term cancels.
+Applying this theorem separately to every r proves loss>=gain, hence
+delta<=0. Its stated strict case gives strictness as claimed. Repeated and
+zero coefficients are covered by the existing binary theorem's continuity
+argument, so they introduce no new restriction here.
+
+Scope audit
+-----------
+This is an analytic corollary of an existing computer-assisted local theorem.
+It does not require new floating-point premises. The independent numerical
+controls check the factor of two, additivity, a translated support function,
+and agreement with actual finite-body first differences. They are controls,
+not a proof of the general statement. The number of hinge terms is arbitrary,
+but a general support polytope need not be a translated zonotope. Even a
+nonpositive derivative for every support polytope would not by itself prove
+global simplex maximality. No global novelty or priority claim is made.
+
+Dependency: public research/minimality/check_all_cuts.py and its complete
+integer-polynomial verification, commit 8e39a45644b3e0efb1d0e7084959264d4adf5949.
+Arithmetic checker: check_zonotope_local.py
+Frozen rational controls: zonotope-local-verification.json
+Reproduce: python -B check_zonotope_local.py --check-report
+
+AI disclosure
+-------------
+OpenAI Codex agents contributed substantially to source discovery, literature synthesis, and mathematical exposition.
+
+Code and data availability
+--------------------------
+The analytic dependency, exact certificates, arithmetic checker and frozen
+controls are available at https://github.com/Kohze/projection-body-separation
+under research/minimality. Original code and generated data follow the
+repository MIT license; manuscript rights follow RIGHTS.md.

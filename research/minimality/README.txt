@@ -80,7 +80,7 @@ the proof itself does not. Allow several minutes and several gigabytes of
 memory for the full check. No numerical search is a proof premise. Exact
 FLINT arithmetic is a software dependency, not a proof-assistant kernel or
 an independent implementation. This part contributes 23 supplement tests;
-the later low-sign extension adds seven.
+the later low-sign extension adds seven and the zonotope corollary adds five.
 
 GENERAL CANDIDATE INTERFACE
   python -B check_unrestricted.py --certificate PATH
@@ -199,3 +199,35 @@ The replay checks 56,323,459 polynomial coefficients. Allow about a minute
 and several gigabytes of memory, depending on hardware. There are 30
 supplement-package tests after this extension. No claim is made for the
 remaining sign cases, higher facet counts, or unrestricted minimality.
+
+LOCAL ZONOTOPE SUPPORT DEFORMATIONS (analytic research corollary)
+
+For any finite list b_1,...,b_h in R^8 and a in R^8, put
+  phi(x)=a.x+sum_r max(0,b_r.x),
+  K_epsilon={x>=0 : sum_i x_i+epsilon phi(x)<=1}.
+The right derivative of R_8(K_epsilon)/c_8 at epsilon=0 is nonpositive.
+There is no upper bound on h. Equivalently, phi is the support function
+of the translated zonotope a+sum_r [0,b_r]. One mixed-sign hinge with
+all coordinates nonzero gives a strictly negative derivative.
+
+The proof in zonotope-local-extension.txt derives the general finite-envelope
+first variation, adds the individual hinge losses, and bounds their combined
+gain by subadditivity of D. Its analytic dependency is the all-binary local
+theorem already proved by check_all_cuts.py. No floating optimizer is a proof
+premise. This permits an unbounded facet count within a special local family,
+but does not give a finite-size neighbourhood or the global all-body bound.
+
+The new checker uses rational exponential-race moments, including repeated
+and zero coefficients. It certifies an upper bound for the derivative of
+an individual rational hinge list. Its five tests compare distinct knots
+with the independent residue formula and cover repeated, zero, linear,
+empty and arbitrary-length inputs. There are now 35 supplement tests.
+
+  python -B check_zonotope_local.py --check-report
+  python -B check_zonotope_local.py --hinges PATH_TO_JSON_LIST
+
+Files:
+  zonotope-local-extension.txt       Analytic statement, proof and scope.
+  check_zonotope_local.py            Standard-library arithmetic checker.
+  zonotope-local-verification.json   Frozen exact arithmetic controls.
+  test_zonotope_local.py             Five controls and scope tests.
