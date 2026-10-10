@@ -1,0 +1,147 @@
+{
+  "status": "PASS: exact computer-assisted local first-variation proof",
+  "all_two_facet_first_variations_nonpositive": true,
+  "strict_case": "Both signs present and all eight coefficients nonzero; repeated values allowed",
+  "zero_coefficients": "Nonpositive derivative by continuity",
+  "same_sign_case": "An affine simplex with constant ratio one",
+  "global_minimality_proved": false,
+  "unrestricted_dimension_eight_bound_proved": false,
+  "arithmetic": "Exact integer multivariate polynomial coefficients; no floating point",
+  "software": {
+    "python_flint": "0.9.0",
+    "source": "https://python-flint.readthedocs.io/en/latest/fmpz_mpoly.html"
+  },
+  "sign_cases": [
+    {
+      "negative_coordinates": 1,
+      "positive_coordinates": 7,
+      "nonzero_coefficients": 3431,
+      "degree": 8,
+      "minimum_coefficient": "2",
+      "negative_coefficients": 0,
+      "positive_factor_removed": "a_1^7",
+      "repeated_level_value_at_one": "6286"
+    },
+    {
+      "negative_coordinates": 2,
+      "positive_coordinates": 6,
+      "nonzero_coefficients": 814360,
+      "degree": 25,
+      "minimum_coefficient": "2",
+      "negative_coefficients": 0,
+      "positive_factor_removed": "1",
+      "repeated_level_value_at_one": "25952256"
+    },
+    {
+      "negative_coordinates": 3,
+      "positive_coordinates": 5,
+      "nonzero_coefficients": 6049757,
+      "degree": 31,
+      "minimum_coefficient": "2",
+      "negative_coefficients": 0,
+      "positive_factor_removed": "1",
+      "repeated_level_value_at_one": "2282618880"
+    },
+    {
+      "negative_coordinates": 4,
+      "positive_coordinates": 4,
+      "nonzero_coefficients": 10398042,
+      "degree": 33,
+      "minimum_coefficient": "2",
+      "negative_coefficients": 0,
+      "positive_factor_removed": "1",
+      "repeated_level_value_at_one": "7918845952"
+    }
+  ],
+  "total_coefficients": 17265590,
+  "controls": {
+    "independent_race_residue_comparisons": [
+      {
+        "negative_coefficients": 1,
+        "scale": 1,
+        "positive_probability": "12996310199/12996310327",
+        "positive_part_mean": "3340051754295/25992620654",
+        "derivative": "-302762047851776/217162391291597374623"
+      },
+      {
+        "negative_coefficients": 1,
+        "scale": 3,
+        "positive_probability": "474455997/474456125",
+        "positive_part_mean": "186461257893/948912250",
+        "derivative": "-14453834029824/225108614550015625"
+      },
+      {
+        "negative_coefficients": 1,
+        "scale": 7,
+        "positive_probability": "87719518229039/87719623642543",
+        "positive_part_mean": "58333551198080151/175439247285086",
+        "derivative": "-35859242790475998339455744/69252591347904499698955561641"
+      },
+      {
+        "negative_coefficients": 2,
+        "scale": 1,
+        "positive_probability": "99103888320189/99118288732925",
+        "positive_part_mean": "8028624633022733/99118288732925",
+        "derivative": "-47589934281778261030486912/4210472212004351572276738125"
+      },
+      {
+        "negative_coefficients": 2,
+        "scale": 3,
+        "positive_probability": "378730129953191/378929431398375",
+        "positive_part_mean": "48883298252020327/378929431398375",
+        "derivative": "-91021194560377099874297588864/1292287625819062067771573765625"
+      },
+      {
+        "negative_coefficients": 2,
+        "scale": 7,
+        "positive_probability": "8732701962261259431/8741648842654932967",
+        "positive_part_mean": "1967006238043039192327/8741648842654932967",
+        "derivative": "-3398721626779843143382650287743321984/13485251380286528645215638638693545251"
+      },
+      {
+        "negative_coefficients": 3,
+        "scale": 1,
+        "positive_probability": "51241002854737/52861698237425",
+        "positive_part_mean": "142282452185213/3410432144350",
+        "derivative": "-2963276121827929441453504/3522794826292370383111875"
+      },
+      {
+        "negative_coefficients": 3,
+        "scale": 3,
+        "positive_probability": "273888006544043/284921450116875",
+        "positive_part_mean": "39906995568409337/569842900233750",
+        "derivative": "-21080839575312820437410143808/11240339917389630777852890625"
+      },
+      {
+        "negative_coefficients": 3,
+        "scale": 7,
+        "positive_probability": "152772563301155565685/159960159558714948629",
+        "positive_part_mean": "40538723210081264979095/319920319117429897258",
+        "derivative": "-942057724294493542790222210179455337954880/230285273814445908140151640591554980816769"
+      },
+      {
+        "negative_coefficients": 4,
+        "scale": 1,
+        "positive_probability": "79587427/130389875",
+        "positive_part_mean": "67139088102/5606764625",
+        "derivative": "-6459391989992153024/6579588047473546875"
+      },
+      {
+        "negative_coefficients": 4,
+        "scale": 3,
+        "positive_probability": "439022658917/686557711125",
+        "positive_part_mean": "16092238761382/686557711125",
+        "derivative": "-247056716266347349552448/128553133828690622390625"
+      },
+      {
+        "negative_coefficients": 4,
+        "scale": 7,
+        "positive_probability": "15940513357546147/24322912991344499",
+        "positive_part_mean": "66666218547898458/1430759587726147",
+        "derivative": "-21713850657752529685875683147875136/5324436867460635040374825278049009"
+      }
+    ],
+    "dimension_nine_zero_padded_derivative": "2509/20160"
+  },
+  "limitation": "A local derivative theorem does not control finite deformations or arbitrary bodies, and is not proof-assistant formalized."
+}

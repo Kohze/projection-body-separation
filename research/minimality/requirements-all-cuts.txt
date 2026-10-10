@@ -1,0 +1,2 @@
+# Optional exact computer-algebra proof; core geometry checkers remain stdlib-only.
+python-flint==0.9.0

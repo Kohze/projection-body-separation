@@ -64,11 +64,11 @@
     }
   ],
   "polynomial_certificate_sha256": "cc3cb105be78d39263825ece88a3ebb9fc0970652e0fbd831e2dcd85511d92d8",
-  "supplement_pdf_sha256": "d5d13a801bf33c1648b62d5360c27ea1bc4953def7a8cea9e162647f01831aeb",
-  "pages": 8,
+  "supplement_pdf_sha256": "a740f2a68735c0e6d37d61fc3af2aa59e7eca726806307438cb3bc5a550bfa25",
+  "pages": 10,
   "all_pages_visually_inspected": true,
   "build_warnings": 0,
-  "references": 7,
+  "references": 8,
   "all_references_cited": true,
   "original_v1_1_0_paper_sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
   "original_paper_and_sealed_snapshot_changed": false,
@@ -77,5 +77,6 @@
     "centroid_cut_direction_searches": 120,
     "no_numerical_search_used_as_proof": true
   },
-  "extension_review": "audit/unrestricted-minimality-review.json"
+  "extension_review": "audit/unrestricted-minimality-review.json",
+  "latest_extension_review": "audit/all-cuts-local-review.json"
 }

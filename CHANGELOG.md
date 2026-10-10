@@ -22,6 +22,14 @@ proved neighbourhood boundary. Add eight tests (15 supplement tests total),
 and cite recent simplex slicing and stability work with its precise scope.
 These additions do not prove the remaining universal inequality.
 
+Remove the centring assumption for the first-derivative assertion at a
+simplex. An exact computer-assisted proof covers all four mixed-sign cases
+in dimension eight by checking 17,265,590 positive integer coefficients.
+Provide the analytic exponential-race recurrence, reconstructing checker,
+pinned optional python-flint dependency, rational cross-checks and eight
+tests (23 supplement tests total). This local theorem does not prove the
+finite all-cut inequality or global minimality.
+
 ## 1.1.0 - 10 October 2026
 
 Prove separation from the entire point-generated class in every dimension

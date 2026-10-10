@@ -15,13 +15,18 @@
     },
     {
       "path": ".github/workflows/verify.yml",
-      "sha256": "ee9bcfa48a97235b0586349154cabe3ac9439a80ea0a78adbe769307e2457cfb",
-      "bytes": 816
+      "sha256": "bcc42030b1323781a5a8474e69bc8f6276fad5b900d77a5edb6987fc9337d2bc",
+      "bytes": 976
     },
     {
       "path": ".gitignore",
       "sha256": "af4fee53a9774629bdede3a780f05a604db067fceacb719a28bc075eec468a4f",
       "bytes": 51
+    },
+    {
+      "path": "audit/all-cuts-local-review.json",
+      "sha256": "0ea9a34d229836b57fda3d01abcd706900585c29070e0308030b8306fe3d4d71",
+      "bytes": 3734
     },
     {
       "path": "audit/citation-audit-v1.0.0.json",
@@ -50,8 +55,8 @@
     },
     {
       "path": "audit/minimality-review.json",
-      "sha256": "12803a7c3467a917b68206af548248e7557e6490b17d05b82d631d042295fe26",
-      "bytes": 3519
+      "sha256": "37ac23ff419eb3689ce31bb34feeed3c9c88afaf5cbef36e05a80eef33271cbe",
+      "bytes": 3585
     },
     {
       "path": "audit/portability-fix-v1.0.1.json",
@@ -90,8 +95,8 @@
     },
     {
       "path": "audit/unrestricted-minimality-review.json",
-      "sha256": "4c3c0db30f633b22e8af6248dc0342d996aa6226ecf59650665fcb914086da5e",
-      "bytes": 4740
+      "sha256": "35b4ff7b61074e629dd115f673e4a65e1b7706ba5dd95025f7bd36e2e8e75ef4",
+      "bytes": 4806
     },
     {
       "path": "audit/verification-environments.json",
@@ -110,8 +115,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "a7a3430b0515ca0f41af57e0b0ea1d0478aafcd05fcd98579fe3a8f6d8335aa4",
-      "bytes": 2872
+      "sha256": "e46f57c11b2533dfb34a3895fb87ce023370caf3b3f1ccd38f4f909285837eb5",
+      "bytes": 3360
     },
     {
       "path": "CITATION.cff",
@@ -130,8 +135,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "b5bc1b88d67f8d638fc798f3538bec354f01e74e7f94c8015effbef607e8f514",
-      "bytes": 6702
+      "sha256": "c54a484b5ccf1eb444fee87825d8187826592ea2c4d1d2753a01ad6911b5fd93",
+      "bytes": 7526
     },
     {
       "path": "README.txt",
@@ -354,6 +359,11 @@
       "bytes": 8106
     },
     {
+      "path": "research/minimality/all-cuts-verification.json",
+      "sha256": "ebbeb5437942121cf5d8dd5817416eab2ecd5df1e86a9bc0bc0550e1b85c4856",
+      "bytes": 5589
+    },
+    {
       "path": "research/minimality/build_note.py",
       "sha256": "3a9e10a1c024dae8514161ddb4ca6e22bfb00a08175a93d7eba25cdd5c0467c6",
       "bytes": 1193
@@ -362,6 +372,11 @@
       "path": "research/minimality/build_unrestricted_examples.py",
       "sha256": "b54720d1f5cfc6e5945a3c8b6743e3db7d4ff3efd28f1e8de608a464acf82d85",
       "bytes": 4674
+    },
+    {
+      "path": "research/minimality/check_all_cuts.py",
+      "sha256": "bce1cbef4881754b9a9c7b764bbd113fb5ef360574a291ff11ce0a61737da1e1",
+      "bytes": 6843
     },
     {
       "path": "research/minimality/check_minimality.py",
@@ -380,13 +395,13 @@
     },
     {
       "path": "research/minimality/minimality.pdf",
-      "sha256": "d5d13a801bf33c1648b62d5360c27ea1bc4953def7a8cea9e162647f01831aeb",
-      "bytes": 385198
+      "sha256": "a740f2a68735c0e6d37d61fc3af2aa59e7eca726806307438cb3bc5a550bfa25",
+      "bytes": 401385
     },
     {
       "path": "research/minimality/minimality.tex",
-      "sha256": "de58c2479b8946d046ab56d08d4de22981df39006d908fa72f06d08e2e997848",
-      "bytes": 24742
+      "sha256": "bf193d8744cefeec3be62a6f2f50789fe3152dd3490b6f0cbce3586b6507615c",
+      "bytes": 30680
     },
     {
       "path": "research/minimality/paired-eight-polynomial.json",
@@ -395,8 +410,18 @@
     },
     {
       "path": "research/minimality/README.txt",
-      "sha256": "5f3c7db6671af7fa17fb99b198ba4e424c7a60b9543d99f576a50cc478755165",
-      "bytes": 5020
+      "sha256": "d18c9d08443e141acff7f42db65ccb40f28c5da6ebc85e826a0a2c76afabab65",
+      "bytes": 6672
+    },
+    {
+      "path": "research/minimality/requirements-all-cuts.txt",
+      "sha256": "e9319f8bdf404f06d009e1365ba3cad30d2cbe35bd4879c434134130df96fab4",
+      "bytes": 104
+    },
+    {
+      "path": "research/minimality/test_all_cuts.py",
+      "sha256": "c7702c3a6c7104001b53334eaca0b49879473e1be5503494d207dabc89c4852f",
+      "bytes": 1692
     },
     {
       "path": "research/minimality/test_minimality.py",

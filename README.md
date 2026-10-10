@@ -109,8 +109,12 @@ Pareto pruning. A further result rules out centred asymmetric two-facet cuts
 with tilt range at most 1/500, with an explicit strict deficit. The unrestricted
 problem is also formulated as a section--projection inequality for every
 facet count. A general rational-polytope interface checks individual geometry
-and that exact representation beyond the paired family. Fifteen adversarial
-and positive tests run in normal and optimized Python.
+and that exact representation beyond the paired family. A computer-assisted
+theorem also proves a nonpositive first derivative for every two-upper-facet
+direction in dimension eight, without centring. Its four sign cases reduce to
+17,265,590 positive integer coefficients. This is a local derivative theorem;
+it does not bound arbitrary finite deformations. Twenty-three adversarial and
+positive tests run in normal and optimized Python.
 
 **Global minimality remains unproved.** The supplement shows that proving
 nine minimal over all convex bodies is equivalent to proving the unrestricted
@@ -121,6 +125,14 @@ separate from the v1.1.0 paper and its sealed reproduction snapshot.
 ```sh
 python -B research/minimality/check_minimality.py --check-report
 python -B research/minimality/check_unrestricted.py --check-report
+python -m pip install -r research/minimality/requirements-all-cuts.txt
+python -B research/minimality/check_all_cuts.py --check-report
 python -B -m unittest discover -s research/minimality -p 'test_*.py' -v
 python -B -O -m unittest discover -s research/minimality -p 'test_*.py' -v
 ```
+
+The first two supplement checkers use only the standard library. The all-cut
+polynomial proof and its eight tests require the optional pinned dependency
+`python-flint==0.9.0`. The full polynomial check takes several minutes and can
+use several gigabytes of memory. It reconstructs every coefficient from the
+analytic recurrence rather than trusting a supplied list of coefficients.

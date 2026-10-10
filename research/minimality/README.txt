@@ -14,6 +14,11 @@ Proved in this supplement:
   * Centred, possibly asymmetric two-upper-facet cuts in dimension eight
     strictly lower the simplex ratio when the tilt range is at most 1/500.
     The ratio is at most 1 minus the tilt range divided by 3000.
+  * Every two-upper-facet direction K_epsilon(b) in dimension eight has
+    nonpositive first variation at the simplex, without centring. It is
+    strictly negative when both signs are present and all coefficients are
+    nonzero, including repeated levels. This is a computer-assisted local
+    theorem, not a bound for arbitrary finite deformations.
 
 NOT proved:
   Global minimality over all convex bodies. General asymmetric seeds and
@@ -36,6 +41,10 @@ FILES
   unrestricted-verification.json  Exact section identity and local constants.
   build_unrestricted_examples.py  Reconstruct the finite geometric controls.
   test_unrestricted.py            Eight geometry and arithmetic tests.
+  check_all_cuts.py               Exact polynomial proof for all sign cases.
+  all-cuts-verification.json      Counts and rational controls for that proof.
+  requirements-all-cuts.txt       Pinned optional python-flint dependency.
+  test_all_cuts.py                Eight tests for the polynomial proof code.
 
 REPRODUCE (Python 3.11 or newer; no network or third-party dependencies)
   python -B check_minimality.py --check-report
@@ -54,6 +63,23 @@ checks all 64 corner obligations for product closure of the finite envelope,
 and enumerates unpruned product/join states through dimension 9. The
 operation calculus is attributed prior work; the note supplies the analytic
 reasoning that finite arithmetic alone cannot replace.
+
+ALL TWO-FACET FIRST VARIATIONS (optional third-party dependency)
+  python -m pip install -r requirements-all-cuts.txt
+  python -B check_all_cuts.py --check-report
+  python -B -m unittest -v test_all_cuts.py
+  python -B -O -m unittest -v test_all_cuts.py
+
+This proof reconstructs integer polynomials for all four mixed-sign cases,
+expands ordered gaps, and checks all 17,265,590 nonzero coefficients, each
+positive. It also checks repeated-level strictness, twelve independent
+rational race/residue controls and a dimension-nine positive control. Zero
+coefficients are handled by the continuity argument in the manuscript.
+Installation needs network access unless the package is already available;
+the proof itself does not. Allow several minutes and several gigabytes of
+memory for the full check. No numerical search is a proof premise. Exact
+FLINT arithmetic is a software dependency, not a proof-assistant kernel or
+an independent implementation. There are 23 supplement tests in total.
 
 GENERAL CANDIDATE INTERFACE
   python -B check_unrestricted.py --certificate PATH

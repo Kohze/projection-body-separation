@@ -81,7 +81,7 @@
       "status": "PASS"
     }
   ],
-  "pages": 8,
+  "pages": 10,
   "all_pages_visually_inspected": true,
   "full_size_pages_inspected": [
     2,
@@ -90,7 +90,7 @@
     7
   ],
   "build_warnings": 0,
-  "references": 7,
+  "references": 8,
   "all_references_cited": true,
   "bibliography": [
     {
@@ -125,6 +125,7 @@
   ],
   "original_paper_and_sealed_snapshot_changed": false,
   "original_v1_1_0_paper_sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
-  "supplement_pdf_sha256": "d5d13a801bf33c1648b62d5360c27ea1bc4953def7a8cea9e162647f01831aeb",
-  "ai_disclosure_matches_companion": true
+  "supplement_pdf_sha256": "a740f2a68735c0e6d37d61fc3af2aa59e7eca726806307438cb3bc5a550bfa25",
+  "ai_disclosure_matches_companion": true,
+  "latest_extension_review": "audit/all-cuts-local-review.json"
 }

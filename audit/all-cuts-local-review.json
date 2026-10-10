@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-10",
+  "status": "PASS: exact computer-assisted local theorem; global minimality unproved",
+  "external_peer_review": false,
+  "proof_assistant_formalized": false,
+  "objective": "Prove dimension nine minimal for separation over all convex bodies",
+  "full_objective_achieved": false,
+  "unrestricted_dimension_eight_bound_proved": false,
+  "proved_scope": "For every b in R^8, the right derivative of R_8(K_epsilon(b))/c_8 at zero is nonpositive",
+  "normalized_local_family": "K_epsilon(b)={x>=0: sum(x)+epsilon*abs(b dot x)<=1}",
+  "strictness": "Both signs and all eight coefficients nonzero, including repeated levels; zeros handled non-strictly by continuity",
+  "analytic_review": {
+    "derivative": "-2(mu_plus-p*B)+2*p*(1-p)*D/9",
+    "normalization": "p=P(sum b_i Exp_i>0), mu_plus=E(sum b_i Exp_i)_+, B=sum b_i, D=sum i<j abs(b_i-b_j)",
+    "race": "Independent serial exponential chains; memorylessness and residual terminal mean; valid for repeated positive means",
+    "clearing": "L_ij is the suffix rectangle product of (a_u+c_v); multiplying the race recurrence gives integer P_ij and A_ij",
+    "sign": "Derivative=-2*N/(9*L^2), N=9*L*(A-P*B)-P*(L-P)*D",
+    "ordered_gaps": "All mixed-sign nonzero b reduce by permutation and reflection to four cases k=1..4; cumulative nonnegative gaps cover repeats",
+    "positive_factor": "k=1 verifies N=a_1^7 times the smaller polynomial before checking coefficients",
+    "strictness": "Positive coefficients and positive all-means-one specialization imply a positive monomial using only the two strictly positive first gaps",
+    "boundary": "At nonzero b the exponential sum has no atom at zero; dominated convergence gives continuity; b=0 and one-sign vectors give affine simplices"
+  },
+  "exact_coefficient_counts": [
+    3431,
+    814360,
+    6049757,
+    10398042
+  ],
+  "total_exact_coefficients": 17265590,
+  "minimum_coefficient": 2,
+  "independent_rational_controls": 12,
+  "dimension_nine_positive_control": "2509/20160",
+  "proof_report_sha256": "ebbeb5437942121cf5d8dd5817416eab2ecd5df1e86a9bc0bc0550e1b85c4856",
+  "software_dependency": {
+    "name": "python-flint",
+    "version": "0.9.0",
+    "arithmetic": "Exact integer multivariate polynomials",
+    "documentation": "https://python-flint.readthedocs.io/en/latest/fmpz_mpoly.html",
+    "versioned_package": "https://pypi.org/project/python-flint/0.9.0/",
+    "trusted_dependency": "FLINT exact arithmetic; not an independent implementation or a proof-assistant kernel"
+  },
+  "verification": {
+    "Windows_full_coefficient_check": "PASS",
+    "Linux_full_frozen_report_replay": "PASS",
+    "normal_unit_tests": 23,
+    "optimized_unit_tests": 23,
+    "Windows_tests": "PASS",
+    "Linux_tests": "PASS",
+    "Linux_python": "3.12.3",
+    "Linux_wheel_sha256": "376b88cacd30612479e839ffdba887599d3f9c8c0e214852bf80bb2b194e4d76"
+  },
+  "presentation": {
+    "pages": 10,
+    "references": 8,
+    "all_references_cited": true,
+    "build_warnings": 0,
+    "all_pages_visually_inspected": true,
+    "full_size_pages_inspected": [
+      6,
+      7,
+      8,
+      10
+    ],
+    "ai_disclosure_matches_companions": true
+  },
+  "scope_limits": [
+    "Does not bound all finite two-facet deformations",
+    "Does not cover directions with more upper facets",
+    "Does not establish the unrestricted dimension-eight bound or global minimality",
+    "Finite searches are not proof premises",
+    "No global novelty or priority claim"
+  ],
+  "original_paper_and_sealed_snapshot_changed": false,
+  "original_v1_1_0_paper_sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
+  "supplement_pdf_sha256": "a740f2a68735c0e6d37d61fc3af2aa59e7eca726806307438cb3bc5a550bfa25"
+}

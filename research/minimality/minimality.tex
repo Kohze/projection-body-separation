@@ -28,7 +28,9 @@ argument reduces arbitrary convex bodies to these constructions. We give
 an equivalent section--projection inequality with no bound on the number
 of facets, an exact checker for individual rational polytopes, and a
 uniform neighbourhood bound for centred, possibly asymmetric, two-facet
-deformations of a simplex. Global minimality remains unproved.
+deformations of a simplex. An exact computer-assisted polynomial argument
+also proves nonpositive first variation for every two-facet direction,
+without centring. Global minimality remains unproved.
 \end{abstract}
 
 \section{What global minimality requires}
@@ -411,6 +413,135 @@ cuts: dropping $\sum_i b_i=0$ adds
 $(2p-1)\sum_i b_i$ to the first derivative. Nor does a negative derivative
 at a simplex control arbitrary bodies farther away.
 
+\section{All two-facet directions: a computer-assisted local bound}
+The centring condition can be removed for the derivative assertion,
+using a larger exact polynomial calculation. This does not extend the
+finite-radius bound of Proposition~\ref{prop:local-asymmetric} to all cuts.
+
+\begin{theorem}[Computer-assisted]\label{thm:all-cuts}
+For every $b\in\mathbb R^8$, the right derivative of
+$R_8(K_\varepsilon(b))/c_8$ at $\varepsilon=0$ is nonpositive.
+It is strictly negative when both signs are present and every coefficient
+is nonzero; repeated coefficients are allowed. No centring is assumed.
+\end{theorem}
+\begin{proof}
+Put $Z=\sum_i b_iE_i$, $p=\PP(Z>0)$, $B=\sum_i b_i$, and
+$\mu_+=\E(Z)_+$. Differentiating~\eqref{eq:asymmetric-ratio} without
+centring gives
+\begin{equation}\label{eq:uncentred-derivative}
+ \left.\frac{d}{d\varepsilon}\frac{R_8}{c_8}\right|_{0+}
+ =-2(\mu_+-pB)+\frac{2p(1-p)}9D(b).
+\end{equation}
+If all coefficients have the same weak sign, the gauge is linear and
+the body is an affine simplex, with constant ratio one. For a mixed-sign
+vector with no zero coefficient, permute and, if necessary, reflect it
+to write
+\[
+ \begin{gathered}
+ b=(-a_k,\ldots,-a_1,c_1,\ldots,c_l),\qquad k+l=8,\quad1\le k\le4,\\
+ 0<a_1\le\cdots\le a_k,\qquad0<c_1\le\cdots\le c_l.
+ \end{gathered}
+\]
+Reflection leaves the gauge unchanged. Let
+$X=\sum_{j=1}^l c_jE_j$ and $Y=\sum_{i=1}^k a_iE'_i$, using independent
+exponentials. The sums can be regarded as the completion times of two
+independent chains of exponential stages. At the state with current
+means $a_i,c_j$, the negative chain advances first with probability
+$c_j/(a_i+c_j)$; the positive chain advances first with probability
+$a_i/(a_i+c_j)$. Memorylessness gives recurrences for both
+$\PP(X>Y)$ and $\E(X-Y)_+$, with terminal values $1$ and
+$\sum_{v=j}^l c_v$ when the negative chain has finished, and zero
+when the positive chain has finished.
+
+These recurrences can be cleared using
+\[
+ L_{ij}=\prod_{u=i}^k\prod_{v=j}^l(a_u+c_v),\quad
+ C_{ij}=c_j\prod_{v=j+1}^l(a_i+c_v),\quad
+ E_{ij}=a_i\prod_{u=i+1}^k(a_u+c_j).
+\]
+Define integer polynomials $P_{ij},A_{ij}$ by
+\[
+ \begin{aligned}
+ P_{ij}&=C_{ij}P_{i+1,j}+E_{ij}P_{i,j+1},\\
+ A_{ij}&=C_{ij}A_{i+1,j}+E_{ij}A_{i,j+1}.
+ \end{aligned}
+\]
+Their boundary values are $P_{k+1,j}=1$ and
+$A_{k+1,j}=\sum_{v=j}^l c_v$ for $j\le l$, and
+$P_{i,l+1}=A_{i,l+1}=0$ for $i\le k$; the unused corner is immaterial.
+Writing $L=L_{11}$, $P=P_{11}$ and $A=A_{11}$, we have
+$p=P/L$ and $\mu_+=A/L$. Also
+\[
+ D(b)=\sum_{i=1}^k(l+2i-k-1)a_i
+       +\sum_{j=1}^l(k+2j-l-1)c_j.
+\]
+Thus~\eqref{eq:uncentred-derivative} equals $-2N/(9L^2)$, where
+\begin{equation}\label{eq:all-cuts-polynomial}
+ N=9L(A-PB)-P(L-P)D(b).
+\end{equation}
+
+Substitute ordered gaps $a_i=x_1+\cdots+x_i$ and
+$c_j=y_1+\cdots+y_j$. The program \texttt{check\_all\_cuts.py}
+reconstructs these integer polynomials and checks every nonzero
+coefficient using the exact multivariate arithmetic of
+\texttt{python-flint}~\cite{python-flint}. The resulting obligations are
+shown in Table~\ref{tab:all-cuts}. All coefficients are positive integers,
+with minimum two. For $k=1$, it first verifies and removes the positive
+factor $a_1^7$; the remaining polynomial is
+\[
+ 9\Big(\sum_jc_j\Big)L-(L-a_1^7)D(b).
+\]
+In each case the specialization with all $a_i=c_j=1$ is positive.
+Consequently at least one positive monomial uses only $x_1,y_1$,
+proving $N>0$ whenever $x_1=a_1>0$ and $y_1=c_1>0$,
+including repeated levels.
+This proves strict negativity in the stated mixed-sign case.
+
+Finally, $p$, $\mu_+$, $B$ and $D(b)$ are continuous at every nonzero
+coefficient vector: $Z$ has no atom at zero and the relevant first
+moments are dominated locally. Approximating zero coefficients by
+nonzero ones therefore proves nonpositivity on the remaining boundary.
+The vector $b=0$ gives a constant simplex directly.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\caption{Exact coefficient obligations for the uncentred first variation.
+The $k=1$ row removes the positive factor $a_1^7$; all other rows check
+$N$ itself. Every listed coefficient is positive, with minimum two.}
+\label{tab:all-cuts}
+\begin{tabular}{rrrr}
+\toprule
+Negative coordinates $k$ & Positive coordinates $l$ & Degree & Nonzero coefficients\\
+\midrule
+1 & 7 & 8 & 3,431\\
+2 & 6 & 25 & 814,360\\
+3 & 5 & 31 & 6,049,757\\
+4 & 4 & 33 & 10,398,042\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+There are 17,265,590 coefficient checks in total, with no numerical
+sampling or optimization used as a proof premise. Twelve rational
+controls compare the race recurrence against the separate exponential
+residue formula. A zero-padded dimension-nine control has positive
+derivative $2509/20160$, so the computation is not an assertion of local
+nonincrease in arbitrary dimension. The exact integer calculation is
+computer-assisted and is not a proof-assistant formalization or an
+independent implementation of FLINT.
+
+This calculation uses \texttt{python-flint}, version 0.9.0.
+To reproduce it:
+\begin{quote}\small\ttfamily
+python -m pip install -r requirements-all-cuts.txt\\
+python -B check\_all\_cuts.py -{}-check-report
+\end{quote}
+Theorem~\ref{thm:all-cuts} controls first derivatives at a simplex.
+It does not exclude a larger finite two-facet deformation, a direction
+with more upper facets, or a convex body unrelated to such a deformation.
+Those distinctions remain necessary for the global problem.
+
 \section{Independent arithmetic check and remaining scope}
 The file \texttt{check\_minimality.py} recomputes the supporting gradient,
 the four margins in~\eqref{eq:gap}, the dimension-nine rational ratio,
@@ -492,8 +623,9 @@ prove~\eqref{eq:remaining}, nor imply that every maximizer belongs to
 $\mathcal F$. Global minimality is therefore open in this work. The next
 substantive requirement is a bound covering all eight-dimensional convex
 bodies, equivalently~\eqref{eq:all-facets} for unbounded $m$, or an exact
-counterexample refuting it. Proposition~\ref{prop:local-asymmetric} and
-the general geometry interface provide additional tools for that task;
+counterexample refuting it. Proposition~\ref{prop:local-asymmetric},
+Theorem~\ref{thm:all-cuts}, and the general geometry interface provide
+additional tools for that task;
 they do not replace it.
 
 \section*{Generative AI disclosure}
@@ -547,5 +679,11 @@ S.~Myroshnychenko, C.~Tang, K.~Tatarko, and T.~Tkocz,
 S.~Brazitikos and C.~Pandis, \emph{Restricted hyperplane sections of
 the cross-polytope and the simplex}, preprint, 5 June 2026.
 \href{https://arxiv.org/abs/2606.07163}{arXiv:2606.07163v1}.
+
+\bibitem{python-flint}
+The python-flint developers, \emph{python-flint}, version 0.9.0,
+exact integer multivariate polynomial arithmetic, accessed 10 October 2026.
+\href{https://python-flint.readthedocs.io/en/latest/fmpz_mpoly.html}{Multivariate polynomial documentation};
+\href{https://pypi.org/project/python-flint/0.9.0/}{Versioned software package}.
 \end{thebibliography}
 \end{document}
