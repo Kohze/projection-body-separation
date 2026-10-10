@@ -22,5 +22,6 @@ jobs:
       - run: python -B research/minimality/check_unrestricted.py --check-report
       - run: python -m pip install -r research/minimality/requirements-all-cuts.txt
       - run: python -B research/minimality/check_all_cuts.py --check-report
+      - run: python -B research/minimality/check_low_sign_hyperplanes.py --check-report
       - run: python -B -m unittest discover -s research/minimality -p 'test_*.py' -v
       - run: python -B -O -m unittest discover -s research/minimality -p 'test_*.py' -v

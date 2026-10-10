@@ -113,8 +113,17 @@ and that exact representation beyond the paired family. A computer-assisted
 theorem also proves a nonpositive first derivative for every two-upper-facet
 direction in dimension eight, without centring. Its four sign cases reduce to
 17,265,590 positive integer coefficients. This is a local derivative theorem;
-it does not bound arbitrary finite deformations. Twenty-three adversarial and
+it does not bound arbitrary finite deformations. Thirty adversarial and
 positive tests run in normal and optimized Python.
+
+An additional executable research result bounds every offset hyperplane
+section with ten coordinates when either side has at most two nonzero
+coefficients. Its 46 cones are checked by reconstructing 56,323,459 integer
+polynomial coefficients and verifying 1,479 rational certificate blocks.
+The analytic reduction and exact certificates are documented in
+[the research instructions](research/minimality/README.txt). This result
+covers a family of ten-facet bodies; the full ten-facet bound remains open.
+These additional research artifacts extend the results described in the PDF.
 
 **Global minimality remains unproved.** The supplement shows that proving
 nine minimal over all convex bodies is equivalent to proving the unrestricted
@@ -127,6 +136,7 @@ python -B research/minimality/check_minimality.py --check-report
 python -B research/minimality/check_unrestricted.py --check-report
 python -m pip install -r research/minimality/requirements-all-cuts.txt
 python -B research/minimality/check_all_cuts.py --check-report
+python -B research/minimality/check_low_sign_hyperplanes.py --check-report
 python -B -m unittest discover -s research/minimality -p 'test_*.py' -v
 python -B -O -m unittest discover -s research/minimality -p 'test_*.py' -v
 ```

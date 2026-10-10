@@ -1,0 +1,31 @@
+{
+  "status": "PASS for stated finite-family scope",
+  "date": "2026-10-10",
+  "statement": "D(b)*density(sum b_i Exp_i,0) <= 9 when either sign occurs at most twice",
+  "dimension": 8,
+  "ambient_coordinates": 10,
+  "verified_order_cones": 46,
+  "polynomial_coefficients": 56323459,
+  "exact_certificate_blocks": 1479,
+  "proof_report_sha256": "c5bd227e5cdf85deba4e538f6c68b02bad5f066b480b595e7f2136bdb142a7ff",
+  "certificate_data_sha256": "8f7b21c54fd630bc7c211c4bafccdbe3de5154c3e0378f9cc6ed0a6cfdb571bb",
+  "windows_public_checker": "Complete exact reconstruction passed",
+  "windows_public_tests": "30 passed in normal and optimized Python",
+  "linux_equivalent_prototype": "Complete 46-cone exact replay and six verifier tests passed in normal and optimized Python",
+  "linux_prototype_receipt_sha256": "9b7188fd928870549f837fabd651e209619f6c083746d12c224f51d61a4b209b",
+  "numerical_optimizer_required_for_replay": false,
+  "analytic_dependency": "Feng--Hu--Liu--Xu (2026), Proposition 4.2; exponential memorylessness; Gamma--Dirichlet factorization; weighted AM-GM",
+  "uncovered_cases": [
+    "At least three nonzero coefficients of each sign",
+    "All ambient dimensions above ten",
+    "Unrestricted eight-dimensional convex bodies"
+  ],
+  "full_ten_facet_bound_proved": false,
+  "unrestricted_minimality_proved": false,
+  "base_paper_pdf_sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
+  "supplement_pdf_sha256": "a740f2a68735c0e6d37d61fc3af2aa59e7eca726806307438cb3bc5a550bfa25",
+  "pdf_scope": "Additional research artifact; PDFs remain at their preceding verified edition",
+  "external_peer_review_claimed": false,
+  "proof_assistant_formalization_claimed": false,
+  "global_priority_claimed": false
+}

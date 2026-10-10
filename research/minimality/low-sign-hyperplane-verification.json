@@ -1,0 +1,430 @@
+{
+  "status": "PASS",
+  "ambient_coordinates": 10,
+  "dimension": 8,
+  "statement": "D(b)*density(sum b_i Exp_i,0) <= 9 when either sign occurs at most twice",
+  "expected_cases": 46,
+  "verified_cases": 46,
+  "polynomial_coefficients": 56323459,
+  "exact_certificate_blocks": 1479,
+  "python_flint": "0.9.0",
+  "certificate_data_sha256": "8f7b21c54fd630bc7c211c4bafccdbe3de5154c3e0378f9cc6ed0a6cfdb571bb",
+  "full_ten_facet_bound_proved": false,
+  "unrestricted_minimality_proved": false,
+  "cases": [
+    {
+      "negative_coordinates": 1,
+      "absolute_ordering": null,
+      "nonzero_coefficients": 16794,
+      "minimum_coefficient": "2",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "1/3628800",
+      "polynomial_control": "32659026"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "AACCCCCCCC",
+      "nonzero_coefficients": 937365,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "23/1814400",
+      "polynomial_control": "1194654678940800"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "ACACCCCCCC",
+      "nonzero_coefficients": 894102,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "1787/23587200",
+      "polynomial_control": "1938185721687600"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "ACCACCCCCC",
+      "nonzero_coefficients": 894102,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "2647/11007360",
+      "polynomial_control": "3241552548215520"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "ACCCACCCCC",
+      "nonzero_coefficients": 914094,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "44383/82555200",
+      "polynomial_control": "5356435234328640"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "ACCCCACCCC",
+      "nonzero_coefficients": 950130,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "114511/117936000",
+      "polynomial_control": "8631108087528960"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "ACCCCCACCC",
+      "nonzero_coefficients": 1005185,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "1222783/801964800",
+      "polynomial_control": "13517718109414200"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "ACCCCCCACC",
+      "nonzero_coefficients": 1090049,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "244025/112275072",
+      "polynomial_control": "20589090791940000"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "ACCCCCCCAC",
+      "nonzero_coefficients": 1231109,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "35219281/12189864960",
+      "polynomial_control": "30563594621710920"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "ACCCCCCCCA",
+      "nonzero_coefficients": 1545974,
+      "minimum_coefficient": "2",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "249995801/68567990400",
+      "polynomial_control": "44340955798083840"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CAACCCCCCC",
+      "nonzero_coefficients": 894102,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "4763/28304640",
+      "polynomial_control": "3711779982852480"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CACACCCCCC",
+      "nonzero_coefficients": 894102,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "542/1289925",
+      "polynomial_control": "6716992228531200"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CACCACCCCC",
+      "nonzero_coefficients": 914094,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "175439/212284800",
+      "polynomial_control": "11697053606029440"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CACCCACCCC",
+      "nonzero_coefficients": 950130,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "1067/773955",
+      "polynomial_control": "19549729672704000"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CACCCCACCC",
+      "nonzero_coefficients": 1005185,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "10964383/5346432000",
+      "polynomial_control": "31434765717168000"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CACCCCCACC",
+      "nonzero_coefficients": 1090049,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "47542/16916445",
+      "polynomial_control": "48820534654510080"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CACCCCCCAC",
+      "nonzero_coefficients": 1231109,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "1160111579/319983955200",
+      "polynomial_control": "73551290201308800"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CACCCCCCCA",
+      "nonzero_coefficients": 1545982,
+      "minimum_coefficient": "2",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "531907/119041650",
+      "polynomial_control": "107945659045002240"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCAACCCCCC",
+      "nonzero_coefficients": 937365,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "35137/47174400",
+      "polynomial_control": "14113923408842400"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCACACCCCC",
+      "nonzero_coefficients": 960213,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "317537/247665600",
+      "polynomial_control": "25483560033171240"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCACCACCCC",
+      "nonzero_coefficients": 1000071,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "8019/4076800",
+      "polynomial_control": "43703640793612800"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCACCCACCC",
+      "nonzero_coefficients": 1060076,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "3546833/1283143680",
+      "polynomial_control": "71605737113882400"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCACCCCACC",
+      "nonzero_coefficients": 1151804,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "18743747/5155488000",
+      "polynomial_control": "112777142778125280"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCACCCCCAC",
+      "nonzero_coefficients": 1303388,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "2673/587860",
+      "polynomial_control": "171733854644352000"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCACCCCCCA",
+      "nonzero_coefficients": 1640464,
+      "minimum_coefficient": "2",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "44876581/8204716800",
+      "polynomial_control": "254181449143607040"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCAACCCCC",
+      "nonzero_coefficients": 996933,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "106063/55036800",
+      "polynomial_control": "51692850607638240"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCACACCCC",
+      "nonzero_coefficients": 1042251,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "109/39690",
+      "polynomial_control": "90292611666216960"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCACCACCC",
+      "nonzero_coefficients": 1108416,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "16454911/4491002880",
+      "polynomial_control": "149937668231364000"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCACCCACC",
+      "nonzero_coefficients": 1208064,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "305152/65786175",
+      "polynomial_control": "238525155680011200"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCACCCCAC",
+      "nonzero_coefficients": 1371156,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "231145309/41023584000",
+      "polynomial_control": "366025734564225120"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCACCCCCA",
+      "nonzero_coefficients": 1731736,
+      "minimum_coefficient": "2",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "1182761/178562475",
+      "polynomial_control": "545114748873277440"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCAACCCC",
+      "nonzero_coefficients": 1071861,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "1826011/495331200",
+      "polynomial_control": "172725713317946880"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCACACCC",
+      "nonzero_coefficients": 1145451,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "52890977/11227507200",
+      "polynomial_control": "289595012164389360"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCACCACC",
+      "nonzero_coefficients": 1253739,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "33650243/5829667200",
+      "polynomial_control": "464013632831807520"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCACCCAC",
+      "nonzero_coefficients": 1428576,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "624919229/91423987200",
+      "polynomial_control": "716022009280234800"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCACCCCA",
+      "nonzero_coefficients": 1812375,
+      "minimum_coefficient": "2",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "16796875/2133226368",
+      "polynomial_control": "1071295930610889984"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCAACCC",
+      "nonzero_coefficients": 1169979,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "10104947/1727308800",
+      "polynomial_control": "522050092878758400"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCACACC",
+      "nonzero_coefficients": 1287675,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "393503/56388150",
+      "polynomial_control": "840858779267020800"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCACCAC",
+      "nonzero_coefficients": 1474272,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "2130381/263361280",
+      "polynomial_control": "1302941949882693120"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCACCCA",
+      "nonzero_coefficients": 1880703,
+      "minimum_coefficient": "-928",
+      "exact_certificate_blocks": 52,
+      "independent_density_control": "3815662/416645775",
+      "polynomial_control": "1956564293777533440"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCCAACC",
+      "nonzero_coefficients": 1309305,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "15789859/1924715520",
+      "polynomial_control": "1437472414302518880"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCCACAC",
+      "nonzero_coefficients": 1507242,
+      "minimum_coefficient": "8",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "71178493/7618665600",
+      "polynomial_control": "2234923527596502600"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCCACCA",
+      "nonzero_coefficients": 1935339,
+      "minimum_coefficient": "-12839",
+      "exact_certificate_blocks": 441,
+      "independent_density_control": "112116497/10755763200",
+      "polynomial_control": "3366890943223991040"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCCCAAC",
+      "nonzero_coefficients": 1526193,
+      "minimum_coefficient": "-311952",
+      "exact_certificate_blocks": 986,
+      "independent_density_control": "6549983/620524800",
+      "polynomial_control": "3656342459985415200"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCCCACA",
+      "nonzero_coefficients": 1973620,
+      "minimum_coefficient": "8",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "692423/59520825",
+      "polynomial_control": "5526301443200778240"
+    },
+    {
+      "negative_coordinates": 2,
+      "absolute_ordering": "CCCCCCCCAA",
+      "nonzero_coefficients": 2031535,
+      "minimum_coefficient": "9",
+      "exact_certificate_blocks": 0,
+      "independent_density_control": "10234501/801964800",
+      "polynomial_control": "8744658205871427840"
+    }
+  ]
+}
