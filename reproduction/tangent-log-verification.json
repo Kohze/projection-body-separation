@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "method": "rational atanh logarithm intervals; no exponential-series import",
+  "dimensions": [
+    10,
+    48
+  ],
+  "comparisons": 39,
+  "logarithmic_margin_lower": "1/4000",
+  "smallest_margin_dimension": 18,
+  "acceptance_uses_floating_point": false
+}

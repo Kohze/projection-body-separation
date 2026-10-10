@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "audit_utc": "2026-10-09T19:35:30.039585+00:00",
   "prior_sources": [
     {
@@ -61,24 +61,38 @@
         "doi": "10.1016/j.aam.2015.03.004"
       },
       "inspected_version": "arXiv:1409.4347v2 (2014), retained alongside the published-version citation"
+    },
+    {
+      "id": "finite-pareto",
+      "author": "mxym (repository account)",
+      "title": "An exact Pareto dynamic program for product-join projection geometry: sharp extrema through dimension 48",
+      "date": "2026-10-08",
+      "commit": "55ba5a7be927e3e7d2dbfd8d054db91b63d8d755",
+      "url": "https://github.com/mxym/math/blob/55ba5a7be927e3e7d2dbfd8d054db91b63d8d755/notes/exact-product-join-finite-optima/paper.md",
+      "sha256": "b779ad786914fe512fdb2dcfde098d12570e626700e90d8414f415a87e0e99fc",
+      "git_blob": "aae95c2431a793ee0cf77c1307928a66dea3c940",
+      "bytes": 14465,
+      "verification": "Full primary-source text fetched from GitHub API; Git blob identity verified",
+      "role": "Prior exact Pareto algorithm and simplex optimum through dimension 13; current package independently replays only through dimension 9"
     }
   ],
-  "current_repository_head": "c8cc0a89cac4db7c98685298d6859a8cb3f4b3bd",
-  "projection_changes_since_pin": false,
   "source_audit_report": "PRIORITY_AND_DEPENDENCIES.txt",
   "focused_screen": "priority-text-screen.json",
   "essential_imports": [
     "central seed family",
     "facet invariant and product/join calculus",
     "balanced recursive operation and tail method",
-    "whole-class mixed Bellman upper theorem"
+    "whole-class mixed Bellman upper theorem",
+    "exact finite Pareto algorithm (small dimension-nine class replay)"
   ],
   "certified_new_claims": [
     "specified rational 12-dimensional seed has 2.861<beta<2.8611",
     "specified rational 8-dimensional seed has 2.8571<beta<2.8573",
     "explicit unrestricted polytopes exceed the entire point-generated class exponentially",
-    "fixed 197-dimensional block and simplex residues beat the entire class in all n>=15500",
-    "explicit 224-facet inequality description of the dimension-197 block, checked by an independent flattened-mass construction"
+    "explicit 224-facet inequality description of the dimension-197 block, checked by an independent flattened-mass construction",
+    "Explicit finite operation recipes and fixed-block extension exceed the entire point-generated class in every n>=9",
+    "One exact-selected rational sequence has both all-n>=9 separation and root limit 2.861<beta<2.8611",
+    "Finite consequence of imported envelope: class R_n < (9/10)*(7137/2500)^n for every n>=49"
   ],
   "exact_seed_ranking": "(beta_A/beta_B)^(3d+1)=a(A)R(A)^3/[a(B)R(B)^3], at fixed dimension and recursion",
   "priority": "Not established; no matching rate/class separation found in focused inspected corpus",
@@ -88,10 +102,10 @@
   "review_revision_utc": "2026-10-09T19:52:29.102340+00:00",
   "review_report": "REVIEWER_AUDIT.txt",
   "edition_repository": "https://github.com/Kohze/projection-body-separation",
-  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.1",
-  "publication_verification_record": "Workspace audit/github-publication-projection-body-separation-v1.0.1.json records the actual remote publication check.",
-  "citation_coverage_audit": "Companion public paper folder audit/citation-audit-v1.0.1.json",
-  "citation_entries": 16,
+  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0",
+  "publication_verification_record": "Workspace audit/github-publication-projection-body-separation-v1.1.0.json records the remote release check.",
+  "citation_coverage_audit": "Companion public paper folder audit/citation-audit-v1.1.0.json",
+  "citation_entries": 17,
   "additional_contextual_sources": [
     "Brannen (1996)",
     "Lutwak-Yang-Zhang (2001)",
@@ -103,5 +117,9 @@
     "Lasserre (2015)",
     "De Loera-Rambau-Santos (2010)"
   ],
-  "new_context_does_not_change_certified_constants": true
+  "new_context_does_not_change_certified_constants": true,
+  "threshold_revision": "Earlier sufficient threshold 15500 replaced by certified all-dimensional threshold 9; original check retained as historical control",
+  "repository_head_at_prior_audit": "c8cc0a89cac4db7c98685298d6859a8cb3f4b3bd",
+  "prior_repository_check_date": "2026-10-09",
+  "projection_changes_since_original_pin_at_prior_audit": false
 }

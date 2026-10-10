@@ -1,17 +1,18 @@
 # Beyond point-generated product-join constructions for projection-body volume
 
-Robin Gounder · Working research draft · 9 October 2026 · Version 1.0.1
+Robin Gounder · Working research draft · 10 October 2026 · Version 1.1.0
 
 [Read the paper](beyond-point-generated-projection-body-constructions.pdf) ·
-[Versioned release](https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.1) ·
+[Versioned release](https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0) ·
 [Citation metadata](CITATION.cff) · [Rights](RIGHTS.md)
 
-This eleven-page research note specifies a rational twelve-dimensional seed whose
+This thirteen-page research note specifies a rational twelve-dimensional seed whose
 iterated products and joins have projection-volume root limit strictly between
 2.861 and 2.8611. Together with an attributed prior upper theorem, it gives a
 strict exponential separation from the entire class generated from a point
-by products, joins and invertible affine equivalences. A fixed 197-dimensional
-block and simplex residues give separation in every dimension at least 15,500.
+by products, joins and invertible affine equivalences. Explicit product-join recipes and a fixed 197-dimensional block give separation
+in every dimension at least **9**. One explicit sequence simultaneously has
+this finite separation and the stronger asymptotic limit.
 An eight-dimensional seed gives an amplified rate between 2.8571 and 2.8573,
 despite its initial ratio falling below the simplex ratio.
 
@@ -19,7 +20,7 @@ The geometric family, operation calculus, recursion, tail method and class
 upper theorem are prior work and are explicitly credited. Optimality and
 global bibliographic priority are not claimed. This is an AI-assisted working
 draft, not externally peer reviewed or proof-assistant formalized. The
-manuscript includes a AI disclosure matching the companion papers and discusses the mathematical
+manuscript includes an AI disclosure matching the companion papers and discusses the mathematical
 and computational limits of the construction.
 
 ## Reproduce
@@ -33,8 +34,10 @@ python -B reproduction/verify_all.py --regenerate
 
 The checks recompute complete rational seed geometry, compare the closed
 formulas, verify the 224 block inequalities, reconstruct the rational recursion,
-check infinite-tail hypotheses, check all 197 residue bounds and the dimension
-15,500 comparison, and run ten unit tests in normal and optimized Python.
+check infinite-tail hypotheses, replay the exact dimension-nine class frontier,
+check 39 finite Bellman bounds and 197 explicit residue witnesses, and prove
+the fixed-block extension in every larger dimension. All 16 unit tests run
+in normal and optimized Python.
 Certificate regeneration occurs in temporary files and leaves delivered files
 unchanged. The own-construction checks need no network access.
 
@@ -71,3 +74,22 @@ does not silently alter the sealed reproduction snapshot.
 
 Original Python code and generated certificate data are MIT licensed;
 manuscript rights and third-party terms are recorded separately in [RIGHTS.md](RIGHTS.md).
+
+## Dimension-nine certificate
+
+`reproduction/threshold-recipes.json` specifies a 420-node operation graph and
+one witness in each dimension 9 through 245. Numerical exploration selected
+the recipes; search scores and optimizer success are not proof premises.
+`produce_threshold.py` reconstructs exact states from the frozen recipes.
+`check_threshold.py` independently checks those states against recomputed
+seed geometry, bounds the finite class envelope by rational tangent estimates,
+and proves the finite constants needed for all-dimensional propagation.
+
+The original growth certificate still replays the older 15,500 fixed-block
+and simplex-padding argument as a historical control. The current threshold
+is **9**, proved in `threshold-verification.json` and Section 5 of the paper.
+Nine is a sufficient dimension, not a proved minimum over all convex bodies.
+The geometric family, dimension-nine simplex counterexample phenomenon,
+operation identities, Pareto algorithm and mixed Bellman theorem are prior
+work and explicitly attributed. The finite witness search is not exhaustive
+and makes no optimality or global priority claim.

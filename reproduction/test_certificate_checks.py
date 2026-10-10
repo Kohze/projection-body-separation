@@ -13,6 +13,7 @@ import check_growth
 import verify_all
 import check_block
 import replay_prior
+import check_threshold
 
 ROOT = Path(__file__).resolve().parent
 
@@ -23,6 +24,55 @@ class CertificateChecks(unittest.TestCase):
         cls.seed = json.loads((ROOT/'seed-eight.json').read_text())
         cls.growth = json.loads((ROOT/'growth-certificate.json').read_text())
         cls.geometry = {r['name']: r for r in json.loads((ROOT/'seed-geometry-verification.json').read_text())}
+        cls.threshold = json.loads((ROOT/'threshold-certificate.json').read_text())
+        cls.recipes = json.loads((ROOT/'threshold-recipes.json').read_text())
+
+    def threshold_check(self, recipe=None, cert=None, geometry=None):
+        recipe = deepcopy(self.recipes) if recipe is None else recipe
+        cert = deepcopy(self.threshold) if cert is None else cert
+        # Counterfeits below are allowed to recompute the recipe hash: the
+        # mathematical checks, not merely the hash mismatch, must reject them.
+        digest = hashlib.sha256(json.dumps(recipe).encode()).hexdigest()
+        cert['recipe_sha256'] = digest
+        return check_threshold.check(recipe, cert, self.geometry if geometry is None else geometry, digest)
+
+    def test_dimension_nine_class_frontier_is_exact(self):
+        result = check_threshold.exact_small_class(check_threshold.g_values(9))
+        self.assertEqual(result['sharp_R_over_simplex'], '1')
+        self.assertEqual(result['candidates_replayed'], 261)
+
+    def test_threshold_rejects_a_simplex_in_small_dimensions(self):
+        for n in (9, 18):
+            recipe = deepcopy(self.recipes); cert = deepcopy(self.threshold)
+            point = next(i for i, row in enumerate(recipe['nodes']) if row['op'] == ['point'])
+            index = point
+            for dimension in range(1, n+1):
+                recipe['nodes'].append(dict(dimension=dimension, op=['join', point, index]))
+                cert['nodes'].append(dict(dimension=dimension, H=str(dimension+1), Q='1'))
+                index = len(recipe['nodes'])-1
+            recipe['targets'][str(n)] = index
+            with self.subTest(dimension=n), self.assertRaises(ValueError):
+                self.threshold_check(recipe, cert)
+
+    def test_threshold_rejects_missing_residue(self):
+        recipe = deepcopy(self.recipes); recipe['targets'].pop('245')
+        with self.assertRaisesRegex(ValueError, 'Missing dimension/residue'):
+            self.threshold_check(recipe)
+
+    def test_threshold_rejects_forged_state(self):
+        cert = deepcopy(self.threshold); cert['nodes'][0]['Q'] = '1'
+        with self.assertRaisesRegex(ValueError, 'False exact witness'):
+            self.threshold_check(cert=cert)
+
+    def test_threshold_rejects_wrong_block(self):
+        cert = deepcopy(self.threshold); cert['block_R'] = '1'
+        with self.assertRaisesRegex(ValueError, 'Wrong repeating block'):
+            self.threshold_check(cert=cert)
+
+    def test_threshold_rejects_false_seed_geometry(self):
+        geometry = deepcopy(self.geometry); geometry['seed-ten']['Q'] = ['1', '1']
+        with self.assertRaisesRegex(ValueError, 'False exact witness'):
+            self.threshold_check(geometry=geometry)
 
     def test_seed_geometry_and_lifted_invariant(self):
         report = check_seeds.check(self.seed)

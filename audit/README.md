@@ -12,3 +12,8 @@ The remote publication audit is retained in the surrounding workspace.
 Version 1.0.1 fixes external-report newline portability and adds its regression
 test. See portability-fix-v1.0.1.json and CHANGELOG.md. The historical v1.0.0
 records remain preserved; current citation coverage is in citation-audit-v1.0.1.json.
+
+Version 1.1.0 replaces the sufficient threshold by 9. Current mathematical
+review is dimension-nine-review-v1.1.0.json; current citation coverage is
+citation-audit-v1.1.0.json. Earlier reviewer records describe their dated
+editions. They remain preserved and are not scores for this revision.

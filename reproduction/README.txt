@@ -1,5 +1,5 @@
 BEYOND POINT-GENERATED PRODUCT--JOIN CONSTRUCTIONS
-Reviewer-audited research draft and exact reproduction package, 9 October 2026
+Reviewer-audited research draft and exact reproduction package, 10 October 2026
 
 Read beyond-point-generated.pdf for the mathematical argument and
 PRIORITY_AND_DEPENDENCIES.txt for the contribution and source audit.
@@ -31,13 +31,39 @@ to beta with 2.861<beta<2.8611. Simplex residue padding supplies an explicit
 sequence in every dimension with the same limit. Thus this construction
 has strictly larger exponential growth than the entire class C.
 
-The fixed block L=K_2 has dimension 197 and R(L)>2.8581^197.
-For n=197k+r, 0<=r<=196, set E_n=L^k x T_r, omitting T_0.
-Then R(E_n)>sup_(K in C_n)R(K) for every n>=15500.
-The threshold 15500 is sufficient, not sharp. Its proof checks all 197
-simplex residues exactly, using c_r>2.8581^r/3500, together with the finite
-class bound 1.051*(n+1)*2.8548^n. This improves the earlier threshold 20000
-without changing the construction or its certified limiting rate.
+CURRENT FINITE SEPARATION: EVERY DIMENSION n>=9
+
+The additional seed S_9 has paired tilts (1,2,3,5)/100 and one zero
+coordinate; S_10 has paired tilts (16,51,91,142,217)/1000. They have
+26 and 36 vertices. Their complete exact geometry is checked alongside
+the original eight- and twelve-dimensional seeds.
+
+threshold-recipes.json specifies 420 product/join nodes and W_n for every
+integer n=9,...,245. threshold-certificate.json stores their exact H,Q
+states. produce_threshold.py regenerates those states with the producer
+formulas; check_threshold.py independently reconstructs them from geometry.
+
+At n=9 the entire point-generated class has the simplex maximum c_9.
+This prior Pareto result is independently replayed through n=9, checking
+261 binary candidates and retaining 50 states across dimensions 0,...,9.
+The seed satisfies R(S_9)/c_9=20811283583/20797677600>1.
+Dimensions 10,...,48 are checked against rational tangent bounds for the
+imported mixed Bellman envelope, with witness/upper bound >4001/4000.
+For n>=49, the new analytic consequence of that envelope is
+  sup_(K in C_n) R(K) < (9/10)*(7137/2500)^n.
+Every base witness s=49,...,245 exceeds that bound by >1001/1000.
+The existing block L=K_2, dimension 197, satisfies
+  R(L) > (5/4)*(7137/2500)^197.
+For n>=49 choose s=49+((n-49) mod 197), k=(n-s)/197, and set
+  E_n = L^k x W_s.
+Omit the factor L^0. Product multiplicativity proves separation in every
+larger dimension. The finite certificate and analytic propagation cover
+all n>=9, not only the finite verification range.
+
+The older growth-certificate.json retains its successful dimension-15500
+simplex-padding comparison as a historical control. The current result
+is in threshold-verification.json. Nine is not proved minimal. Neither
+this check nor the discovery search resolves unrestricted dimensions 4-8.
 
 A simpler seed with B=(-4,-3,-2,-1,1,2,3,4) and denominator 10 has
 dimension 8 and 25 vertices. Its root limit is between 2.8571 and 2.8573,
@@ -58,12 +84,12 @@ new geometry and growth checks:
 This checks the delivery hashes, recomputes complete rational seed geometry,
 compares the independently obtained R and a to the closed formulas, checks
 the exact recursive states and infinite-tail hypotheses, checks all finite
-separation constants, runs ten adversarial/unit tests, and checks regenerated
+separation constants, runs sixteen adversarial/unit tests, and checks regenerated
 reports against their delivered hashes. Growth acceptance is replayed in
 both normal and optimized Python. Typical runtime is around twenty seconds.
 
 The runner writes regenerated reports and certificates to temporary files;
-it leaves every delivered file unchanged. All ten unit tests also run under
+it leaves every delivered file unchanged. All sixteen unit tests also run under
 optimized Python. Empty or incomplete manifests are rejected.
 
 To regenerate the supplied certificates and confirm identical bytes:
@@ -118,13 +144,14 @@ bibliographic priority and unrestricted optimality are not established.
 Numerical optimization guided seed selection but is not a proof dependency.
 The dimension-197 block has an explicit 224-facet sparse integer description
 in block-197.json, checked independently by check_block.py. Its 46,118,408
-vertices are counted by the operation rules rather than enumerated. The known open cases in dimensions 4 through 8 remain
-open. Research and code were developed with AI assistance.
+vertices are counted by the operation rules rather than enumerated. This
+work does not resolve unrestricted dimensions 4 through 8. Research and
+code were developed with AI assistance.
 
 Older papers and archives in the surrounding workspace are preserved.
 This package is a separate research continuation, with its own claims and
 reproducibility records. Its manuscript, data and code edition is available at
-https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.1.
+https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0.
 The original Python code and generated geometry/growth/block certificate data
 are MIT licensed. Third-party inputs retain their upstream terms and are
 fetched rather than redistributed. Manuscript rights are reserved separately.

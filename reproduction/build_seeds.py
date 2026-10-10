@@ -126,10 +126,10 @@ def build(n, positive, denominator, name, output_directory=ROOT):
 
 if __name__ == "__main__":
     import argparse
-    from exact_model import SEEDS
+    from exact_model import SEEDS, FINITE_SEEDS
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-directory', type=Path, default=ROOT)
     args = parser.parse_args()
     args.output_directory.mkdir(parents=True, exist_ok=True)
-    for name, (n, positive, denominator) in SEEDS.items():
+    for name, (n, positive, denominator) in (SEEDS | FINITE_SEEDS).items():
         build(n, positive, denominator, name, args.output_directory)

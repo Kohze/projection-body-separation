@@ -98,5 +98,105 @@
     "status": "explicit_rational_seed_geometry_verified",
     "name": "seed-twelve",
     "input_sha256": "02bc663b7d18f7c6e06f50621ffed935dedf1b84f8a334e63500f379de15f65f"
+  },
+  {
+    "dimension": 9,
+    "parameter": [
+      "1",
+      "100"
+    ],
+    "vertices": 26,
+    "facets": 11,
+    "active_systems_checked": 55,
+    "positive_simplices_checked": 70,
+    "uncancelled_boundary_simplices": 420,
+    "interior_probe_multiplicity": 1,
+    "projection_minors_checked": 55,
+    "polytope_volume": [
+      "233834647",
+      "90564734969856"
+    ],
+    "scaled_projection_volume": [
+      "267",
+      "25"
+    ],
+    "ratio": [
+      "20811283583",
+      "20797677600"
+    ],
+    "excess": [
+      "13605983",
+      "20797677600"
+    ],
+    "lifted_minors_checked": 11,
+    "scaled_lifted_volume": [
+      "111",
+      "100"
+    ],
+    "a": [
+      "37",
+      "356"
+    ],
+    "R": [
+      "33179908075899309",
+      "3105786521600"
+    ],
+    "Q": [
+      "8651881939",
+      "8319071040"
+    ],
+    "status": "explicit_rational_seed_geometry_verified",
+    "name": "seed-nine",
+    "input_sha256": "49785a7183f5cb8194995ae88a7bb3e1a3d68fd357f379b0a26b57618789869d"
+  },
+  {
+    "dimension": 10,
+    "parameter": [
+      "1",
+      "1000"
+    ],
+    "vertices": 36,
+    "facets": 12,
+    "active_systems_checked": 66,
+    "positive_simplices_checked": 252,
+    "uncancelled_boundary_simplices": 1512,
+    "interior_probe_multiplicity": 1,
+    "projection_minors_checked": 66,
+    "polytope_volume": [
+      "5907418324615180414159421559605",
+      "28109950215679078946258104390467032064"
+    ],
+    "scaled_projection_volume": [
+      "14571",
+      "1000"
+    ],
+    "ratio": [
+      "17215398481593558762943386309000891",
+      "17041967172204027138935138243779616"
+    ],
+    "excess": [
+      "173431309389531624008248065221275",
+      "17041967172204027138935138243779616"
+    ],
+    "lifted_minors_checked": 12,
+    "scaled_lifted_volume": [
+      "1517",
+      "1000"
+    ],
+    "a": [
+      "1517",
+      "14571"
+    ],
+    "R": [
+      "747196114652498210197195586328163671875",
+      "24400998451110311585293493394502632"
+    ],
+    "Q": [
+      "1792310719688245737655968501184157",
+      "1549269742927638830812285294889056"
+    ],
+    "status": "explicit_rational_seed_geometry_verified",
+    "name": "seed-ten",
+    "input_sha256": "71a2ba9a29510e9a78438c007ff66355ad0bf69f7c37c898950f7bba59936d99"
   }
 ]

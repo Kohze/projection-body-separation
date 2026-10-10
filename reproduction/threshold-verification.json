@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "starting_dimension": 9,
+  "finite_dimensions_checked": 40,
+  "finite_class_nine": {
+    "max_dimension": 9,
+    "candidates_replayed": 261,
+    "retained_states": 50,
+    "sharp_R_over_simplex": "1",
+    "attribution": "mxym exact Pareto finite-optima algorithm, 8 October 2026"
+  },
+  "dimension_nine_R_over_class_maximum": "20811283583/20797677600",
+  "finite_Bellman_dimensions": [
+    10,
+    48
+  ],
+  "finite_Bellman_margin_lower": "4001/4000",
+  "uniform_class_bound": "(9/10)*(7137/2500)^n for every n>=49",
+  "residue_dimensions": [
+    49,
+    245
+  ],
+  "residues_checked": 197,
+  "residue_margin_lower": "1001/1000",
+  "repeating_block_dimension": 197,
+  "repeating_block_gain_lower": "5/4",
+  "witness_nodes": 420,
+  "seeds": [
+    "seed-nine",
+    "seed-ten",
+    "seed-twelve"
+  ],
+  "conclusion": "R(E_n) > sup_{K in C_n} R(K) for every integer n>=9",
+  "scope": "Imports the analytic mixed Bellman theorem and operation identities; not global optimality or external peer review",
+  "certificate_sha256": "1d724b020a3dbe1ff799596062a8c2e470844d5448b56568d6aba50eafbb7a8b"
+}

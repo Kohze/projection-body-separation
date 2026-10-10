@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-10",
+  "version": "1.1.0",
+  "status": "PASS",
+  "external_peer_review": false,
+  "old_sufficient_dimension": 15500,
+  "new_sufficient_dimension": 9,
+  "minimality_claim": false,
+  "mathematical_review": {
+    "finite_bound": "f_n second derivative <= -2 alpha/D; completing square yields tangent upper bound",
+    "uniform_bound": "Drop quartic term; x exp(-x)<=1/e; monotonic (n+1)g(n)^2 exp(-2n); exact base at 49",
+    "coverage": "40 small dimensions 9-48 plus 197 bases 49-245 and arbitrary nonnegative block powers",
+    "propagation": "R(L)>(5/4)c^197, multiplicativity; no asymptotic estimate substituted for finite inequality",
+    "limit": "E root limit R(L)^(1/197)<beta; exact larger-of-A,E selection retains beta",
+    "point_convention": "Formal H=Q=1; join is a pyramid; products with points omitted",
+    "priority": "Seed family, low-dimensional counterexample phenomenon, operation rules, Pareto algorithm and envelope attributed",
+    "acceptance": "Rational geometry, rational operation replay and rational exponential intervals; no floating-point acceptance",
+    "negative_controls": "Valid simplex substitutions in dimensions 9 and 18, missing residue 245, forged state, false geometry and wrong block are rejected",
+    "historical_records": "Old tags, archives and earlier growth comparison retained; current threshold isolated in new certificate"
+  },
+  "witness_nodes": 420,
+  "finite_class_candidates": 261,
+  "finite_class_states": 50,
+  "unit_tests": 16,
+  "new_geometry": {
+    "seed-nine": {
+      "vertices": 26,
+      "facets": 11,
+      "active_systems": 55,
+      "simplices": 70
+    },
+    "seed-ten": {
+      "vertices": 36,
+      "facets": 12,
+      "active_systems": 66,
+      "simplices": 252
+    }
+  },
+  "caveats": [
+    "Imported analytic theorem remains an essential external premise",
+    "No minimal-dimension or unrestricted-optimum claim",
+    "No exhaustive search or global-priority claim"
+  ],
+  "additional_crosscheck": "All 39 finite comparisons verified again with rational atanh logarithm intervals; worst certified margin at dimension 18 exceeds 1/4000",
+  "all_17_references_cited": true
+}

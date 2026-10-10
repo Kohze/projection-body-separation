@@ -1,17 +1,11 @@
 {
-  "pages": 11,
+  "pages": 13,
   "all_pages_visually_inspected": true,
-  "render_dpi": 90,
+  "render_dpi": 80,
   "latex_overfull": 0,
   "latex_underfull": 0,
   "unresolved_references": 0,
-  "final_pdf_sha256": "44ef102267d2f041475da188f890730ae2a79829e433308789b011ec6fa10830",
+  "final_pdf_sha256": "246e3ef5f1beed496c11247fa9f602a6e1dc49353116f3353656aa03671f0791",
   "status": "PASS",
-  "edition": "v1.0.1; exact companion disclosure, 16 references and portable replay",
-  "patch_pages_reinspected": [
-    8,
-    9,
-    10,
-    11
-  ]
+  "edition": "v1.1.0; dimension-nine separation and 17 references"
 }

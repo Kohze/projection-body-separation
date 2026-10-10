@@ -7,6 +7,11 @@ SEEDS = {
     "seed-twelve": (12, [17, 24, 32, 41, 53, 69], 100),
 }
 
+FINITE_SEEDS = {
+    "seed-nine": (9, [1, 2, 3, 5], 100),
+    "seed-ten": (10, [16, 51, 91, 142, 217], 1000),
+}
+
 def require(ok, message):
     if not ok:
         raise ValueError(message)

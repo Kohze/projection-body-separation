@@ -260,7 +260,7 @@ def main():
     parser.add_argument('--report', type=Path, default=ROOT/'seed-geometry-verification.json')
     args = parser.parse_args()
     reports = []
-    for name in ("seed-eight", "seed-twelve"):
+    for name in ("seed-eight", "seed-twelve", "seed-nine", "seed-ten"):
         raw = (ROOT / f"{name}.json").read_bytes()
         start = time.monotonic()
         result = check(json.loads(raw))

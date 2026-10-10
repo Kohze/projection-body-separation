@@ -20,6 +20,9 @@ REQUIRED_ARTIFACTS = {
     'growth-certificate.json', 'growth-verification.json', 'replay_prior.py',
     'prior-input-manifest.json', 'prior-mixed-upper-replay.json', 'source-audit.json',
     'build_blocks.py', 'check_block.py', 'block-197.json', 'block-197-verification.json',
+    'seed-nine.json', 'seed-ten.json', 'produce_threshold.py', 'check_threshold.py',
+    'threshold-recipes.json', 'threshold-certificate.json', 'threshold-verification.json',
+    'check_tangent_logs.py', 'tangent-log-verification.json',
 }
 
 
@@ -73,7 +76,9 @@ def main():
             run(['build_seeds.py', '--output-directory', directory])
             run(['produce_growth.py', '--output-directory', directory])
             run(['build_blocks.py', '--output-directory', directory])
-            generated = ('seed-eight.json', 'seed-twelve.json', 'growth-certificate.json', 'block-197.json')
+            run(['produce_threshold.py', '--output-directory', directory])
+            generated = ('seed-eight.json', 'seed-twelve.json', 'seed-nine.json', 'seed-ten.json',
+                         'growth-certificate.json', 'block-197.json', 'threshold-certificate.json')
             require(all(digest(ROOT/name) == digest(temporary/name) for name in generated), 'Producer regeneration changed certificate bytes')
             print('PASS: byte-identical certificate regeneration in temporary files.', flush=True)
         geometry = temporary/'geometry.json'
@@ -81,9 +86,9 @@ def main():
         require(digest(geometry) == digest(ROOT/'seed-geometry-verification.json'), 'Regenerated geometry report changed bytes')
         print('PASS: complete rational seed geometry and lifted minors.', flush=True)
         # Formula/geometry comparison is additional to both independent checkers.
-        from exact_model import SEEDS, state
+        from exact_model import SEEDS, FINITE_SEEDS, state
         for row in json.loads(geometry.read_text()):
-            n, tilts, denominator = SEEDS[row['name']]
+            n, tilts, denominator = (SEEDS | FINITE_SEEDS)[row['name']]
             s = state(n, [F(t, denominator) for t in tilts])
             for key in ('R', 'a', 'Q'):
                 require(s[key] == F(*map(int, row[key])), 'Closed formula disagrees with geometry: '+key)
@@ -98,9 +103,19 @@ def main():
             run(mode+['check_growth.py', '--self-test', '--geometry-report', str(geometry), '--report', str(report)])
             require(digest(report) == digest(ROOT/'growth-verification.json'), 'Regenerated growth report changed bytes')
         print('PASS: exact growth, analytic endpoint hypotheses, all 197 residues, finite separation; normal and optimized Python.', flush=True)
+        for mode in ([], ['-O']):
+            report = temporary/('threshold-optimized.json' if mode else 'threshold.json')
+            run(mode+['check_threshold.py', '--geometry-report', str(geometry), '--report', str(report)])
+            require(digest(report) == digest(ROOT/'threshold-verification.json'), 'Regenerated dimension-nine separation report changed bytes')
+        print('PASS: separation in every dimension n>=9; exact class-nine frontier, 39 finite Bellman bounds, 197 residue witnesses and infinite propagation; normal and optimized Python.', flush=True)
+        for mode in ([], ['-O']):
+            report = temporary/('log-optimized.json' if mode else 'log.json')
+            run(mode+['check_tangent_logs.py', '--report', str(report)])
+            require(digest(report)==digest(ROOT/'tangent-log-verification.json'), 'Logarithmic cross-check changed bytes')
+        print('PASS: all 39 finite comparisons cross-checked with independent rational logarithm intervals.', flush=True)
         print(run(['-m', 'unittest', '-v', 'test_certificate_checks.py']).strip(), flush=True)
         run(['-O', '-m', 'unittest', '-v', 'test_certificate_checks.py'])
-        print('PASS: all ten unit tests also pass under optimized Python.', flush=True)
+        print('PASS: all sixteen unit tests also pass under optimized Python.', flush=True)
         if args.with_prior:
             report = temporary/'prior.json'
             print(run(['replay_prior.py', '--report', str(report)]).strip(), flush=True)
@@ -108,7 +123,7 @@ def main():
     prior = json.loads((ROOT/'prior-mixed-upper-replay.json').read_text())
     require(prior['status'] == 'PASS' and prior['mathematics_replayed'] is True, 'Missing prior upper replay record')
     manifest(args.assembly)
-    print(json.dumps(dict(status='PASS', manifest_files=count, unit_tests=10,
+    print(json.dumps(dict(status='PASS', manifest_files=count, unit_tests=16, separation_starting_dimension=9,
                           seed_geometry='independently recomputed', growth='independently recomputed',
                           delivered_files_modified=False,
                           external_upper='replayed now' if args.with_prior else 'saved successful replay; use --with-prior to rerun'), indent=2), flush=True)

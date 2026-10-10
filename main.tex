@@ -14,7 +14,7 @@
 \newcommand{\RK}{\mathcal P}
 \title{Beyond point-generated product--join constructions\protect\\for projection-body volume}
 \author{Robin Gounder}
-\date{Working research draft, 9 October 2026}
+\date{Working research draft, 10 October 2026}
 \hypersetup{pdftitle={Beyond point-generated product-join constructions for projection-body volume},pdfauthor={Robin Gounder}}
 \raggedbottom
 \begin{document}
@@ -26,8 +26,8 @@ $2.861$ and $2.8611$. In combination with the prior bound
 $\Gamma_{\CC}\le e^{1.049}<2.855$ for the class generated from a point by
 products, joins, and affine equivalences, this proves a strict asymptotic
 separation between that entire class and unrestricted convex polytopes.
-An explicit fixed-block construction exceeds every member of $\CC_n$
-for every $n\ge15500$. A simpler eight-dimensional seed already gives
+Explicit finite product--join recipes and a fixed-block extension exceed
+every member of $\CC_n$ for every $n\ge9$. A simpler eight-dimensional seed already gives
 a limit above $2.8571$. The geometric seed family, product--join calculus,
 recursive scheme, and comparison upper bound are attributed to prior
 work. The additional contribution is their use with specified rational
@@ -96,11 +96,13 @@ Consequently, using the prior upper theorem~\cite{mxym-upper},
  \Gamma_{\CC}<2.855<\beta
  \le\liminf_{n\to\infty}U_n.
 \]
-There is also an explicit fixed-block sequence $E_n$ satisfying
+There is also an explicit sequence $E_n$, given by finite product--join
+recipes and a fixed-block extension, satisfying
 \[
- R_n(E_n)>\sup_{K\in\CC_n}R_n(K)\qquad\text{for every }n\ge15500.
+ R_n(E_n)>\sup_{K\in\CC_n}R_n(K)\qquad\text{for every }n\ge9.
 \]
-The number $15500$ is a sufficient threshold, not a sharp one.
+The sequence $P_n$ can be chosen to satisfy the same strict inequality
+for every $n\ge9$. No minimal-dimension claim is made.
 \end{theorem}
 
 Thus the advantage concerns an entire construction class. For example,
@@ -390,30 +392,30 @@ the limits. No floating-point logarithm or numerically truncated infinite
 product is used in acceptance of the endpoints.
 \end{proof}
 
-For the first assertion of Theorem~\ref{thm:main}, take the twelve-dimensional
+For the asymptotic construction in Theorem~\ref{thm:main}, take the twelve-dimensional
 family. For $n\ge144$, choose the largest $j$ with $d_j\le\sqrt n$, put
 $k=\lfloor n/d_j\rfloor$, $r=n-kd_j$, and set
 \[
- P_n=K_j^k\times T_r.
+ A_n=K_j^k\times T_r.
 \]
 Here $K_j^k$ denotes a Cartesian power; the factor $T_0$ is omitted.
-For $n<144$ use $P_n=T_n$. Then $j\to\infty$,
+For $n<144$ use $A_n=T_n$. Then $j\to\infty$,
 $0\le r<d_j\le\sqrt n$, and $kd_j/n\to1$. Product multiplicativity gives
 \[
- \frac{\log R_n(P_n)}n
+ \frac{\log R_n(A_n)}n
  =\frac{kd_j}{n}\frac{\log R_j}{d_j}+\frac{\log c_r}{n}.
 \]
 Set $c_0=1$. The bound $c_r\le(r+1)e^r$ makes the last term tend to zero,
 so the required all-dimensional limit is $\beta$. This padding argument
 is the one used for the prior recursive family in~\cite[Corollary 9.3]{mxym-calculus}.
 
-\section{The imported upper bound and an effective separation}
+\section{The imported upper bound and separation from dimension nine}
 The mixed Bellman theorem~\cite{mxym-upper} states, for every $K\in\CC$,
 with $D=n+1$ and $H=1/a(K)$,
 \begin{equation}\label{eq:prior-upper}
- \log Q(K)\le\frac{87}{2000}\left(D-\frac{H^2}{D}\right)
-              +\frac{11}{2000}\left(D-\frac{H^4}{D^3}\right)
- \le\frac{49}{1000}D.
+ \log Q(K)\le\alpha\left(D-\frac{H^2}{D}\right)
+                 +\delta\left(D-\frac{H^4}{D^3}\right),
+ \qquad\alpha=\frac{87}{2000},\quad\delta=\frac{11}{2000}.
 \end{equation}
 This is an imported theorem, not a new inequality of this note.
 Its pinned exact certificate was replayed successfully: 19,900 finite
@@ -422,54 +424,162 @@ constants. The complete English argument was also inspected. Exact
 replay checks its finite proof obligations; it does not replace review
 of its analytic argument.
 
-Since $H\le n+1$, $R=g(n)HQ$, and $g(n)\le e^n$,
+Discarding the dependence on $H$ gives the coarse bound
+$R_n(K)<1.051(n+1)(2.8548)^n$. Combined with a single block and simplex
+padding, this gave the earlier sufficient threshold $15500$.
+Retaining that dependence yields a much smaller comparison bound.
+Write
+\[
+ f_n(H)=\log H+\alpha(D-H^2/D)+\delta(D-H^4/D^3).
+\]
+Then $R_n(K)\le g(n)\exp f_n(H)$. For every rational $h>0$,
+$f_n''(H)\le-2\alpha/D$ implies
+\begin{equation}\label{eq:tangent-upper}
+ \sup_{K\in\CC_n}R_n(K)
+ \le g(n)h\exp\left[
+ \alpha(D-h^2/D)+\delta(D-h^4/D^3)
+       +\frac{D}{4\alpha}
+        \left(\frac1h-\frac{2\alpha h}{D}
+                         -\frac{4\delta h^3}{D^3}\right)^2\right].
+\end{equation}
+Indeed, the quadratic upper Taylor bound at $h$ is maximized by
+completing the square. Rational centres near its stationary point give
+tight bounds without solving an algebraic equation in proof acceptance.
+
+\begin{lemma}\label{lem:uniform-upper}
+For every $n\ge49$,
 \begin{equation}\label{eq:finite-upper}
  \sup_{K\in\CC_n}R_n(K)
- \le e^{49/1000}(n+1)(e^{1049/1000})^n
- <\frac{1051}{1000}(n+1)\left(\frac{7137}{2500}\right)^n.
+ <\frac9{10}\left(\frac{7137}{2500}\right)^n.
 \end{equation}
-The factorial bound follows from
-$\sum_{i=1}^n\log i\ge\int_1^n\log t\,dt$.
-The final bounds $e^{49/1000}<1.051$ and $e^{1049/1000}<2.8548$ are
-certified by rational Taylor intervals.
-Taking roots proves $\Gamma_{\CC}<2.855$, and hence the asymptotic
-separation in Theorem~\ref{thm:main}.
-
-\begin{proposition}\label{prop:effective}
-Let $L=K_2$ for the seed~\eqref{eq:seed12}. Thus $\dim L=197$.
-For $n=197k+r$, $0\le r\le196$, define $E_n=L^k\times T_r$.
-Then $R_n(E_n)>\sup_{K\in\CC_n}R_n(K)$ for every $n\ge15500$.
-\end{proposition}
+\end{lemma}
 \begin{proof}
-Put $b_*=28581/10000=2.8581$. The exact recurrence certificate proves
-$R_{197}(L)>b_*^{197}$.
-The block has 224 facets and 46,118,408 vertices: under each recursive
-step the facet count is multiplied by four and the vertex count changes
-from $v$ to $2v^2$. The package supplies its sparse integer facet
-inequalities, not its full vertex list.
-The checker verifies all 197 rational residue inequalities
+Drop the nonpositive quartic term in $f_n(H)$ and use
+$x e^{-x}\le e^{-1}$, with $x=2\alpha H^2/D$. This gives
 \[
- c_r>\frac{b_*^r}{3500}\qquad(0\le r\le196),\qquad c_0=1.
+ R_n(K)^2\le\frac{1000}{87}(n+1)g(n)^2
+                  \exp\left(\frac{49}{500}(n+1)-1\right).
 \]
-It reconstructs the simplex values from $c_1=2$ and
-$c_{r+1}/c_r=((r+2)/(r+1))(1+1/r)^r$, rather than the producer's
-factorial formula. Consequently, for $k\ge1$,
+The sequence $B_n=(n+1)g(n)^2e^{-2n}$ strictly decreases. Its consecutive
+ratio is $(n+2)(1+1/n)^{2n}/((n+1)e^2)$, which is below one since
 \[
- R_n(E_n)>b_*^{n-r}c_r
- >\frac{b_*^n}{3500}.
+ 2n\log(1+1/n)<2-\frac1{n+1},\qquad
+ \log(1+1/(n+1))<\frac1{n+1}.
 \]
-Comparison with~\eqref{eq:finite-upper} therefore reduces to
+The first inequality follows by integrating
+$t/(1+t)\ge t/(1+x)$ on $0\le t\le x$, with $x=1/n$.
+Consequently, for $n\ge49$,
 \[
- \left(\frac{9527}{9516}\right)^n>\frac{7357}{2}(n+1).
+ R_n(K)^2\le\frac{1000}{87}B_{49}
+                  e^{-451/500}e^{(1049/500)n}.
 \]
-The certificate checks this integer inequality at $n=15500$.
-The ratio of consecutive left-to-right quotients is
-$(9527/9516)(n+1)/(n+2)>1$ throughout $n\ge15500$.
-This proves the assertion in every stated dimension.
+Rational Taylor bounds certify
+\[
+ \frac{1000}{87}\,50g(49)^2e^{-98-451/500}<\frac{81}{100},
+ \qquad e^{1049/1000}<\frac{7137}{2500}.
+\]
+Taking positive square roots proves the claim. In particular
+$\Gamma_{\CC}<2.855$, as used in Theorem~\ref{thm:main}.
 \end{proof}
 
+Two additional rational members of the inherited seed family suffice
+for the finite witnesses. The ten-dimensional seed is
+\[
+ S_{10}=K(16/1000,51/1000,91/1000,142/1000,217/1000).
+\]
+The nine-dimensional seed $S_9$ is a pyramid over
+$K(1/100,2/100,3/100,5/100)$ in dimension eight; equivalently, append one
+zero coefficient to its paired tilt vector. It has 26 vertices and 11
+facets, whereas $S_{10}$ has 36 vertices and 12 facets. The calculus in
+$(H,Q)$ extends to a point with the formal values $H=Q=1$:
+\begin{align}
+ (H,Q)(A*B)&=(H_A+H_B,Q_AQ_B),\label{eq:HQjoin}\\
+ H(A\times B)&=\frac{r+s}{r/H_A+s/H_B},\qquad
+ Q(A\times B)=Q_AQ_B\frac{g(r)g(s)}{g(r+s)}
+                            \frac{sH_A+rH_B}{r+s}.\label{eq:HQproduct}
+\end{align}
+The point case in~\eqref{eq:HQjoin} is the ordinary pyramid formula;
+products with a point can be omitted. These are rewritings of the prior
+operation rules, not new geometric identities.
+
+\begin{proposition}\label{prop:effective}
+The accompanying 420-node rational operation certificate specifies
+polytopes $W_n$ for $9\le n\le245$, built from points, $S_9$, $S_{10}$,
+and $K_0$ by products and joins. Let $L=K_2$, of dimension 197. Define
+\[
+ E_n=\begin{cases}
+ W_n,&9\le n\le48,\\
+ L^k\times W_s,&n\ge49,\quad
+ s=49+((n-49)\bmod197),\quad k=(n-s)/197.
+ \end{cases}
+\]
+Then $R_n(E_n)>\sup_{K\in\CC_n}R_n(K)$ for every $n\ge9$.
+The factor $L^0$ is omitted.
+\end{proposition}
+\begin{proof}
+For $n=9$, the prior exact Pareto classification gives
+$\sup_{K\in\CC_9}R_9(K)=c_9$~\cite[Theorem 1]{mxym-finite}.
+Our checker replays this small instance: starting with $(H,Q)=(1,1)$,
+it enumerates every product and join of smaller-dimensional Pareto states,
+then discards coordinatewise dominated states. Both outputs
+in~\eqref{eq:HQjoin}--\eqref{eq:HQproduct} increase in both input coordinates
+at fixed dimensions, so induction proves completeness. The replay checks
+261 candidates, retaining 50 states across dimensions zero through nine.
+The independent geometry check gives
+\[
+ \frac{R_9(S_9)}{c_9}=\frac{20811283583}{20797677600}>1.
+\]
+Set $W_9=S_9$. The geometric family and the dimension-nine simplex
+counterexample phenomenon are already prior work~\cite{feng}.
+
+For $10\le n\le48$, the certificate specifies $W_n$ and a rational
+centre $h_n$. Reconstructing every operation state and applying rational
+upper Taylor intervals for the exponential in~\eqref{eq:tangent-upper}
+gives the strict comparison in each of these 39 dimensions.
+For each of the 197 integers $49\le s\le245$, it instead certifies
+\[
+ R_s(W_s)>\frac{1001}{1000}\frac9{10}
+                    \left(\frac{7137}{2500}\right)^s.
+\]
+The dimension ranges and certified multiplicative margins are:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Dimensions & Class upper bound & Witness / upper bound\\
+\midrule
+$9$ & $c_9$, exact Pareto replay & $>4001/4000$\\
+$10$--$48$ & Rational tangent bounds & $>4001/4000$\\
+$49$--$245$ & $(9/10)(7137/2500)^n$ & $>1001/1000$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are verified lower margins, not approximations to sharp extrema.
+For example, the recipes choose $W_{10}=S_{10}$, $W_{18}$ as six
+successive pyramids over $K_0$, and $W_{49}=K_1$.
+The finite recipes are explicit construction witnesses; completeness of
+the search that discovered them is unnecessary.
+
+Finally the exact recurrence gives
+\[
+ R_{197}(L)>\frac54\left(\frac{7137}{2500}\right)^{197}.
+\]
+Product multiplicativity and Lemma~\ref{lem:uniform-upper} now prove
+the claim for every $n=s+197k\ge49$. This covers every residue and every
+larger dimension, with no finite truncation of the conclusion.
+The block retains its explicit 224-facet description and has 46,118,408
+vertices, counted by the recursion rather than enumerated.
+\end{proof}
+
+To obtain one sequence satisfying both assertions of
+Theorem~\ref{thm:main}, set $E_n=T_n$ for $n<9$ and choose $P_n$ to be
+whichever of $A_n,E_n$ has larger $R_n$, breaking ties in favour of $A_n$.
+This is an exact rational comparison. Since
+$R_n(E_n)^{1/n}\to R_{197}(L)^{1/197}<\beta$ by strict root increase,
+whereas $R_n(A_n)^{1/n}\to\beta$, the selected sequence has limit
+$\beta$ and strictly exceeds the entire class in every dimension $n\ge9$.
+
 \section{Exact verification}
-The accompanying standard-library Python package contains both exact
+The accompanying standard-library Python package contains the four exact
 seeds, their vertex lists and oriented triangulations, the full rational
 recurrence states, and separate geometric and growth checkers.
 The producers use pulling triangulations; the standard geometric
@@ -492,9 +602,15 @@ minor. Thus it checks both $R_0$ and $a_0$ without assuming
 Proposition~\ref{prop:seed}. The recurrence checker imports neither the
 geometric producer nor its formula module and uses central binomial
 coefficients instead of factorial ratios. It checks~\eqref{eq:hypotheses},
-the rational limit endpoints, the dimension-197 block inequality, the
-197 residue inequalities, and the dimension-15500 comparison. Explicit
+the rational limit endpoints and the original dimension-197 block comparison.
+A separate finite-separation checker reconstructs all 420 witness nodes,
+replays the exact dimension-nine class frontier, checks the 39 rational
+tangent bounds and all 197 residue witnesses, and verifies the finite
+constants in the analytic all-dimensional extension. The new seeds have
+55 and 66 active systems and 70 and 252 oriented simplices, respectively. Explicit
 exceptions keep the mathematical checks active under optimized Python.
+The 39 finite comparisons are also cross-checked using rational atanh
+intervals for logarithms, without reusing the exponential-series code.
 The dimension-197 block also has an explicit inequality certificate.
 A separate checker compares its 224 inequalities with a flattened
 description using sixteen seed copies, four inner join coordinates,
@@ -502,7 +618,7 @@ and one outer join coordinate. It verifies a strict interior point.
 This checks equivalence to the recursive expression; it does not
 enumerate the block's vertices or independently recompute its volume.
 
-Run \texttt{python verify\_all.py} for all new checks and ten unit tests.
+Run \texttt{python verify\_all.py} for all new checks and sixteen unit tests.
 The runner writes regenerated certificates and reports to temporary files
 and leaves the delivered files unchanged. Empty or incomplete delivery
 manifests and mathematically false comparison constants are rejected.
@@ -534,14 +650,17 @@ It does not justify comparing different dimensions by that objective or
 claiming that the balanced recursion is the best possible schedule.
 
 The asymptotic advantage is small at the level of a single root, but it
-produces an exponential ratio of volumes as dimension grows. The fixed
-block construction makes the comparison effective in every dimension
-at least $15500$. This is a sufficient threshold obtained from a
-particular block, residue bounds, and the imported class envelope; it
-is not evidence that separation first occurs there. Nor does the lower
-rate approach a known unrestricted optimum: the classical upper root
-$\pi e/2$ leaves a substantial gap. The simplex-bound questions in
-dimensions four through eight are unchanged.
+produces an exponential ratio of volumes as dimension grows. The finite
+construction now separates in every dimension at least nine. The reduction
+from the earlier sufficient threshold $15500$ comes from retaining the
+invariant dependence in the class envelope and replacing a uniform simplex
+padding loss by finitely many checked product--join witnesses. It does not
+improve the imported asymptotic class ceiling or the certified value of
+$\beta$. Different finite and asymptotic objectives favour different seeds.
+The threshold nine is not proved minimal: the present result makes no new
+assertion about unrestricted maximizers in dimensions four through eight.
+Nor does the lower rate approach a known unrestricted optimum: the
+classical upper root $\pi e/2$ leaves a substantial gap.
 
 Explicitness also needs a computational qualification. The block $L$
 has a compact description by 224 facet inequalities but more than
@@ -566,9 +685,10 @@ Further progress could take several forms. A rigorous global search for
 the objective $I^3p^2s$ would distinguish a good rational seed from an
 optimum within a precisely stated family. Enlarging that family, changing
 seed dimension, or allowing unbalanced schedules may improve the lower
-rate. Sharper class envelopes and residue comparisons may lower the
-effective dimension threshold. These are separate optimization problems;
-none is resolved by the present certificates. External mathematical
+rate. Sharper class envelopes may reduce the finite certificate or
+improve separation margins. Moving below dimension nine would require
+a new unrestricted counterexample, not merely a smaller padding constant.
+These optimization problems are not resolved by the present certificates. External mathematical
 review and proof-assistant formalization would strengthen confidence in
 both the new argument and its imported dependencies.
 
@@ -577,15 +697,16 @@ An explicit rational twelve-dimensional seed, amplified by the prior
 product--join recursion, gives a projection-volume root limit strictly
 between $2.861$ and $2.8611$. Combined with the attributed upper theorem
 for the point-generated class, this proves a strict exponential
-separation from that entire class. A fixed 197-dimensional block and
-simplex padding give a concrete comparison in every dimension
-$n\ge15500$.
+separation from that entire class. A finite rational operation
+certificate and a repeating 197-dimensional block give a comparison in
+every dimension $n\ge9$. One explicit sequence satisfies this finite
+separation while retaining the stronger root limit.
 
 The examples show that the initial seed and its lifted invariant are
 material to recursive growth. Exact geometry, recurrence certificates,
 and a finite comparison make the claims reproducible without treating
 numerical search as proof. The unrestricted extremal rate, optimal seed
-and schedule, sharp separation threshold, and global bibliographic
+and schedule, minimal separation dimension, and global bibliographic
 priority remain open.
 
 \section*{Generative AI disclosure}
@@ -594,10 +715,10 @@ literature synthesis, and mathematical exposition.
 
 \section*{Data and code availability}
 The manuscript source, PDF, exact seed coordinates and triangulations,
-dimension-197 facet inequalities, rational recurrence certificates,
+dimension-197 facet inequalities, finite operation recipes, recurrence certificates,
 verification programs, source audit, and reproduction instructions are
 publicly available in the accompanying GitHub repository~\cite{data}.
-The versioned release \texttt{v1.0.1} identifies the edition accompanying
+The versioned release \texttt{v1.1.0} identifies the edition accompanying
 this manuscript. Original Python code and generated certificate data are
 provided under the MIT license; manuscript rights are stated separately.
 
@@ -612,6 +733,7 @@ The release includes the successful external replay record. External
 inputs remain attributed and are fetched from their pinned upstream
 locations rather than redistributed as part of this package.
 
+\clearpage
 \appendix
 \section{A simplex truncation identity}\label{app:truncation}
 The following is a standard simplex section formula; see
@@ -667,9 +789,9 @@ PDF dated 26 August 2026.
 
 \bibitem{data}
 R.~Gounder, \emph{Beyond point-generated product--join constructions for
-projection-body volume: manuscript, data, and code}, version 1.0.1 (2026).
+projection-body volume: manuscript, data, and code}, version 1.1.0 (2026).
 \href{https://github.com/Kohze/projection-body-separation}{Reproduction repository};
-\href{https://github.com/Kohze/projection-body-separation/releases/tag/v1.0.1}{Versioned release}.
+\href{https://github.com/Kohze/projection-body-separation/releases/tag/v1.1.0}{Versioned release}.
 
 \bibitem{lasserre}
 J.~B.~Lasserre, \emph{Volume of slices and sections of the simplex in
@@ -695,6 +817,12 @@ envelope for projection-body growth}, research manuscript, dated
 7 October 2026.
 \href{https://github.com/mxym/math/blob/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join/proof.md}{Pinned proof};
 \href{https://github.com/mxym/math/tree/2fc3f25179cf1128c4bccbde65fd3a07c093ad6d/notes/mixed-bellman-product-join}{Exact certificates and checker}.
+
+\bibitem{mxym-finite}
+mxym (repository account), \emph{An exact Pareto dynamic program for
+product--join projection geometry: sharp extrema through dimension 48},
+research note, 8 October 2026.
+\href{https://github.com/mxym/math/blob/55ba5a7be927e3e7d2dbfd8d054db91b63d8d755/notes/exact-product-join-finite-optima/paper.md}{Pinned theorem and proof}.
 
 \bibitem{mxym-spectral}
 mxym (repository account), \emph{Asymptotic spectral reduction}, supplement
