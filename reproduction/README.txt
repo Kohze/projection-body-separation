@@ -1,6 +1,11 @@
 BEYOND POINT-GENERATED PRODUCT--JOIN CONSTRUCTIONS
 Internally audited research draft and exact reproduction package, 10 October 2026
 
+VERSION 1.3.3 NOTE
+Add a visible keywords line after the abstract and matching metadata.
+The manuscript remains sixteen pages with twenty-one cited references.
+Mathematical text, construction data and proof pins are unchanged.
+
 VERSION 1.3.2 NOTE
 The matching sixteen-page manuscript now cites twenty-one references.
 Henk (2025) supplies recent geometric context; Ron (1988) receives the

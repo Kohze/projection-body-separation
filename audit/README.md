@@ -44,3 +44,8 @@ Version 1.3.2 is a citation-only revision with twenty-one cited entries.
 Its current records are citation-audit-v1.3.2.json, layout-qa-v1.3.2.json
 and citation-release-review-v1.3.2.json. The earlier full internal review
 and scores remain historical; this delta does not re-score the mathematics.
+
+Version 1.3.3 adds post-abstract keywords and matching metadata.
+Its layout and scope record is keyword-release-review-v1.3.3.json.
+The v1.3.2 citation audit and previous mathematical reviews retain
+their documented scope; this editorial delta does not revise scores.

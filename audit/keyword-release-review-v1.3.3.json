@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-10",
+  "edition": "v1.3.3",
+  "status": "PASS",
+  "scope": "Internal editorial keyword and layout check; no new mathematical review or scores.",
+  "keywords": [
+    "convex geometry",
+    "projection bodies",
+    "reverse projection inequality",
+    "simplex sections",
+    "product-join constructions",
+    "polytopes",
+    "exact computation"
+  ],
+  "placement": "Immediately after the abstract; bold Keywords label; semicolon-separated terms.",
+  "matches_companion_paper_format": true,
+  "pdf_keywords_and_citation_metadata_match": true,
+  "pages": 16,
+  "all_pages_visually_inspected": true,
+  "contact_sheets": 4,
+  "focused_full_page_checks": [
+    1
+  ],
+  "renderer": "Poppler pdftoppm, maximum page dimension 1500 pixels",
+  "warning_free_three_pass_latex_build": true,
+  "unresolved_references": 0,
+  "bibliography_entries": 21,
+  "all_entries_cited": true,
+  "mathematical_text_and_certificates_unchanged": true,
+  "source_diff_restricted_to_keywords_metadata_and_edition": true,
+  "previous_citation_audit": "citation-audit-v1.3.2.json",
+  "prior_manifest_files_unchanged": 113,
+  "prior_file_changes": [
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "README.md",
+    "README.txt",
+    "audit/README.md",
+    "beyond-point-generated-projection-body-constructions.pdf",
+    "main.tex",
+    "reproduction/ARTIFACTS.sha256",
+    "reproduction/README.txt",
+    "reproduction/beyond-point-generated.pdf",
+    "reproduction/beyond-point-generated.tex",
+    "reproduction/source-audit.json"
+  ],
+  "final_pdf_sha256": "13378d3bbcbbe49b97d4faa8f88c3c6da3c4b1186f4fee04c02ea75d13b4303a",
+  "source_sha256": "467ac87b86f83433235b649550e6af3ebae679df3fb16c641bd1c41126ed465f",
+  "delivery_inventory": "Verified after sealing",
+  "previous_full_CI_release": "v1.3.2",
+  "remote_CI": "Automatic branch and tag workflows run after push; check GitHub for current status."
+}

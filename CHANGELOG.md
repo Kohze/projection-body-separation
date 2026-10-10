@@ -1,5 +1,13 @@
 # Changes
 
+## 1.3.3 - 10 October 2026
+
+Add a bold Keywords label and semicolon-separated terms immediately after
+the abstract, following the companion papers. Synchronize PDF keywords and
+CITATION.cff. Rebuild and visually inspect the sixteen-page PDF, refresh the
+matching reproduction snapshots and inventories, and update the release
+citation. Mathematical text, construction data and proof pins are unchanged.
+
 ## 1.3.2 - 10 October 2026
 
 Strengthen literature coverage with Henk (2025) on zonotope projection

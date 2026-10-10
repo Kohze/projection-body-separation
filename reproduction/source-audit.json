@@ -103,7 +103,7 @@
   "mathematical_scope": "Rational seed geometry and finite analytic proof obligations; imported upper theorem remains an essential cited analytic dependency",
   "review_revision_utc": "2026-10-09T19:52:29.102340+00:00",
   "edition_repository": "https://github.com/Kohze/projection-body-separation",
-  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.2",
+  "edition_release": "https://github.com/Kohze/projection-body-separation/releases/tag/v1.3.3",
   "publication_verification_record": "Remote tag, release assets and CI are checked after the final push; receipts are retained in the surrounding workspace.",
   "citation_coverage_audit": "../audit/citation-audit-v1.3.2.json",
   "citation_entries": 21,
@@ -132,7 +132,7 @@
     "One exact-selected rational sequence has both all-n>=9 separation and root limit 2.861<beta<2.8611",
     "Finite consequence of imported envelope: class R_n < (9/10)*(7137/2500)^n for every n>=49"
   ],
-  "current_review_report": "../audit/citation-release-review-v1.3.2.json",
+  "current_review_report": "../audit/keyword-release-review-v1.3.3.json",
   "historical_review_report": "REVIEWER_AUDIT.txt",
   "related_work_not_proof_dependency": [
     {
@@ -152,5 +152,6 @@
   "historical_source_audit_report": "PRIORITY_AND_DEPENDENCIES.txt",
   "repository_head_at_current_audit": "b9056460497110b0983a0c058e19426e908f961e",
   "current_review_date": "2026-10-10",
-  "citation_only_delta": "Adds Henk and Ron and precise method pointers; certified claims and dependency pins are unchanged."
+  "citation_only_delta": "Adds Henk and Ron and precise method pointers; certified claims and dependency pins are unchanged.",
+  "keyword_only_delta": "Visible post-abstract keywords and matching metadata; mathematics and citation coverage unchanged."
 }
